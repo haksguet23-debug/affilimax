@@ -17,7 +17,7 @@ services:
       - key: STRIPE_WEBHOOK_SECRET
         sync: false
       - key: AFFILMAX_REQUIRE_LIVE
-        value: "1"
+        value: "0"
       - key: AFFILMAX_BASE_URL
         value: "https://affilimax.onrender.com"
       - key: ADMIN_USER
