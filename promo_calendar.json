@@ -1,0 +1,40 @@
+{
+  "created_at": "2026-07-24T17:58:05.762863Z",
+  "stats": {
+    "total_posts": 1,
+    "products_used": [],
+    "by_platform": {
+      "twitter": 1,
+      "linkedin": 0,
+      "facebook": 0,
+      "instagram": 0,
+      "telegram": 0,
+      "email": 0,
+      "blog": 0
+    },
+    "by_day": {
+      "2026-07-24": 1
+    },
+    "last_24h": 0
+  },
+  "history": [
+    {
+      "product_slug": "wd-my-passport-4to",
+      "product_name": "WD My Passport 4To Ultra",
+      "platform": "twitter",
+      "titre": "Astuce WD My Passport 4To Ultra",
+      "content": " 3 raisons d'acheter le WD My Passport 4To Ultra aujourd'hui :\n Capacite 4To - des milliers de photos et videos\n USB 3.2 Gen 1, compatible USB-C\n Chiffrement materiel AES 256 bits\n 4.4/5 (345 avis)\n https://affilmax.render.com/go/wd-my-passport-4to?src=promo",
+      "objet": "",
+      "created_at": "2026-07-24T18:40:29.365594Z",
+      "price": 119.99,
+      "rating": 4.4
+    }
+  ],
+  "schedule": {
+    "last_post_at": null,
+    "next_post_at": null,
+    "interval_seconds": null,
+    "running": false,
+    "started_at": null
+  }
+}

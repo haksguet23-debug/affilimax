@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /go/
+
+Sitemap: https://affilimax.onrender.com/sitemap.xml

@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: affilimax
+    env: python
+    region: frankfurt
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python server.py
+    healthCheckPath: /healthz
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
+      - key: ADMIN_USER
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: AFFILMAX_REQUIRE_LIVE
+        value: "1"
+      - key: AFFILMAX_BASE_URL
+        sync: false

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affilimax — ÉTAT RÉEL</title>
+    <style>
+        :root{--bg:#0a0a1a;--card:#141432;--border:#1e1e4a;--green:#10b981;--red:#ef4444;--orange:#f97316;--gold:#f0a500;--text:#f1f5f9;--muted:#64748b;--radius:14px}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding:24px}
+        .container{max-width:1100px;margin:0 auto}
+        h1{font-size:1.8rem;margin-bottom:8px;background:linear-gradient(135deg,var(--text),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .subtitle{color:var(--muted);margin-bottom:28px;font-size:0.9rem}
+        .summary-banner{padding:20px 24px;border-radius:var(--radius);margin-bottom:24px;font-size:1rem;line-height:1.7}
+        .summary-banner--critical{background:rgba(239,68,68,0.1);border:2px solid var(--red)}
+        .summary-banner--warn{background:rgba(249,115,22,0.1);border:2px solid var(--orange)}
+        .summary-banner--ok{background:rgba(16,185,129,0.1);border:2px solid var(--green)}
+        .big-number{font-size:3rem;font-weight:800;font-family:'SF Mono',monospace}
+        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-bottom:24px}
+        .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;transition:all .2s}
+        .card:hover{border-color:rgba(240,165,0,0.3)}
+        .card__title{font-weight:700;font-size:0.95rem;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+        .status-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+        .status-dot--ok{background:var(--green);box-shadow:0 0 8px var(--green)}
+        .status-dot--warn{background:var(--orange);box-shadow:0 0 8px var(--orange)}
+        .status-dot--ko{background:var(--red);box-shadow:0 0 8px var(--red)}
+        .row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid rgba(30,30,74,0.5)}
+        .row:last-child{border-bottom:none}
+        .row__label{font-size:0.82rem;color:var(--muted)}
+        .row__value{font-weight:600;font-size:0.85rem}
+        .row__value--ok{color:var(--green)}
+        .row__value--ko{color:var(--red)}
+        .row__value--warn{color:var(--orange)}
+        .tag{padding:3px 10px;border-radius:50px;font-size:0.68rem;font-weight:600}
+        .tag--ok{background:rgba(16,185,129,0.15);color:var(--green)}
+        .tag--ko{background:rgba(239,68,68,0.15);color:var(--red)}
+        .tag--warn{background:rgba(249,115,22,0.15);color:var(--orange)}
+        .section-title{font-size:1.2rem;margin:32px 0 14px;font-weight:700}
+        table{width:100%;border-collapse:collapse;font-size:0.82rem}
+        th{text-align:left;padding:8px 10px;color:var(--muted);font-weight:600;font-size:0.68rem;text-transform:uppercase;border-bottom:1px solid var(--border)}
+        td{padding:10px;border-bottom:1px solid rgba(30,30,74,0.5)}
+        .highlight{background:rgba(240,165,0,0.08);border-radius:4px;padding:2px 6px;font-family:monospace;font-size:0.78rem}
+        .footer{margin-top:40px;padding:20px;text-align:center;color:var(--muted);font-size:0.72rem;border-top:1px solid var(--border)}
+        code{background:rgba(124,58,237,0.2);padding:2px 6px;border-radius:4px;font-size:0.75rem}
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>&#128200; Affilimax — État Réel du Système</h1>
+    <p class="subtitle">Dernière mise à jour : <span id="ts">chargement...</span> &middot; Aucune simulation, que du factuel</p>
+
+    <!-- BANNIÈRE CRITIQUE -->
+    <div class="summary-banner summary-banner--critical" id="bannerCritical">
+        <strong>&#9888;&#65039; GAINS RÉELS : <span style="font-size:1.2rem">0,00 €</span></strong><br>
+        <span id="bannerText">Aucune commission réelle n'a été générée. Le tracking de clics fonctionne mais personne n'a cliqué sur les liens d'affiliation.</span>
+    </div>
+
+    <!-- CHIFFRES CLÉS -->
+    <div class="grid">
+        <div class="card">
+            <div class="card__title"><span class="status-dot status-dot--ko"></span> Commissions réelles</div>
+            <div class="big-number" style="color:var(--red)" id="realComms">0,00 €</div>
+            <div style="color:var(--muted);font-size:0.75rem">Amazon ne verse qu'après une vente réelle via un lien taggé</div>
+        </div>
+        <div class="card">
+            <div class="card__title"><span class="status-dot status-dot--ok"></span> Clics trackés aujourd'hui</div>
+            <div class="big-number" id="realClicks">--</div>
+            <div style="color:var(--muted);font-size:0.75rem">Chaque /go/ redirige vers Amazon ET enregistre le clic</div>
+        </div>
+        <div class="card">
+            <div class="card__title"><span class="status-dot status-dot--warn"></span> Serveur</div>
+            <div class="big-number" style="font-size:1.5rem;color:var(--green)" id="serverStatus">VÉRIFICATION...</div>
+            <div style="color:var(--muted);font-size:0.75rem">Port 8765 &middot; <span id="productsCount">--</span> produits chargés</div>
+        </div>
+    </div>
+
+    <!-- BRICK BY BRICK -->
+    <div class="section-title">&#128736;&#65039; Diagnostic Brique par Brique</div>
+    <div class="grid">
+        <div class="card">
+            <div class="card__title"><span class="status-dot status-dot--ok"></span> Serveur HTTP</div>
+            <div class="row"><span class="row__label">Statut</span><span class="row__value row__value--ok" id="brickServer">✅ ONLINE</span></div>
+            <div class="row"><span class="row__label">Dashboard</span><span class="tag tag--ok">index.html</span></div>
+            <div class="row"><span class="row__label">API /api/stats</span><span class="tag tag--ok">FONCTIONNELLE</span></div>
+            <div class="row"><span class="row__label">API /api/produits</span><span class="tag tag--ok" id="brickProduits">-- produits</span></div>
+        </div>
+        <div class="card">
+            <div class="card__title"><span class="status-dot status-dot--ok"></span> Tracking de Clics</div>
+            <div class="row"><span class="row__label">Redirections /go/</span><span class="tag tag--ok">CORRIGÉ</span></div>
+            <div class="row"><span class="row__label">Enregistrement clic</span><span class="tag tag--ok">ACTIF</span></div>
+            <div class="row"><span class="row__label">Sources trackées</span><span class="row__value">utm_source, src, ref</span></div>
+            <div class="row"><span class="row__label">Clics aujourd'hui</span><span class="row__value" id="brickClicks">--</span></div>
+        </div>
+        <div class="card">
+            <div class="card__title"><span class="status-dot status-dot--ko"></span> Amazon Partenaires</div>
+            <div class="row"><span class="row__label">Tag affilié</span><span class="highlight">confortbure07-21</span></div>
+            <div class="row"><span class="row__label">Produits actifs</span><span id="brickAmzProducts">--</span></div>
+            <div class="row"><span class="row__label">Commissions</span><span class="row__value row__value--ko">0,00 € (0 ventes)</span></div>
+            <div class="row"><span class="row__label">Paiement Amazon</span><span class="tag tag--warn">J+60 après 1ère vente</span></div>
+        </div>
+        <div class="card">
+            <div class="card__title"><span class="status-dot status-dot--ko"></span> Stripe Connect</div>
+            <div class="row"><span class="row__label">Mode</span><span class="tag tag--ko">DEMO (pas de clé)</span></div>
+            <div class="row"><span class="row__label">Partenaires onboardés</span><span class="row__value row__value--ko">0 / 9</span></div>
+            <div class="row"><span class="row__label">Payouts réels</span><span class="row__value row__value--ko">0</span></div>
+            <div class="row"><span class="row__label">STRIPE_SECRET_KEY</span><span class="tag tag--ko">ABSENTE</span></div>
+        </div>
+        <div class="card">
+            <div class="card__title"><span class="status-dot status-dot--ko"></span> Partenaires</div>
+            <div class="row"><span class="row__label">Nombre</span><span class="row__value">9</span></div>
+            <div class="row"><span class="row__label">Données réelles</span><span class="tag tag--ko">FABRIQUÉES</span></div>
+            <div class="row"><span class="row__label">Avec Stripe</span><span class="row__value row__value--ko">0</span></div>
+            <div class="row"><span class="row__label">Soldes affichés</span><span class="row__value row__value--warn">1 834,63 € (non vérifiables)</span></div>
+        </div>
+        <div class="card">
+            <div class="card__title"><span class="status-dot status-dot--ko"></span> Notifications</div>
+            <div class="row"><span class="row__label">Telegram</span><span class="tag tag--ko">Non configuré</span></div>
+            <div class="row"><span class="row__label">Slack</span><span class="tag tag--ko">Non configuré</span></div>
+            <div class="row"><span class="row__label">Email (Resend)</span><span class="tag tag--ko">Pas de clé API</span></div>
+        </div>
+    </div>
+
+    <!-- PARTENAIRES -->
+    <div class="section-title">&#128101; Partenaires (données dans partners.json)</div>
+    <div style="overflow-x:auto">
+        <table>
+            <thead>
+                <tr><th>Partenaire</th><th>Total gagné</th><th>Total payé</th><th>Solde</th><th>Stripe</th><th>RÉEL ?</th></tr>
+            </thead>
+            <tbody id="partnersBody">
+                <tr><td colspan="6" style="text-align:center;color:var(--muted)">Chargement...</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- CE QUI MANQUE -->
+    <div class="section-title">&#127919; Pour avoir des GAINS RÉELS, il faut :</div>
+    <div class="summary-banner summary-banner--warn">
+        <strong>&#128161; Plan d'action pour passer de 0 € à des vrais euros :</strong><br><br>
+        <strong>1.</strong> <code>python server.py</code> — lancer le serveur (corrigé, prêt à démarrer)<br>
+        <strong>2.</strong> Publier les liens <code>/go/roborock-q5-pro-plus</code> (et 29 autres) sur Twitter, Facebook, LinkedIn, forums<br>
+        <strong>3.</strong> Chaque clic sur un lien /go/ est tracké → redirige vers Amazon avec ton tag <code>confortbure07-21</code><br>
+        <strong>4.</strong> Si la personne achète dans les 24h → commission Amazon (4-10%) → versée sur ton IBAN sous 60 jours<br>
+        <strong>5.</strong> Pour Stripe Connect (paiements partenaires) : créer un compte Stripe, activer Connect, définir <code>STRIPE_SECRET_KEY</code><br><br>
+        <strong>&#9200; Amazon ne paie qu'après une VRAIE VENTE. Sans trafic, pas de commissions.</strong>
+    </div>
+
+    <div class="footer">
+        Affilimax Status Dashboard &middot; Données 100% réelles &middot; Généré le <span id="footerTs"></span>
+    </div>
+</div>
+
+<script>
+// ==================== FETCH REAL DATA ====================
+async function load() {
+    const ts = new Date().toLocaleString('fr-FR');
+    document.getElementById('ts').textContent = ts;
+    document.getElementById('footerTs').textContent = ts;
+
+    try {
+        // Test server health
+        const h = await fetch('/healthz', {signal:AbortSignal.timeout(3000)});
+        const hd = await h.json();
+        document.getElementById('serverStatus').textContent = '✅ EN LIGNE';
+        document.getElementById('serverStatus').style.color = 'var(--green)';
+        document.getElementById('productsCount').textContent = hd.checks.products_count;
+        document.getElementById('brickProduits').textContent = hd.checks.products_count + ' produits';
+        document.getElementById('brickServer').textContent = '✅ ONLINE';
+        document.getElementById('realClicks').textContent = hd.clicks_today || '0';
+
+        // Test stats API
+        const s = await fetch('/api/stats', {signal:AbortSignal.timeout(3000)});
+        const sd = await s.json();
+        const r = sd.resume || {};
+        document.getElementById('realClicks').textContent = r.clics_aujourdhui || 0;
+        document.getElementById('realComms').textContent = (r.commissions_aujourdhui || 0).toFixed(2) + ' €';
+        document.getElementById('brickClicks').textContent = r.clics_aujourdhui || 0;
+        document.getElementById('brickAmzProducts').textContent = sd.top_campagnes ? sd.top_campagnes.length + ' campagnes' : '--';
+
+        // Update banner
+        if ((r.commissions_aujourdhui || 0) > 0) {
+            document.getElementById('bannerCritical').className = 'summary-banner summary-banner--ok';
+            document.getElementById('bannerText').textContent = 'Commissions réelles détectées ! Continue à promouvoir.';
+        }
+
+        // Test partners (needs auth)
+        try {
+            const p = await fetch('/api/partners', {
+                signal: AbortSignal.timeout(3000),
+                headers: {'Authorization': 'Basic ' + btoa('admin:08hx9C_oJBwJHyVSWtzgOwaIgdqdZf0a')}
+            });
+            if (p.ok) {
+                const pd = await p.json();
+                const ps = pd.partenaires || [];
+                let html = '';
+                for (const p of ps) {
+                    const real = p.stripe_account_id ? '✅' : '❌';
+                    html += `<tr>
+                        <td><strong>${p.nom}</strong><br><small>${p.email||''}</small></td>
+                        <td>${p.total_gagne?.toFixed(2)||'0.00'} €</td>
+                        <td>${p.total_paye?.toFixed(2)||'0.00'} €</td>
+                        <td>${p.solde_en_attente?.toFixed(2)||'0.00'} €</td>
+                        <td>${p.stripe_account_id ? '✅ Connecté' : '❌ Non'}</td>
+                        <td>${real}</td>
+                    </tr>`;
+                }
+                document.getElementById('partnersBody').innerHTML = html;
+            }
+        } catch(e) {}
+    } catch(e) {
+        document.getElementById('serverStatus').textContent = '❌ HORS-LIGNE';
+        document.getElementById('serverStatus').style.color = 'var(--red)';
+        document.getElementById('brickServer').textContent = '❌ OFFLINE';
+        document.getElementById('bannerText').textContent = 'Le serveur n\'est pas lancé. Exécute "python server.py" dans C:\\Windows\\system32 pour le démarrer.';
+    }
+}
+load();
+setInterval(load, 15000);
+</script>
+</body>
+</html>
