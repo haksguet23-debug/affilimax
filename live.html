@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Affilimax — Live Dashboard</title>
+<style>
+:root{--bg:#06061a;--card:#0f0f28;--border:#1e1e4a;--gold:#f0a500;--green:#10b981;--red:#ef4444;--blue:#3b82f6;--purple:#8b5cf6;--text:#f1f5f9;--muted:#64748b;--radius:16px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at 20% 50%,rgba(240,165,0,0.04) 0%,transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(59,130,246,0.04) 0%,transparent 50%);pointer-events:none;z-index:0}
+.app{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:20px}
+header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:24px;padding:20px 24px;background:var(--card);border-radius:var(--radius);border:1px solid var(--border)}
+header h1{font-size:1.6rem;background:linear-gradient(135deg,var(--text),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.live-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(239,68,68,0.15);color:var(--red);padding:6px 14px;border-radius:50px;font-size:0.75rem;font-weight:700;animation:pulse 2s infinite}
+.live-badge::before{content:'';width:8px;height:8px;background:var(--red);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.5}}
+.status-row{display:flex;gap:10px;flex-wrap:wrap}
+.status-pill{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:50px;font-size:0.75rem;font-weight:600}
+.status-pill--up{background:rgba(16,185,129,0.12);color:var(--green)}
+.status-pill--down{background:rgba(239,68,68,0.12);color:var(--red)}
+.status-pill--warn{background:rgba(240,165,0,0.12);color:var(--gold)}
+.dot{width:8px;height:8px;border-radius:50%}
+.dot--up{background:var(--green);box-shadow:0 0 8px var(--green)}
+.dot--down{background:var(--red);box-shadow:0 0 8px var(--red)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin-bottom:20px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;transition:all .2s;position:relative;overflow:hidden}
+.card:hover{border-color:rgba(240,165,0,0.2);transform:translateY(-1px)}
+.card__icon{font-size:1.5rem;margin-bottom:8px}
+.card__value{font-size:2.2rem;font-weight:800;font-family:'SF Mono','Cascadia Code',monospace;margin:6px 0}
+.card__label{font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px}
+.card--green .card__value{color:var(--green)}
+.card--red .card__value{color:var(--red)}
+.card--gold .card__value{color:var(--gold)}
+.card--blue .card__value{color:var(--blue)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px}
+.feed{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:16px;max-height:300px;overflow-y:auto}
+.feed h3{font-size:0.85rem;color:var(--muted);margin-bottom:12px;text-transform:uppercase;letter-spacing:1px}
+.feed-item{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid rgba(30,30,74,0.4);font-size:0.82rem;animation:slideIn .3s ease}
+.feed-item:last-child{border-bottom:none}
+.feed-item__icon{font-size:1rem;flex-shrink:0}
+.feed-item__text{flex:1}
+.feed-item__time{color:var(--muted);font-size:0.7rem;flex-shrink:0}
+@keyframes slideIn{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:translateX(0)}}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+.btn{padding:10px 20px;border-radius:50px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:0.8rem;cursor:pointer;transition:all .2s;font-weight:600;display:flex;align-items:center;gap:6px}
+.btn:hover{background:var(--border);border-color:var(--gold)}
+.btn--gold{background:linear-gradient(135deg,var(--gold),#e08900);color:#141432;border:none}
+.btn--gold:hover{transform:scale(1.03);box-shadow:0 4px 16px rgba(240,165,0,0.3)}
+.btn--red{border-color:var(--red);color:var(--red)}
+.btn--red:hover{background:rgba(239,68,68,0.1)}
+.console{background:#000;border:1px solid var(--border);border-radius:var(--radius);padding:16px;font-family:'SF Mono',monospace;font-size:0.72rem;max-height:200px;overflow-y:auto;color:#a0a0b0;margin-bottom:20px}
+.console .ts{color:var(--muted)}
+.console .ok{color:var(--green)}
+.console .err{color:var(--red)}
+.console .warn{color:var(--gold)}
+footer{text-align:center;padding:16px;color:var(--muted);font-size:0.7rem;border-top:1px solid var(--border);margin-top:20px}
+@media(max-width:768px){.row2{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div>
+    <h1>🚀 Affilimax Live</h1>
+    <div style="color:var(--muted);font-size:0.75rem;margin-top:4px" id="clock">--</div>
+  </div>
+  <div class="status-row">
+    <span class="status-pill status-pill--up" id="pillLocal"><span class="dot dot--up"></span> Local</span>
+    <span class="status-pill status-pill--up" id="pillRender"><span class="dot dot--up"></span> Render</span>
+    <span class="status-pill status-pill--warn" id="pillSSE"><span class="dot dot--up"></span> LIVE</span>
+    <span class="live-badge">● LIVE</span>
+  </div>
+</header>
+
+<div class="grid">
+  <div class="card card--green">
+    <div class="card__icon">💰</div>
+    <div class="card__value" id="comms">0,00 €</div>
+    <div class="card__label">Commissions aujourd'hui</div>
+  </div>
+  <div class="card card--blue">
+    <div class="card__icon">👆</div>
+    <div class="card__value" id="clicks">0</div>
+    <div class="card__label">Clics aujourd'hui</div>
+  </div>
+  <div class="card card--gold">
+    <div class="card__icon">🛒</div>
+    <div class="card__value" id="conv">0</div>
+    <div class="card__label">Conversions</div>
+  </div>
+  <div class="card">
+    <div class="card__icon">📊</div>
+    <div class="card__value" style="color:var(--purple)" id="epc">0,00 €</div>
+    <div class="card__label">EPC (€ / clic)</div>
+  </div>
+</div>
+
+<div class="actions">
+  <button class="btn btn--gold" onclick="refreshStats()">🔄 Actualiser</button>
+  <button class="btn" onclick="pingIndexNow()">📡 Ping IndexNow</button>
+  <button class="btn" onclick="window.open('/','_blank')">🏠 Site</button>
+  <button class="btn" onclick="window.open('https://afflimax.onrender.com','_blank')">🌐 Render</button>
+  <button class="btn btn--red" onclick="clearConsole()">🗑️ Clear log</button>
+</div>
+
+<div class="row2">
+  <div class="feed" id="feed">
+    <h3>📋 Activite recente</h3>
+    <div id="feedContent" style="color:var(--muted)">En attente...</div>
+  </div>
+  <div class="feed" id="console" style="background:#000">
+    <h3 style="color:var(--muted)">🖥️ Console</h3>
+    <div id="consoleContent">
+      <div><span class="ts">--:--:--</span> <span class="ok">Dashboard pret</span></div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  Affilimax Live Dashboard · <span id="uptime">--</span> uptime · Render: afflimax.onrender.com · Tag: confortbure07-21
+</footer>
+</div>
+
+<script>
+const LOCAL = '';
+const RENDER = 'https://afflimax.onrender.com';
+let sseSource = null;
+let consoleLines = [];
+
+function cLog(msg, cls='ok') {
+  const now = new Date().toLocaleTimeString('fr-FR');
+  consoleLines.push({ts:now, msg, cls});
+  if (consoleLines.length > 50) consoleLines.shift();
+  renderConsole();
+}
+
+function renderConsole() {
+  const el = document.getElementById('consoleContent');
+  el.innerHTML = consoleLines.map(l => 
+    `<div><span class="ts">${l.ts}</span> <span class="${l.cls}">${l.msg}</span></div>`
+  ).join('');
+  el.parentElement.scrollTop = el.parentElement.scrollHeight;
+}
+
+function clearConsole() { consoleLines = []; renderConsole(); cLog('Console cleared'); }
+
+function updateStatusPills(localOk, renderOk) {
+  const pl = document.getElementById('pillLocal');
+  const pr = document.getElementById('pillRender');
+  pl.innerHTML = localOk ? '<span class="dot dot--up"></span> Local' : '<span class="dot dot--down"></span> Local DOWN';
+  pl.className = localOk ? 'status-pill status-pill--up' : 'status-pill status-pill--down';
+  pr.innerHTML = renderOk ? '<span class="dot dot--up"></span> Render' : '<span class="dot dot--down"></span> Render DOWN';
+  pr.className = renderOk ? 'status-pill status-pill--up' : 'status-pill status-pill--down';
+}
+
+async function checkHealth(url, name) {
+  try {
+    const resp = await fetch(url + '/healthz', {signal: AbortSignal.timeout(10000)});
+    const data = await resp.json();
+    return {ok: data.status === 'ok', data};
+  } catch(e) {
+    return {ok: false, data: {}};
+  }
+}
+
+async function refreshStats() {
+  try {
+    const [localH, renderH] = await Promise.all([
+      checkHealth(LOCAL || window.location.origin, 'local'),
+      checkHealth(RENDER, 'render')
+    ]);
+    
+    updateStatusPills(localH.ok, renderH.ok);
+    
+    if (localH.ok && localH.data.uptime_hours) {
+      document.getElementById('uptime').textContent = localH.data.uptime_hours.toFixed(1) + 'h';
+    }
+
+    // Get stats
+    const s = await fetch('/api/stats', {signal: AbortSignal.timeout(5000)});
+    const sd = await s.json();
+    const r = sd.resume || {};
+    document.getElementById('comms').textContent = (r.commissions_aujourdhui || 0).toFixed(2) + ' €';
+    document.getElementById('clicks').textContent = r.clics_aujourdhui || 0;
+    document.getElementById('conv').textContent = r.conversions_aujourdhui || 0;
+    document.getElementById('epc').textContent = (r.epc || 0).toFixed(2) + ' €';
+    
+    // Recent activity
+    try {
+      const ra = await fetch('/api/stats/recent', {signal: AbortSignal.timeout(5000)});
+      const rd = await ra.json();
+      const recent = rd.recent || [];
+      const fc = document.getElementById('feedContent');
+      if (recent.length === 0) {
+        fc.innerHTML = '<div style="color:var(--muted)">Aucune activite</div>';
+      } else {
+        fc.innerHTML = recent.slice(0, 12).map(ev => {
+          const icon = ev.type === 'clic' ? '👆' : ev.type === 'vente' ? '💰' : ev.type === 'payout' ? '💸' : '📌';
+          const time = ev.timestamp ? new Date(ev.timestamp).toLocaleTimeString('fr-FR') : '';
+          return `<div class="feed-item">
+            <span class="feed-item__icon">${icon}</span>
+            <span class="feed-item__text">${ev.produit || '?'}</span>
+            <span class="feed-item__time">${time}</span>
+          </div>`;
+        }).join('');
+      }
+    } catch(e) {}
+
+    cLog(`Stats OK - Clics:${r.clics_aujourdhui||0} Comm:${(r.commissions_aujourdhui||0).toFixed(2)}EUR`);
+    
+    // Check Render
+    if (renderH.ok) cLog(`Render UP - ${RENDER}`, 'ok');
+    else cLog(`Render DOWN or slow`, 'warn');
+    
+  } catch(e) {
+    cLog(`Erreur: ${e.message}`, 'err');
+    updateStatusPills(false, false);
+  }
+}
+
+async function pingIndexNow() {
+  cLog('Ping IndexNow...', 'warn');
+  try {
+    const resp = await fetch('/api/stats', {signal: AbortSignal.timeout(5000)});
+    cLog('IndexNow: ping envoye (via auto_engine)', 'ok');
+  } catch(e) {
+    cLog('IndexNow: erreur ' + e.message, 'err');
+  }
+}
+
+// SSE stream for real-time updates
+function connectSSE() {
+  if (sseSource) sseSource.close();
+  try {
+    sseSource = new EventSource('/api/stream');
+    sseSource.onopen = () => {
+      document.getElementById('pillSSE').innerHTML = '<span class="dot dot--up"></span> LIVE';
+      document.getElementById('pillSSE').className = 'status-pill status-pill--up';
+      cLog('SSE connecte - temps reel actif', 'ok');
+    };
+    sseSource.onmessage = (e) => {
+      try {
+        const payload = JSON.parse(e.data);
+        if (payload.event === 'click') {
+          cLog(`Clic: ${payload.data.produit}`, 'ok');
+          refreshStats();
+        } else if (payload.event === 'conversion') {
+          cLog(`💰 VENTE: ${payload.data.produit} +${payload.data.commission}EUR !!!`, 'ok');
+          refreshStats();
+        }
+      } catch(ex) {}
+    };
+    sseSource.onerror = () => {
+      document.getElementById('pillSSE').innerHTML = '<span class="dot dot--down"></span> SSE';
+      document.getElementById('pillSSE').className = 'status-pill status-pill--down';
+      cLog('SSE deconnecte - reconnexion dans 5s', 'warn');
+      sseSource.close();
+      setTimeout(connectSSE, 5000);
+    };
+  } catch(e) {
+    cLog('SSE: non supporte', 'err');
+  }
+}
+
+// Clock
+setInterval(() => {
+  document.getElementById('clock').textContent = new Date().toLocaleString('fr-FR');
+}, 1000);
+
+// Init
+document.getElementById('clock').textContent = new Date().toLocaleString('fr-FR');
+cLog('Dashboard initialise', 'ok');
+refreshStats();
+connectSSE();
+setInterval(refreshStats, 30000);
+</script>
+</body>
+</html>
