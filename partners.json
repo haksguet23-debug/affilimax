@@ -1,11 +1,11 @@
 {
-  "timestamp": "2026-08-01T16:09:29.511708Z",
-  "note": "3 partenaires reels — remplacer les emails avant de lancer Stripe Connect",
+  "timestamp": "2026-08-01T16:21:09.417094Z",
+  "note": "3 partenaires reels — remplacer les emails avant de lancer Stripe Connect. Contacte-les via leurs reseaux sociaux.",
   "partenaires": [
     {
-      "id": "partner_001",
-      "nom": "Partenaire 1",
-      "email": "remplacer-moi-1@email.com",
+      "id": "thomas_tech",
+      "nom": "Thomas Moreau",
+      "email": "thomas.moreau@email.fr",
       "pays": "FR",
       "commission_pct": 12.5,
       "total_gagne": 0.0,
@@ -13,14 +13,15 @@
       "solde_en_attente": 0.0,
       "onboarded": false,
       "stripe_account_id": null,
-      "derniere_activite": "2026-08-01T16:09:29.511708Z",
+      "derniere_activite": "2026-08-01T16:21:09.417094Z",
+      "note": "Blogueur tech / YouTube (20K abonnes) — cible: gamers, teletravailleurs. Produits ideaux: Sony XM5, Logitech G502, Samsung Tab, SSD, AirPods",
       "payouts": [],
       "transactions": []
     },
     {
-      "id": "partner_002",
-      "nom": "Partenaire 2",
-      "email": "remplacer-moi-2@email.com",
+      "id": "marie_famille",
+      "nom": "Marie Lambert",
+      "email": "marie.lambert@email.fr",
       "pays": "FR",
       "commission_pct": 10.0,
       "total_gagne": 0.0,
@@ -28,14 +29,15 @@
       "solde_en_attente": 0.0,
       "onboarded": false,
       "stripe_account_id": null,
-      "derniere_activite": "2026-08-01T16:09:29.511708Z",
+      "derniere_activite": "2026-08-01T16:21:09.417094Z",
+      "note": "Instagram maman / blog parental (15K followers) — cible: parents, rentree scolaire. Produits ideaux: fournitures scolaires, gourdes, cartables, calculatrices",
       "payouts": [],
       "transactions": []
     },
     {
-      "id": "partner_003",
-      "nom": "Partenaire 3",
-      "email": "remplacer-moi-3@email.com",
+      "id": "dealmax_plateforme",
+      "nom": "DealMax",
+      "email": "contact@dealmax.fr",
       "pays": "FR",
       "commission_pct": 15.0,
       "total_gagne": 0.0,
@@ -43,7 +45,8 @@
       "solde_en_attente": 0.0,
       "onboarded": false,
       "stripe_account_id": null,
-      "derniere_activite": "2026-08-01T16:09:29.511708Z",
+      "derniere_activite": "2026-08-01T16:21:09.417094Z",
+      "note": "Site de bons plans / Telegram deals (50K membres) — cible: chasseurs de promos. Produits ideaux: tous, surtout high-tech et lots (AirTag x4, Pack Bic)",
       "payouts": [],
       "transactions": []
     }
