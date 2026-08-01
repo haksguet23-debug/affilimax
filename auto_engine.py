@@ -148,7 +148,8 @@ def rotate_log():
     except:
         pass
 
-def run():        rotate_log()
+def run():
+    rotate_log()
     log("=" * 50, "START")
     log("AFFILIMAX AUTO-ENGINE v3.1 - Demarrage", "START")
     log(f"Local: {LOCAL} | Render: {RENDER_URL}", "START")
