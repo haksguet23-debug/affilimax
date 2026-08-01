@@ -29,16 +29,22 @@ def log(msg, level="INFO"):
     except:
         pass
 
-def http_get(url, timeout=8):
+def http_get_local(url, timeout=8):
+    """HTTP GET sans verification SSL (localhost uniquement)."""
     ctx = ssl.create_default_context()
     ctx.check_hostname = False
     ctx.verify_mode = ssl.CERT_NONE
     req = urllib.request.Request(url, method="GET")
     return urllib.request.urlopen(req, timeout=timeout, context=ctx)
 
+def http_get_public(url, timeout=15):
+    """HTTP GET avec verification SSL (URLs publiques comme Render)."""
+    req = urllib.request.Request(url, method="GET")
+    return urllib.request.urlopen(req, timeout=timeout)
+
 def check_local():
     try:
-        resp = http_get(f"{LOCAL}/healthz", timeout=5)
+        resp = http_get_local(f"{LOCAL}/healthz", timeout=5)
         data = json.loads(resp.read())
         return data.get("status") == "ok", data
     except:
@@ -46,7 +52,7 @@ def check_local():
 
 def check_render():
     try:
-        resp = http_get(f"{RENDER_URL}/healthz", timeout=15)
+        resp = http_get_public(f"{RENDER_URL}/healthz", timeout=20)
         data = json.loads(resp.read())
         return data.get("status") == "ok", data
     except:
@@ -54,7 +60,7 @@ def check_render():
 
 def get_stats():
     try:
-        resp = http_get(f"{LOCAL}/api/stats", timeout=5)
+        resp = http_get_local(f"{LOCAL}/api/stats", timeout=5)
         return json.loads(resp.read())
     except:
         return {"resume": {"clics_aujourdhui": 0, "commissions_aujourdhui": 0.0}}
@@ -65,9 +71,10 @@ def restart_server():
         subprocess.Popen(
             [sys.executable, str(BASE / "server.py")],
             cwd=str(BASE),
-            creationflags=0x08000000 if os.name == "nt" else 0,
+            stdin=subprocess.DEVNULL,
             stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL
+            stderr=subprocess.DEVNULL,
+            creationflags=0x08000000 if os.name == "nt" else 0
         )
         time.sleep(4)
         ok, _ = check_local()
@@ -112,9 +119,38 @@ def ping_indexnow():
         log(f"IndexNow: {e}", "ERROR")
         return False
 
-def run():
+def refresh_seo():
+    """Genere un article SEO frais via gain_engine (si disponible)."""
+    try:
+        result = subprocess.run(
+            [sys.executable, str(BASE / "gain_engine.py"), "--seo"],
+            cwd=str(BASE),
+            capture_output=True, text=True, timeout=120,
+            stdin=subprocess.DEVNULL
+        )
+        if result.returncode == 0:
+            log("SEO: Contenu regenere avec succes")
+            return True
+        else:
+            log(f"SEO: Echec (exit {result.returncode})", "WARN")
+    except Exception as e:
+        log(f"SEO: Erreur - {e}", "WARN")
+    return False
+
+def rotate_log():
+    """Rotation du log si > 500KB."""
+    try:
+        if LOG_FILE.exists() and LOG_FILE.stat().st_size > 500_000:
+            bak = LOG_FILE.with_suffix(".log.bak")
+            bak.write_text(LOG_FILE.read_text(encoding="utf-8", errors="replace")[-10000:], encoding="utf-8")
+            LOG_FILE.write_text("", encoding="utf-8")
+            log("Log rotate effectue", "INFO")
+    except:
+        pass
+
+def run():        rotate_log()
     log("=" * 50, "START")
-    log("AFFILIMAX AUTO-ENGINE v3.0 - Demarrage", "START")
+    log("AFFILIMAX AUTO-ENGINE v3.1 - Demarrage", "START")
     log(f"Local: {LOCAL} | Render: {RENDER_URL}", "START")
 
     cycle = 0
@@ -163,6 +199,14 @@ def run():
         if now - last_indexnow > 3600 and render_ok:
             ping_indexnow()
             last_indexnow = now
+
+        # 8. SEO refresh every 12h
+        if cycle % 144 == 0 and render_ok:  # 144 cycles * 5min = 12h
+            refresh_seo()
+
+        # 9. Log rotation every 100 cycles
+        if cycle % 100 == 0:
+            rotate_log()
 
         # Sleep 5 minutes
         time.sleep(300)

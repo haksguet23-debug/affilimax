@@ -98,7 +98,7 @@ footer{text-align:center;padding:16px;color:var(--muted);font-size:0.7rem;border
 
 <div class="actions">
   <button class="btn btn--gold" onclick="refreshStats()">🔄 Actualiser</button>
-  <button class="btn" onclick="pingIndexNow()">📡 Ping IndexNow</button>
+  <button class="btn" onclick="forceIndexNow()">📡 Forcer IndexNow</button>
   <button class="btn" onclick="window.open('/','_blank')">🏠 Site</button>
   <button class="btn" onclick="window.open('https://afflimax.onrender.com','_blank')">🌐 Render</button>
   <button class="btn btn--red" onclick="clearConsole()">🗑️ Clear log</button>
@@ -219,13 +219,30 @@ async function refreshStats() {
   }
 }
 
-async function pingIndexNow() {
-  cLog('Ping IndexNow...', 'warn');
+async function forceIndexNow() {
+  cLog('Envoi IndexNow...', 'warn');
   try {
-    const resp = await fetch('/api/stats', {signal: AbortSignal.timeout(5000)});
-    cLog('IndexNow: ping envoye (via auto_engine)', 'ok');
+    // Appel reel a IndexNow via le serveur (ping SEO)
+    const key = 'affilimax2026indexnowkey001';
+    const host = 'afflimax.onrender.com';
+    const urls = [
+      'https://afflimax.onrender.com/',
+      'https://afflimax.onrender.com/sitemap.xml'
+    ];
+    const payload = {host, key, keyLocation: `https://afflimax.onrender.com/affilimax_blog/${key}.txt`, urlList: urls};
+    const resp = await fetch('https://api.indexnow.org/indexnow', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(payload),
+      signal: AbortSignal.timeout(10000)
+    });
+    if (resp.ok) {
+      cLog(`IndexNow: HTTP ${resp.status} - URLs soumises a Bing/Yandex`, 'ok');
+    } else {
+      cLog(`IndexNow: HTTP ${resp.status}`, 'warn');
+    }
   } catch(e) {
-    cLog('IndexNow: erreur ' + e.message, 'err');
+    cLog('IndexNow: ' + e.message, 'err');
   }
 }
 
@@ -273,6 +290,7 @@ document.getElementById('clock').textContent = new Date().toLocaleString('fr-FR'
 cLog('Dashboard initialise', 'ok');
 refreshStats();
 connectSSE();
+// Fallback polling every 30s (SSE gère le temps reel, ceci est un filet de securite)
 setInterval(refreshStats, 30000);
 </script>
 </body>
