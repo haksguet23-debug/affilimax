@@ -771,7 +771,7 @@
       "prix": 3.49,
       "commission_pct": 5,
       "commission_euro": 0.17,
-      "lien": "https://www.amazon.fr/dp/B000J0CESW?tag=confortbure07-21",
+      "lien": "https://www.amazon.fr/dp/B08T9N6YNR?tag=confortbure07-21",
       "description": "Pack de 12 crayons HB en bois de cedre. Mine resistante, faciles a tailler. Le crayon standard pour l'ecole et le bureau.",
       "categorie": "Scolaire",
       "image_url": "https://placehold.co/600x400/141432/f0a500?text=Crayons+HB",
@@ -1491,7 +1491,7 @@
       "prix": 79.99,
       "commission_pct": 4,
       "commission_euro": 3.20,
-      "lien": "https://www.amazon.fr/dp/B0CN4LQFWQ?tag=confortbure07-21",
+      "lien": "https://www.amazon.fr/dp/B08YZ2KTKM?tag=confortbure07-21",
       "description": "Texas Instruments TI-83 Premium CE Edition Python. Ecran couleur, mode examen. La calculatrice graphique obligatoire au lycee.",
       "categorie": "Scolaire",
       "image_url": "https://placehold.co/600x400/141432/f0a500?text=TI-83+Premium",
@@ -1709,5 +1709,5 @@
       "avis_total": 3400
     }
   ],
-  "note": "100 produits Amazon.fr avec tag confortbure07-21. 30 high-tech + 70 fournitures scolaires. ASINs reels. Prix a jour aout 2026."
+  "note": "~100 produits Amazon.fr avec tag confortbure07-21. 30 high-tech + ~70 fournitures scolaires. ASINs reels. Prix a jour aout 2026."
 }
