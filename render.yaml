@@ -19,6 +19,6 @@ services:
       - key: ADMIN_PASSWORD
         sync: false
       - key: AFFILMAX_REQUIRE_LIVE
-        value: "1"
+        value: "0"
       - key: AFFILMAX_BASE_URL
         sync: false
