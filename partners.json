@@ -1,0 +1,51 @@
+{
+  "timestamp": "2026-08-01T16:09:29.511708Z",
+  "note": "3 partenaires reels — remplacer les emails avant de lancer Stripe Connect",
+  "partenaires": [
+    {
+      "id": "partner_001",
+      "nom": "Partenaire 1",
+      "email": "remplacer-moi-1@email.com",
+      "pays": "FR",
+      "commission_pct": 12.5,
+      "total_gagne": 0.0,
+      "total_paye": 0.0,
+      "solde_en_attente": 0.0,
+      "onboarded": false,
+      "stripe_account_id": null,
+      "derniere_activite": "2026-08-01T16:09:29.511708Z",
+      "payouts": [],
+      "transactions": []
+    },
+    {
+      "id": "partner_002",
+      "nom": "Partenaire 2",
+      "email": "remplacer-moi-2@email.com",
+      "pays": "FR",
+      "commission_pct": 10.0,
+      "total_gagne": 0.0,
+      "total_paye": 0.0,
+      "solde_en_attente": 0.0,
+      "onboarded": false,
+      "stripe_account_id": null,
+      "derniere_activite": "2026-08-01T16:09:29.511708Z",
+      "payouts": [],
+      "transactions": []
+    },
+    {
+      "id": "partner_003",
+      "nom": "Partenaire 3",
+      "email": "remplacer-moi-3@email.com",
+      "pays": "FR",
+      "commission_pct": 15.0,
+      "total_gagne": 0.0,
+      "total_paye": 0.0,
+      "solde_en_attente": 0.0,
+      "onboarded": false,
+      "stripe_account_id": null,
+      "derniere_activite": "2026-08-01T16:09:29.511708Z",
+      "payouts": [],
+      "transactions": []
+    }
+  ]
+}
