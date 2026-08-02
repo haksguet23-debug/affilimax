@@ -135,5 +135,15 @@
 </div>
 <footer>
 <p>Affilimax participe au programme Amazon Partenaires. En achetant via nos liens, vous soutenez notre travail sans payer plus cher.</p><p>© 2026 Affilimax — Guide rentrée primaire et maternelle. Liens affiliés Amazon (tag: confortbure07-21).</p><p style="margin-top:6px"><a href="/" style="color:var(--primary)">← Retour au site</a></p></footer>
+
+<script>
+/* Affilimax: propage le ?src= de l'URL vers tous les liens /go/ (tracking de source) */
+(function(){
+  var s = new URLSearchParams(location.search).get('src');
+  if (s) document.querySelectorAll('a[href*="/go/"]').forEach(function(a){
+    a.href += (a.href.indexOf('?') > -1 ? '&' : '?') + 'src=' + s;
+  });
+})();
+</script>
 </body>
 </html>

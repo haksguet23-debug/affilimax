@@ -90,5 +90,15 @@ footer{text-align:center;padding:40px 20px;color:#606080;font-size:.85em;border-
 <footer>
 <p>Affilimax participe au programme Amazon Partenaires. En achetant via nos liens, vous soutenez notre travail sans payer plus cher.</p><p>Affilimax · Tag : confortbure07-21 | <a href="/" style="color:#10b981;">Accueil</a></p></footer>
 </div>
+
+<script>
+/* Affilimax: propage le ?src= de l'URL vers tous les liens /go/ (tracking de source) */
+(function(){
+  var s = new URLSearchParams(location.search).get('src');
+  if (s) document.querySelectorAll('a[href*="/go/"]').forEach(function(a){
+    a.href += (a.href.indexOf('?') > -1 ? '&' : '?') + 'src=' + s;
+  });
+})();
+</script>
 </body>
 </html>

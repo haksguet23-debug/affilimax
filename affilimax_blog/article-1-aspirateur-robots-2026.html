@@ -397,4 +397,14 @@ footer.site .copy{border-top:1px solid #444;padding-top:20px;margin-top:24px;tex
 <footer>
 <p>Affilimax participe au programme Amazon Partenaires. En achetant via nos liens, vous soutenez notre travail sans payer plus cher.</p>
 </footer>
+
+<script>
+/* Affilimax: propage le ?src= de l'URL vers tous les liens /go/ (tracking de source) */
+(function(){
+  var s = new URLSearchParams(location.search).get('src');
+  if (s) document.querySelectorAll('a[href*="/go/"]').forEach(function(a){
+    a.href += (a.href.indexOf('?') > -1 ? '&' : '?') + 'src=' + s;
+  });
+})();
+</script>
 </body></html>

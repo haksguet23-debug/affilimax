@@ -136,5 +136,15 @@ Samsung Galaxy Tab A9+ 11
 <p>© 2026 Affilimax - <a href="https://affilimax.onrender.com/mentions-legales.html" style="color:var(--muted)">Mentions légales</a></p>
 </footer>
 </div>
+
+<script>
+/* Affilimax: propage le ?src= de l'URL vers tous les liens /go/ (tracking de source) */
+(function(){
+  var s = new URLSearchParams(location.search).get('src');
+  if (s) document.querySelectorAll('a[href*="/go/"]').forEach(function(a){
+    a.href += (a.href.indexOf('?') > -1 ? '&' : '?') + 'src=' + s;
+  });
+})();
+</script>
 </body>
 </html>

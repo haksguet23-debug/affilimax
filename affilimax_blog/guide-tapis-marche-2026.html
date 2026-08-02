@@ -64,5 +64,15 @@
 <footer>
 <p>Affilimax participe au programme Amazon Partenaires. En achetant via nos liens, vous soutenez notre travail sans payer plus cher.</p><p>Liens affiliés Amazon Partenaires. © 2026 Affilimax</p></footer>
 </div>
+
+<script>
+/* Affilimax: propage le ?src= de l'URL vers tous les liens /go/ (tracking de source) */
+(function(){
+  var s = new URLSearchParams(location.search).get('src');
+  if (s) document.querySelectorAll('a[href*="/go/"]').forEach(function(a){
+    a.href += (a.href.indexOf('?') > -1 ? '&' : '?') + 'src=' + s;
+  });
+})();
+</script>
 </body>
 </html>
