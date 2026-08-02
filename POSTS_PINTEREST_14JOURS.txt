@@ -10,6 +10,7 @@ CONSEILS D'UTILISATION:
 - Creer les visuels avec Canva (gratuit) : titre en gros + image produit
 - 5-7 hashtags suffisent sur Pinterest (le reste est pour le SEO interne)
 - TOUJOURS garder ?src=pinterest dans le lien pour suivre les clics dans le dashboard
+- Les epingles 69-70 utilisent ?src=pinterest2 (variante anti-doublon de destination - meme tracking)
 - Regrouper les epingles dans des boards par theme : Rentree 2026, High-Tech, Bureau, Cuisine, Sport, Livres
 
 ======================================================================
