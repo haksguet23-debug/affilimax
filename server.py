@@ -63,7 +63,10 @@ PORT = int(os.environ.get("PORT", 8765))
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATS_FILE = os.path.join(BASE_DIR, "stats.json")
 LIENS_FILE = os.path.join(BASE_DIR, "liens_affiliation.json")
-DATA_LOCK = threading.Lock()
+# RLock (reentrant) : load_data() appelle save_data() alors qu'il detient
+# deja DATA_LOCK pendant le rollover journalier. Avec un Lock simple, cela
+# creerait un deadlock (meme thread qui veut re-acquerir le verrou).
+DATA_LOCK = threading.RLock()
 
 # ==================== SSE BUS (Server-Sent Events - temps-reel) ====================
 # Bus push pour les dashboards connectes via EventSource.
@@ -169,11 +172,21 @@ def init_fresh_data():
             "epc": 0.0,
             "ca_genere": 0.0
         },
+        "date_jour": now.strftime("%Y-%m-%d"),
         "historique_7j": {
             "commissions": [0,0,0,0,0,0,0],
             "clics": [0,0,0,0,0,0,0],
             "conversions": [0,0,0,0,0,0,0]
         },
+        "historique_dates": [
+            (now - timedelta(days=6)).strftime("%d/%m"),
+            (now - timedelta(days=5)).strftime("%d/%m"),
+            (now - timedelta(days=4)).strftime("%d/%m"),
+            (now - timedelta(days=3)).strftime("%d/%m"),
+            (now - timedelta(days=2)).strftime("%d/%m"),
+            (now - timedelta(days=1)).strftime("%d/%m"),
+            now.strftime("%d/%m")
+        ],
         "top_campagnes": [
             {"nom": "Pack Business Pro", "plateforme": "Amazon", "clics": 0, "conversions": 0, "commissions": 0.0, "progression": 0},
             {"nom": "Livre Investir en Bourse", "plateforme": "Amazon", "clics": 0, "conversions": 0, "commissions": 0.0, "progression": 0},
@@ -230,13 +243,94 @@ def init_fresh_data():
     save_data(data)
     return data
 
+def _ensure_hist(data):
+    """Garantit que les structures historique_7j / historique_dates existent
+    avec 7 buckets (migration des vieux stats.json)."""
+    if not isinstance(data.get("historique_7j"), dict):
+        data["historique_7j"] = {"commissions": [0]*7, "clics": [0]*7, "conversions": [0]*7}
+    for k in ("commissions", "clics", "conversions"):
+        arr = data["historique_7j"].get(k)
+        if not isinstance(arr, list) or len(arr) != 7:
+            data["historique_7j"][k] = [0]*7
+    if not isinstance(data.get("historique_dates"), list) or len(data.get("historique_dates", [])) != 7:
+        now = datetime.utcnow()
+        data["historique_dates"] = [
+            (now - timedelta(days=6-i)).strftime("%d/%m") for i in range(7)
+        ]
+
+
+def rollover_journalier(data):
+    """Detecte le changement de jour et fait glisser l'historique 7 jours.
+
+    Structure historique_7j.<k> = [J-6, J-5, J-4, J-3, J-2, J-1, aujourdhui]
+    - Le dernier bucket est incremente en continu pendant la journee.
+    - Au changement de jour : le bucket d'aujourd'hui devient J-1 (archive),
+      le plus ancien (J-6) tombe, et un bucket vide (0) s'ouvre pour le
+      nouveau jour. Les compteurs du jour (resume, sources, horaires) sont
+      remis a zero.
+    - Premiere execution (stats.json sans date_jour, migration) : on initie
+      simplement le bucket du jour avec les compteurs actuels, sans decalage
+      ni reset (pour ne pas perdre les clics d'aujourd'hui).
+    """
+    now = datetime.utcnow()
+    today = now.strftime("%Y-%m-%d")
+    prev = data.get("date_jour")
+    if prev == today:
+        return False
+
+    _ensure_hist(data)
+
+    if prev is None:
+        # Migration : premier passage. Le bucket du jour recupere les
+        # compteurs actuels pour ne pas perdre l'historique de la journee.
+        # Les dates restent telles quelles (deja creees par _ensure_hist,
+        # finissant par aujourd'hui) et l'historique n'est PAS decale.
+        data["historique_7j"]["clics"][-1] = data["resume"].get("clics_aujourdhui", 0)
+        data["historique_7j"]["conversions"][-1] = data["resume"].get("conversions_aujourdhui", 0)
+        data["historique_7j"]["commissions"][-1] = data["resume"].get("commissions_aujourdhui", 0.0)
+    else:
+        # Changement de jour : glissement de l'historique + reset du jour.
+        for k in ("commissions", "clics", "conversions"):
+            arr = data["historique_7j"][k]
+            data["historique_7j"][k] = arr[1:] + [0]
+        data["resume"]["clics_aujourdhui"] = 0
+        data["resume"]["conversions_aujourdhui"] = 0
+        data["resume"]["commissions_aujourdhui"] = 0.0
+        data["resume"]["epc"] = 0.0
+        data["resume"]["taux_conversion"] = 0.0
+        data["resume"]["ca_genere"] = 0.0
+        data["sources_trafic"] = {k: 0 for k in SOURCES}
+        data["performance_horaire"]["clics"] = [0] * 24
+        data["performance_horaire"]["commissions"] = [0] * 24
+        # Glissement des dates uniquement en cas de vrai changement de jour
+        dates = data.get("historique_dates", [])
+        if len(dates) == 7:
+            data["historique_dates"] = dates[1:] + [now.strftime("%d/%m")]
+        else:
+            data["historique_dates"] = [
+                (now - timedelta(days=6-i)).strftime("%d/%m") for i in range(7)
+            ]
+
+    data["date_jour"] = today
+    return True
+
+
 def load_data():
     """Charge les donnees depuis le fichier JSON."""
     try:
         with open(STATS_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
+            data = json.load(f)
     except (FileNotFoundError, json.JSONDecodeError):
         return init_fresh_data()
+    # Migration : garantir la structure historique
+    _ensure_hist(data)
+    # Rollover journalier : si la date a change, decale l'historique,
+    # reset les compteurs du jour et persiste le changement. Le verrou
+    # evite une double course entre threads au premier appel apres minuit.
+    with DATA_LOCK:
+        if rollover_journalier(data):
+            save_data(data)
+    return data
 
 def save_data(data):
     """Sauvegarde les donnees dans le fichier JSON."""
@@ -284,6 +378,8 @@ def record_click(product_name=None, platform=None, source=None):
 
     # Mettre a jour les compteurs
     data["resume"]["clics_aujourdhui"] += 1
+    # Historique 7 jours : incrementer le bucket du jour courant
+    data["historique_7j"]["clics"][-1] += 1
 
     # Choisir une source (manuelle ou referencement_direct par defaut)
     if source and source in SOURCES:
@@ -390,6 +486,9 @@ def record_conversion(product_name=None, platform=None, commission_override=None
     data["resume"]["conversions_aujourdhui"] += 1
     data["resume"]["commissions_aujourdhui"] = round(data["resume"]["commissions_aujourdhui"] + commission, 2)
     data["resume"]["ca_genere"] = round(data["resume"]["ca_genere"] + price, 2)
+    # Historique 7 jours : incrementer le bucket du jour courant
+    data["historique_7j"]["conversions"][-1] += 1
+    data["historique_7j"]["commissions"][-1] = round(data["historique_7j"]["commissions"][-1] + commission, 2)
 
     # Recalculer EPC et taux de conversion
     if data["resume"]["clics_aujourdhui"] > 0:

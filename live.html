@@ -45,6 +45,12 @@ header h1{font-size:1.6rem;background:linear-gradient(135deg,var(--text),var(--g
 .sources h3{font-size:0.85rem;color:var(--muted);margin-bottom:4px;text-transform:uppercase;letter-spacing:1px}
 .sources__head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;margin-bottom:12px}
 .sources__pint{font-size:0.68rem;color:var(--gold);text-transform:none;letter-spacing:0}
+.hist{display:flex;align-items:flex-end;gap:8px;height:120px;padding-top:8px}
+.hist-col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:4px}
+.hist-val{font-size:0.72rem;font-weight:700;color:var(--gold);font-family:'SF Mono',monospace}
+.hist-bar-wrap{width:100%;max-width:36px;height:80px;display:flex;align-items:flex-end;background:rgba(30,30,74,0.5);border-radius:8px;overflow:hidden}
+.hist-bar{width:100%;background:linear-gradient(180deg,var(--blue),var(--purple));border-radius:8px;transition:height .6s ease;min-height:2px}
+.hist-day{font-size:0.6rem;color:var(--muted)}
 .src-row{display:flex;align-items:center;gap:12px;padding:6px 0}
 .src-name{width:160px;font-size:0.78rem;color:var(--text);display:flex;align-items:center;gap:6px;flex-shrink:0}
 .src-bar-wrap{flex:1;height:14px;background:rgba(30,30,74,0.5);border-radius:8px;overflow:hidden}
@@ -131,6 +137,16 @@ footer{text-align:center;padding:16px;color:var(--muted);font-size:0.7rem;border
   </div>
 </div>
 
+<div class="sources">
+  <div class="card">
+    <div class="sources__head">
+      <h3>📅 7 derniers jours (clics)</h3>
+      <span class="sources__pint" id="histDates">Historique quotidien</span>
+    </div>
+    <div id="histContent" style="color:var(--muted)">En attente...</div>
+  </div>
+</div>
+
 <div class="row2">
   <div class="feed" id="feed">
     <h3>📋 Activite recente</h3>
@@ -182,6 +198,23 @@ function srcBadge(src) {
   };
   const [label, cls] = labels[src] || [src, 'badge--other'];
   return `<span class="badge ${cls}">${label}</span>`;
+}
+
+function renderHist(hist, dates) {
+  const el = document.getElementById('histContent');
+  if (!el) return;
+  const clics = (hist && Array.isArray(hist.clics)) ? hist.clics : [0,0,0,0,0,0,0];
+  const max = Math.max(1, ...clics);
+  const dateLabels = (dates && Array.isArray(dates) && dates.length === 7) ? dates : ['J-6','J-5','J-4','J-3','J-2','J-1','Auj'];
+  document.getElementById('histDates').textContent = 'Clics par jour (' + dateLabels[0] + ' → ' + dateLabels[6] + ')';
+  el.innerHTML = '<div class="hist">' + clics.map((v, i) => {
+    const h = v > 0 ? Math.max(4, Math.round(v / max * 100)) : 2;
+    return `<div class="hist-col">
+      <span class="hist-val">${v}</span>
+      <div class="hist-bar-wrap"><div class="hist-bar" style="height:${h}%"></div></div>
+      <span class="hist-day">${dateLabels[i]}</span>
+    </div>`;
+  }).join('') + '</div>';
 }
 
 function renderSources(srcs) {
@@ -277,6 +310,8 @@ async function refreshStats() {
     const srcs = sd.sources_trafic || {};
     renderSources(srcs);
     const soc = Number(srcs['reseaux_sociaux']) || 0;
+    // Historique 7 jours
+    renderHist(sd.historique_7j || {}, sd.historique_dates || []);
     cLog(`Stats OK - Clics:${r.clics_aujourdhui||0} Comm:${(r.commissions_aujourdhui||0).toFixed(2)}EUR Pinterest:${soc}`);
 
     cLog(`Stats OK - Clics:${r.clics_aujourdhui||0} Comm:${(r.commissions_aujourdhui||0).toFixed(2)}EUR Pinterest:${soc}`);
