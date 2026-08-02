@@ -2574,7 +2574,7 @@ def main():
     # Demarrer le serveur HTTP
     server = http.server.ThreadingHTTPServer(("0.0.0.0", PORT), AffilimaxHandler)
     if is_render:
-        render_url = os.environ.get("RENDER_EXTERNAL_URL", f"https://afflimax.onrender.com")
+        render_url = os.environ.get("RENDER_EXTERNAL_URL", f"https://affilimax.onrender.com")
         print(f" >>> Dashboard : {render_url}")
         print(f" >>> Pub        : {render_url}/pub.html")
         print(f" >>> Admin      : {render_url}/admin.html")

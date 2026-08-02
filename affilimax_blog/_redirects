@@ -1,0 +1,35 @@
+# AFFILIMAX BLOG — Netlify _redirects
+# Genere par _rebuild_blog_from_drafts.py le 2026-07-20
+# 30 regles /go/<slug> -> Amazon avec tag confortbure07-21
+
+/go/ssd-samsung-t7-shield    https://www.amazon.fr/dp/B09SB38KMD?tag=confortbure07-21
+/go/investir-en-bourse-etf    https://www.amazon.fr/dp/B0D5TRRZBC?tag=confortbure07-21
+/go/tp-link-deco-x50-mesh    https://www.amazon.fr/dp/B09LVG58VX?tag=confortbure07-21
+/go/logitech-c920s-webcam    https://www.amazon.fr/dp/B07MM4V7NR?tag=confortbure07-21
+/go/philips-lor-barista    https://www.amazon.fr/dp/B087G85L13?tag=confortbure07-21
+/go/dropshipping-lancer-reussir    https://www.amazon.fr/dp/2101968102?tag=confortbure07-21
+/go/grand-livre-marketing-digital    https://www.amazon.fr/dp/B0CGRL916C?tag=confortbure07-21
+/go/wordpress-pour-les-nuls    https://www.amazon.fr/dp/B0D3XQ1V44?tag=confortbure07-21
+/go/apple-airpods-4    https://www.amazon.fr/dp/B0DGWCC6V8?tag=confortbure07-21
+/go/logitech-g502-hero    https://www.amazon.fr/dp/B07GS6ZB7V?tag=confortbure07-21
+/go/anker-power-bank-20000    https://www.amazon.fr/dp/B0B68C697W?tag=confortbure07-21
+/go/epomaker-aula-f75    https://www.amazon.fr/dp/B0D2X3D5L9?tag=confortbure07-21
+/go/tapis-marche-pliable-lontek    https://www.amazon.fr/dp/B09X1K5M6V?tag=confortbure07-21
+/go/jbl-go-4-enceinte    https://www.amazon.fr/dp/B0CVL23L6B?tag=confortbure07-21
+/go/roborock-q5-pro-plus    https://www.amazon.fr/dp/B0C895M1J5?tag=confortbure07-21
+/go/cryptomonnaies-guide-complet    https://www.amazon.fr/dp/2412140417?tag=confortbure07-21
+/go/les-4-accords-tolteques    https://www.amazon.fr/dp/2290237748?tag=confortbure07-21
+/go/renpho-balance-connectee    https://www.amazon.fr/dp/B01N1UX8RW?tag=confortbure07-21
+/go/amazon-kindle-2024    https://www.amazon.fr/dp/B0BZS2NN5F?tag=confortbure07-21
+/go/xiaomi-robot-aspirateur-s20    https://www.amazon.fr/dp/B0CN4LQFWQ?tag=confortbure07-21
+/go/ninja-foodi-max-air-fryer    https://www.amazon.fr/dp/B09M3G71CW?tag=confortbure07-21
+/go/apple-airtag-pack-4    https://www.amazon.fr/dp/B093257N6C?tag=confortbure07-21
+/go/bose-quietcomfort-ultra    https://www.amazon.fr/dp/B0BZD7QBZ6?tag=confortbure07-21
+/go/lego-ideas-notre-dame-paris    https://www.amazon.fr/dp/B0CQRQYP9R?tag=confortbure07-21
+/go/wd-my-passport-4to    https://www.amazon.fr/dp/B07VS3D33D?tag=confortbure07-21
+/go/psychologie-de-l-argent    https://www.amazon.fr/dp/B0BGQ2W1L4?tag=confortbure07-21
+/go/samsung-galaxy-tab-a9-plus    https://www.amazon.fr/dp/B0CJS58X4J?tag=confortbure07-21
+/go/philips-hue-kit-demarrage    https://www.amazon.fr/dp/B0B2V2T79Q?tag=confortbure07-21
+/go/sony-wh-1000xm5    https://www.amazon.fr/dp/B09XS6R2J7?tag=confortbure07-21
+/go/asus-zenscreen-portable    https://www.amazon.fr/dp/B089M2NFPZ?tag=confortbure07-21
+/go/*            /              302
