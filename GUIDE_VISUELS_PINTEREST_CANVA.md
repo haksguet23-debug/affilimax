@@ -2,7 +2,7 @@
 
 > Objectif : créer les 70 visuels pour `POSTS_PINTEREST_14JOURS.txt` / `CALENDRIER_PINTEREST_14JOURS.txt`
 > Format : **1000 × 1500 px (ratio 2:3)** — le format qui performe le mieux sur Pinterest
-> Temps estimé : 45-60 min pour les 70 (grâce au workflow batch)
+> Temps estimé : 1h30-2h pour les 70 (avec les gabarits prêts, sinon 3h)
 
 ---
 
@@ -55,6 +55,16 @@ Un visuel Pinterest doit être lisible **en 2 secondes** sur un téléphone dans
 │  BANDEAU BAS (10%)   │  "Clique pour voir le prix" + note étoiles
 └──────────────────────┘
 ```
+
+### Polices à utiliser (Canva gratuit)
+| Rôle | Police | Style |
+|------|--------|-------|
+| **Titre principal** | **Montserrat** ou **Poppins** | Gras (Bold), 60-80 pt, MAJUSCULES |
+| Sous-titre | Montserrat / Poppins | Regular ou Medium, 28-36 pt |
+| Bandeau + CTA | Montserrat | Gras, 24-30 pt |
+| Chiffres/prix | **Lato** ou Montserrat | Extra Bold, 40-60 pt |
+
+> Cherche-les dans **Texte → Ajouter du texte** : elles sont gratuites. Une seule famille de police par visuel = cohérence de marque.
 
 ---
 
