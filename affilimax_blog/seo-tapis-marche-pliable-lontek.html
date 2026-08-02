@@ -138,11 +138,13 @@ Tapis de Marche Pliable LONTEK
 </div>
 
 <script>
-/* Affilimax: propage le ?src= de l'URL vers tous les liens /go/ (tracking de source) */
+<script>
+/* Affilimax: propage le ?src= de l'URL vers tous les liens /go/ (remplace l'ancien src) */
 (function(){
   var s = new URLSearchParams(location.search).get('src');
   if (s) document.querySelectorAll('a[href*="/go/"]').forEach(function(a){
-    a.href += (a.href.indexOf('?') > -1 ? '&' : '?') + 'src=' + s;
+    a.href = a.href.replace(/[?&]src=[^&]*/i, '');
+    a.href += (a.href.indexOf('?') > -1 ? '&' : '?') + 'src=' + encodeURIComponent(s);
   });
 })();
 </script>
