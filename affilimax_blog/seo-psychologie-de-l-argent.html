@@ -139,12 +139,15 @@ La Psychologie de l'Argent
 
 <script>
 <script>
+<script>
 /* Affilimax: propage le ?src= de l'URL vers tous les liens /go/ (remplace l'ancien src) */
 (function(){
   var s = new URLSearchParams(location.search).get('src');
   if (s) document.querySelectorAll('a[href*="/go/"]').forEach(function(a){
-    a.href = a.href.replace(/[?&]src=[^&]*/i, '');
-    a.href += (a.href.indexOf('?') > -1 ? '&' : '?') + 'src=' + encodeURIComponent(s);
+    var u = new URL(a.href);
+    u.searchParams.delete('src');
+    u.searchParams.append('src', s);
+    a.href = u.href;
   });
 })();
 </script>
