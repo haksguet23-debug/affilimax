@@ -1,0 +1,78 @@
+========================================================
+  AFFILIMAX - PACK JOUR 01 (5 epingles Pinterest)
+  Pret a copier-coller - publie aujourd'hui
+  Les liens contiennent ?src=pinterest = tracking auto
+========================================================
+
+--------------------------------------------------------
+EPINGLE 1/5  [09:00]  BOARD: RENTREE   (SOURCE: EPINGLE 01)
+--------------------------------------------------------
+TITRE (a mettre sur l'image Canva) :
+La liste COMPLETE des 30 fournitures scolaires indispensables 2026
+
+DESCRIPTION (a coller dans la description Pinterest) :
+Tout pour la rentree scolaire 2026 : les 30 fournitures essentielles pour tous les niveaux et tous les budgets. Stylos, cahiers, cartables, calculatrices... La checklist ultime a sauvegarder pour ne rien oublier le jour J. #rentreescolaire #fourniturescolaire #backtoschool #liste2026 #conseils #parents #maternelle #college #lycee #affilimax
+
+LIEN (a coller dans le champ lien) :
+https://affilimax.onrender.com/affilimax_blog/guide-ultime-rentree-2026.html?src=pinterest
+
+--------------------------------------------------------
+EPINGLE 2/5  [13:00]  BOARD: BUREAU   (SOURCE: EPINGLE 35)
+--------------------------------------------------------
+TITRE (a mettre sur l'image Canva) :
+Top 5 smartphones et accessoires 2026 : le guide d'achat
+
+DESCRIPTION (a coller dans la description Pinterest) :
+Les 5 meilleurs smartphones et accessoires de 2026 : le guide d'achat complet. Choisissez le bon appareil et les bons accessoires avec nos tests et avis. #smartphone #top5 #guide #accessoires #mobile #affilimax
+
+LIEN (a coller dans le champ lien) :
+https://affilimax.onrender.com/affilimax_blog/top-5-smartphones-accessoires-2026.html?src=pinterest
+
+--------------------------------------------------------
+EPINGLE 3/5  [17:00]  BOARD: BUREAU   (SOURCE: EPINGLE 66)
+--------------------------------------------------------
+TITRE (a mettre sur l'image Canva) :
+Apple AirTag pack de 4 : le traqueur teste 2026
+
+DESCRIPTION (a coller dans la description Pinterest) :
+Test complet des Apple AirTag pack de 4 : ne perdez plus jamais vos affaires. Precision, facilite, prix. Notre avis. #airtag #apple #traqueur #localisation #affilimax
+
+LIEN (a coller dans le champ lien) :
+https://affilimax.onrender.com/affilimax_blog/seo-apple-airtag-pack-4.html?src=pinterest
+
+--------------------------------------------------------
+EPINGLE 4/5  [20:00]  BOARD: MAISON   (SOURCE: EPINGLE 50)
+--------------------------------------------------------
+TITRE (a mettre sur l'image Canva) :
+Philips Hue Kit Demarrage : l'eclairage connecte teste 2026
+
+DESCRIPTION (a coller dans la description Pinterest) :
+Test complet du Philips Hue Kit Demarrage V4 : l'eclairage connecte qui transforme votre maison. Installation, ambiance, prix. #philips #hue #eclairage #connecte #smarthome #affilimax
+
+LIEN (a coller dans le champ lien) :
+https://affilimax.onrender.com/affilimax_blog/seo-philips-hue-kit-demarrage.html?src=pinterest
+
+--------------------------------------------------------
+EPINGLE 5/5  [21:30]  BOARD: FINANCE   (SOURCE: EPINGLE 52)
+--------------------------------------------------------
+TITRE (a mettre sur l'image Canva) :
+Guide investissement 2026 : livres, ETF, crypto par ou commencer ?
+
+DESCRIPTION (a coller dans la description Pinterest) :
+Investir en 2026 : livres, ETF, crypto... par ou commencer ? Le guide complet pour debuter dans l'investissement avec les meilleures ressources et conseils. #investissement #etf #crypto #bourse #debutant #affilimax
+
+LIEN (a coller dans le champ lien) :
+https://affilimax.onrender.com/affilimax_blog/guide-investissement-2026.html?src=pinterest
+
+========================================================
+  CHECKLIST AVANT DE PUBLIER CHAQUE EPINGLE
+========================================================
+[ ] Image Canva 1000x1500 creee (voir GUIDE_VISUELS_PINTEREST_CANVA.md)
+[ ] TITRE colle sur l'image (lisible en 2s)
+[ ] DESCRIPTION collee dans le champ description
+[ ] LIEN colle avec ?src=pinterest (ne pas supprimer le parametre)
+[ ] BOARD du theme selectionne (RENTREE / BUREAU / MAISON / FINANCE)
+[ ] Publier maintenant ou programmer a l'heure indiquee
+
+Astuce : pour les 5 images, duplique un seul design Canva puis change
+le titre, la photo et les couleurs du theme (voir le guide Canva).
