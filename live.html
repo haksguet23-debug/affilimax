@@ -41,6 +41,23 @@ header h1{font-size:1.6rem;background:linear-gradient(135deg,var(--text),var(--g
 .feed-item__icon{font-size:1rem;flex-shrink:0}
 .feed-item__text{flex:1}
 .feed-item__time{color:var(--muted);font-size:0.7rem;flex-shrink:0}
+.sources{margin-bottom:20px}
+.sources h3{font-size:0.85rem;color:var(--muted);margin-bottom:4px;text-transform:uppercase;letter-spacing:1px}
+.sources__head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.sources__pint{font-size:0.68rem;color:var(--gold);text-transform:none;letter-spacing:0}
+.src-row{display:flex;align-items:center;gap:12px;padding:6px 0}
+.src-name{width:160px;font-size:0.78rem;color:var(--text);display:flex;align-items:center;gap:6px;flex-shrink:0}
+.src-bar-wrap{flex:1;height:14px;background:rgba(30,30,74,0.5);border-radius:8px;overflow:hidden}
+.src-bar{height:100%;border-radius:8px;transition:width .6s ease;min-width:2px}
+.src-count{width:44px;text-align:right;font-size:0.8rem;font-weight:700;color:var(--gold);font-family:'SF Mono',monospace;flex-shrink:0}
+.badge{display:inline-block;padding:2px 8px;border-radius:30px;font-size:0.62rem;font-weight:700;flex-shrink:0}
+.badge--social{background:rgba(232,56,106,0.15);color:#e8386a}
+.badge--direct{background:rgba(59,130,246,0.15);color:var(--blue)}
+.badge--seo{background:rgba(16,185,129,0.15);color:var(--green)}
+.badge--email{background:rgba(168,85,247,0.15);color:var(--purple)}
+.badge--ads{background:rgba(240,165,0,0.15);color:var(--gold)}
+.badge--other{background:rgba(100,116,139,0.2);color:var(--muted)}
+@media(max-width:768px){.src-name{width:110px}}
 @keyframes slideIn{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:translateX(0)}}
 .actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
 .btn{padding:10px 20px;border-radius:50px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:0.8rem;cursor:pointer;transition:all .2s;font-weight:600;display:flex;align-items:center;gap:6px}
@@ -104,6 +121,16 @@ footer{text-align:center;padding:16px;color:var(--muted);font-size:0.7rem;border
   <button class="btn btn--red" onclick="clearConsole()">🗑️ Clear log</button>
 </div>
 
+<div class="sources">
+  <div class="card">
+    <div class="sources__head">
+      <h3>📈 Sources de trafic (clics)</h3>
+      <span class="sources__pint">📌 Pinterest inclus dans Réseaux sociaux</span>
+    </div>
+    <div id="sourcesContent" style="color:var(--muted)">En attente...</div>
+  </div>
+</div>
+
 <div class="row2">
   <div class="feed" id="feed">
     <h3>📋 Activite recente</h3>
@@ -144,6 +171,43 @@ function renderConsole() {
 }
 
 function clearConsole() { consoleLines = []; renderConsole(); cLog('Console cleared'); }
+
+function srcBadge(src) {
+  const labels = {
+    'reseaux_sociaux': ['📌 Pinterest', 'badge--social'],
+    'referencement_direct': ['🖥️ Direct', 'badge--direct'],
+    'SEO_organique': ['🔍 SEO', 'badge--seo'],
+    'email_marketing': ['📧 Email', 'badge--email'],
+    'publicite_payante': ['📣 Ads', 'badge--ads']
+  };
+  const [label, cls] = labels[src] || [src, 'badge--other'];
+  return `<span class="badge ${cls}">${label}</span>`;
+}
+
+function renderSources(srcs) {
+  const el = document.getElementById('sourcesContent');
+  const defs = [
+    {key:'reseaux_sociaux', label:'Réseaux sociaux (Pinterest)', color:'#e8386a'},
+    {key:'SEO_organique', label:'SEO organique', color:'#10b981'},
+    {key:'email_marketing', label:'Email marketing', color:'#8b5cf6'},
+    {key:'publicite_payante', label:'Publicité payante', color:'#f0a500'},
+    {key:'referencement_direct', label:'Référencement direct', color:'#3b82f6'}
+  ];
+  const total = Object.values(srcs).reduce((a,b) => a + (Number(b)||0), 0);
+  if (total === 0) {
+    el.innerHTML = '<div>Aucun clic enregistré aujourd’hui. Les clics ?src=pinterest apparaîtront ici dès les premières épingles publiées.</div>';
+    return;
+  }
+  el.innerHTML = defs.map(d => {
+    const v = Number(srcs[d.key]) || 0;
+    const pct = total > 0 ? Math.round(v/total*100) : 0;
+    return `<div class="src-row">
+      <span class="src-name">${d.label}</span>
+      <div class="src-bar-wrap"><div class="src-bar" style="width:${Math.max(pct,2)}%;background:${d.color}"></div></div>
+      <span class="src-count">${v}</span>
+    </div>`;
+  }).join('');
+}
 
 function updateStatusPills(localOk, renderOk) {
   const pl = document.getElementById('pillLocal');
@@ -198,16 +262,24 @@ async function refreshStats() {
         fc.innerHTML = recent.slice(0, 12).map(ev => {
           const icon = ev.type === 'clic' ? '👆' : ev.type === 'vente' ? '💰' : ev.type === 'payout' ? '💸' : '📌';
           const time = ev.timestamp ? new Date(ev.timestamp).toLocaleTimeString('fr-FR') : '';
+          const badge = ev.source ? srcBadge(ev.source) : '';
           return `<div class="feed-item">
             <span class="feed-item__icon">${icon}</span>
+            ${badge}
             <span class="feed-item__text">${ev.produit || '?'}</span>
             <span class="feed-item__time">${time}</span>
           </div>`;
         }).join('');
       }
-    } catch(e) {}
+    } catch(e) { cLog('Activite recente: ' + e.message, 'err'); }
 
-    cLog(`Stats OK - Clics:${r.clics_aujourdhui||0} Comm:${(r.commissions_aujourdhui||0).toFixed(2)}EUR`);
+    // Sources de trafic (clics Pinterest visibles ici)
+    const srcs = sd.sources_trafic || {};
+    renderSources(srcs);
+    const soc = Number(srcs['reseaux_sociaux']) || 0;
+    cLog(`Stats OK - Clics:${r.clics_aujourdhui||0} Comm:${(r.commissions_aujourdhui||0).toFixed(2)}EUR Pinterest:${soc}`);
+
+    cLog(`Stats OK - Clics:${r.clics_aujourdhui||0} Comm:${(r.commissions_aujourdhui||0).toFixed(2)}EUR Pinterest:${soc}`);
     
     // Check Render
     if (renderH.ok) cLog(`Render UP - ${RENDER}`, 'ok');
