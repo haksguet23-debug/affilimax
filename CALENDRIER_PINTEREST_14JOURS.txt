@@ -4,452 +4,527 @@ CALENDRIER DE PUBLICATION PINTEREST - 14 JOURS
 Site: https://affilimax.onrender.com
 ==============================================================================
 
+COMMENT UTILISER:
+- Chaque epingle reference sa SOURCE (EPINGLE NN) dans POSTS_PINTEREST_14JOURS.txt
+  -> ouvrir ce fichier, chercher '--- EPINGLE NN ---' pour le titre + description + hashtags
+- Publier chaque epingle dans SON board (indique sur chaque ligne BOARD)
+
 BONNES PRATIQUES:
-- Horaires optimaux Pinterest FR: 9h, 13h, 17h, 20h, 21h30
-- Espacer les publications de 2-3h minimum
+- Horaires optimaux Pinterest FR: 9h, 13h, 17h, 20h, 21h30 (espacement 2-3h)
 - Reposter les epingles a succes apres 3-4 semaines
-- Chaque epingle garde son lien ?src=pinterest (tracking automatique)
-- Utiliser 3-5 boards par theme : Rentree 2026, High-Tech, Bureau, Maison, Audio
+- Chaque epingle garde son lien ?src=pinterest (tracking automatique dans le dashboard)
+- Boards recommandes : Rentree 2026, High-Tech, Bureau, Maison, Audio, Sport, Livres
 
 ==============================================================================
-JOUR 01 - (5 epingles - themes: BUREAU/TECH, FINANCE/LIVRES, MAISON, RENTREE)
+JOUR 01 - 5 epingles - themes: BUREAU/TECH, FINANCE/LIVRES, MAISON, RENTREE
 ==============================================================================
 
-  [09:00] Epingle 1 (RENTREE):
+  [09:00] SOURCE: EPINGLE 01 (RENTREE)
       TITRE : La liste COMPLETE des 30 fournitures scolaires indispensables 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/guide-ultime-rentree-2026.html?src=pinterest
       BOARD : RENTREE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 01 ---'
 
-  [13:00] Epingle 2 (BUREAU/TECH):
+  [13:00] SOURCE: EPINGLE 35 (BUREAU/TECH)
       TITRE : Top 5 smartphones et accessoires 2026 : le guide d'achat
       LIEN  : https://affilimax.onrender.com/affilimax_blog/top-5-smartphones-accessoires-2026.html?src=pinterest
       BOARD : BUREAU
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 35 ---'
 
-  [17:00] Epingle 3 (BUREAU/TECH):
+  [17:00] SOURCE: EPINGLE 66 (BUREAU/TECH)
       TITRE : Apple AirTag pack de 4 : le traqueur teste 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-apple-airtag-pack-4.html?src=pinterest
       BOARD : BUREAU
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 66 ---'
 
-  [20:00] Epingle 4 (MAISON):
+  [20:00] SOURCE: EPINGLE 50 (MAISON)
       TITRE : Philips Hue Kit Demarrage : l'eclairage connecte teste 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-philips-hue-kit-demarrage.html?src=pinterest
       BOARD : MAISON
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 50 ---'
 
-  [21:30] Epingle 5 (FINANCE/LIVRES):
+  [21:30] SOURCE: EPINGLE 52 (FINANCE/LIVRES)
       TITRE : Guide investissement 2026 : livres, ETF, crypto par ou commencer ?
       LIEN  : https://affilimax.onrender.com/affilimax_blog/guide-investissement-2026.html?src=pinterest
       BOARD : FINANCE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 52 ---'
 
-  TACHE: Creer/chercher l'image Canva, copier-coller titre+desc+lien, publier dans le board BUREAU si applicable
+  TACHE : creer l'image Canva, copier-coller titre+description+hashtags+liens depuis la source, publier chaque epingle dans son board
 
 ==============================================================================
-JOUR 02 - (5 epingles - themes: AUDIO, BUREAU/TECH, FINANCE/LIVRES, MAISON, RENTREE)
+JOUR 02 - 5 epingles - themes: AUDIO, BUREAU/TECH, FINANCE/LIVRES, MAISON, RENTREE
 ==============================================================================
 
-  [09:00] Epingle 1 (RENTREE):
+  [09:00] SOURCE: EPINGLE 02 (RENTREE)
       TITRE : Checklist Rentree 2026 : la liste complete college, lycee et fac
       LIEN  : https://affilimax.onrender.com/affilimax_blog/checklist-rentree-2026.html?src=pinterest
       BOARD : RENTREE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 02 ---'
 
-  [13:00] Epingle 2 (BUREAU/TECH):
+  [13:00] SOURCE: EPINGLE 36 (BUREAU/TECH)
       TITRE : Top 5 materiel photo et video 2026 : le guide creation de contenu
       LIEN  : https://affilimax.onrender.com/affilimax_blog/top-materiel-photo-video-2026.html?src=pinterest
       BOARD : BUREAU
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 36 ---'
 
-  [17:00] Epingle 3 (AUDIO):
+  [17:00] SOURCE: EPINGLE 14 (AUDIO)
       TITRE : Casque audio premium 2026 : Bose QC Ultra vs Sony WH-1000XM5
       LIEN  : https://affilimax.onrender.com/affilimax_blog/article-2-casque-audio-2026.html?src=pinterest
       BOARD : AUDIO
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 14 ---'
 
-  [20:00] Epingle 4 (MAISON):
+  [20:00] SOURCE: EPINGLE 51 (MAISON)
       TITRE : Renpho Balance connectee : le suivi sante teste 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-renpho-balance-connectee.html?src=pinterest
       BOARD : MAISON
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 51 ---'
 
-  [21:30] Epingle 5 (FINANCE/LIVRES):
+  [21:30] SOURCE: EPINGLE 53 (FINANCE/LIVRES)
       TITRE : Investir en Bourse avec les ETF : le guide complet 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-investir-en-bourse-etf.html?src=pinterest
       BOARD : FINANCE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 53 ---'
 
-  TACHE: Creer/chercher l'image Canva, copier-coller titre+desc+lien, publier dans le board AUDIO si applicable
+  TACHE : creer l'image Canva, copier-coller titre+description+hashtags+liens depuis la source, publier chaque epingle dans son board
 
 ==============================================================================
-JOUR 03 - (5 epingles - themes: AUDIO, BUREAU/TECH, FINANCE/LIVRES, MAISON, RENTREE)
+JOUR 03 - 5 epingles - themes: AUDIO, BUREAU/TECH, FINANCE/LIVRES, MAISON, RENTREE
 ==============================================================================
 
-  [09:00] Epingle 1 (RENTREE):
+  [09:00] SOURCE: EPINGLE 03 (RENTREE)
       TITRE : 30 fournitures scolaires rentree 2026 : la liste complete tous niveaux
       LIEN  : https://affilimax.onrender.com/affilimax_blog/liste-complete-fournitures-rentree-2026.html?src=pinterest
       BOARD : RENTREE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 03 ---'
 
-  [13:00] Epingle 2 (BUREAU/TECH):
+  [13:00] SOURCE: EPINGLE 37 (BUREAU/TECH)
       TITRE : Top 10 produits high-tech 2026 : les meilleurs bons plans
       LIEN  : https://affilimax.onrender.com/affilimax_blog/top-10-high-tech-2026.html?src=pinterest
       BOARD : BUREAU
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 37 ---'
 
-  [17:00] Epingle 3 (AUDIO):
+  [17:00] SOURCE: EPINGLE 15 (AUDIO)
       TITRE : Meilleurs casques audio 2026 : le comparatif Bose et Sony
       LIEN  : https://affilimax.onrender.com/affilimax_blog/comparatif-casques-audio-2026.html?src=pinterest
       BOARD : AUDIO
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 15 ---'
 
-  [20:00] Epingle 4 (MAISON):
+  [20:00] SOURCE: EPINGLE 70 (MAISON)
       TITRE : Smart home 2026 : 6 produits pour connecter votre maison
       LIEN  : https://affilimax.onrender.com/affilimax_blog/guide-maison-connectee-2026.html?src=pinterest2
       BOARD : MAISON
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 70 ---'
 
-  [21:30] Epingle 5 (FINANCE/LIVRES):
+  [21:30] SOURCE: EPINGLE 54 (FINANCE/LIVRES)
       TITRE : Cryptomonnaies : le guide complet teste 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-cryptomonnaies-guide-complet.html?src=pinterest
       BOARD : FINANCE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 54 ---'
 
-  TACHE: Creer/chercher l'image Canva, copier-coller titre+desc+lien, publier dans le board AUDIO si applicable
+  TACHE : creer l'image Canva, copier-coller titre+description+hashtags+liens depuis la source, publier chaque epingle dans son board
 
 ==============================================================================
-JOUR 04 - (5 epingles - themes: AUDIO, BUREAU/TECH, CUISINE, FINANCE/LIVRES, RENTREE)
+JOUR 04 - 5 epingles - themes: AUDIO, BUREAU/TECH, CUISINE, FINANCE/LIVRES, RENTREE
 ==============================================================================
 
-  [09:00] Epingle 1 (RENTREE):
+  [09:00] SOURCE: EPINGLE 04 (RENTREE)
       TITRE : Top 20 Rentree Scolaire 2026 : le guide ultime high-tech & fournitures
       LIEN  : https://affilimax.onrender.com/affilimax_blog/top-20-rentree-scolaire-2026.html?src=pinterest
       BOARD : RENTREE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 04 ---'
 
-  [13:00] Epingle 2 (BUREAU/TECH):
+  [13:00] SOURCE: EPINGLE 38 (BUREAU/TECH)
       TITRE : Top 5 high-tech a moins de 100 euros en 2026 : bons plans tech pas chers
       LIEN  : https://affilimax.onrender.com/affilimax_blog/top-high-tech-moins-100-euros-2026.html?src=pinterest
       BOARD : BUREAU
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 38 ---'
 
-  [17:00] Epingle 3 (AUDIO):
+  [17:00] SOURCE: EPINGLE 16 (AUDIO)
       TITRE : Comparatif ecouteurs sans fil 2026 : AirPods 4 vs JBL Go 4 vs Bose
       LIEN  : https://affilimax.onrender.com/affilimax_blog/comparatif-ecouteurs-sans-fil-2026.html?src=pinterest
       BOARD : AUDIO
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 16 ---'
 
-  [20:00] Epingle 4 (CUISINE):
+  [20:00] SOURCE: EPINGLE 21 (CUISINE)
       TITRE : Air fryer familial 2026 : pourquoi le Ninja Foodi Max 7,5L est le meilleur
       LIEN  : https://affilimax.onrender.com/affilimax_blog/article-3-air-fryer-2026.html?src=pinterest
       BOARD : CUISINE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 21 ---'
 
-  [21:30] Epingle 5 (FINANCE/LIVRES):
+  [21:30] SOURCE: EPINGLE 55 (FINANCE/LIVRES)
       TITRE : La Psychologie de l'Argent : le livre a lire en 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-psychologie-de-l-argent.html?src=pinterest
       BOARD : FINANCE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 55 ---'
 
-  TACHE: Creer/chercher l'image Canva, copier-coller titre+desc+lien, publier dans le board AUDIO si applicable
+  TACHE : creer l'image Canva, copier-coller titre+description+hashtags+liens depuis la source, publier chaque epingle dans son board
 
 ==============================================================================
-JOUR 05 - (5 epingles - themes: AUDIO, BUREAU/TECH, CUISINE, FINANCE/LIVRES, RENTREE)
+JOUR 05 - 5 epingles - themes: AUDIO, BUREAU/TECH, CUISINE, FINANCE/LIVRES, RENTREE
 ==============================================================================
 
-  [09:00] Epingle 1 (RENTREE):
+  [09:00] SOURCE: EPINGLE 05 (RENTREE)
       TITRE : Top 70 fournitures college & lycee 2026 : calculatrices, stylos plume, correcteurs
       LIEN  : https://affilimax.onrender.com/affilimax_blog/top-70-fournitures-college-lycee-2026.html?src=pinterest
       BOARD : RENTREE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 05 ---'
 
-  [13:00] Epingle 2 (BUREAU/TECH):
+  [13:00] SOURCE: EPINGLE 39 (BUREAU/TECH)
       TITRE : ASUS ZenScreen 15.6 : l'ecran portable teste et approuve 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-asus-zenscreen-portable.html?src=pinterest
       BOARD : BUREAU
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 39 ---'
 
-  [17:00] Epingle 3 (AUDIO):
+  [17:00] SOURCE: EPINGLE 17 (AUDIO)
       TITRE : Bose QuietComfort Ultra : le casque premium teste 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-bose-quietcomfort-ultra.html?src=pinterest
       BOARD : AUDIO
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 17 ---'
 
-  [20:00] Epingle 4 (CUISINE):
+  [20:00] SOURCE: EPINGLE 22 (CUISINE)
       TITRE : Meilleur air fryer 2026 : Ninja Foodi Max test et avis
       LIEN  : https://affilimax.onrender.com/affilimax_blog/guide-ninja-air-fryer-2026.html?src=pinterest
       BOARD : CUISINE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 22 ---'
 
-  [21:30] Epingle 5 (FINANCE/LIVRES):
+  [21:30] SOURCE: EPINGLE 56 (FINANCE/LIVRES)
       TITRE : Les 4 Accords Tolteques : le livre indispensable 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-les-4-accords-tolteques.html?src=pinterest
       BOARD : FINANCE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 56 ---'
 
-  TACHE: Creer/chercher l'image Canva, copier-coller titre+desc+lien, publier dans le board AUDIO si applicable
+  TACHE : creer l'image Canva, copier-coller titre+description+hashtags+liens depuis la source, publier chaque epingle dans son board
 
 ==============================================================================
-JOUR 06 - (5 epingles - themes: AUDIO, BUREAU/TECH, CUISINE, FINANCE/LIVRES, RENTREE)
+JOUR 06 - 5 epingles - themes: AUDIO, BUREAU/TECH, CUISINE, FINANCE/LIVRES, RENTREE
 ==============================================================================
 
-  [09:00] Epingle 1 (RENTREE):
+  [09:00] SOURCE: EPINGLE 06 (RENTREE)
       TITRE : Top 5 cartables & sacs scolaires rentree 2026 : le guide d'achat
       LIEN  : https://affilimax.onrender.com/affilimax_blog/top-cartables-sacs-scolaires-2026.html?src=pinterest
       BOARD : RENTREE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 06 ---'
 
-  [13:00] Epingle 2 (BUREAU/TECH):
+  [13:00] SOURCE: EPINGLE 40 (BUREAU/TECH)
       TITRE : Logitech G502 HERO : la souris gaming ultime testee 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-logitech-g502-hero.html?src=pinterest
       BOARD : BUREAU
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 40 ---'
 
-  [17:00] Epingle 3 (AUDIO):
+  [17:00] SOURCE: EPINGLE 18 (AUDIO)
       TITRE : Sony WH-1000XM5 : le casque de reference teste 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-sony-wh-1000xm5.html?src=pinterest
       BOARD : AUDIO
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 18 ---'
 
-  [20:00] Epingle 4 (CUISINE):
+  [20:00] SOURCE: EPINGLE 23 (CUISINE)
       TITRE : Ninja Foodi Max AF180EU : l'air fryer teste 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-ninja-foodi-max-air-fryer.html?src=pinterest
       BOARD : CUISINE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 23 ---'
 
-  [21:30] Epingle 5 (FINANCE/LIVRES):
+  [21:30] SOURCE: EPINGLE 57 (FINANCE/LIVRES)
       TITRE : Top 5 meilleurs livres 2026 : developpement personnel, finance, business
       LIEN  : https://affilimax.onrender.com/affilimax_blog/top-5-livres-2026.html?src=pinterest
       BOARD : FINANCE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 57 ---'
 
-  TACHE: Creer/chercher l'image Canva, copier-coller titre+desc+lien, publier dans le board AUDIO si applicable
+  TACHE : creer l'image Canva, copier-coller titre+description+hashtags+liens depuis la source, publier chaque epingle dans son board
 
 ==============================================================================
-JOUR 07 - (5 epingles - themes: AUDIO, BUREAU/TECH, CUISINE, FINANCE/LIVRES, RENTREE)
+JOUR 07 - 5 epingles - themes: AUDIO, BUREAU/TECH, CUISINE, FINANCE/LIVRES, RENTREE
 ==============================================================================
 
-  [09:00] Epingle 1 (RENTREE):
+  [09:00] SOURCE: EPINGLE 07 (RENTREE)
       TITRE : Guide fournitures scolaires 2026 : les 5 essentiels de la rentree
       LIEN  : https://affilimax.onrender.com/affilimax_blog/guide-fournitures-scolaires-2026.html?src=pinterest
       BOARD : RENTREE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 07 ---'
 
-  [13:00] Epingle 2 (BUREAU/TECH):
+  [13:00] SOURCE: EPINGLE 41 (BUREAU/TECH)
       TITRE : EPOMAKER Aula F75 : le clavier mecanique a tester 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-epomaker-aula-f75.html?src=pinterest
       BOARD : BUREAU
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 41 ---'
 
-  [17:00] Epingle 3 (AUDIO):
+  [17:00] SOURCE: EPINGLE 19 (AUDIO)
       TITRE : Apple AirPods 4 : les ecouteurs sans fil testes 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-apple-airpods-4.html?src=pinterest
       BOARD : AUDIO
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 19 ---'
 
-  [20:00] Epingle 4 (CUISINE):
+  [20:00] SOURCE: EPINGLE 24 (CUISINE)
       TITRE : Guide cuisine connectee 2026 : les 5 indispensables
       LIEN  : https://affilimax.onrender.com/affilimax_blog/guide-cuisine-connectee-2026.html?src=pinterest
       BOARD : CUISINE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 24 ---'
 
-  [21:30] Epingle 5 (FINANCE/LIVRES):
+  [21:30] SOURCE: EPINGLE 58 (FINANCE/LIVRES)
       TITRE : Le Grand Livre du Marketing Digital : le test complet 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-grand-livre-marketing-digital.html?src=pinterest
       BOARD : FINANCE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 58 ---'
 
-  TACHE: Creer/chercher l'image Canva, copier-coller titre+desc+lien, publier dans le board AUDIO si applicable
+  TACHE : creer l'image Canva, copier-coller titre+description+hashtags+liens depuis la source, publier chaque epingle dans son board
 
 ==============================================================================
-JOUR 08 - (5 epingles - themes: AUDIO, BUREAU/TECH, CUISINE, FINANCE/LIVRES, RENTREE)
+JOUR 08 - 5 epingles - themes: AUDIO, BUREAU/TECH, CUISINE, FINANCE/LIVRES, RENTREE
 ==============================================================================
 
-  [09:00] Epingle 1 (RENTREE):
+  [09:00] SOURCE: EPINGLE 08 (RENTREE)
       TITRE : Rentree primaire & maternelle 2026 : toutes les fournitures pour les 3-10 ans
       LIEN  : https://affilimax.onrender.com/affilimax_blog/guide-rentree-primaire-maternelle-2026.html?src=pinterest
       BOARD : RENTREE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 08 ---'
 
-  [13:00] Epingle 2 (BUREAU/TECH):
+  [13:00] SOURCE: EPINGLE 42 (BUREAU/TECH)
       TITRE : Logitech C920s : la webcam HD Pro pour teletravail testee 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-logitech-c920s-webcam.html?src=pinterest
       BOARD : BUREAU
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 42 ---'
 
-  [17:00] Epingle 3 (AUDIO):
+  [17:00] SOURCE: EPINGLE 20 (AUDIO)
       TITRE : JBL Go 4 : l'enceinte Bluetooth ultra-portable testee 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-jbl-go-4-enceinte.html?src=pinterest
       BOARD : AUDIO
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 20 ---'
 
-  [20:00] Epingle 4 (CUISINE):
+  [20:00] SOURCE: EPINGLE 25 (CUISINE)
       TITRE : Philips L'Or Barista Sublime : la machine a cafe testee 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-philips-lor-barista.html?src=pinterest
       BOARD : CUISINE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 25 ---'
 
-  [21:30] Epingle 5 (FINANCE/LIVRES):
+  [21:30] SOURCE: EPINGLE 59 (FINANCE/LIVRES)
       TITRE : Dropshipping : Se Lancer et Reussir - le livre teste 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-dropshipping-lancer-reussir.html?src=pinterest
       BOARD : FINANCE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 59 ---'
 
-  TACHE: Creer/chercher l'image Canva, copier-coller titre+desc+lien, publier dans le board AUDIO si applicable
+  TACHE : creer l'image Canva, copier-coller titre+description+hashtags+liens depuis la source, publier chaque epingle dans son board
 
 ==============================================================================
-JOUR 09 - (5 epingles - themes: BUREAU/TECH, FINANCE/LIVRES, MAISON, RENTREE, SPORT)
+JOUR 09 - 5 epingles - themes: BUREAU/TECH, FINANCE/LIVRES, MAISON, RENTREE, SPORT
 ==============================================================================
 
-  [09:00] Epingle 1 (RENTREE):
+  [09:00] SOURCE: EPINGLE 09 (RENTREE)
       TITRE : Comparatif fournitures college 2026 : quel materiel choisir ?
       LIEN  : https://affilimax.onrender.com/affilimax_blog/comparatif-fournitures-college-2026.html?src=pinterest
       BOARD : RENTREE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 09 ---'
 
-  [13:00] Epingle 2 (BUREAU/TECH):
+  [13:00] SOURCE: EPINGLE 43 (BUREAU/TECH)
       TITRE : Samsung Galaxy Tab A9+ 11 : la tablette parfaite testee 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-samsung-galaxy-tab-a9-plus.html?src=pinterest
       BOARD : BUREAU
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 43 ---'
 
-  [17:00] Epingle 3 (MAISON):
+  [17:00] SOURCE: EPINGLE 10 (MAISON)
       TITRE : Meilleur robot aspirateur 2026 : Roborock Q5 Pro+ vs Xiaomi S20+
       LIEN  : https://affilimax.onrender.com/affilimax_blog/article-1-aspirateur-robots-2026.html?src=pinterest
       BOARD : MAISON
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 10 ---'
 
-  [20:00] Epingle 4 (SPORT):
+  [20:00] SOURCE: EPINGLE 26 (SPORT)
       TITRE : Tapis de marche bureau 2026 : restez actif en teletravail
       LIEN  : https://affilimax.onrender.com/affilimax_blog/article-4-tapis-marche-2026.html?src=pinterest
       BOARD : SPORT
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 26 ---'
 
-  [21:30] Epingle 5 (FINANCE/LIVRES):
+  [21:30] SOURCE: EPINGLE 60 (FINANCE/LIVRES)
       TITRE : WordPress pour les Nuls : le livre teste 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-wordpress-pour-les-nuls.html?src=pinterest
       BOARD : FINANCE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 60 ---'
 
-  TACHE: Creer/chercher l'image Canva, copier-coller titre+desc+lien, publier dans le board BUREAU si applicable
+  TACHE : creer l'image Canva, copier-coller titre+description+hashtags+liens depuis la source, publier chaque epingle dans son board
 
 ==============================================================================
-JOUR 10 - (5 epingles - themes: BUREAU/TECH, DIVERS, MAISON, RENTREE, SPORT)
+JOUR 10 - 5 epingles - themes: BUREAU/TECH, DIVERS, MAISON, RENTREE, SPORT
 ==============================================================================
 
-  [09:00] Epingle 1 (RENTREE):
+  [09:00] SOURCE: EPINGLE 69 (RENTREE)
       TITRE : Rentree 2026 : 30 fournitures a acheter maintenant (la liste ultime)
       LIEN  : https://affilimax.onrender.com/affilimax_blog/guide-ultime-rentree-2026.html?src=pinterest2
       BOARD : RENTREE
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 69 ---'
 
-  [13:00] Epingle 2 (BUREAU/TECH):
+  [13:00] SOURCE: EPINGLE 44 (BUREAU/TECH)
       TITRE : SSD Samsung T7 Shield 1To : le stockage externe teste 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-ssd-samsung-t7-shield.html?src=pinterest
       BOARD : BUREAU
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 44 ---'
 
-  [17:00] Epingle 3 (MAISON):
+  [17:00] SOURCE: EPINGLE 11 (MAISON)
       TITRE : Meilleurs aspirateurs robots 2026 : le comparatif complet
       LIEN  : https://affilimax.onrender.com/affilimax_blog/comparatif-aspirateurs-robots-2026.html?src=pinterest
       BOARD : MAISON
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 11 ---'
 
-  [20:00] Epingle 4 (SPORT):
+  [20:00] SOURCE: EPINGLE 27 (SPORT)
       TITRE : Tapis de marche pliable 2026 : guide d'achat et test LONTEK
       LIEN  : https://affilimax.onrender.com/affilimax_blog/guide-tapis-marche-2026.html?src=pinterest
       BOARD : SPORT
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 27 ---'
 
-  [21:30] Epingle 5 (DIVERS):
+  [21:30] SOURCE: EPINGLE 61 (DIVERS)
       TITRE : Guide voyage 2026 : le top 5 des accessoires high-tech pour voyager leger
       LIEN  : https://affilimax.onrender.com/affilimax_blog/guide-voyage-2026.html?src=pinterest
       BOARD : DIVERS
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 61 ---'
 
-  TACHE: Creer/chercher l'image Canva, copier-coller titre+desc+lien, publier dans le board BUREAU si applicable
+  TACHE : creer l'image Canva, copier-coller titre+description+hashtags+liens depuis la source, publier chaque epingle dans son board
 
 ==============================================================================
-JOUR 11 - (5 epingles - themes: BUREAU/TECH, DIVERS, MAISON, SPORT)
+JOUR 11 - 5 epingles - themes: BUREAU/TECH, DIVERS, MAISON, SPORT
 ==============================================================================
 
-  [09:00] Epingle 1 (BUREAU/TECH):
+  [09:00] SOURCE: EPINGLE 31 (BUREAU/TECH)
       TITRE : Setup bureau high-tech 2026 : le guide complet teletravail
       LIEN  : https://affilimax.onrender.com/affilimax_blog/guide-bureau-high-tech-2026.html?src=pinterest
       BOARD : BUREAU
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 31 ---'
 
-  [13:00] Epingle 2 (BUREAU/TECH):
+  [13:00] SOURCE: EPINGLE 46 (BUREAU/TECH)
       TITRE : Anker Power Bank 20000mAh : la batterie externe testee 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-anker-power-bank-20000.html?src=pinterest
       BOARD : BUREAU
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 46 ---'
 
-  [17:00] Epingle 3 (MAISON):
+  [17:00] SOURCE: EPINGLE 12 (MAISON)
       TITRE : Roborock Q5 Pro+ : le robot aspirateur teste 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-roborock-q5-pro-plus.html?src=pinterest
       BOARD : MAISON
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 12 ---'
 
-  [20:00] Epingle 4 (SPORT):
+  [20:00] SOURCE: EPINGLE 28 (SPORT)
       TITRE : Tapis de marche pliable LONTEK : le test complet 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-tapis-marche-pliable-lontek.html?src=pinterest
       BOARD : SPORT
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 28 ---'
 
-  [21:30] Epingle 5 (DIVERS):
+  [21:30] SOURCE: EPINGLE 62 (DIVERS)
       TITRE : Guide jardin & exterieur 2026 : 5 accessoires tech pour l'ete
       LIEN  : https://affilimax.onrender.com/affilimax_blog/guide-jardin-exterieur-2026.html?src=pinterest
       BOARD : DIVERS
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 62 ---'
 
-  TACHE: Creer/chercher l'image Canva, copier-coller titre+desc+lien, publier dans le board BUREAU si applicable
+  TACHE : creer l'image Canva, copier-coller titre+description+hashtags+liens depuis la source, publier chaque epingle dans son board
 
 ==============================================================================
-JOUR 12 - (5 epingles - themes: BUREAU/TECH, DIVERS, MAISON, SPORT)
+JOUR 12 - 5 epingles - themes: BUREAU/TECH, DIVERS, MAISON, SPORT
 ==============================================================================
 
-  [09:00] Epingle 1 (BUREAU/TECH):
+  [09:00] SOURCE: EPINGLE 32 (BUREAU/TECH)
       TITRE : Top 5 accessoires teletravail 2026 : le setup bureau domicile ideal
       LIEN  : https://affilimax.onrender.com/affilimax_blog/top-accessoires-teletravail-2026.html?src=pinterest
       BOARD : BUREAU
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 32 ---'
 
-  [13:00] Epingle 2 (BUREAU/TECH):
+  [13:00] SOURCE: EPINGLE 47 (BUREAU/TECH)
       TITRE : TP-Link Deco X50 : le Wi-Fi 6 Mesh teste 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-tp-link-deco-x50-mesh.html?src=pinterest
       BOARD : BUREAU
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 47 ---'
 
-  [17:00] Epingle 3 (MAISON):
+  [17:00] SOURCE: EPINGLE 13 (MAISON)
       TITRE : Xiaomi Robot Aspirateur S20+ : le test complet 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-xiaomi-robot-aspirateur-s20.html?src=pinterest
       BOARD : MAISON
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 13 ---'
 
-  [20:00] Epingle 4 (SPORT):
+  [20:00] SOURCE: EPINGLE 29 (SPORT)
       TITRE : Guide sport maison 2026 : l'equipement complet pour une salle a domicile
       LIEN  : https://affilimax.onrender.com/affilimax_blog/guide-sport-maison-2026.html?src=pinterest
       BOARD : SPORT
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 29 ---'
 
-  [21:30] Epingle 5 (DIVERS):
+  [21:30] SOURCE: EPINGLE 63 (DIVERS)
       TITRE : Idees cadeaux Noel 2026 : le guide des meilleurs cadeaux high-tech
       LIEN  : https://affilimax.onrender.com/affilimax_blog/guide-cadeaux-noel-2026.html?src=pinterest
       BOARD : DIVERS
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 63 ---'
 
-  TACHE: Creer/chercher l'image Canva, copier-coller titre+desc+lien, publier dans le board BUREAU si applicable
+  TACHE : creer l'image Canva, copier-coller titre+description+hashtags+liens depuis la source, publier chaque epingle dans son board
 
 ==============================================================================
-JOUR 13 - (5 epingles - themes: BUREAU/TECH, DIVERS, MAISON, SPORT)
+JOUR 13 - 5 epingles - themes: BUREAU/TECH, DIVERS, MAISON, SPORT
 ==============================================================================
 
-  [09:00] Epingle 1 (BUREAU/TECH):
+  [09:00] SOURCE: EPINGLE 33 (BUREAU/TECH)
       TITRE : Guide gaming 2026 : le setup gamer complet
       LIEN  : https://affilimax.onrender.com/affilimax_blog/guide-gaming-2026.html?src=pinterest
       BOARD : BUREAU
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 33 ---'
 
-  [13:00] Epingle 2 (BUREAU/TECH):
+  [13:00] SOURCE: EPINGLE 64 (BUREAU/TECH)
       TITRE : Top 5 cadeaux high-tech 2026 : des idees pour tous
       LIEN  : https://affilimax.onrender.com/affilimax_blog/top-cadeaux-high-tech-2026.html?src=pinterest
       BOARD : BUREAU
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 64 ---'
 
-  [17:00] Epingle 3 (MAISON):
+  [17:00] SOURCE: EPINGLE 48 (MAISON)
       TITRE : Guide maison connectee 2026 : le top 6 pour une smart home
       LIEN  : https://affilimax.onrender.com/affilimax_blog/guide-maison-connectee-2026.html?src=pinterest
       BOARD : MAISON
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 48 ---'
 
-  [20:00] Epingle 4 (SPORT):
+  [20:00] SOURCE: EPINGLE 30 (SPORT)
       TITRE : Top 5 produits bien-etre 2026 : sante & developpement personnel
       LIEN  : https://affilimax.onrender.com/affilimax_blog/top-bien-etre-2026.html?src=pinterest
       BOARD : SPORT
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 30 ---'
 
-  [21:30] Epingle 5 (DIVERS):
+  [21:30] SOURCE: EPINGLE 67 (DIVERS)
       TITRE : Lego Ideas Notre-Dame de Paris 21061 : le test 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-lego-ideas-notre-dame-paris.html?src=pinterest
       BOARD : DIVERS
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 67 ---'
 
-  TACHE: Creer/chercher l'image Canva, copier-coller titre+desc+lien, publier dans le board BUREAU si applicable
+  TACHE : creer l'image Canva, copier-coller titre+description+hashtags+liens depuis la source, publier chaque epingle dans son board
 
 ==============================================================================
-JOUR 14 - (5 epingles - themes: BUREAU/TECH, DIVERS, MAISON, SPORT)
+JOUR 14 - 5 epingles - themes: BUREAU/TECH, DIVERS, MAISON, SPORT
 ==============================================================================
 
-  [09:00] Epingle 1 (BUREAU/TECH):
+  [09:00] SOURCE: EPINGLE 34 (BUREAU/TECH)
       TITRE : Guide high-tech etudiant 2026 : 5 indispensables pour reussir
       LIEN  : https://affilimax.onrender.com/affilimax_blog/guide-high-tech-etudiant-2026.html?src=pinterest
       BOARD : BUREAU
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 34 ---'
 
-  [13:00] Epingle 2 (BUREAU/TECH):
+  [13:00] SOURCE: EPINGLE 65 (BUREAU/TECH)
       TITRE : Amazon Kindle 2024 11e Gen : la liseuse testee 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-amazon-kindle-2024.html?src=pinterest
       BOARD : BUREAU
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 65 ---'
 
-  [17:00] Epingle 3 (MAISON):
+  [17:00] SOURCE: EPINGLE 49 (MAISON)
       TITRE : Comparatif objets connectes 2026 : le top 5 des accessoires
       LIEN  : https://affilimax.onrender.com/affilimax_blog/comparatif-objets-connectes-2026.html?src=pinterest
       BOARD : MAISON
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 49 ---'
 
-  [20:00] Epingle 4 (SPORT):
+  [20:00] SOURCE: EPINGLE 45 (SPORT)
       TITRE : WD My Passport 4To Ultra : le disque externe teste 2026
       LIEN  : https://affilimax.onrender.com/affilimax_blog/seo-wd-my-passport-4to.html?src=pinterest
       BOARD : SPORT
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 45 ---'
 
-  [21:30] Epingle 5 (DIVERS):
+  [21:30] SOURCE: EPINGLE 68 (DIVERS)
       TITRE : Lego collection adulte 2026 : Notre-Dame de Paris 21061, la plus belle piece
       LIEN  : https://affilimax.onrender.com/affilimax_blog/article-5-lego-adulte-2026.html?src=pinterest
       BOARD : DIVERS
+      DESC  : voir POSTS_PINTEREST_14JOURS.txt -> '--- EPINGLE 68 ---'
 
-  TACHE: Creer/chercher l'image Canva, copier-coller titre+desc+lien, publier dans le board BUREAU si applicable
+  TACHE : creer l'image Canva, copier-coller titre+description+hashtags+liens depuis la source, publier chaque epingle dans son board
 
 ==============================================================================
 CHECKLIST QUOTIDIENNE
 1. [ ] Publier les 5 epingles du jour (9h, 13h, 17h, 20h, 21h30)
-2. [ ] Ajouter 2-3 mots-cles dans le titre si Pinterest le permet
-3. [ ] Verifier dans le dashboard (localhost:8765) les clics ?src=pinterest
-4. [ ] Epingler 5 contenus d'autres createurs (engagement reciproque)
-5. [ ] Noter les epingles qui performent (a reposter J+21)
+2. [ ] Pour chaque epingle: copier titre + description + hashtags depuis la SOURCE indiquee
+3. [ ] Publier dans le board correspondant (BOARD indique)
+4. [ ] Verifier dans le dashboard (affilimax.onrender.com) les clics ?src=pinterest
+5. [ ] Epingler 5 contenus d'autres createurs (engagement reciproque)
+6. [ ] Noter les epingles qui performent (a reposter J+21)
 ==============================================================================
