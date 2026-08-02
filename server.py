@@ -1633,6 +1633,7 @@ class AffilimaxHandler(http.server.SimpleHTTPRequestHandler):
             "linkedin": "reseaux_sociaux", "li": "reseaux_sociaux",
             "instagram": "reseaux_sociaux", "ig": "reseaux_sociaux",
             "tiktok": "reseaux_sociaux", "tt": "reseaux_sociaux",
+            "pinterest": "reseaux_sociaux", "pin": "reseaux_sociaux", "pins": "reseaux_sociaux",
             "email": "email_marketing", "mail": "email_marketing",
             "newsletter": "email_marketing",
             "google": "SEO_organique", "seo": "SEO_organique",
