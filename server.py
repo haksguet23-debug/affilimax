@@ -317,20 +317,21 @@ def rollover_journalier(data):
 
 def load_data():
     """Charge les donnees depuis le fichier JSON."""
-    try:
-        with open(STATS_FILE, "r", encoding="utf-8") as f:
-            data = json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError):
-        return init_fresh_data()
-    # Migration : garantir la structure historique
-    _ensure_hist(data)
-    # Rollover journalier : si la date a change, decale l'historique,
-    # reset les compteurs du jour et persiste le changement. Le verrou
-    # evite une double course entre threads au premier appel apres minuit.
     with DATA_LOCK:
+        try:
+            with open(STATS_FILE, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        except (FileNotFoundError, json.JSONDecodeError):
+            return init_fresh_data()
+        # Migration : garantir la structure historique
+        _ensure_hist(data)
+        # Rollover journalier : si la date a change, decale l'historique,
+        # reset les compteurs du jour et persiste le changement. La lecture,
+        # le rollover et la sauvegarde sont atomiques sous le meme verrou
+        # (RLock) pour eviter un double-decalage entre threads a minuit.
         if rollover_journalier(data):
             save_data(data)
-    return data
+        return data
 
 def save_data(data):
     """Sauvegarde les donnees dans le fichier JSON."""
