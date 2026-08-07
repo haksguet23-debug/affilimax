@@ -126,7 +126,7 @@ else:
         providers.append("Groq")
     if GEMINI_ENABLED:
         providers.append("Gemini")
-    print(f"[IA] Providers actifs: {', '.join(providers)} (cascade: Groq -> Gemini -> statique)")
+    print(f"[IA] Providers actifs: {', '.join(providers)} (cascade: Gemini -> Groq -> statique)")
 
 
 # ==================== CHARGEMENT PRODUITS ====================
@@ -215,14 +215,14 @@ def ask_ai(system_prompt, user_prompt, temperature=0.8, max_tokens=500):
     if not AI_ENABLED:
         return None
 
-    # Provider 1: Groq (plus rapide, plus de quota)
-    result = _ask_groq(system_prompt, user_prompt, temperature, max_tokens)
+    # Provider 1: Gemini (Google AI Studio, prioritaire)
+    result = _ask_gemini(system_prompt, user_prompt, temperature, max_tokens)
     if result is not None:
         return result
 
-    # Provider 2: Gemini (fallback, gratuit)
-    print("[IA] Groq rate-limite -> tentative Gemini...")
-    result = _ask_gemini(system_prompt, user_prompt, temperature, max_tokens)
+    # Provider 2: Groq (repli)
+    print("[IA] Gemini KO -> tentative Groq...")
+    result = _ask_groq(system_prompt, user_prompt, temperature, max_tokens)
     if result is not None:
         return result
 
