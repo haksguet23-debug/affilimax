@@ -3,3 +3,11 @@
 stripe==11.6.0
 resend>=1.0.0
 google-generativeai>=0.8.0
+# --- IA (Groq via openai) ---
+openai>=1.0.0
+# --- Video Factory (scripts, images, voix, montage MP4) ---
+edge-tts>=6.1.0
+pillow>=10.0.0
+numpy>=1.24.0
+moviepy>=2.0.0
+imageio-ffmpeg>=0.5.0

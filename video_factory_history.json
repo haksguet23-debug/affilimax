@@ -1,0 +1,283 @@
+[
+  {
+    "id": "vf_20260807_123245_903",
+    "kind": "product",
+    "status": "done",
+    "progress": 100,
+    "step": "Video terminee",
+    "title": "Eastpak Padded Sac a Dos : test complet et avis honnete (39.99 EUR)",
+    "params": {
+      "product": "Sony WH-1000XM5",
+      "theme": "",
+      "duration": "30s",
+      "style": "testeur",
+      "scenes": 2,
+      "voice": "fr-FR-DeniseNeural",
+      "subtitles": true
+    },
+    "created_at": "2026-08-07T12:32:45.873929Z",
+    "finished_at": "2026-08-07T12:33:37.399025Z",
+    "files": {
+      "video": "video_factory/output/vf_20260807_123245_903/video.mp4",
+      "script": "video_factory/output/vf_20260807_123245_903/script.json",
+      "srt": "video_factory/output/vf_20260807_123245_903/subtitles.srt"
+    },
+    "log": [
+      {
+        "ts": "12:32:45",
+        "msg": "Job cree"
+      },
+      {
+        "ts": "12:32:45",
+        "msg": "Script IA en cours..."
+      },
+      {
+        "ts": "12:32:46",
+        "msg": "Script genere (IA (STATIQUE)) - 2 scenes"
+      },
+      {
+        "ts": "12:32:46",
+        "msg": "Storyboard images (PIL)..."
+      },
+      {
+        "ts": "12:32:47",
+        "msg": "2 images generees"
+      },
+      {
+        "ts": "12:32:47",
+        "msg": "Voix IA (edge-tts)..."
+      },
+      {
+        "ts": "12:32:50",
+        "msg": "Voix IA: 2/2 scenes"
+      },
+      {
+        "ts": "12:32:50",
+        "msg": "Sous-titres SRT (timings edge-tts)..."
+      },
+      {
+        "ts": "12:32:51",
+        "msg": "Sous-titres: 7 lignes (incrustes dans la video)"
+      },
+      {
+        "ts": "12:32:51",
+        "msg": "Montage (moviepy + ffmpeg)..."
+      },
+      {
+        "ts": "12:33:37",
+        "msg": "Video MP4 terminee"
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "vf_20260807_123041_765",
+    "kind": "product",
+    "status": "done",
+    "progress": 100,
+    "step": "Video terminee",
+    "title": "Ninja Foodi Max Air Fryer AF180EU : test complet et avis honnete (174.99 EUR)",
+    "params": {
+      "product": "Ninja Foodi Max Air Fryer",
+      "theme": "",
+      "duration": "30s",
+      "style": "testeur",
+      "scenes": 2,
+      "voice": "fr-FR-DeniseNeural",
+      "subtitles": true
+    },
+    "created_at": "2026-08-07T12:30:41.012853Z",
+    "finished_at": "2026-08-07T12:30:46.073803Z",
+    "files": {
+      "video": "video_factory/output/vf_20260807_123041_765/video.mp4",
+      "script": "video_factory/output/vf_20260807_123041_765/script.json"
+    },
+    "log": [
+      {
+        "ts": "12:30:41",
+        "msg": "Job cree"
+      },
+      {
+        "ts": "12:30:41",
+        "msg": "Script IA en cours..."
+      },
+      {
+        "ts": "12:30:42",
+        "msg": "Script genere (IA (STATIQUE)) - 2 scenes"
+      },
+      {
+        "ts": "12:30:42",
+        "msg": "Storyboard images (PIL)..."
+      },
+      {
+        "ts": "12:30:42",
+        "msg": "2 images generees"
+      },
+      {
+        "ts": "12:30:42",
+        "msg": "Voix IA (edge-tts)..."
+      },
+      {
+        "ts": "12:30:44",
+        "msg": "Voix IA: 0/2 scenes"
+      },
+      {
+        "ts": "12:30:44",
+        "msg": "Sous-titres SRT (timings edge-tts)..."
+      },
+      {
+        "ts": "12:30:44",
+        "msg": "Sous-titres: aucun timing disponible, ignores"
+      },
+      {
+        "ts": "12:30:44",
+        "msg": "Montage (moviepy + ffmpeg)..."
+      },
+      {
+        "ts": "12:30:46",
+        "msg": "Video MP4 terminee"
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "vf_20260807_122900_577",
+    "kind": "product",
+    "status": "done",
+    "progress": 100,
+    "step": "Video terminee",
+    "title": "Bose QuietComfort Ultra Casque : test complet et avis honnete (399.99 EUR)",
+    "params": {
+      "product": "Bose QuietComfort Ultra",
+      "duration": "30s",
+      "style": "testeur",
+      "scenes": 2,
+      "voice": "fr-FR-DeniseNeural",
+      "subtitles": true
+    },
+    "created_at": "2026-08-07T12:29:00.232248Z",
+    "finished_at": "2026-08-07T12:30:02.776115Z",
+    "files": {
+      "video": "video_factory/output/vf_20260807_122900_577/video.mp4",
+      "script": "video_factory/output/vf_20260807_122900_577/script.json",
+      "srt": "video_factory/output/vf_20260807_122900_577/subtitles.srt"
+    },
+    "log": [
+      {
+        "ts": "12:29:00",
+        "msg": "Job cree"
+      },
+      {
+        "ts": "12:29:00",
+        "msg": "Script IA en cours..."
+      },
+      {
+        "ts": "12:29:03",
+        "msg": "Script genere (IA (STATIQUE)) - 2 scenes"
+      },
+      {
+        "ts": "12:29:03",
+        "msg": "Storyboard images (PIL)..."
+      },
+      {
+        "ts": "12:29:03",
+        "msg": "2 images generees"
+      },
+      {
+        "ts": "12:29:03",
+        "msg": "Voix IA (edge-tts)..."
+      },
+      {
+        "ts": "12:29:08",
+        "msg": "Voix IA: 2/2 scenes"
+      },
+      {
+        "ts": "12:29:08",
+        "msg": "Sous-titres SRT (timings edge-tts)..."
+      },
+      {
+        "ts": "12:29:09",
+        "msg": "Sous-titres: 7 lignes (incrustes dans la video)"
+      },
+      {
+        "ts": "12:29:09",
+        "msg": "Montage (moviepy + ffmpeg)..."
+      },
+      {
+        "ts": "12:30:02",
+        "msg": "Video MP4 terminee"
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "vf_20260807_122159_210",
+    "kind": "product",
+    "status": "done",
+    "progress": 100,
+    "step": "Video terminee",
+    "title": "SSD Samsung T7 Shield 1To : test complet et avis honnete (109.99 EUR)",
+    "params": {
+      "product": "SSD Samsung T7",
+      "theme": "un petit renard",
+      "duration": "30s",
+      "style": "testeur",
+      "scenes": 2,
+      "voice": "fr-FR-DeniseNeural",
+      "subtitles": true
+    },
+    "created_at": "2026-08-07T12:21:59.249239Z",
+    "finished_at": "2026-08-07T12:22:08.602426Z",
+    "files": {
+      "video": "video_factory/output/vf_20260807_122159_210/video.mp4",
+      "script": "video_factory/output/vf_20260807_122159_210/script.json"
+    },
+    "log": [
+      {
+        "ts": "12:21:59",
+        "msg": "Job cree"
+      },
+      {
+        "ts": "12:21:59",
+        "msg": "Script IA en cours..."
+      },
+      {
+        "ts": "12:22:00",
+        "msg": "Script genere (IA (STATIQUE)) - 2 scenes"
+      },
+      {
+        "ts": "12:22:00",
+        "msg": "Storyboard images (PIL)..."
+      },
+      {
+        "ts": "12:22:00",
+        "msg": "2 images generees"
+      },
+      {
+        "ts": "12:22:00",
+        "msg": "Voix IA (edge-tts)..."
+      },
+      {
+        "ts": "12:22:06",
+        "msg": "Voix IA: 0/2 scenes"
+      },
+      {
+        "ts": "12:22:06",
+        "msg": "Sous-titres SRT (timings edge-tts)..."
+      },
+      {
+        "ts": "12:22:07",
+        "msg": "Sous-titres: aucun timing disponible, ignores"
+      },
+      {
+        "ts": "12:22:07",
+        "msg": "Montage (moviepy + ffmpeg)..."
+      },
+      {
+        "ts": "12:22:08",
+        "msg": "Video MP4 terminee"
+      }
+    ],
+    "error": null
+  }
+]

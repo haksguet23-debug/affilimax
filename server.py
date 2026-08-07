@@ -1164,6 +1164,102 @@ class AffilimaxHandler(http.server.SimpleHTTPRequestHandler):
                 self.serve_json({"status": "error", "message": str(e)})
             return
 
+        # API: Video Factory - health check (IA + voix + ffmpeg)
+        if path == "/api/video/health":
+            try:
+                from video_factory import health_check as vf_health
+                self.serve_json(vf_health())
+            except Exception as e:
+                self.serve_json({"status": "error", "message": str(e)})
+            return
+
+        # API: Video Factory - generer un script (texte seul, synchrone)
+        if path == "/api/video/script":
+            qs = urllib.parse.parse_qs(parsed.query)
+            kind = qs.get("kind", ["product"])[0]
+            scenes = int(qs.get("scenes", ["5"])[0])
+            duration = qs.get("duration", ["60s"])[0]
+            style = qs.get("style", ["testeur"])[0]
+            try:
+                from video_factory import generate_product_script, generate_children_story
+                from ai_automator import find_product
+                if kind == "story":
+                    theme = qs.get("theme", [""])[0]
+                    result = generate_children_story(theme, scenes=scenes, duration=duration)
+                else:
+                    product = find_product(qs.get("product", [None])[0])
+                    result = generate_product_script(product, scenes=scenes, style=style, duration=duration)
+                self.serve_json(result)
+            except Exception as e:
+                self.serve_json({"status": "error", "message": str(e)})
+            return
+
+        # API: Video Factory - statut d'un job (polling)
+        if path == "/api/video/job":
+            qs = urllib.parse.parse_qs(parsed.query)
+            job_id = qs.get("id", [None])[0]
+            try:
+                from video_factory import get_job
+                job = get_job(job_id) if job_id else None
+                if job:
+                    self.serve_json(job)
+                else:
+                    self.serve_json({"status": "error", "message": "Job introuvable"})
+            except Exception as e:
+                self.serve_json({"status": "error", "message": str(e)})
+            return
+
+        # API: Video Factory - historique des jobs
+        if path == "/api/video/history":
+            try:
+                from video_factory import list_jobs
+                self.serve_json({"jobs": list_jobs()})
+            except Exception as e:
+                self.serve_json({"status": "error", "message": str(e)})
+            return
+
+        # API: Video Factory - telecharger le MP4 / le script d'un job
+        if path == "/api/video/download":
+            qs = urllib.parse.parse_qs(parsed.query)
+            job_id = qs.get("id", [None])[0]
+            file_key = qs.get("file", ["video"])[0]
+            try:
+                from video_factory import get_job, OUTPUT_DIR
+                job = get_job(job_id) if job_id else None
+                if not job:
+                    self.serve_json({"status": "error", "message": "Job introuvable"})
+                    return
+                rel = job.get("files", {}).get(file_key)
+                if not rel:
+                    self.serve_json({"status": "error", "message": "Fichier absent pour ce job"})
+                    return
+                # Securite: le fichier doit rester sous OUTPUT_DIR
+                full = (OUTPUT_DIR / job_id / os.path.basename(rel)).resolve()
+                if not str(full).startswith(str(OUTPUT_DIR.resolve())) or not full.exists():
+                    self.serve_json({"status": "error", "message": "Fichier introuvable"})
+                    return
+                mime = {
+                    "video": "video/mp4",
+                    "srt": "application/x-subrip; charset=utf-8",
+                    "script": "application/json; charset=utf-8",
+                }.get(file_key, "application/octet-stream")
+                self.send_response(200)
+                self.send_header("Content-Type", mime)
+                self.send_header("Content-Disposition", f'attachment; filename="{os.path.basename(full)}"')
+                self.send_header("Content-Length", str(full.stat().st_size))
+                self.send_header("Access-Control-Allow-Origin", "*")
+                self.end_headers()
+                with open(full, "rb") as f:
+                    self.wfile.write(f.read())
+            except Exception as e:
+                self.serve_json({"status": "error", "message": str(e)})
+            return
+
+        # Page Video Factory
+        if path == "/video-factory.html":
+            self.path = "/video-factory.html"
+            return super().do_GET()
+
         # Fichiers statiques
         if path == "/" or path == "":
             self.path = "/index.html"
@@ -1703,6 +1799,30 @@ class AffilimaxHandler(http.server.SimpleHTTPRequestHandler):
 
         # ================== FIN STRIPE ==================
 
+        # ================== VIDEO FACTORY ==================
+        # Lance un pipeline video en arriere-plan (script + images + voix + MP4)
+        if path == "/api/video/job":
+            kind = payload.get("kind", "product")
+            if kind not in ("product", "story"):
+                self.serve_json({"status": "error", "message": "kind doit etre product ou story"})
+                return
+            try:
+                import video_factory
+                video_factory.set_event_callback(lambda ev, data: publish_event("video_" + ev, data))
+                job = video_factory.start_job(kind, {
+                    "product": payload.get("product", ""),
+                    "theme": payload.get("theme", ""),
+                    "duration": payload.get("duration", "60s"),
+                    "style": payload.get("style", "testeur"),
+                    "scenes": int(payload.get("scenes", 5)),
+                    "voice": payload.get("voice", ""),
+                    "subtitles": payload.get("subtitles", True),
+                })
+                self.serve_json({"status": "ok", "job": job})
+            except Exception as e:
+                self.serve_json({"status": "error", "message": str(e)})
+            return
+
         self.send_error(404, "Not Found")
 
     def handle_redirect(self, slug):
@@ -2203,6 +2323,7 @@ footer{{text-align:center;padding:40px 20px;color:var(--muted);font-size:.7rem;b
 
 <footer>
     <p>Affilimax - Plateforme d'affiliation | En partenariat avec Amazon | <a href="/">Dashboard</a> | <a href="/go">Liens</a></p>
+<p style="font-size:0.72rem">En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.</p>
 </footer>
 
 <script>

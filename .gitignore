@@ -1,1 +1,13 @@
 .env.render
+
+# Secrets locaux (cle API Groq / env) - JAMAIS commiter
+.env
+
+# Logs runtime
+*.log
+
+# Cache Python
+__pycache__/
+
+# Videos generees (Video Factory output)
+video_factory/output/
