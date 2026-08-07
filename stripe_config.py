@@ -54,7 +54,7 @@ STRIPE_DEFAULT_COUNTRY = os.environ.get("STRIPE_DEFAULT_COUNTRY", "FR")  # ISO 3
 STRIPE_DEFAULT_CURRENCY = os.environ.get("STRIPE_DEFAULT_CURRENCY", "eur").lower()
 STRIPE_DEFAULT_BUSINESS_TYPE = os.environ.get("STRIPE_DEFAULT_BUSINESS_TYPE", "individual")  # individual|company
 PLATFORM_FEE_PERCENT = float(os.environ.get("PLATFORM_FEE_PERCENT", "0"))  # 0 = pas de fee plateforme (virements directs)
-STRIPE_BASE_URL = os.environ.get("AFFILMAX_BASE_URL") or os.environ.get("RENDER_EXTERNAL_URL") or "http://localhost:8765"
+STRIPE_BASE_URL = os.environ.get("AFFILMAX_BASE_URL") or os.environ.get("RENDER_EXTERNAL_URL") or "https://afflimax.onrender.com"
 
 # ==================== INIT STRIPE ====================
 

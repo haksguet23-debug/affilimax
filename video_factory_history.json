@@ -1,5 +1,715 @@
 [
   {
+    "id": "vf_20260807_133030_501",
+    "kind": "product",
+    "status": "done",
+    "progress": 100,
+    "step": "Video terminee",
+    "title": "Découvrez le casque Bose QuietComfort Ultra : le sommet du confort audio !",
+    "params": {
+      "product": "Bose QuietComfort Ultra",
+      "theme": "",
+      "duration": "30s",
+      "style": "testeur",
+      "scenes": 3,
+      "voice": "fr-FR-DeniseNeural",
+      "subtitles": true
+    },
+    "created_at": "2026-08-07T13:30:30.053138Z",
+    "finished_at": "2026-08-07T13:33:12.711672Z",
+    "files": {
+      "video": "video_factory/output/vf_20260807_133030_501/video.mp4",
+      "script": "video_factory/output/vf_20260807_133030_501/script.json",
+      "srt": "video_factory/output/vf_20260807_133030_501/subtitles.srt"
+    },
+    "log": [
+      {
+        "ts": "13:30:30",
+        "msg": "Job cree"
+      },
+      {
+        "ts": "13:30:30",
+        "msg": "Script IA en cours..."
+      },
+      {
+        "ts": "13:30:34",
+        "msg": "Script genere (IA (GROQ)) - 3 scenes"
+      },
+      {
+        "ts": "13:30:34",
+        "msg": "Storyboard images (PIL)..."
+      },
+      {
+        "ts": "13:30:34",
+        "msg": "3 images generees"
+      },
+      {
+        "ts": "13:30:34",
+        "msg": "Voix IA (edge-tts)..."
+      },
+      {
+        "ts": "13:30:39",
+        "msg": "Voix IA: 3/3 scenes"
+      },
+      {
+        "ts": "13:30:39",
+        "msg": "Sous-titres SRT (timings edge-tts)..."
+      },
+      {
+        "ts": "13:30:40",
+        "msg": "Sous-titres: 25 lignes (incrustes dans la video)"
+      },
+      {
+        "ts": "13:30:40",
+        "msg": "Montage (moviepy + ffmpeg)..."
+      },
+      {
+        "ts": "13:33:12",
+        "msg": "Video MP4 terminee"
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "vf_20260807_131858_791",
+    "kind": "product",
+    "status": "done",
+    "progress": 100,
+    "step": "Video terminee",
+    "title": "La Meilleure Calculatrice pour les Eleves : TI-83 Premium CE",
+    "params": {
+      "product": "Boite gouter compartimentee",
+      "theme": "",
+      "duration": "30s",
+      "style": "testeur",
+      "scenes": 3,
+      "voice": "fr-FR-DeniseNeural",
+      "subtitles": true
+    },
+    "created_at": "2026-08-07T13:18:58.150827Z",
+    "finished_at": "2026-08-07T13:24:51.404735Z",
+    "files": {
+      "video": "video_factory/output/vf_20260807_131858_791/video.mp4",
+      "script": "video_factory/output/vf_20260807_131858_791/script.json",
+      "srt": "video_factory/output/vf_20260807_131858_791/subtitles.srt"
+    },
+    "log": [
+      {
+        "ts": "13:18:58",
+        "msg": "Job cree"
+      },
+      {
+        "ts": "13:18:58",
+        "msg": "Script IA en cours..."
+      },
+      {
+        "ts": "13:19:01",
+        "msg": "Script genere (IA (GROQ)) - 3 scenes"
+      },
+      {
+        "ts": "13:19:01",
+        "msg": "Storyboard images (PIL)..."
+      },
+      {
+        "ts": "13:19:02",
+        "msg": "3 images generees"
+      },
+      {
+        "ts": "13:19:02",
+        "msg": "Voix IA (edge-tts)..."
+      },
+      {
+        "ts": "13:19:09",
+        "msg": "Voix IA: 3/3 scenes"
+      },
+      {
+        "ts": "13:19:09",
+        "msg": "Sous-titres SRT (timings edge-tts)..."
+      },
+      {
+        "ts": "13:19:10",
+        "msg": "Sous-titres: 25 lignes (incrustes dans la video)"
+      },
+      {
+        "ts": "13:19:10",
+        "msg": "Montage (moviepy + ffmpeg)..."
+      },
+      {
+        "ts": "13:24:51",
+        "msg": "Video MP4 terminee"
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "vf_20260807_131856_398",
+    "kind": "product",
+    "status": "done",
+    "progress": 100,
+    "step": "Video terminee",
+    "title": "La calculatrice de poche parfaite pour les étudiants !",
+    "params": {
+      "product": "Pilot Frixion Pack 4",
+      "theme": "",
+      "duration": "30s",
+      "style": "testeur",
+      "scenes": 3,
+      "voice": "fr-FR-DeniseNeural",
+      "subtitles": true
+    },
+    "created_at": "2026-08-07T13:18:56.896711Z",
+    "finished_at": "2026-08-07T13:24:30.124852Z",
+    "files": {
+      "video": "video_factory/output/vf_20260807_131856_398/video.mp4",
+      "script": "video_factory/output/vf_20260807_131856_398/script.json",
+      "srt": "video_factory/output/vf_20260807_131856_398/subtitles.srt"
+    },
+    "log": [
+      {
+        "ts": "13:18:56",
+        "msg": "Job cree"
+      },
+      {
+        "ts": "13:18:56",
+        "msg": "Script IA en cours..."
+      },
+      {
+        "ts": "13:19:00",
+        "msg": "Script genere (IA (GROQ)) - 3 scenes"
+      },
+      {
+        "ts": "13:19:00",
+        "msg": "Storyboard images (PIL)..."
+      },
+      {
+        "ts": "13:19:02",
+        "msg": "3 images generees"
+      },
+      {
+        "ts": "13:19:02",
+        "msg": "Voix IA (edge-tts)..."
+      },
+      {
+        "ts": "13:19:10",
+        "msg": "Voix IA: 3/3 scenes"
+      },
+      {
+        "ts": "13:19:10",
+        "msg": "Sous-titres SRT (timings edge-tts)..."
+      },
+      {
+        "ts": "13:19:11",
+        "msg": "Sous-titres: 23 lignes (incrustes dans la video)"
+      },
+      {
+        "ts": "13:19:11",
+        "msg": "Montage (moviepy + ffmpeg)..."
+      },
+      {
+        "ts": "13:24:30",
+        "msg": "Video MP4 terminee"
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "vf_20260807_131025_362",
+    "kind": "product",
+    "status": "done",
+    "progress": 100,
+    "step": "Video terminee",
+    "title": "Découvrez le Ninja Foodi Max Air Fryer AF180EU : le roi de la cuisine saine !",
+    "params": {
+      "product": "Ninja Foodi Max Air Fryer",
+      "theme": "",
+      "duration": "30s",
+      "style": "testeur",
+      "scenes": 3,
+      "voice": "fr-FR-DeniseNeural",
+      "subtitles": true
+    },
+    "created_at": "2026-08-07T13:10:25.534737Z",
+    "finished_at": "2026-08-07T13:17:30.842535Z",
+    "files": {
+      "video": "video_factory/output/vf_20260807_131025_362/video.mp4",
+      "script": "video_factory/output/vf_20260807_131025_362/script.json",
+      "srt": "video_factory/output/vf_20260807_131025_362/subtitles.srt"
+    },
+    "log": [
+      {
+        "ts": "13:10:25",
+        "msg": "Job cree"
+      },
+      {
+        "ts": "13:10:25",
+        "msg": "Script IA en cours..."
+      },
+      {
+        "ts": "13:10:30",
+        "msg": "Script genere (IA (GROQ)) - 3 scenes"
+      },
+      {
+        "ts": "13:10:30",
+        "msg": "Storyboard images (PIL)..."
+      },
+      {
+        "ts": "13:10:30",
+        "msg": "3 images generees"
+      },
+      {
+        "ts": "13:10:30",
+        "msg": "Voix IA (edge-tts)..."
+      },
+      {
+        "ts": "13:10:38",
+        "msg": "Voix IA: 3/3 scenes"
+      },
+      {
+        "ts": "13:10:38",
+        "msg": "Sous-titres SRT (timings edge-tts)..."
+      },
+      {
+        "ts": "13:10:39",
+        "msg": "Sous-titres: 26 lignes (incrustes dans la video)"
+      },
+      {
+        "ts": "13:10:39",
+        "msg": "Montage (moviepy + ffmpeg)..."
+      },
+      {
+        "ts": "13:17:30",
+        "msg": "Video MP4 terminee"
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "vf_20260807_131025_590",
+    "kind": "product",
+    "status": "done",
+    "progress": 100,
+    "step": "Video terminee",
+    "title": "Découvrez le Meilleur Aspirateur Robot du Moment : Roborock Q5 Pro+",
+    "params": {
+      "product": "Roborock Q5 Pro+",
+      "theme": "",
+      "duration": "30s",
+      "style": "testeur",
+      "scenes": 3,
+      "voice": "fr-FR-DeniseNeural",
+      "subtitles": true
+    },
+    "created_at": "2026-08-07T13:10:25.534737Z",
+    "finished_at": "2026-08-07T13:16:41.678139Z",
+    "files": {
+      "video": "video_factory/output/vf_20260807_131025_590/video.mp4",
+      "script": "video_factory/output/vf_20260807_131025_590/script.json",
+      "srt": "video_factory/output/vf_20260807_131025_590/subtitles.srt"
+    },
+    "log": [
+      {
+        "ts": "13:10:25",
+        "msg": "Job cree"
+      },
+      {
+        "ts": "13:10:25",
+        "msg": "Script IA en cours..."
+      },
+      {
+        "ts": "13:10:29",
+        "msg": "Script genere (IA (GROQ)) - 3 scenes"
+      },
+      {
+        "ts": "13:10:29",
+        "msg": "Storyboard images (PIL)..."
+      },
+      {
+        "ts": "13:10:30",
+        "msg": "3 images generees"
+      },
+      {
+        "ts": "13:10:30",
+        "msg": "Voix IA (edge-tts)..."
+      },
+      {
+        "ts": "13:10:37",
+        "msg": "Voix IA: 3/3 scenes"
+      },
+      {
+        "ts": "13:10:37",
+        "msg": "Sous-titres SRT (timings edge-tts)..."
+      },
+      {
+        "ts": "13:10:39",
+        "msg": "Sous-titres: 19 lignes (incrustes dans la video)"
+      },
+      {
+        "ts": "13:10:39",
+        "msg": "Montage (moviepy + ffmpeg)..."
+      },
+      {
+        "ts": "13:16:41",
+        "msg": "Video MP4 terminee"
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "vf_20260807_125935_280",
+    "kind": "product",
+    "status": "error",
+    "progress": 78,
+    "step": "Erreur",
+    "title": "Découvrez la gourde inox parfaite pour l'école !",
+    "params": {
+      "product": "Lego Ideas Notre-Dame",
+      "theme": "",
+      "duration": "30s",
+      "style": "testeur",
+      "scenes": 3,
+      "voice": "fr-FR-DeniseNeural",
+      "subtitles": true
+    },
+    "created_at": "2026-08-07T12:59:35.303245Z",
+    "finished_at": "2026-08-07T13:08:06.774160Z",
+    "files": {
+      "video": null,
+      "script": "video_factory/output/vf_20260807_125935_280/script.json",
+      "srt": "video_factory/output/vf_20260807_125935_280/subtitles.srt"
+    },
+    "log": [
+      {
+        "ts": "12:59:35",
+        "msg": "Job cree"
+      },
+      {
+        "ts": "12:59:35",
+        "msg": "Script IA en cours..."
+      },
+      {
+        "ts": "12:59:56",
+        "msg": "Script genere (IA (GROQ)) - 3 scenes"
+      },
+      {
+        "ts": "12:59:56",
+        "msg": "Storyboard images (PIL)..."
+      },
+      {
+        "ts": "12:59:56",
+        "msg": "3 images generees"
+      },
+      {
+        "ts": "12:59:56",
+        "msg": "Voix IA (edge-tts)..."
+      },
+      {
+        "ts": "13:00:06",
+        "msg": "Voix IA: 3/3 scenes"
+      },
+      {
+        "ts": "13:00:06",
+        "msg": "Sous-titres SRT (timings edge-tts)..."
+      },
+      {
+        "ts": "13:00:07",
+        "msg": "Sous-titres: 25 lignes (incrustes dans la video)"
+      },
+      {
+        "ts": "13:00:07",
+        "msg": "Montage (moviepy + ffmpeg)..."
+      },
+      {
+        "ts": "13:08:06",
+        "msg": "ERREUR: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'videoTEMP_MPY_wvf_snd.mp4'"
+      }
+    ],
+    "error": "[WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'videoTEMP_MPY_wvf_snd.mp4'"
+  },
+  {
+    "id": "vf_20260807_125934_899",
+    "kind": "product",
+    "status": "error",
+    "progress": 78,
+    "step": "Erreur",
+    "title": "Les Meilleurs Stylos Roller pour les Etudiants !",
+    "params": {
+      "product": "Sony WH-1000XM5",
+      "theme": "",
+      "duration": "30s",
+      "style": "testeur",
+      "scenes": 3,
+      "voice": "fr-FR-DeniseNeural",
+      "subtitles": true
+    },
+    "created_at": "2026-08-07T12:59:34.959785Z",
+    "finished_at": "2026-08-07T13:08:32.719449Z",
+    "files": {
+      "video": null,
+      "script": "video_factory/output/vf_20260807_125934_899/script.json",
+      "srt": "video_factory/output/vf_20260807_125934_899/subtitles.srt"
+    },
+    "log": [
+      {
+        "ts": "12:59:34",
+        "msg": "Job cree"
+      },
+      {
+        "ts": "12:59:35",
+        "msg": "Script IA en cours..."
+      },
+      {
+        "ts": "12:59:47",
+        "msg": "Script genere (IA (GROQ)) - 3 scenes"
+      },
+      {
+        "ts": "12:59:47",
+        "msg": "Storyboard images (PIL)..."
+      },
+      {
+        "ts": "12:59:48",
+        "msg": "3 images generees"
+      },
+      {
+        "ts": "12:59:48",
+        "msg": "Voix IA (edge-tts)..."
+      },
+      {
+        "ts": "12:59:52",
+        "msg": "Voix IA: 3/3 scenes"
+      },
+      {
+        "ts": "12:59:52",
+        "msg": "Sous-titres SRT (timings edge-tts)..."
+      },
+      {
+        "ts": "12:59:52",
+        "msg": "Sous-titres: 27 lignes (incrustes dans la video)"
+      },
+      {
+        "ts": "12:59:52",
+        "msg": "Montage (moviepy + ffmpeg)..."
+      },
+      {
+        "ts": "13:08:32",
+        "msg": "ERREUR: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'videoTEMP_MPY_wvf_snd.mp4'"
+      }
+    ],
+    "error": "[WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'videoTEMP_MPY_wvf_snd.mp4'"
+  },
+  {
+    "id": "vf_20260807_125934_466",
+    "kind": "product",
+    "status": "error",
+    "progress": 78,
+    "step": "Erreur",
+    "title": "Découvrez le Ninja Foodi Max Air Fryer AF180EU : La Révolution de la Cuisine",
+    "params": {
+      "product": "Ninja Foodi Max Air Fryer",
+      "theme": "",
+      "duration": "30s",
+      "style": "testeur",
+      "scenes": 3,
+      "voice": "fr-FR-DeniseNeural",
+      "subtitles": true
+    },
+    "created_at": "2026-08-07T12:59:34.647211Z",
+    "finished_at": "2026-08-07T13:07:48.821471Z",
+    "files": {
+      "video": null,
+      "script": "video_factory/output/vf_20260807_125934_466/script.json",
+      "srt": "video_factory/output/vf_20260807_125934_466/subtitles.srt"
+    },
+    "log": [
+      {
+        "ts": "12:59:34",
+        "msg": "Job cree"
+      },
+      {
+        "ts": "12:59:34",
+        "msg": "Script IA en cours..."
+      },
+      {
+        "ts": "12:59:43",
+        "msg": "Script genere (IA (GROQ)) - 3 scenes"
+      },
+      {
+        "ts": "12:59:43",
+        "msg": "Storyboard images (PIL)..."
+      },
+      {
+        "ts": "12:59:44",
+        "msg": "3 images generees"
+      },
+      {
+        "ts": "12:59:44",
+        "msg": "Voix IA (edge-tts)..."
+      },
+      {
+        "ts": "12:59:50",
+        "msg": "Voix IA: 3/3 scenes"
+      },
+      {
+        "ts": "12:59:50",
+        "msg": "Sous-titres SRT (timings edge-tts)..."
+      },
+      {
+        "ts": "12:59:52",
+        "msg": "Sous-titres: 23 lignes (incrustes dans la video)"
+      },
+      {
+        "ts": "12:59:52",
+        "msg": "Montage (moviepy + ffmpeg)..."
+      },
+      {
+        "ts": "13:07:48",
+        "msg": "ERREUR: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'videoTEMP_MPY_wvf_snd.mp4'"
+      }
+    ],
+    "error": "[WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'videoTEMP_MPY_wvf_snd.mp4'"
+  },
+  {
+    "id": "vf_20260807_125934_203",
+    "kind": "product",
+    "status": "error",
+    "progress": 78,
+    "step": "Erreur",
+    "title": "Découvrez le Roborock Q5 Pro+ : l'aspirateur robot le plus puissant de sa gamme !",
+    "params": {
+      "product": "Roborock Q5 Pro+",
+      "theme": "",
+      "duration": "30s",
+      "style": "testeur",
+      "scenes": 3,
+      "voice": "fr-FR-DeniseNeural",
+      "subtitles": true
+    },
+    "created_at": "2026-08-07T12:59:34.317407Z",
+    "finished_at": "2026-08-07T13:07:56.381042Z",
+    "files": {
+      "video": null,
+      "script": "video_factory/output/vf_20260807_125934_203/script.json",
+      "srt": "video_factory/output/vf_20260807_125934_203/subtitles.srt"
+    },
+    "log": [
+      {
+        "ts": "12:59:34",
+        "msg": "Job cree"
+      },
+      {
+        "ts": "12:59:34",
+        "msg": "Script IA en cours..."
+      },
+      {
+        "ts": "12:59:47",
+        "msg": "Script genere (IA (GROQ)) - 3 scenes"
+      },
+      {
+        "ts": "12:59:47",
+        "msg": "Storyboard images (PIL)..."
+      },
+      {
+        "ts": "12:59:47",
+        "msg": "3 images generees"
+      },
+      {
+        "ts": "12:59:47",
+        "msg": "Voix IA (edge-tts)..."
+      },
+      {
+        "ts": "12:59:53",
+        "msg": "Voix IA: 3/3 scenes"
+      },
+      {
+        "ts": "12:59:53",
+        "msg": "Sous-titres SRT (timings edge-tts)..."
+      },
+      {
+        "ts": "12:59:53",
+        "msg": "Sous-titres: 24 lignes (incrustes dans la video)"
+      },
+      {
+        "ts": "12:59:53",
+        "msg": "Montage (moviepy + ffmpeg)..."
+      },
+      {
+        "ts": "13:07:56",
+        "msg": "ERREUR: [WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'videoTEMP_MPY_wvf_snd.mp4'"
+      }
+    ],
+    "error": "[WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'videoTEMP_MPY_wvf_snd.mp4'"
+  },
+  {
+    "id": "vf_20260807_125934_417",
+    "kind": "product",
+    "status": "done",
+    "progress": 100,
+    "step": "Video terminee",
+    "title": "Test du Bose QuietComfort Ultra : le casque ultime pour les amateurs de musique",
+    "params": {
+      "product": "Bose QuietComfort Ultra",
+      "theme": "",
+      "duration": "30s",
+      "style": "testeur",
+      "scenes": 3,
+      "voice": "fr-FR-DeniseNeural",
+      "subtitles": true
+    },
+    "created_at": "2026-08-07T12:59:34.000569Z",
+    "finished_at": "2026-08-07T13:08:56.700693Z",
+    "files": {
+      "video": "video_factory/output/vf_20260807_125934_417/video.mp4",
+      "script": "video_factory/output/vf_20260807_125934_417/script.json",
+      "srt": "video_factory/output/vf_20260807_125934_417/subtitles.srt"
+    },
+    "log": [
+      {
+        "ts": "12:59:34",
+        "msg": "Job cree"
+      },
+      {
+        "ts": "12:59:34",
+        "msg": "Script IA en cours..."
+      },
+      {
+        "ts": "12:59:48",
+        "msg": "Script genere (IA (GROQ)) - 3 scenes"
+      },
+      {
+        "ts": "12:59:48",
+        "msg": "Storyboard images (PIL)..."
+      },
+      {
+        "ts": "12:59:48",
+        "msg": "3 images generees"
+      },
+      {
+        "ts": "12:59:48",
+        "msg": "Voix IA (edge-tts)..."
+      },
+      {
+        "ts": "12:59:55",
+        "msg": "Voix IA: 3/3 scenes"
+      },
+      {
+        "ts": "12:59:55",
+        "msg": "Sous-titres SRT (timings edge-tts)..."
+      },
+      {
+        "ts": "12:59:56",
+        "msg": "Sous-titres: 28 lignes (incrustes dans la video)"
+      },
+      {
+        "ts": "12:59:56",
+        "msg": "Montage (moviepy + ffmpeg)..."
+      },
+      {
+        "ts": "13:08:56",
+        "msg": "Video MP4 terminee"
+      }
+    ],
+    "error": null
+  },
+  {
     "id": "vf_20260807_123245_903",
     "kind": "product",
     "status": "done",

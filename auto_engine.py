@@ -15,7 +15,7 @@ from pathlib import Path
 
 BASE = Path(__file__).parent.resolve()
 LOCAL = "http://127.0.0.1:8765"
-RENDER_URL = "https://affilimax.onrender.com"
+RENDER_URL = "https://afflimax.onrender.com"
 INDEXNOW_KEY = "affilimax2026indexnowkey001"
 LOG_FILE = BASE / "auto_engine.log"
 

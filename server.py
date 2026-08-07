@@ -14,7 +14,7 @@ Fonctionnalites:
 
 Usage:
   python server.py
-  Puis ouvre http://localhost:8765 dans ton navigateur.
+  Puis ouvre https://afflimax.onrender.com dans ton navigateur.
 """
 
 import html
@@ -41,7 +41,7 @@ if not os.environ.get("STRIPE_SECRET_KEY"):
 if not os.environ.get("STRIPE_WEBHOOK_SECRET"):
     os.environ["STRIPE_WEBHOOK_SECRET"] = ""  # A definir dans l'environnement pour la prod
 if not os.environ.get("AFFILMAX_BASE_URL"):
-    os.environ["AFFILMAX_BASE_URL"] = "https://enjoyment-calzone-await.ngrok-free.dev"
+    os.environ["AFFILMAX_BASE_URL"] = "https://afflimax.onrender.com"
 if not os.environ.get("ADMIN_USER"):
     os.environ["ADMIN_USER"] = "admin"
 if not os.environ.get("ADMIN_PASSWORD"):
@@ -2796,7 +2796,7 @@ def main():
     # Demarrer le serveur HTTP
     server = http.server.ThreadingHTTPServer(("0.0.0.0", PORT), AffilimaxHandler)
     if is_render:
-        render_url = os.environ.get("RENDER_EXTERNAL_URL", f"https://affilimax.onrender.com")
+        render_url = os.environ.get("RENDER_EXTERNAL_URL", f"https://afflimax.onrender.com")
         print(f" >>> Dashboard : {render_url}")
         print(f" >>> Pub        : {render_url}/pub.html")
         print(f" >>> Admin      : {render_url}/admin.html")

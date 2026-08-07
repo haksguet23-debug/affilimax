@@ -35,7 +35,7 @@ BLOG_DIR.mkdir(exist_ok=True)
 OUTPUT_DIR.mkdir(exist_ok=True)
 
 # ==================== CONFIG ====================
-PUBLIC_URL = os.environ.get("AFFILMAX_BASE_URL", "https://affilimax.onrender.com")
+PUBLIC_URL = os.environ.get("AFFILMAX_BASE_URL", "https://afflimax.onrender.com")
 SITE_NAME = "Affilimax"
 SITE_DESC = "Tests, comparatifs et avis produits 2026 - Les meilleurs rapports qualité-prix"
 

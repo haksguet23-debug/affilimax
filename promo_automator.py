@@ -260,10 +260,10 @@ def generate_content_for_product(product, prenom="Ami"):
         "raison_2": astuces[1] if len(astuces) > 1 else "Rapport qualite-prix imbattable",
         "raison_3": astuces[2] if len(astuces) > 2 else "Service client reactif",
         "fun_fact": random.choice(fun_facts),
-        "url": f"https://affilmax.render.com/go/{slug}?src=promo",
+        "url": f"https://afflimax.onrender.com/go/{slug}?src=promo",
         "prenom": prenom,
         "cta_bouton": random.choice(CTA_LIST).format(
-            url=f"https://affilmax.render.com/go/{slug}?src=email")}
+            url=f"https://afflimax.onrender.com/go/{slug}?src=email")}
 
     # Choisir le type de contenu
     content_type = random.choices(
@@ -282,7 +282,7 @@ def generate_content_for_product(product, prenom="Ami"):
     elif content_type == "post_long":
         tpl = random.choice(LONG_POSTS_TEMPLATES)
         titre = tpl["titre"].format(**context)
-        contenu = tpl["contenu"].format(**context)
+        contenu = tpl["contenu"].format(**{**context, "titre": titre})
         return {"type": random.choice(["linkedin", "facebook"]), "content": contenu, "titre": titre}
 
     elif content_type == "email":
@@ -295,7 +295,7 @@ def generate_content_for_product(product, prenom="Ami"):
     else:  # blog
         tpl = random.choice(LONG_POSTS_TEMPLATES)
         titre = tpl["titre"].format(**context)
-        contenu = tpl["contenu"].format(**context)
+        contenu = tpl["contenu"].format(**{**context, "titre": titre})
         return {"type": "blog", "content": contenu, "titre": titre}
 
 
@@ -574,7 +574,7 @@ class PromoAutomator:
         # meme si Telegram/Slack timeout)
         try:
             import notifications as _notif_mod
-            promo_url = f"https://affilmax.render.com/go/{product.get('slug', '')}?src={content['type']}"
+            promo_url = f"https://afflimax.onrender.com/go/{product.get('slug', '')}?src={content['type']}"
             preview = content.get("content", "") or content.get("objet", "")
             threading.Thread(
                 target=_notif_mod.notify_promo_post,
