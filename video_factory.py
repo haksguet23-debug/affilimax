@@ -982,12 +982,18 @@ def _render_video(images, audios, out_path, scenes, fps=24, sub_entries=None):
         raise RuntimeError("Aucune scene a monter")
 
     final = concatenate_videoclips(clips, method="chain")
+    # Fichier temp AUDIO UNIQUE par job : evite le conflit WinError 32
+    # quand plusieurs montages tournent en parallele (moviepy ecrit
+    # sinon dans un meme videoTEMP_MPY_wvf_snd.mp4 partage).
+    temp_audio = str(out_path.parent / f"temp_audio_{out_path.stem}.m4a")
     final.write_videofile(
         str(out_path),
         fps=fps,
         codec="libx264",
         audio_codec="aac",
         preset="ultrafast",
+        temp_audiofile=temp_audio,
+        remove_temp=True,
         logger=None,
     )
     return out_path
