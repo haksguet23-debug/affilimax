@@ -1,6 +1,6 @@
 {
   "timestamp": "2026-08-01T17:20:43.618825Z",
-  "note": "4 partenaires VERIFIES le 10/08/2026 (chiffres lus sur les profils publics)",
+  "note": "5 partenaires VERIFIES (chiffres lus sur profils publics 10/08/2026)",
   "partenaires": [
     {
       "id": "roxanne_famille",
@@ -67,6 +67,23 @@
       "derniere_activite": "2026-08-10T00:00:00.000000Z",
       "note": "Instagram @actionbonplan | 117K abonnes VERIFIES (10/08/2026) | Bons plans generalistes | Email collab reel dans la bio",
       "contact": "https://www.instagram.com/actionbonplan/",
+      "payouts": [],
+      "transactions": []
+    },
+    {
+      "id": "lorylyn",
+      "nom": "LoryLyn",
+      "email": "",
+      "pays": "FR",
+      "commission_pct": 10.0,
+      "total_gagne": 0.0,
+      "total_paye": 0.0,
+      "solde_en_attente": 0.0,
+      "onboarded": false,
+      "stripe_account_id": null,
+      "derniere_activite": "2026-08-10T00:00:00.000000Z",
+      "note": "Instagram @lorylyn79 | 447K abonnes VERIFIES (10/08/2026) | Maman x3, lifestyle, voyages | Email via bio (a recuperer)",
+      "contact": "https://www.instagram.com/lorylyn79/",
       "payouts": [],
       "transactions": []
     }
