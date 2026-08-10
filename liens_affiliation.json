@@ -18,7 +18,7 @@
       "lien": "https://www.amazon.fr/dp/B09SB38KMD?tag=confortbure07-21",
       "description": "Samsung T7 Shield SSD 1To. Lecture 1050 Mo/s, resistant a l'eau et a la poussiere (IP65). Ultra-rapide pour les pros en deplacement.",
       "categorie": "Business",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=SSD+Samsung+T7+Shield",
+      "image_url": "https://loremflickr.com/600/400/ssd,drive,portable?lock=8305",
       "caracteristiques": [
         "SSD portable 1To, lecture 1050 Mo/s",
         "Resistant a l'eau et a la poussiere (IP65)",
@@ -28,7 +28,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.7,
-      "avis_total": 124
+      "avis_total": 124,
+      "image_prompt": "professional product photo of SSD Samsung T7 Shield 1To, professional business product, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Investir en Bourse avec les ETF",
@@ -40,7 +41,7 @@
       "lien": "https://www.amazon.fr/dp/B0D5TRRZBC?tag=confortbure07-21",
       "description": "Guide complet pour investir en Bourse avec les ETF. Strategie long terme, fiscalite, exemples concrets. Par Axel Ghozland.",
       "categorie": "Formation",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Investir+Bourse+ETF",
+      "image_url": "https://loremflickr.com/600/400/book,learning,education?lock=1593",
       "caracteristiques": [
         "Guide ETF complet pour debutants et confirmes",
         "Strategies d'investissement passif long terme",
@@ -50,7 +51,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 89
+      "avis_total": 89,
+      "image_prompt": "professional product photo of Investir en Bourse avec les ETF, educational book, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "TP-Link Deco X50 Wi-Fi 6 Mesh",
@@ -62,7 +64,7 @@
       "lien": "https://www.amazon.fr/dp/B09LVG58VX?tag=confortbure07-21",
       "description": "TP-Link Deco X50 pack 3. Wi-Fi 6 mesh couvrant jusqu'a 600m2. Ideal teletravail, streaming 4K et gaming.",
       "categorie": "Tech",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=TP-Link+Deco+X50",
+      "image_url": "https://loremflickr.com/600/400/router,wifi,mesh?lock=5820",
       "caracteristiques": [
         "Pack 3 satellites - couverture 600m2",
         "Wi-Fi 6 AX3000 - debit jusqu'a 3 Gbps",
@@ -72,7 +74,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.6,
-      "avis_total": 312
+      "avis_total": 312,
+      "image_prompt": "professional product photo of TP-Link Deco X50 Wi-Fi 6 Mesh, modern tech gadget, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Logitech C920s HD Pro Webcam",
@@ -84,7 +87,7 @@
       "lien": "https://www.amazon.fr/dp/B07MM4V7NR?tag=confortbure07-21",
       "description": "Logitech C920s HD Pro. Full HD 1080p, micro stereo, cache confidentialite. La reference pour visioconferences pros.",
       "categorie": "Bureau",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Logitech+C920s",
+      "image_url": "https://loremflickr.com/600/400/webcam,logitech,streaming?lock=9349",
       "caracteristiques": [
         "Full HD 1080p a 30 fps - image cristalline",
         "Double micro stereo avec reduction de bruit",
@@ -94,7 +97,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 567
+      "avis_total": 567,
+      "image_prompt": "professional product photo of Logitech C920s HD Pro Webcam, office desk accessory, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Philips L'Or Barista Sublime",
@@ -106,7 +110,7 @@
       "lien": "https://www.amazon.fr/dp/B087G85L13?tag=confortbure07-21",
       "description": "Philips L'Or Barista LM8012. Machine espresso et cafe long. Mousseur a lait integre. Design elegant noir mat.",
       "categorie": "Maison",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Philips+LOr+Barista",
+      "image_url": "https://loremflickr.com/600/400/home,appliance,living?lock=9064",
       "caracteristiques": [
         "Double pression 19 bars pour espresso cremeux",
         "Mousseur a lait integre pour cappuccinos",
@@ -116,7 +120,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.4,
-      "avis_total": 203
+      "avis_total": 203,
+      "image_prompt": "professional product photo of Philips L'Or Barista Sublime, home product, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Dropshipping : Se Lancer et Reussir",
@@ -128,7 +133,7 @@
       "lien": "https://www.amazon.fr/dp/2101968102?tag=confortbure07-21",
       "description": "Guide complet dropshipping par Eric Ibanez. Methode pas-a-pas, fournisseurs, marketing. Pour creer votre e-commerce sans stock.",
       "categorie": "E-Commerce",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Dropshipping+Reussir",
+      "image_url": "https://loremflickr.com/600/400/business,book,marketing?lock=2581",
       "caracteristiques": [
         "Methode complete pas-a-pas illustree",
         "Trouver les meilleurs fournisseurs francais",
@@ -138,7 +143,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.3,
-      "avis_total": 67
+      "avis_total": 67,
+      "image_prompt": "professional product photo of Dropshipping : Se Lancer et Reussir, business book, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Le Grand Livre du Marketing Digital",
@@ -150,7 +156,7 @@
       "lien": "https://www.amazon.fr/dp/B0CGRL916C?tag=confortbure07-21",
       "description": "La bible du marketing digital. SEO, SEA, social media, emailing, data. 600 pages de strategies pour marketeurs et entrepreneurs.",
       "categorie": "Marketing",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Marketing+Digital",
+      "image_url": "https://loremflickr.com/600/400/marketing,business,book?lock=2575",
       "caracteristiques": [
         "SEO, SEA, reseaux sociaux, content marketing",
         "Plus de 600 pages de strategies actionnables",
@@ -160,7 +166,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.6,
-      "avis_total": 145
+      "avis_total": 145,
+      "image_prompt": "professional product photo of Le Grand Livre du Marketing Digital, marketing book, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "WordPress pour les Nuls",
@@ -172,7 +179,7 @@
       "lien": "https://www.amazon.fr/dp/2412107319?tag=confortbure07-21",
       "description": "WordPress pour les Nuls 6e edition. Creez votre site web sans coder. Guide complet de A a Z avec exemples pratiques.",
       "categorie": "Web",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=WordPress+Nuls",
+      "image_url": "https://loremflickr.com/600/400/computer,web,technology?lock=4668",
       "caracteristiques": [
         "Guide complet WordPress de debutant a avance",
         "Creation de sites sans connaissance technique",
@@ -182,7 +189,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.4,
-      "avis_total": 89
+      "avis_total": 89,
+      "image_prompt": "professional product photo of WordPress pour les Nuls, web development book, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Apple AirPods 4",
@@ -194,7 +202,7 @@
       "lien": "https://www.amazon.fr/dp/B0DGHWD7CT?tag=confortbure07-21",
       "description": "Apple AirPods 4. Son spatial personnalise, puce H2, autonomie 30h. Le meilleur rapport qualite-prix Apple pour un son immersif.",
       "categorie": "Audio",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Apple+AirPods+4",
+      "image_url": "https://loremflickr.com/600/400/earbuds,wireless,audio?lock=840",
       "caracteristiques": [
         "Son spatial personnalise avec suivi des mouvements",
         "Puce H2 Apple - audio haute resolution",
@@ -204,7 +212,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.7,
-      "avis_total": 1890
+      "avis_total": 1890,
+      "image_prompt": "professional product photo of Apple AirPods 4, audio device headphones speaker, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Logitech G502 HERO Souris Gaming",
@@ -216,7 +225,7 @@
       "lien": "https://www.amazon.fr/dp/B07GS6ZB7T?tag=confortbure07-21",
       "description": "Logitech G502 HERO. Capteur 25K DPI, 11 boutons programmables, poids reglables, RGB LIGHTSYNC. La souris gaming iconique.",
       "categorie": "Gaming",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Logitech+G502+HERO",
+      "image_url": "https://loremflickr.com/600/400/gaming,mouse,rgb?lock=3919",
       "caracteristiques": [
         "Capteur HERO 25K DPI ultra-precis",
         "11 boutons programmables, molette hyper-rapide",
@@ -226,7 +235,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.8,
-      "avis_total": 2345
+      "avis_total": 2345,
+      "image_prompt": "professional product photo of Logitech G502 HERO Souris Gaming, gaming gear, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Anker Power Bank 20000mAh",
@@ -238,7 +248,7 @@
       "lien": "https://www.amazon.fr/dp/B0CXDXP8VR?tag=confortbure07-21",
       "description": "Anker 325 Power Bank 20000mAh. Charge rapide 20W USB-C, double port. 5 charges iPhone. Compacte et fiable.",
       "categorie": "Accessoires",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Anker+Power+Bank",
+      "image_url": "https://loremflickr.com/600/400/powerbank,battery,charger?lock=7406",
       "caracteristiques": [
         "20000mAh - jusqu'a 5 charges iPhone 15",
         "Charge rapide Power Delivery 20W USB-C",
@@ -248,7 +258,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.6,
-      "avis_total": 456
+      "avis_total": 456,
+      "image_prompt": "professional product photo of Anker Power Bank 20000mAh, tech accessory, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "EPOMAKER Aula F75 Clavier Mecanique",
@@ -260,7 +271,7 @@
       "lien": "https://www.amazon.fr/dp/B0CNT61VMZ?tag=confortbure07-21",
       "description": "EPOMAKER Aula F75 AZERTY. Switches mecaniques, retroeclairage RGB, sans fil Bluetooth. Clavier gaming et bureautique premium.",
       "categorie": "Bureau",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Aula+F75+Mecanique",
+      "image_url": "https://loremflickr.com/600/400/keyboard,mechanical,rgb?lock=6698",
       "caracteristiques": [
         "Switches mecaniques lineaires pre-lubrifies",
         "Sans fil Bluetooth 5.0 + 2.4GHz + USB-C",
@@ -270,7 +281,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.7,
-      "avis_total": 234
+      "avis_total": 234,
+      "image_prompt": "professional product photo of EPOMAKER Aula F75 Clavier Mecanique, office desk accessory, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Tapis de Marche Pliable LONTEK",
@@ -282,7 +294,7 @@
       "lien": "https://www.amazon.fr/dp/B0FX28W23H?tag=confortbure07-21",
       "description": "Tapis de marche pliable LONTEK. Moteur silencieux, telecommande, capteurs cardiaques. Ideal bureau et maison. Pliable 90.",
       "categorie": "Sport",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Tapis+Marche+LONTEK",
+      "image_url": "https://loremflickr.com/600/400/treadmill,walking,fitness?lock=8462",
       "caracteristiques": [
         "Moteur silencieux 3.0 HP, vitesse 1-12 km/h",
         "Pliable a 90, roulettes de deplacement",
@@ -292,7 +304,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.3,
-      "avis_total": 178
+      "avis_total": 178,
+      "image_prompt": "professional product photo of Tapis de Marche Pliable LONTEK, fitness sport equipment, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "JBL Go 4 Enceinte Bluetooth",
@@ -304,7 +317,7 @@
       "lien": "https://www.amazon.fr/dp/B0CX5C6WP3?tag=confortbure07-21",
       "description": "JBL Go 4. Mini enceinte Bluetooth portable, son JBL Pro, etanche IP67, autonomie 7h. Ultra-portable pour toutes vos aventures.",
       "categorie": "Audio",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=JBL+Go+4",
+      "image_url": "https://loremflickr.com/600/400/speaker,bluetooth,portable?lock=7529",
       "caracteristiques": [
         "Son JBL Pro Sound puissant et clair",
         "Etanche IP67 (poussiere + immersion 1m)",
@@ -314,7 +327,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 345
+      "avis_total": 345,
+      "image_prompt": "professional product photo of JBL Go 4 Enceinte Bluetooth, audio device headphones speaker, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Roborock Q5 Pro+ Aspirateur Robot",
@@ -326,7 +340,7 @@
       "lien": "https://www.amazon.fr/dp/B0CCD9YGXJ?tag=confortbure07-21",
       "description": "Roborock Q5 Pro+ avec base auto-vidage. Navigation LiDAR, 5500Pa. Aspiration puissante, cartographie multi-etages. 7 semaines sans vider.",
       "categorie": "Maison",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Roborock+Q5+Pro",
+      "image_url": "https://loremflickr.com/600/400/vacuum,robot,smart?lock=3460",
       "caracteristiques": [
         "Base auto-vidage (7 semaines d'autonomie)",
         "Navigation LiDAR PreciSense, cartographie precise",
@@ -336,7 +350,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.6,
-      "avis_total": 567
+      "avis_total": 567,
+      "image_prompt": "professional product photo of Roborock Q5 Pro+ Aspirateur Robot, home product, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Cryptomonnaies : Le Guide Complet",
@@ -348,7 +363,7 @@
       "lien": "https://www.amazon.fr/dp/2412140417?tag=confortbure07-21",
       "description": "Guide complet crypto et blockchain 2025. Bitcoin, Ethereum, DeFi, NFT. Tout pour comprendre et investir sans risque.",
       "categorie": "Formation",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Crypto+Monnaies+Guide",
+      "image_url": "https://loremflickr.com/600/400/book,learning,education?lock=6385",
       "caracteristiques": [
         "Bitcoin, Ethereum, altcoins expliques simplement",
         "NFT, DeFi, metavers : comprendre la revolution Web3",
@@ -358,7 +373,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.2,
-      "avis_total": 56
+      "avis_total": 56,
+      "image_prompt": "professional product photo of Cryptomonnaies : Le Guide Complet, educational book, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Les 4 Accords Tolteques",
@@ -370,7 +386,7 @@
       "lien": "https://www.amazon.fr/dp/2290237748?tag=confortbure07-21",
       "description": "Les 4 Accords Tolteques par Don Miguel Ruiz. Best-seller mondial, 10 millions d'exemplaires. La voie de la liberte personnelle.",
       "categorie": "Livre",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=4+Accords+Tolteques",
+      "image_url": "https://loremflickr.com/600/400/book,literature,reading?lock=8262",
       "caracteristiques": [
         "Best-seller mondial, 10 millions d'exemplaires",
         "4 principes simples pour transformer sa vie",
@@ -380,7 +396,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.8,
-      "avis_total": 3400
+      "avis_total": 3400,
+      "image_prompt": "professional product photo of Les 4 Accords Tolteques, book, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Renpho Balance Connectee",
@@ -392,7 +409,7 @@
       "lien": "https://www.amazon.fr/dp/B01N1UX8RW?tag=confortbure07-21",
       "description": "Renpho Balance impedancemetre. 13 parametres corporels, Bluetooth, appli gratuite. Design verre trempe, reconnaissance multi-utilisateurs.",
       "categorie": "Sport",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Renpho+Balance",
+      "image_url": "https://loremflickr.com/600/400/scale,smart,body?lock=975",
       "caracteristiques": [
         "13 mesures : poids, IMC, graisse, muscle, eau...",
         "Bluetooth 4.0, synchro appli Renpho Health",
@@ -402,7 +419,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.6,
-      "avis_total": 890
+      "avis_total": 890,
+      "image_prompt": "professional product photo of Renpho Balance Connectee, fitness sport equipment, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Amazon Kindle 2024 11e Gen",
@@ -414,7 +432,7 @@
       "lien": "https://www.amazon.fr/dp/B0CP32JG8B?tag=confortbure07-21",
       "description": "Kindle 2024 11e generation. Ecran 300ppp sans reflet, lumiere frontale reglable, autonomie 6 semaines. La meilleure liseuse pour lire partout.",
       "categorie": "High-Tech",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Kindle+2024",
+      "image_url": "https://loremflickr.com/600/400/kindle,ereader,book?lock=64",
       "caracteristiques": [
         "Ecran 6 pouces 300ppp sans reflet ni eblouissement",
         "Lumiere frontale reglable pour lire dans l'obscurite",
@@ -424,7 +442,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.7,
-      "avis_total": 1200
+      "avis_total": 1200,
+      "image_prompt": "professional product photo of Amazon Kindle 2024 11e Gen, premium tech device, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Xiaomi Robot Aspirateur S20+",
@@ -436,7 +455,7 @@
       "lien": "https://www.amazon.fr/dp/B0DDTXRRRP?tag=confortbure07-21",
       "description": "Xiaomi Robot Aspirateur S20+. 4000Pa de suction, navigation LiDAR, cartographie 3D. Aspire et lave les sols automatiquement.",
       "categorie": "Maison",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Xiaomi+S20+",
+      "image_url": "https://loremflickr.com/600/400/vacuum,robot,cleaning?lock=1053",
       "caracteristiques": [
         "Aspiration 4000Pa ultra-puissante",
         "Navigation LiDAR laser, cartographie multi-etages",
@@ -446,7 +465,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.4,
-      "avis_total": 234
+      "avis_total": 234,
+      "image_prompt": "professional product photo of Xiaomi Robot Aspirateur S20+, home product, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Ninja Foodi Max Air Fryer AF180EU",
@@ -458,7 +478,7 @@
       "lien": "https://www.amazon.fr/dp/B0CPFT191B?tag=confortbure07-21",
       "description": "Ninja Foodi Max Air Fryer 7.5L. 6 fonctions de cuisson, friteuse sans huile, roti, deshydrateur. Pour toute la famille jusqu'a 6 personnes.",
       "categorie": "Cuisine",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Ninja+Air+Fryer",
+      "image_url": "https://loremflickr.com/600/400/air,fryer,kitchen?lock=3781",
       "caracteristiques": [
         "Capacite 7.5L - jusqu'a 6 personnes",
         "6 fonctions: Air Fry, Roti, Grill, dehydrateur...",
@@ -468,7 +488,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.7,
-      "avis_total": 678
+      "avis_total": 678,
+      "image_prompt": "professional product photo of Ninja Foodi Max Air Fryer AF180EU, kitchen appliance, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Apple AirTag Pack de 4",
@@ -480,7 +501,7 @@
       "lien": "https://www.amazon.fr/dp/B0935JRJ59?tag=confortbure07-21",
       "description": "Apple AirTag pack de 4. Retrouvez vos clefs, sac, bagages en un clin d'oeil via le reseau Localiser. Etanche, pile user-remplacable.",
       "categorie": "High-Tech",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=AirTag+Pack+4",
+      "image_url": "https://loremflickr.com/600/400/airtag,tracker,apple?lock=605",
       "caracteristiques": [
         "Reseau Localiser Apple - des centaines de millions d'appareils",
         "Puce U1 Ultra Wideband pour localisation precise",
@@ -490,7 +511,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 1456
+      "avis_total": 1456,
+      "image_prompt": "professional product photo of Apple AirTag Pack de 4, premium tech device, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Bose QuietComfort Ultra Casque",
@@ -502,7 +524,7 @@
       "lien": "https://www.amazon.fr/dp/B0CCZ1L489?tag=confortbure07-21",
       "description": "Bose QuietComfort Ultra. Reduction de bruit active legendaire, son spatial immersif Bluetooth. Le meilleur casque audio du marche.",
       "categorie": "Audio",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Bose+QC+Ultra",
+      "image_url": "https://loremflickr.com/600/400/headphones,bose,noise?lock=6543",
       "caracteristiques": [
         "Reduction de bruit active Bose la plus avancee",
         "Son spatial immersif avec suivi des mouvements",
@@ -512,7 +534,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.8,
-      "avis_total": 2345
+      "avis_total": 2345,
+      "image_prompt": "professional product photo of Bose QuietComfort Ultra Casque, audio device headphones speaker, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Lego Ideas Notre-Dame de Paris 21061",
@@ -524,7 +547,7 @@
       "lien": "https://www.amazon.fr/dp/B0CWH1M12W?tag=confortbure07-21",
       "description": "Lego Ideas Notre-Dame de Paris 21061. 4383 pieces, reproduction architecturale de la cathedrale. Collectionneur adulte, exposition.",
       "categorie": "Jeux",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Lego+Notre-Dame",
+      "image_url": "https://loremflickr.com/600/400/lego,building,bricks?lock=5986",
       "caracteristiques": [
         "4383 pieces - maquette architecture adulte",
         "Reproduction detaillee de la cathedrale",
@@ -534,7 +557,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.9,
-      "avis_total": 456
+      "avis_total": 456,
+      "image_prompt": "professional product photo of Lego Ideas Notre-Dame de Paris 21061, lego toy game, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "WD My Passport 4To Ultra",
@@ -546,7 +570,7 @@
       "lien": "https://www.amazon.fr/dp/B07VTW2LPX?tag=confortbure07-21",
       "description": "WD My Passport 4To Ultra. Disque dur externe portable 4To, USB 3.2, securite par mot de passe. Sauvegardez toute votre vie numerique.",
       "categorie": "Informatique",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=WD+Passport+4To",
+      "image_url": "https://loremflickr.com/600/400/computer,storage,hardware?lock=2466",
       "caracteristiques": [
         "Capacite 4To - des milliers de photos et videos",
         "USB 3.2 Gen 1, compatible USB-C",
@@ -556,7 +580,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.4,
-      "avis_total": 345
+      "avis_total": 345,
+      "image_prompt": "professional product photo of WD My Passport 4To Ultra, computer storage hardware, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "La Psychologie de l'Argent",
@@ -568,7 +593,7 @@
       "lien": "https://www.amazon.fr/dp/2361170566?tag=confortbure07-21",
       "description": "La Psychologie de l'Argent par Morgan Housel. Best-seller mondial pour comprendre comment les gens pensent l'argent et investissent.",
       "categorie": "Livre",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Psychologie+Argent",
+      "image_url": "https://loremflickr.com/600/400/book,literature,reading?lock=8564",
       "caracteristiques": [
         "Best-seller du Wall Street Journal et USA Today",
         "19 histoires courtes sur la gestion d'argent",
@@ -578,7 +603,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.7,
-      "avis_total": 2100
+      "avis_total": 2100,
+      "image_prompt": "professional product photo of La Psychologie de l'Argent, book, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Samsung Galaxy Tab A9+ 11",
@@ -590,7 +616,7 @@
       "lien": "https://www.amazon.fr/dp/B0CNGR8WBC?tag=confortbure07-21",
       "description": "Samsung Galaxy Tab A9+ 11 pouces. Ecran TFT 90Hz, 4HP, processeur Snapdragon 695. Tablette Android parfaite pour multimedia et travail.",
       "categorie": "High-Tech",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Galaxy+Tab+A9+",
+      "image_url": "https://loremflickr.com/600/400/tablet,samsung,android?lock=3205",
       "caracteristiques": [
         "Ecran 11 pouces 90Hz - image fluide et lumineuse",
         "4 haut-parleurs surround, son Dolby Atmos",
@@ -600,7 +626,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.4,
-      "avis_total": 456
+      "avis_total": 456,
+      "image_prompt": "professional product photo of Samsung Galaxy Tab A9+ 11, premium tech device, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Philips Hue Kit Demarrage V4",
@@ -612,7 +639,7 @@
       "lien": "https://www.amazon.fr/dp/B0FJXZJ9N7?tag=confortbure07-21",
       "description": "Philips Hue Kit Demarrage White & Color Ambiance V4. 3 ampoules LED + pont. 16 millions de couleurs, controle vocal. Eclairage connecte.",
       "categorie": "Maison",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Hue+Kit+V4",
+      "image_url": "https://loremflickr.com/600/400/home,appliance,living?lock=1163",
       "caracteristiques": [
         "3 ampoules White & Color Ambiance + pont",
         "16 millions de couleurs et blancs de 2000 a 6500K",
@@ -622,7 +649,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 789
+      "avis_total": 789,
+      "image_prompt": "professional product photo of Philips Hue Kit Demarrage V4, home product, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Sony WH-1000XM5 Casque Audio",
@@ -634,7 +662,7 @@
       "lien": "https://www.amazon.fr/dp/B09Y2MYL5C?tag=confortbure07-21",
       "description": "Sony WH-1000XM5. Reduction de bruit active leader du marche, son haute resolution, autonomie 30h. Le casque audio haut de gamme par excellence.",
       "categorie": "Audio",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Sony+WH-1000XM5",
+      "image_url": "https://loremflickr.com/600/400/headphones,sony,wireless?lock=6113",
       "caracteristiques": [
         "Reduction de bruit active la plus puissante du marche",
         "Son haute resolution, processeur V1 et QN1",
@@ -644,7 +672,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.7,
-      "avis_total": 3456
+      "avis_total": 3456,
+      "image_prompt": "professional product photo of Sony WH-1000XM5 Casque Audio, audio device headphones speaker, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "ASUS ZenScreen 15.6 Ecran Portable",
@@ -656,7 +685,7 @@
       "lien": "https://www.amazon.fr/dp/B09P3SBQ8W?tag=confortbure07-21",
       "description": "ASUS ZenScreen MB16A 15.6 pouces. Ecran portable USB-C, Full HD IPS, 1.3kg. Le compagnon ideal des nomades et pros en deplacement.",
       "categorie": "Bureau",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=ASUS+ZenScreen",
+      "image_url": "https://loremflickr.com/600/400/desk,office,workspace?lock=7028",
       "caracteristiques": [
         "Ecran 15.6 pouces Full HD IPS 1920x1080",
         "Alimentation via USB-C - aucun adaptateur necessaire",
@@ -666,7 +695,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.3,
-      "avis_total": 123
+      "avis_total": 123,
+      "image_prompt": "professional product photo of ASUS ZenScreen 15.6 Ecran Portable, office desk accessory, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Casio FX-92 Collège Calculatrice",
@@ -678,7 +708,7 @@
       "lien": "https://www.amazon.fr/dp/B08V8KP8TN?tag=confortbure07-21",
       "description": "Casio FX-92 College. Calculatrice scientifique speciale college. 400 fonctions, ecran LCD 4 lignes, mode examen. La reference pour le brevet.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Casio+FX92",
+      "image_url": "https://loremflickr.com/600/400/calculator,casio,school?lock=1826",
       "caracteristiques": [
         "Calculatrice scientifique college",
         "400 fonctions mathematiques",
@@ -688,7 +718,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.7,
-      "avis_total": 2300
+      "avis_total": 2300,
+      "image_prompt": "professional product photo of Casio FX-92 Collège Calculatrice, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Pilot Frixion Ball Pack 4 Stylos",
@@ -700,7 +731,7 @@
       "lien": "https://www.amazon.fr/dp/B07S45C9RQ?tag=confortbure07-21",
       "description": "Pilot Frixion Ball Pack de 4 stylos effacables. Encre thermosensible, gomme integree. Noir, bleu, rouge, vert. Le stylo prefere des etudiants.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Pilot+Frixion",
+      "image_url": "https://loremflickr.com/600/400/pens,erasable,stationery?lock=6565",
       "caracteristiques": [
         "Stylos effacables thermosensibles",
         "Pack 4 couleurs",
@@ -710,7 +741,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.6,
-      "avis_total": 8900
+      "avis_total": 8900,
+      "image_prompt": "professional product photo of Pilot Frixion Ball Pack 4 Stylos, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Clairefontaine Cahier 24x32 96p",
@@ -722,7 +754,7 @@
       "lien": "https://www.amazon.fr/dp/B07DD1JL83?tag=confortbure07-21",
       "description": "Clairefontaine Cahier 24x32 96 pages Seyes. Papier veloute 90g/m2, reliure piquee. Le cahier iconique made in France.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Clairefontaine+Cahier",
+      "image_url": "https://loremflickr.com/600/400/notebook,paper,school?lock=9",
       "caracteristiques": [
         "Papier veloute 90g/m2",
         "Reglure Seyes",
@@ -732,7 +764,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.8,
-      "avis_total": 12000
+      "avis_total": 12000,
+      "image_prompt": "professional product photo of Clairefontaine Cahier 24x32 96p, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Stabilo Boss Pack 6 Surligneurs",
@@ -744,7 +777,7 @@
       "lien": "https://www.amazon.fr/dp/B01LXOQ1KJ?tag=confortbure07-21",
       "description": "Stabilo Boss Pack 6 surligneurs pastel. Technologie anti-sechage 4h, pointe biseautee. Les surligneurs iconiques pour reviser efficacement.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Stabilo+Boss",
+      "image_url": "https://loremflickr.com/600/400/highlighter,marker,stationery?lock=1979",
       "caracteristiques": [
         "Pack 6 couleurs pastel",
         "Anti-sechage 4h sans bouchon",
@@ -754,7 +787,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.8,
-      "avis_total": 15000
+      "avis_total": 15000,
+      "image_prompt": "professional product photo of Stabilo Boss Pack 6 Surligneurs, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Oxford Pack 5 Carnets A5",
@@ -766,7 +800,7 @@
       "lien": "https://www.amazon.fr/dp/B07KYHGHG9?tag=confortbure07-21",
       "description": "Oxford Pack 5 carnets A5 96 pages. Papier Optik Paper 90g/m2, reliure spirale, couverture polypro. Parfait pour les cours et revisions.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Oxford+Carnets",
+      "image_url": "https://loremflickr.com/600/400/notebook,paper,stationery?lock=7543",
       "caracteristiques": [
         "Pack 5 carnets A5",
         "Papier Optik Paper 90g/m2",
@@ -776,7 +810,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.7,
-      "avis_total": 3400
+      "avis_total": 3400,
+      "image_prompt": "professional product photo of Oxford Pack 5 Carnets A5, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Bic Cristal Stylos Pack 10",
@@ -788,7 +823,7 @@
       "lien": "https://www.amazon.fr/dp/B08WZCH1XD?tag=confortbure07-21",
       "description": "Bic Cristal Pack de 10 stylos bille. Pointe moyenne 1mm, encre bleue. Le stylo le plus vendu au monde depuis 1950. Indispensable pour la rentree.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Bic+Cristal",
+      "image_url": "https://loremflickr.com/600/400/pens,ballpoint,stationery?lock=1057",
       "caracteristiques": [
         "Pack 10 stylos bille",
         "Pointe moyenne 1mm",
@@ -798,7 +833,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.7,
-      "avis_total": 25000
+      "avis_total": 25000,
+      "image_prompt": "professional product photo of Bic Cristal Stylos Pack 10, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Crayons HB Pack 12",
@@ -810,7 +846,7 @@
       "lien": "https://www.amazon.fr/dp/B08T9N6YNR?tag=confortbure07-21",
       "description": "Pack de 12 crayons HB en bois de cedre. Mine resistante, faciles a tailler. Le crayon standard pour l'ecole et le bureau.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Crayons+HB",
+      "image_url": "https://loremflickr.com/600/400/pencils,drawing,stationery?lock=7611",
       "caracteristiques": [
         "Pack 12 crayons HB",
         "Bois de cedre",
@@ -820,7 +856,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 5600
+      "avis_total": 5600,
+      "image_prompt": "professional product photo of Crayons HB Pack 12, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Crayons de Couleur Faber-Castell 24",
@@ -832,7 +869,7 @@
       "lien": "https://www.amazon.fr/dp/B000KT72JS?tag=confortbure07-21",
       "description": "Faber-Castell 24 crayons de couleur. Pigments intenses, mine tendre 3.3mm. Etui metal. La qualite allemande pour les cours d'arts plastiques.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Faber+Castell",
+      "image_url": "https://loremflickr.com/600/400/colored,pencils,art?lock=9039",
       "caracteristiques": [
         "24 crayons de couleur",
         "Pigments intenses",
@@ -842,7 +879,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.8,
-      "avis_total": 7800
+      "avis_total": 7800,
+      "image_prompt": "professional product photo of Crayons de Couleur Faber-Castell 24, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Feutres Crayola 24 Couleurs",
@@ -854,7 +892,7 @@
       "lien": "https://www.amazon.fr/dp/B07NJH94RQ?tag=confortbure07-21",
       "description": "Crayola 24 feutres SuperTips. Pointe fine et large, couleurs vives lavables. Les feutres preferes des enfants et des profs.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Crayola+24",
+      "image_url": "https://loremflickr.com/600/400/markers,color,drawing?lock=1369",
       "caracteristiques": [
         "24 feutres SuperTips",
         "Pointe fine et large",
@@ -864,7 +902,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.7,
-      "avis_total": 12000
+      "avis_total": 12000,
+      "image_prompt": "professional product photo of Feutres Crayola 24 Couleurs, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Maped Gommes Pack 3",
@@ -876,7 +915,7 @@
       "lien": "https://www.amazon.fr/dp/B0CRRTKNFC?tag=confortbure07-21",
       "description": "Maped Pack 3 gommes blanches. Sans PVC, ne bave pas. La gomme classique qui efface proprement crayon et mine.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Maped+Gommes",
+      "image_url": "https://loremflickr.com/600/400/eraser,rubber,school?lock=8377",
       "caracteristiques": [
         "Pack 3 gommes",
         "Sans PVC",
@@ -886,7 +925,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.6,
-      "avis_total": 8900
+      "avis_total": 8900,
+      "image_prompt": "professional product photo of Maped Gommes Pack 3, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Maped Taille-Crayon Double Trou",
@@ -898,7 +938,7 @@
       "lien": "https://www.amazon.fr/dp/B003155XU8?tag=confortbure07-21",
       "description": "Maped taille-crayon double trou avec reservoir. Lames acier inoxydable. Adapte aux crayons standards et gros diametres.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Taille+Crayon",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=8624",
       "caracteristiques": [
         "Double trou",
         "Reservoir integre",
@@ -908,7 +948,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 6700
+      "avis_total": 6700,
+      "image_prompt": "professional product photo of Maped Taille-Crayon Double Trou, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Maped Regle 30cm Incassable",
@@ -920,7 +961,7 @@
       "lien": "https://www.amazon.fr/dp/B001ANZF60?tag=confortbure07-21",
       "description": "Maped regle 30cm incassable. Graduation imprimee dans la matiere, double graduation cm/mm. Flexible et resistante.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Regle+30cm",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=1998",
       "caracteristiques": [
         "30cm incassable",
         "Graduation imprimee",
@@ -930,7 +971,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.6,
-      "avis_total": 4500
+      "avis_total": 4500,
+      "image_prompt": "professional product photo of Maped Regle 30cm Incassable, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Maped Compas Metallique",
@@ -942,7 +984,7 @@
       "lien": "https://www.amazon.fr/dp/B072MRCDXS?tag=confortbure07-21",
       "description": "Maped compas metallique avec bague de serrage. Branches en metal, molette de reglage. Livre avec mine de rechange. Le compas de geometrie par excellence.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Compas+Maped",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=6012",
       "caracteristiques": [
         "Compas metallique",
         "Bague de serrage",
@@ -952,7 +994,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.4,
-      "avis_total": 3200
+      "avis_total": 3200,
+      "image_prompt": "professional product photo of Maped Compas Metallique, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "UHU Stick Colle Pack 3",
@@ -964,7 +1007,7 @@
       "lien": "https://www.amazon.fr/dp/B000KJO7JG?tag=confortbure07-21",
       "description": "UHU Stick Pack de 3 tubes de colle 21g. Colle forte et propre, sans solvant. Seche transparent. Ideal cahiers et travaux manuels.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=UHU+Colle",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=2117",
       "caracteristiques": [
         "Pack 3 sticks 21g",
         "Sans solvant",
@@ -974,7 +1017,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.7,
-      "avis_total": 15000
+      "avis_total": 15000,
+      "image_prompt": "professional product photo of UHU Stick Colle Pack 3, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Ciseaux Maped 13cm",
@@ -986,7 +1030,7 @@
       "lien": "https://www.amazon.fr/dp/B07R8GQCCR?tag=confortbure07-21",
       "description": "Maped ciseaux 13cm avec lames en acier inoxydable. Anneaux ergonomiques. Adaptes aux droitiers et gauchers. Le ciseau scolaire de reference.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Ciseaux+Maped",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=4949",
       "caracteristiques": [
         "Lames acier inoxydable",
         "Anneaux ergonomiques",
@@ -996,7 +1040,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 5600
+      "avis_total": 5600,
+      "image_prompt": "professional product photo of Ciseaux Maped 13cm, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Scotch Magic 3M Ruban Adhesif",
@@ -1008,7 +1053,7 @@
       "lien": "https://www.amazon.fr/dp/B001BFY5JU?tag=confortbure07-21",
       "description": "Scotch Magic 3M ruban adhesif mat 19mm x 33m. Invisible sur le papier, effacable, ne jaunit pas. Le scotch iconique.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Scotch+3M",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=6917",
       "caracteristiques": [
         "Ruban adhesif mat",
         "19mm x 33m",
@@ -1018,7 +1063,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.7,
-      "avis_total": 21000
+      "avis_total": 21000,
+      "image_prompt": "professional product photo of Scotch Magic 3M Ruban Adhesif, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Agenda Scolaire 2026-2027",
@@ -1030,7 +1076,7 @@
       "lien": "https://www.amazon.fr/dp/B0GV61VWP5?tag=confortbure07-21",
       "description": "Agenda scolaire 2026-2027 format A5. Un jour par page, couverture rigide, coins arrondis. Parfait pour organiser son annee scolaire.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Agenda+2026",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=1316",
       "caracteristiques": [
         "Format A5",
         "Un jour par page",
@@ -1040,7 +1086,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.4,
-      "avis_total": 2300
+      "avis_total": 2300,
+      "image_prompt": "professional product photo of Agenda Scolaire 2026-2027, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Classeur A4 4 Anneaux",
@@ -1052,7 +1099,7 @@
       "lien": "https://www.amazon.fr/dp/B0041VW7H8?tag=confortbure07-21",
       "description": "Classeur A4 dos 40mm avec 4 anneaux. Couverture rigide. Pour ranger et organiser tous vos cours et intercalaires.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Classeur+A4",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=6241",
       "caracteristiques": [
         "Format A4",
         "Dos 40mm",
@@ -1062,7 +1109,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.3,
-      "avis_total": 1800
+      "avis_total": 1800,
+      "image_prompt": "professional product photo of Classeur A4 4 Anneaux, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Intercalaires A4 Pack 12",
@@ -1074,7 +1122,7 @@
       "lien": "https://www.amazon.fr/dp/B09V86VB3F?tag=confortbure07-21",
       "description": "Pack de 12 intercalaires A4 multicolores. Onglets pre-decoupes, plastique 170 microns. Pour organiser vos classeurs par matiere.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Intercalaires",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=5354",
       "caracteristiques": [
         "Pack 12 intercalaires",
         "Format A4",
@@ -1084,7 +1132,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 4500
+      "avis_total": 4500,
+      "image_prompt": "professional product photo of Intercalaires A4 Pack 12, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Pochettes Plastique A4 Pack 100",
@@ -1096,7 +1145,7 @@
       "lien": "https://www.amazon.fr/dp/B07F17TGJH?tag=confortbure07-21",
       "description": "Pack de 100 pochettes plastique A4 perforees. Transparentes, 80 microns. Indispensables pour proteger vos documents dans le classeur.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Pochettes+100",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=7296",
       "caracteristiques": [
         "Pack 100 pochettes",
         "Format A4",
@@ -1106,7 +1155,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.6,
-      "avis_total": 8900
+      "avis_total": 8900,
+      "image_prompt": "professional product photo of Pochettes Plastique A4 Pack 100, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Trousse Scolaire Grande Capacite",
@@ -1118,7 +1168,7 @@
       "lien": "https://www.amazon.fr/dp/B0D2NXK5VB?tag=confortbure07-21",
       "description": "Trousse scolaire grande capacite 3 compartiments. Tissu resistant, fermeture zip. Range tous vos stylos, crayons et accessoires.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Trousse+Scolaire",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=4501",
       "caracteristiques": [
         "Grande capacite",
         "3 compartiments",
@@ -1128,7 +1178,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.4,
-      "avis_total": 3400
+      "avis_total": 3400,
+      "image_prompt": "professional product photo of Trousse Scolaire Grande Capacite, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Eastpak Padded Sac a Dos",
@@ -1140,7 +1191,7 @@
       "lien": "https://www.amazon.fr/dp/B001G73S6G?tag=confortbure07-21",
       "description": "Eastpak Padded Pak'r sac a dos 24L. Compartiment principal zippe, poche avant. Garanti 30 ans. Le sac a dos iconique de la rentree.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Eastpak+Sac",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=3056",
       "caracteristiques": [
         "Sac a dos 24L",
         "Compartiment principal",
@@ -1150,7 +1201,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.7,
-      "avis_total": 12000
+      "avis_total": 12000,
+      "image_prompt": "professional product photo of Eastpak Padded Sac a Dos, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "TI College Plus Calculatrice",
@@ -1162,7 +1214,7 @@
       "lien": "https://www.amazon.fr/dp/B00FREON7A?tag=confortbure07-21",
       "description": "Texas Instruments TI College Plus. Calculatrice scientifique, mode examen, grand ecran. L'alternative a la Casio pour le brevet.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=TI+College",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=7267",
       "caracteristiques": [
         "Calculatrice scientifique",
         "Mode examen",
@@ -1172,7 +1224,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 4500
+      "avis_total": 4500,
+      "image_prompt": "professional product photo of TI College Plus Calculatrice, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Feuilles Simples A4 SeYes 500",
@@ -1184,7 +1237,7 @@
       "lien": "https://www.amazon.fr/dp/B09SJ193B1?tag=confortbure07-21",
       "description": "Ramette 500 feuilles simples A4 Seyes 90g/m2. Papier veloute, reglure Seyes. Le stock de feuilles pour toute l'annee scolaire.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Feuilles+A4",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=9771",
       "caracteristiques": [
         "500 feuilles A4 Seyes",
         "Papier 90g/m2",
@@ -1194,7 +1247,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.6,
-      "avis_total": 6700
+      "avis_total": 6700,
+      "image_prompt": "professional product photo of Feuilles Simples A4 SeYes 500, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Copies Doubles A4 Perforees 100",
@@ -1206,7 +1260,7 @@
       "lien": "https://www.amazon.fr/dp/B084CPTDH1?tag=confortbure07-21",
       "description": "Pack 100 copies doubles A4 perforees Seyes. Papier 90g/m2, grands carreaux. Indispensables pour les controles et devoirs.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Copies+Doubles",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=7525",
       "caracteristiques": [
         "100 copies doubles",
         "Format A4",
@@ -1216,7 +1270,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.7,
-      "avis_total": 5600
+      "avis_total": 5600,
+      "image_prompt": "professional product photo of Copies Doubles A4 Perforees 100, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Post-it Super Sticky Pack 6",
@@ -1228,7 +1283,7 @@
       "lien": "https://www.amazon.fr/dp/B000YD1XNG?tag=confortbure07-21",
       "description": "Post-it Super Sticky Pack 6 de 76x76mm. Adherence 2x plus forte. Colorees, repositionnables. Pour reviser et organiser ses cours.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Post-it",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=6355",
       "caracteristiques": [
         "Pack 6 blocs 76x76mm",
         "Adherence 2x renforcee",
@@ -1238,7 +1293,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.8,
-      "avis_total": 18000
+      "avis_total": 18000,
+      "image_prompt": "professional product photo of Post-it Super Sticky Pack 6, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Ardoise Velleda Effacable",
@@ -1250,7 +1306,7 @@
       "lien": "https://www.amazon.fr/dp/B0021SUFTU?tag=confortbure07-21",
       "description": "Ardoise effacable A4 recto-verso avec feutre Velleda. Surface blanche brillante. Parfaite pour les exercices et brouillons sans gaspillage.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Ardoise+Velleda",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=4077",
       "caracteristiques": [
         "Format A4",
         "Recto-verso",
@@ -1260,7 +1316,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.4,
-      "avis_total": 2300
+      "avis_total": 2300,
+      "image_prompt": "professional product photo of Ardoise Velleda Effacable, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Kit Geometrie Equerre Rapporteur",
@@ -1272,7 +1329,7 @@
       "lien": "https://www.amazon.fr/dp/B07XPDCDDY?tag=confortbure07-21",
       "description": "Kit geometrie complet : equerre 60, rapporteur 180, regle 20cm. Plastique transparent, graduations claires. Tout pour la geometrie.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Kit+Geometrie",
+      "image_url": "https://loremflickr.com/600/400/geometry,compass,ruler?lock=9883",
       "caracteristiques": [
         "Equerre 60",
         "Rapporteur 180",
@@ -1282,7 +1339,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.3,
-      "avis_total": 2800
+      "avis_total": 2800,
+      "image_prompt": "professional product photo of Kit Geometrie Equerre Rapporteur, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Sharpie Marqueurs Permanents Pack 4",
@@ -1294,7 +1352,7 @@
       "lien": "https://www.amazon.fr/dp/B01N4W8TIW?tag=confortbure07-21",
       "description": "Sharpie Pack 4 marqueurs permanents noir/bleu/rouge/vert. Pointe fine, seche rapide. Pour marquer cahiers, classeurs et etiquettes.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Sharpie+4",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=1312",
       "caracteristiques": [
         "Pack 4 marqueurs",
         "Noir bleu rouge vert",
@@ -1304,7 +1362,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.7,
-      "avis_total": 14000
+      "avis_total": 14000,
+      "image_prompt": "professional product photo of Sharpie Marqueurs Permanents Pack 4, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Bic 4 Couleurs Stylo",
@@ -1316,7 +1375,7 @@
       "lien": "https://www.amazon.fr/dp/B0006SVBO0?tag=confortbure07-21",
       "description": "Bic 4 Couleurs stylo bille. Bleu, noir, rouge, vert en un seul stylo. L'indispensable pour la prise de notes. Iconique depuis 1970.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Bic+4+Couleurs",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=3056",
       "caracteristiques": [
         "4 couleurs en 1",
         "Bleu noir rouge vert",
@@ -1326,7 +1385,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.8,
-      "avis_total": 32000
+      "avis_total": 32000,
+      "image_prompt": "professional product photo of Bic 4 Couleurs Stylo, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Papermate Stylos Roller Pack 4",
@@ -1338,7 +1398,7 @@
       "lien": "https://www.amazon.fr/dp/B00CWZSZY4?tag=confortbure07-21",
       "description": "Papermate InkJoy 4 stylos roller gel. Pointe fine 0.7mm, encre ultra-fluide. Ecriture glisse sans effort, couleurs vives.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Papermate+InkJoy",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=744",
       "caracteristiques": [
         "Stylos roller gel",
         "Pointe fine 0.7mm",
@@ -1348,7 +1408,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.6,
-      "avis_total": 6700
+      "avis_total": 6700,
+      "image_prompt": "professional product photo of Papermate Stylos Roller Pack 4, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Qwetch Gourde Inox 500ml",
@@ -1360,7 +1421,7 @@
       "lien": "https://www.amazon.fr/dp/B07K4Q9VFN?tag=confortbure07-21",
       "description": "Qwetch gourde isotherme inox 500ml. Garde au chaud 12h / au froid 24h. Bouchon etanche, design francais. Sans BPA.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Gourde+Inox",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=9144",
       "caracteristiques": [
         "Inox isotherme 500ml",
         "Chaud 12h / Froid 24h",
@@ -1370,7 +1431,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.6,
-      "avis_total": 4500
+      "avis_total": 4500,
+      "image_prompt": "professional product photo of Qwetch Gourde Inox 500ml, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Gourde Plastique 1L",
@@ -1382,7 +1444,7 @@
       "lien": "https://www.amazon.fr/dp/B0G7DNBTT6?tag=confortbure07-21",
       "description": "Gourde plastique 1L sans BPA. Bouchon sport, graduation. Legere et robuste pour l'ecole. Passe au lave-vaisselle.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Gourde+1L",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=2238",
       "caracteristiques": [
         "Capacite 1 litre",
         "Sans BPA",
@@ -1392,7 +1454,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.3,
-      "avis_total": 7800
+      "avis_total": 7800,
+      "image_prompt": "professional product photo of Gourde Plastique 1L, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Boite a Gouter Compartimentee",
@@ -1404,7 +1467,7 @@
       "lien": "https://www.amazon.fr/dp/B071ZZR5KV?tag=confortbure07-21",
       "description": "Boite a gouter 4 compartiments etanche. Sans BPA, micro-ondes et lave-vaisselle. Parfait pour les recessions equilibrees.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Boite+Gouter",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=5152",
       "caracteristiques": [
         "4 compartiments",
         "Etanche",
@@ -1414,7 +1477,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 5600
+      "avis_total": 5600,
+      "image_prompt": "professional product photo of Boite a Gouter Compartimentee, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Lunch Box Isotherme Enfant",
@@ -1426,7 +1490,7 @@
       "lien": "https://www.amazon.fr/dp/B071P9CX3Z?tag=confortbure07-21",
       "description": "Sac lunch box isotherme enfant. Garde au frais 6h, motifs fun, fermeture zip. Parfait pour la cantine et les sorties.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Lunch+Box",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=6625",
       "caracteristiques": [
         "Isotherme 6h",
         "Motifs enfant",
@@ -1436,7 +1500,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.4,
-      "avis_total": 3400
+      "avis_total": 3400,
+      "image_prompt": "professional product photo of Lunch Box Isotherme Enfant, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Protège-Cahiers Transparents Pack 10",
@@ -1448,7 +1513,7 @@
       "lien": "https://www.amazon.fr/dp/B08CCWX782?tag=confortbure07-21",
       "description": "Pack 10 protège-cahiers transparents 24x32. Plastique 200 microns. Prolonge la vie des cahiers toute l'annee.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Protege+Cahiers",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=1831",
       "caracteristiques": [
         "Pack 10 protège-cahiers",
         "Format 24x32",
@@ -1458,7 +1523,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 6700
+      "avis_total": 6700,
+      "image_prompt": "professional product photo of Protège-Cahiers Transparents Pack 10, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Etiquettes Autocollantes Scolaires",
@@ -1470,7 +1536,7 @@
       "lien": "https://www.amazon.fr/dp/B0C17JMDWT?tag=confortbure07-21",
       "description": "Pack 100 etiquette autocollantes personnalisables. Resistantes a l'eau. Pour marquer cahiers, fournitures et vetements.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Etiquettes",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=7546",
       "caracteristiques": [
         "100 etiquettes",
         "Personnalisables",
@@ -1480,7 +1546,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.6,
-      "avis_total": 8900
+      "avis_total": 8900,
+      "image_prompt": "professional product photo of Etiquettes Autocollantes Scolaires, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Cahier de Texte A4 2026-2027",
@@ -1492,7 +1559,7 @@
       "lien": "https://www.amazon.fr/dp/B08JB7BXNX?tag=confortbure07-21",
       "description": "Cahier de texte A4 2026-2027. Reliure spirale, 160 pages. Pour noter les devoirs et organiser son travail scolaire.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Cahier+Texte",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=5203",
       "caracteristiques": [
         "Format A4",
         "160 pages",
@@ -1502,7 +1569,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.4,
-      "avis_total": 4500
+      "avis_total": 4500,
+      "image_prompt": "professional product photo of Cahier de Texte A4 2026-2027, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Porte-Vues A4 60 Vues",
@@ -1514,7 +1582,7 @@
       "lien": "https://www.amazon.fr/dp/B079SV5YT6?tag=confortbure07-21",
       "description": "Porte-vues A4 60 pochettes transparentes. Couverture rigide coloree. Ideal pour ranger les fiches et documents volants.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Porte+Vues",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=6365",
       "caracteristiques": [
         "60 pochettes A4",
         "Couverture rigide",
@@ -1524,7 +1592,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.3,
-      "avis_total": 3400
+      "avis_total": 3400,
+      "image_prompt": "professional product photo of Porte-Vues A4 60 Vues, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Tipp-Ex Souris Correctrice Pack 2",
@@ -1536,7 +1605,7 @@
       "lien": "https://www.amazon.fr/dp/B002IRKDZA?tag=confortbure07-21",
       "description": "Tipp-Ex Mini Souris correctrice pack 2. Seche instantanement, sans odeur. Le correcteur prefere des ecoliers.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=TippEx+Souris",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=5600",
       "caracteristiques": [
         "Pack 2 souris",
         "Seche instantanement",
@@ -1546,7 +1615,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.6,
-      "avis_total": 12000
+      "avis_total": 12000,
+      "image_prompt": "professional product photo of Tipp-Ex Souris Correctrice Pack 2, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Blanco Correcteur Liquide",
@@ -1558,7 +1628,7 @@
       "lien": "https://www.amazon.fr/dp/B000I5SFCW?tag=confortbure07-21",
       "description": "Blanco correcteur liquide 20ml. A base d'eau, seche rapide, sans solvant. Le classique pour corriger les erreurs.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Blanco",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=1453",
       "caracteristiques": [
         "Correcteur liquide 20ml",
         "Base d'eau",
@@ -1568,7 +1638,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.4,
-      "avis_total": 15000
+      "avis_total": 15000,
+      "image_prompt": "professional product photo of Blanco Correcteur Liquide, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Stylo Plume Rechargeable",
@@ -1580,7 +1651,7 @@
       "lien": "https://www.amazon.fr/dp/B000FA5EII?tag=confortbure07-21",
       "description": "Stylo plume rechargeable avec cartouches incluses. Plume medium, ecriture fluide. Pour apprendre la belle ecriture au college.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Stylo+Plume",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=6883",
       "caracteristiques": [
         "Stylo plume rechargeable",
         "Cartouches incluses",
@@ -1590,7 +1661,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.3,
-      "avis_total": 2300
+      "avis_total": 2300,
+      "image_prompt": "professional product photo of Stylo Plume Rechargeable, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Cartouches Encre Bleue Pack 30",
@@ -1602,7 +1674,7 @@
       "lien": "https://www.amazon.fr/dp/B00S2TWQ5S?tag=confortbure07-21",
       "description": "Pack de 30 cartouches encre bleue pour stylo plume. Compatibles standard universel. Seche rapide, bleu effacable.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Cartouches+30",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=1133",
       "caracteristiques": [
         "30 cartouches bleues",
         "Standard universel",
@@ -1612,7 +1684,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 5600
+      "avis_total": 5600,
+      "image_prompt": "professional product photo of Cartouches Encre Bleue Pack 30, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Cartable a Roulettes Enfant",
@@ -1624,7 +1697,7 @@
       "lien": "https://www.amazon.fr/dp/B099S3BJX2?tag=confortbure07-21",
       "description": "Cartable a roulettes et sac a dos 2-en-1. Poignee telescopique, dos rembourre. Motifs licorne/dinosaure/soccer. Pour le primaire.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Cartable+Roulettes",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=5707",
       "caracteristiques": [
         "2-en-1 roulettes + sac",
         "Poignee telescopique",
@@ -1634,7 +1707,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 3400
+      "avis_total": 3400,
+      "image_prompt": "professional product photo of Cartable a Roulettes Enfant, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Sac Maternelle Petit Enfant",
@@ -1646,7 +1720,7 @@
       "lien": "https://www.amazon.fr/dp/B0DFN47HWG?tag=confortbure07-21",
       "description": "Sac a dos maternelle 25cm. Motifs animaux/etoiles, bretelles reglables. Taille parfaite pour les petits de 3-6 ans.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Sac+Maternelle",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=396",
       "caracteristiques": [
         "Format maternelle 25cm",
         "Motifs animaux",
@@ -1656,7 +1730,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.6,
-      "avis_total": 5600
+      "avis_total": 5600,
+      "image_prompt": "professional product photo of Sac Maternelle Petit Enfant, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Gouache Peinture 12 Couleurs",
@@ -1668,7 +1743,7 @@
       "lien": "https://www.amazon.fr/dp/B0H3KH9698?tag=confortbure07-21",
       "description": "Kit gouache 12 couleurs en pots de 20ml. Non toxique, lavable a l'eau. Parfait pour les cours d'arts plastiques.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Gouache+12",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=3050",
       "caracteristiques": [
         "12 couleurs 20ml",
         "Non toxique",
@@ -1678,7 +1753,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.4,
-      "avis_total": 4500
+      "avis_total": 4500,
+      "image_prompt": "professional product photo of Gouache Peinture 12 Couleurs, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Pinceaux Ecole Pack 6",
@@ -1690,7 +1766,7 @@
       "lien": "https://www.amazon.fr/dp/B0G124VS7G?tag=confortbure07-21",
       "description": "Pack 6 pinceaux ecole tailles mixtes. Manches en bois, poils doux. Pour peinture gouache et aquarelle.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Pinceaux+6",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=9230",
       "caracteristiques": [
         "6 pinceaux tailles mixtes",
         "Manches bois",
@@ -1700,7 +1776,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.3,
-      "avis_total": 3400
+      "avis_total": 3400,
+      "image_prompt": "professional product photo of Pinceaux Ecole Pack 6, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Feutres Velleda Tableau Blanc",
@@ -1712,7 +1789,7 @@
       "lien": "https://www.amazon.fr/dp/B00BBF2RC2?tag=confortbure07-21",
       "description": "Velleda feutres tableau blanc pack 4. Pointe ogive, effacables, odeur faible. Pour ardoises et tableaux blancs.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Velleda+4",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=9292",
       "caracteristiques": [
         "Pack 4 feutres",
         "Pointe ogive",
@@ -1722,7 +1799,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.7,
-      "avis_total": 12000
+      "avis_total": 12000,
+      "image_prompt": "professional product photo of Feutres Velleda Tableau Blanc, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Chemises Cartonnees Lot 5",
@@ -1734,7 +1812,7 @@
       "lien": "https://www.amazon.fr/dp/B003R1FS9M?tag=confortbure07-21",
       "description": "Lot 5 chemises cartonnees A4. Rabats lateraux, 5 coloris. Pour ranger les documents et intercalaires sans les abimer.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Chemises+5",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=7973",
       "caracteristiques": [
         "Lot 5 chemises A4",
         "Rabats lateraux",
@@ -1744,7 +1822,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.4,
-      "avis_total": 4500
+      "avis_total": 4500,
+      "image_prompt": "professional product photo of Chemises Cartonnees Lot 5, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Bloc Steno 80 Pages",
@@ -1756,7 +1835,7 @@
       "lien": "https://www.amazon.fr/dp/B09S7JS6HD?tag=confortbure07-21",
       "description": "Bloc steno 80 pages 14x21cm. Papier 70g/m2, spirale en haut. Format pratique pour les prises de notes rapides.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Bloc+Steno",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=4962",
       "caracteristiques": [
         "80 pages 14x21cm",
         "Spirale en haut",
@@ -1766,7 +1845,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.3,
-      "avis_total": 5600
+      "avis_total": 5600,
+      "image_prompt": "professional product photo of Bloc Steno 80 Pages, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Calculatrice de Poche Bureau",
@@ -1778,7 +1858,7 @@
       "lien": "https://www.amazon.fr/dp/B08JZ5LX5G?tag=confortbure07-21",
       "description": "Calculatrice de poche 8 chiffres. Double alimentation solaire+pile. Grand ecran incline. Parfaite pour le bureau et la maison.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Calculatrice",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=1050",
       "caracteristiques": [
         "8 chiffres",
         "Solaire + pile",
@@ -1788,7 +1868,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 23000
+      "avis_total": 23000,
+      "image_prompt": "professional product photo of Calculatrice de Poche Bureau, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "TI-83 Premium CE Calculatrice Lycee",
@@ -1800,7 +1881,7 @@
       "lien": "https://www.amazon.fr/dp/B08YZ2KTKM?tag=confortbure07-21",
       "description": "Texas Instruments TI-83 Premium CE Edition Python. Ecran couleur, mode examen. La calculatrice graphique obligatoire au lycee.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=TI-83+Premium",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=274",
       "caracteristiques": [
         "Ecran couleur haute resolution",
         "Python integre",
@@ -1810,7 +1891,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.7,
-      "avis_total": 8900
+      "avis_total": 8900,
+      "image_prompt": "professional product photo of TI-83 Premium CE Calculatrice Lycee, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Casio Graph 35+E II",
@@ -1822,7 +1904,7 @@
       "lien": "https://www.amazon.fr/dp/B08V8SD173?tag=confortbure07-21",
       "description": "Casio Graph 35+E II. Calculatrice graphique avec Python, mode examen. Ecran 8 lignes, 21K de memoire. L'alternative a la TI pour le lycee.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Casio+Graph+35",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=1194",
       "caracteristiques": [
         "Ecran 8 lignes",
         "Python integre",
@@ -1832,7 +1914,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.6,
-      "avis_total": 6700
+      "avis_total": 6700,
+      "image_prompt": "professional product photo of Casio Graph 35+E II, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Marque-pages Adhesifs Fluos",
@@ -1844,7 +1927,7 @@
       "lien": "https://www.amazon.fr/dp/B000KJNYMM?tag=confortbure07-21",
       "description": "Pack 200 marque-pages adhesifs fluorescents 5 couleurs. Amovibles, repositionnables. Pour reperer les pages importantes.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Marque-pages",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=3492",
       "caracteristiques": [
         "200 marque-pages",
         "5 couleurs fluos",
@@ -1854,7 +1937,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.6,
-      "avis_total": 6700
+      "avis_total": 6700,
+      "image_prompt": "professional product photo of Marque-pages Adhesifs Fluos, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Paquet Mouchoirs Pocket x10",
@@ -1866,7 +1950,7 @@
       "lien": "https://www.amazon.fr/dp/B07VSBVHD7?tag=confortbure07-21",
       "description": "Pack de 10 paquets mouchoirs pocket 10 mouchoirs chacun. Doux, 3 epaisseurs. A toujours avoir dans le cartable.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Mouchoirs",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=9467",
       "caracteristiques": [
         "10 paquets",
         "10 mouchoirs par paquet",
@@ -1876,7 +1960,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 15000
+      "avis_total": 15000,
+      "image_prompt": "professional product photo of Paquet Mouchoirs Pocket x10, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Tablier Enfant Arts Plastiques",
@@ -1888,7 +1973,7 @@
       "lien": "https://www.amazon.fr/dp/B0D3X7H4K4?tag=confortbure07-21",
       "description": "Tablier enfant impermeable avec manches longues. Fermeture scratch. Protege les vetements pendant les cours de peinture.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Tablier",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=9592",
       "caracteristiques": [
         "Impermeable",
         "Manches longues",
@@ -1898,7 +1983,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 3400
+      "avis_total": 3400,
+      "image_prompt": "professional product photo of Tablier Enfant Arts Plastiques, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Pochette de 12 Enveloppes A5",
@@ -1910,7 +1996,7 @@
       "lien": "https://www.amazon.fr/dp/B07B3C9BQB?tag=confortbure07-21",
       "description": "Pochette 12 enveloppes A5 blanches. 120g/m2, auto-adhesives. Pour les courriers administratifs scolaires.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Enveloppes",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=148",
       "caracteristiques": [
         "12 enveloppes A5",
         "120g/m2",
@@ -1920,7 +2006,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.4,
-      "avis_total": 4500
+      "avis_total": 4500,
+      "image_prompt": "professional product photo of Pochette de 12 Enveloppes A5, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Correcteur Rouleau Bande 5mm x 10m",
@@ -1932,7 +2019,7 @@
       "lien": "https://www.amazon.fr/dp/B00H2CFGGW?tag=confortbure07-21",
       "description": "Correcteur en rouleau 5mm x 10m. Application precise sans bavure, sechage instantane. Plus propre que le liquide.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Correcteur",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=6409",
       "caracteristiques": [
         "Rouleau 5mm x 10m",
         "Application precise",
@@ -1942,7 +2029,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 8900
+      "avis_total": 8900,
+      "image_prompt": "professional product photo of Correcteur Rouleau Bande 5mm x 10m, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Taille-Crayon Electrique",
@@ -1954,7 +2042,7 @@
       "lien": "https://www.amazon.fr/dp/B0FHC81V7C?tag=confortbure07-21",
       "description": "Taille-crayon electrique avec reservoir. Adapte tous diametres. Arret automatique. Pour des crayons toujours parfaitement tailles.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Taille+Electrique",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=8331",
       "caracteristiques": [
         "Electrique",
         "Reservoir amovible",
@@ -1964,7 +2052,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.4,
-      "avis_total": 4500
+      "avis_total": 4500,
+      "image_prompt": "professional product photo of Taille-Crayon Electrique, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Pochette Zip A4 Document",
@@ -1976,7 +2065,7 @@
       "lien": "https://www.amazon.fr/dp/B0BZ4FYBXT?tag=confortbure07-21",
       "description": "Pochette zip A4 transparente. Fermeture zip etanche, plastique epais. Pour ranger les petits documents et le materiel.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Pochette+Zip",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=1488",
       "caracteristiques": [
         "Format A4",
         "Fermeture zip",
@@ -1986,7 +2075,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.3,
-      "avis_total": 5600
+      "avis_total": 5600,
+      "image_prompt": "professional product photo of Pochette Zip A4 Document, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Lot Gommes Fantaisie Animaux",
@@ -1998,7 +2088,7 @@
       "lien": "https://www.amazon.fr/dp/B07JQL7R3T?tag=confortbure07-21",
       "description": "Lot 10 gommes fantaisie formes animaux (chat, chien, panda...). Sans PVC, odeur agreable. Les enfants les adorent.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Gommes+Animaux",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=414",
       "caracteristiques": [
         "10 gommes animaux",
         "Chat chien panda...",
@@ -2008,7 +2098,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.7,
-      "avis_total": 7800
+      "avis_total": 7800,
+      "image_prompt": "professional product photo of Lot Gommes Fantaisie Animaux, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Set Bureau Enfant Complet",
@@ -2020,7 +2111,7 @@
       "lien": "https://www.amazon.fr/dp/B08BCLTMWX?tag=confortbure07-21",
       "description": "Set bureau enfant complet : 12 crayons + 12 feutres + 6 stylos + gomme + taille-crayon + regle. Tout en un pour la rentree.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Set+Bureau",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=5639",
       "caracteristiques": [
         "Set complet",
         "12 crayons + 12 feutres",
@@ -2030,7 +2121,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.6,
-      "avis_total": 5600
+      "avis_total": 5600,
+      "image_prompt": "professional product photo of Set Bureau Enfant Complet, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Rouleau Papier Kraft Couvrir Livres",
@@ -2042,7 +2134,7 @@
       "lien": "https://www.amazon.fr/dp/B076HM42HP?tag=confortbure07-21",
       "description": "Rouleau papier kraft 50cm x 2m pour couvrir les livres. Epais, resistant, personnalisable. L'indispensable de la rentree.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Papier+Kraft",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=6577",
       "caracteristiques": [
         "Rouleau 50cm x 2m",
         "Papier kraft epais",
@@ -2052,7 +2144,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.4,
-      "avis_total": 4500
+      "avis_total": 4500,
+      "image_prompt": "professional product photo of Rouleau Papier Kraft Couvrir Livres, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Repertoire Alphabetique A5",
@@ -2064,7 +2157,7 @@
       "lien": "https://www.amazon.fr/dp/B0D2RRQSBM?tag=confortbure07-21",
       "description": "Repertoire alphabetique A5, onglets A a Z. 160 pages. Pour noter contacts, vocabulaire et formules par ordre alphabetique.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Repertoire",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=6320",
       "caracteristiques": [
         "Format A5",
         "Onglets A-Z",
@@ -2074,7 +2167,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.3,
-      "avis_total": 2300
+      "avis_total": 2300,
+      "image_prompt": "professional product photo of Repertoire Alphabetique A5, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Attache-Parisienne Lot 100",
@@ -2086,7 +2180,7 @@
       "lien": "https://www.amazon.fr/dp/B00175X9QE?tag=confortbure07-21",
       "description": "Lot de 100 attaches parisiennes dorees. Pour fixer les feuilles sans agrafeuse. Reutilisables et pratiques.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Attaches",
+      "image_url": "https://loremflickr.com/600/400/school,supplies,stationery?lock=9240",
       "caracteristiques": [
         "100 attaches",
         "Dorees",
@@ -2096,7 +2190,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.4,
-      "avis_total": 3400
+      "avis_total": 3400,
+      "image_prompt": "professional product photo of Attache-Parisienne Lot 100, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Sac a dos cartable enfant 20L",
@@ -2108,7 +2203,7 @@
       "lien": "https://www.amazon.fr/s?k=sac+a+dos+enfant+primaire&tag=confortbure07-21",
       "description": "Sac a dos ergonomique enfant, 20L, compartiment ordinateur, ideale rentree des classes.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Sac+a+dos+cartable+enfant+20L",
+      "image_url": "https://loremflickr.com/600/400/backpack,school,child?lock=5934",
       "caracteristiques": [
         "Sac a dos ergonomique enfant, 20L, compartiment ordinateur, ",
         "Rentree des classes 2026",
@@ -2117,7 +2212,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Sac a dos cartable enfant 20L, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Trousse scolaire zippee 3 compartiments",
@@ -2129,7 +2225,7 @@
       "lien": "https://www.amazon.fr/s?k=trousse+scolaire+zippee&tag=confortbure07-21",
       "description": "Trousse zippee 3 compartiments, grande capacite, pour stylos et fournitures.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Trousse+scolaire+zippee+3+compartiments",
+      "image_url": "https://loremflickr.com/600/400/pencil,case,school?lock=9508",
       "caracteristiques": [
         "Trousse zippee 3 compartiments, grande capacite, pour stylos",
         "Rentree des classes 2026",
@@ -2138,7 +2234,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Trousse scolaire zippee 3 compartiments, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Trousse de table cartable etui 6 panneaux",
@@ -2150,7 +2247,7 @@
       "lien": "https://www.amazon.fr/s?k=trousse+de+table+6+panneaux&tag=confortbure07-21",
       "description": "Etui-trousse 6 panneaux qui se deplie comme une trousse de table, tres pratique.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Trousse+de+table+cartable+etui+6+panneaux",
+      "image_url": "https://loremflickr.com/600/400/pencil,case,stationery?lock=9863",
       "caracteristiques": [
         "Etui-trousse 6 panneaux qui se deplie comme une trousse de t",
         "Rentree des classes 2026",
@@ -2159,7 +2256,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Trousse de table cartable etui 6 panneaux, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Gourde isotherme enfant 500ml",
@@ -2171,7 +2269,7 @@
       "lien": "https://www.amazon.fr/s?k=gourde+isotherme+enfant&tag=confortbure07-21",
       "description": "Gourde isotherme inox 500ml, sans BPA, garde l'eau fraiche 12h - parfaite ecole.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Gourde+isotherme+enfant+500ml",
+      "image_url": "https://loremflickr.com/600/400/water,bottle,thermos?lock=9166",
       "caracteristiques": [
         "Gourde isotherme inox 500ml, sans BPA, garde l'eau fraiche 1",
         "Rentree des classes 2026",
@@ -2180,7 +2278,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Gourde isotherme enfant 500ml, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Boite a lunch bento 3 compartiments",
@@ -2192,7 +2291,7 @@
       "lien": "https://www.amazon.fr/s?k=boite+lunch+bento+enfant&tag=confortbure07-21",
       "description": "Boite repas bento 3 compartiments avec couverts, micro-ondable, etanche.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Boite+a+lunch+bento+3+compartiments",
+      "image_url": "https://loremflickr.com/600/400/lunch,box,bento?lock=9768",
       "caracteristiques": [
         "Boite repas bento 3 compartiments avec couverts, micro-ondab",
         "Rentree des classes 2026",
@@ -2201,7 +2300,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Boite a lunch bento 3 compartiments, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Calculatrice scientifique Casio FX-92",
@@ -2213,7 +2313,7 @@
       "lien": "https://www.amazon.fr/s?k=calculatrice+scientifique+collège+fx-92&tag=confortbure07-21",
       "description": "Calculatrice scientifique CASIO FX-92 College, mode examen, conforme programme scolaire.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Calculatrice+scientifique+Casio+FX-92",
+      "image_url": "https://loremflickr.com/600/400/calculator,math,school?lock=8457",
       "caracteristiques": [
         "Calculatrice scientifique CASIO FX-92 College, mode examen, ",
         "Rentree des classes 2026",
@@ -2222,7 +2322,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Calculatrice scientifique Casio FX-92, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Livre de lecture CP Methode syllabique",
@@ -2234,7 +2335,7 @@
       "lien": "https://www.amazon.fr/s?k=livre+lecture+cp+méthode+syllabique&tag=confortbure07-21",
       "description": "Methode de lecture syllabique CP, livre pedagogique pour apprendre a lire a la maison.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Livre+de+lecture+CP+Methode+syllabique",
+      "image_url": "https://loremflickr.com/600/400/book,reading,child?lock=1048",
       "caracteristiques": [
         "Methode de lecture syllabique CP, livre pedagogique pour app",
         "Rentree des classes 2026",
@@ -2243,7 +2344,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Livre de lecture CP Methode syllabique, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Cahier de vacances CE1 vers CE2",
@@ -2255,7 +2357,7 @@
       "lien": "https://www.amazon.fr/s?k=cahier+de+vacances+ce1+ce2&tag=confortbure07-21",
       "description": "Cahier de vacances CE1 vers CE2, revision ludique pendant les vacances.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Cahier+de+vacances+CE1+vers+CE2",
+      "image_url": "https://loremflickr.com/600/400/notebook,homework,child?lock=3537",
       "caracteristiques": [
         "Cahier de vacances CE1 vers CE2, revision ludique pendant le",
         "Rentree des classes 2026",
@@ -2264,7 +2366,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Cahier de vacances CE1 vers CE2, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Ardoise magique effacable enfant",
@@ -2276,7 +2379,7 @@
       "lien": "https://www.amazon.fr/s?k=ardoise+magique+enfant+effaçable&tag=confortbure07-21",
       "description": "Ardoise magique effacable avec feutres, pour ecrire et dessiner sans taches.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Ardoise+magique+effacable+enfant",
+      "image_url": "https://loremflickr.com/600/400/blackboard,drawing,child?lock=9719",
       "caracteristiques": [
         "Ardoise magique effacable avec feutres, pour ecrire et dessi",
         "Rentree des classes 2026",
@@ -2285,7 +2388,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Ardoise magique effacable enfant, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Tableau blanc magnétique enfant",
@@ -2297,7 +2401,7 @@
       "lien": "https://www.amazon.fr/s?k=tableau+blanc+magnétique+enfant&tag=confortbure07-21",
       "description": "Tableau blanc magnetique avec accessoires, ideal pour les devoirs a la maison.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Tableau+blanc+magnétique+enfant",
+      "image_url": "https://loremflickr.com/600/400/whiteboard,magnetic,child?lock=7330",
       "caracteristiques": [
         "Tableau blanc magnetique avec accessoires, ideal pour les de",
         "Rentree des classes 2026",
@@ -2306,7 +2410,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Tableau blanc magnétique enfant, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Lampe de bureau LED pliable rechargeable",
@@ -2318,7 +2423,7 @@
       "lien": "https://www.amazon.fr/s?k=lampe+bureau+led+pliable+rechargeable&tag=confortbure07-21",
       "description": "Lampe de bureau LED pliable, rechargeable USB, eclairage reglable pour les devoirs.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Lampe+de+bureau+LED+pliable+rechargeable",
+      "image_url": "https://loremflickr.com/600/400/lamp,desk,study?lock=4152",
       "caracteristiques": [
         "Lampe de bureau LED pliable, rechargeable USB, eclairage reg",
         "Rentree des classes 2026",
@@ -2327,7 +2432,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Lampe de bureau LED pliable rechargeable, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Chaise de bureau enfant reglable",
@@ -2339,7 +2445,7 @@
       "lien": "https://www.amazon.fr/s?k=chaise+bureau+enfant+réglable&tag=confortbure07-21",
       "description": "Chaise de bureau enfant reglable en hauteur, roulettes, assise confortable pour les devoirs.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Chaise+de+bureau+enfant+reglable",
+      "image_url": "https://loremflickr.com/600/400/chair,desk,child?lock=2183",
       "caracteristiques": [
         "Chaise de bureau enfant reglable en hauteur, roulettes, assi",
         "Rentree des classes 2026",
@@ -2348,7 +2454,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Chaise de bureau enfant reglable, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Bureau enfant avec rangement",
@@ -2360,7 +2467,7 @@
       "lien": "https://www.amazon.fr/s?k=bureau+enfant+rangement&tag=confortbure07-21",
       "description": "Bureau enfant avec rangement integre, espace devoirs organise et propre.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Bureau+enfant+avec+rangement",
+      "image_url": "https://loremflickr.com/600/400/desk,room,child?lock=5793",
       "caracteristiques": [
         "Bureau enfant avec rangement integre, espace devoirs organis",
         "Rentree des classes 2026",
@@ -2369,7 +2476,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Bureau enfant avec rangement, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Organiseur de bureau enfant",
@@ -2381,7 +2489,7 @@
       "lien": "https://www.amazon.fr/s?k=organiseur+bureau+enfant+crayons&tag=confortbure07-21",
       "description": "Organiseur bureau avec porte-crayons, tiroirs et rangements pour fournitures scolaires.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Organiseur+de+bureau+enfant",
+      "image_url": "https://loremflickr.com/600/400/organizer,pens,desk?lock=7929",
       "caracteristiques": [
         "Organiseur bureau avec porte-crayons, tiroirs et rangements ",
         "Rentree des classes 2026",
@@ -2390,7 +2498,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Organiseur de bureau enfant, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Etiquettes autocollantes prenom 100 pcs",
@@ -2402,7 +2511,7 @@
       "lien": "https://www.amazon.fr/s?k=étiquettes+prenom+autocollantes+école&tag=confortbure07-21",
       "description": "Etiquettes autocollantes prenom personnalisables, 100 pieces, pour marquer les affaires.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Etiquettes+autocollantes+prenom+100+pcs",
+      "image_url": "https://loremflickr.com/600/400/labels,stickers,name?lock=4534",
       "caracteristiques": [
         "Etiquettes autocollantes prenom personnalisables, 100 pieces",
         "Rentree des classes 2026",
@@ -2411,7 +2520,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Etiquettes autocollantes prenom 100 pcs, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Protection cartable pluie",
@@ -2423,7 +2533,7 @@
       "lien": "https://www.amazon.fr/s?k=protection+cartable+pluie+housse&tag=confortbure07-21",
       "description": "Housse de protection cartable contre la pluie, elastique, anti-dechirure.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Protection+cartable+pluie",
+      "image_url": "https://loremflickr.com/600/400/rain,cover,backpack?lock=4887",
       "caracteristiques": [
         "Housse de protection cartable contre la pluie, elastique, an",
         "Rentree des classes 2026",
@@ -2432,7 +2542,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Protection cartable pluie, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Carnet de liaison scolaire",
@@ -2444,7 +2555,7 @@
       "lien": "https://www.amazon.fr/s?k=carnet+de+liaison+école&tag=confortbure07-21",
       "description": "Carnet de liaison scolaire avec lignes, pour les messages parents-ecole.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Carnet+de+liaison+scolaire",
+      "image_url": "https://loremflickr.com/600/400/notebook,school,diary?lock=3408",
       "caracteristiques": [
         "Carnet de liaison scolaire avec lignes, pour les messages pa",
         "Rentree des classes 2026",
@@ -2453,7 +2564,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Carnet de liaison scolaire, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Recharge stylo plume cartouches 100",
@@ -2465,7 +2577,7 @@
       "lien": "https://www.amazon.fr/s?k=cartouches+encre+stylo+plume+100&tag=confortbure07-21",
       "description": "Boite de 100 cartouches d'encre bleue pour stylo plume, compatible majorite des marques.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Recharge+stylo+plume+cartouches+100",
+      "image_url": "https://loremflickr.com/600/400/ink,cartridges,pen?lock=7788",
       "caracteristiques": [
         "Boite de 100 cartouches d'encre bleue pour stylo plume, comp",
         "Rentree des classes 2026",
@@ -2474,7 +2586,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Recharge stylo plume cartouches 100, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Crayons de couleur 36 pcs bois",
@@ -2486,7 +2599,7 @@
       "lien": "https://www.amazon.fr/s?k=crayons+de+couleur+36+bois&tag=confortbure07-21",
       "description": "Crayons de couleur en bois 36 pieces, mine resistante, couleurs vives.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Crayons+de+couleur+36+pcs+bois",
+      "image_url": "https://loremflickr.com/600/400/colored,pencils,art?lock=9101",
       "caracteristiques": [
         "Crayons de couleur en bois 36 pieces, mine resistante, coule",
         "Rentree des classes 2026",
@@ -2495,7 +2608,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Crayons de couleur 36 pcs bois, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Peinture gouache enfant 12 tubes",
@@ -2507,7 +2621,7 @@
       "lien": "https://www.amazon.fr/s?k=peinture+gouache+enfant+12+tubes&tag=confortbure07-21",
       "description": "Peinture gouache 12 tubes, lavable, couleurs vives, pour ecole et maison.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Peinture+gouache+enfant+12+tubes",
+      "image_url": "https://loremflickr.com/600/400/paint,tubes,gouache?lock=6051",
       "caracteristiques": [
         "Peinture gouache 12 tubes, lavable, couleurs vives, pour eco",
         "Rentree des classes 2026",
@@ -2516,7 +2630,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Peinture gouache enfant 12 tubes, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Ciseaux scolaires enfant 2 pcs",
@@ -2528,7 +2643,7 @@
       "lien": "https://www.amazon.fr/s?k=ciseaux+scolaires+enfant&tag=confortbure07-21",
       "description": "Ciseaux scolaires enfant a bouts ronds, 2 pieces, securite garantie.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Ciseaux+scolaires+enfant+2+pcs",
+      "image_url": "https://loremflickr.com/600/400/scissors,school,child?lock=9463",
       "caracteristiques": [
         "Ciseaux scolaires enfant a bouts ronds, 2 pieces, securite g",
         "Rentree des classes 2026",
@@ -2537,7 +2652,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Ciseaux scolaires enfant 2 pcs, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Tapis de sol enfant confort devoirs",
@@ -2549,7 +2665,7 @@
       "lien": "https://www.amazon.fr/s?k=tapis+sol+enfant+confort&tag=confortbure07-21",
       "description": "Tapis de sol epais et confortable pour lire et faire ses devoirs au sol.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Tapis+de+sol+enfant+confort+devoirs",
+      "image_url": "https://loremflickr.com/600/400/mat,floor,playroom?lock=6369",
       "caracteristiques": [
         "Tapis de sol epais et confortable pour lire et faire ses dev",
         "Rentree des classes 2026",
@@ -2558,7 +2674,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Tapis de sol enfant confort devoirs, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     },
     {
       "nom": "Bracelet d'identification prenom enfant",
@@ -2570,7 +2687,7 @@
       "lien": "https://www.amazon.fr/s?k=bracelet+identification+enfant+prenom&tag=confortbure07-21",
       "description": "Bracelet d'identification gravable prenom, securite enfant rentree scolaire.",
       "categorie": "Scolaire",
-      "image_url": "https://placehold.co/600x400/141432/f0a500?text=Bracelet+d'identification+prenom+enfant",
+      "image_url": "https://loremflickr.com/600/400/bracelet,child,identification?lock=1369",
       "caracteristiques": [
         "Bracelet d'identification gravable prenom, securite enfant r",
         "Rentree des classes 2026",
@@ -2579,7 +2696,8 @@
       ],
       "actif": true,
       "note_moyenne": 4.5,
-      "avis_total": 120
+      "avis_total": 120,
+      "image_prompt": "professional product photo of Bracelet d'identification prenom enfant, school supplies for kids, clean white background, studio lighting, sharp focus, 4k"
     }
   ],
   "note": "118 produits - dont 24 nouveaux liens Rentree des Classes 2026"

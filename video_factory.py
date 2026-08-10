@@ -578,29 +578,84 @@ def _wrap_text(draw, text, font, max_width):
     return lines or [""]
 
 
-def _build_scene_image(scene, index, total, out_path):
-    """Genere une image storyboard 1280x720 (degrade + formes + texte)."""
-    from PIL import Image, ImageDraw
+def _load_product_image_url(product_name):
+    """Retrouve l'URL d'image du produit (catalogue) pour illustrer les scenes.
+
+    Les image_url du catalogue pointent vers des photos reelles pertinentes
+    (LoremFlickr par mot-cle) -> la video montre le VRAI produit, pas un
+    degrade generique. Retourne None si introuvable.
+    """
+    if not product_name:
+        return None
+    try:
+        cfg = json.loads((BASE_DIR / "liens_affiliation.json").read_text(encoding="utf-8"))
+    except Exception:
+        return None
+    q = str(product_name).lower()
+    for p in cfg.get("produits", []):
+        if q in str(p.get("nom", "")).lower() or q in str(p.get("slug", "")).lower():
+            url = p.get("image_url") or ""
+            if url:
+                return url
+    return None
+
+
+def _download_background(url, dest, timeout=10):
+    """Telecharge une image de fond (LoremFlickr) avec timeout court.
+
+    Retourne le chemin si OK, None en cas d'echec (fallback degrade).
+    """
+    import urllib.request
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        data = urllib.request.urlopen(req, timeout=timeout).read()
+        if len(data) < 5000:
+            return None
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_bytes(data)
+        return dest
+    except Exception:
+        return None
+
+
+def _build_scene_image(scene, index, total, out_path, background_path=None):
+    """Genere une image storyboard 1280x720.
+
+    Si background_path est fourni (photo produit reelle), elle est utilisee
+    comme fond (assombrie pour la lisibilite) avec le texte par-dessus.
+    Sinon, degrade + formes + texte (fallback sans reseau).
+    """
+    from PIL import Image, ImageDraw, ImageEnhance
 
     W, H = 1280, 720
-    try:
-        import numpy as np
-        top, bottom = _PALETTES[index % len(_PALETTES)]
-        # Broadcasting: y doit etre (H, 1, 1) pour que le degrade suive l'axe 0
-        y = np.linspace(0, 1, H)[:, None, None]
-        top_a = np.array(top, dtype=float)[None, None, :]
-        bot_a = np.array(bottom, dtype=float)[None, None, :]
-        grad = top_a * (1 - y) + bot_a * y          # (H, 1, 3)
-        img = np.tile(grad, (1, W, 1)).astype("uint8")  # (H, W, 3)
-        image = Image.fromarray(img, "RGB")
-    except Exception:
-        top, bottom = _PALETTES[index % len(_PALETTES)]
-        image = Image.new("RGB", (W, H), top)
-        draw = ImageDraw.Draw(image)
-        for yy in range(0, H, 8):
-            t = yy / H
-            color = tuple(int(top[i] * (1 - t) + bottom[i] * t) for i in range(3))
-            draw.rectangle([0, yy, W, yy + 8], fill=color)
+    image = None
+    if background_path and background_path.exists():
+        try:
+            im = Image.open(background_path).convert("RGB")
+            im = im.resize((W, H), Image.LANCZOS)
+            im = ImageEnhance.Brightness(im).enhance(0.62)  # assombrir pour le texte
+            image = im
+        except Exception:
+            image = None
+
+    if image is None:
+        try:
+            import numpy as np
+            top, bottom = _PALETTES[index % len(_PALETTES)]
+            y = np.linspace(0, 1, H)[:, None, None]
+            top_a = np.array(top, dtype=float)[None, None, :]
+            bot_a = np.array(bottom, dtype=float)[None, None, :]
+            grad = top_a * (1 - y) + bot_a * y
+            img = np.tile(grad, (1, W, 1)).astype("uint8")
+            image = Image.fromarray(img, "RGB")
+        except Exception:
+            top, bottom = _PALETTES[index % len(_PALETTES)]
+            image = Image.new("RGB", (W, H), top)
+            draw = ImageDraw.Draw(image)
+            for yy in range(0, H, 8):
+                t = yy / H
+                color = tuple(int(top[i] * (1 - t) + bottom[i] * t) for i in range(3))
+                draw.rectangle([0, yy, W, yy + 8], fill=color)
     draw = ImageDraw.Draw(image)
 
     # Decor : cercles doux
@@ -652,9 +707,19 @@ def _build_scene_images(script, job_dir):
     img_dir.mkdir(parents=True, exist_ok=True)
     scenes = script.get("scenes") or []
     paths = []
+
+    # Image produit reelle en fond (une seule, partagee par toutes les scenes)
+    background_path = None
+    product_name = script.get("produit") or script.get("product_name") or ""
+    if product_name:
+        url = _load_product_image_url(product_name)
+        if url:
+            bg_dest = job_dir / "images" / "background.jpg"
+            background_path = _download_background(url, bg_dest)
+
     for i, scene in enumerate(scenes):
         out = img_dir / f"scene_{i + 1:02d}.png"
-        _build_scene_image(scene, i, len(scenes), out)
+        _build_scene_image(scene, i, len(scenes), out, background_path=background_path)
         paths.append(out)
     return paths
 
