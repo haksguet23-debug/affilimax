@@ -1,212 +1,212 @@
 [
   {
-    "id": "vf_20260810_181529_879",
-    "kind": "story",
+    "id": "vf_20260810_183332_253",
+    "kind": "lesson",
     "status": "done",
     "progress": 100,
     "step": "Video terminee",
-    "title": "L'aventure de l'ours polaire",
+    "title": "Découvrons l'Alphabet",
     "params": {
       "product": null,
-      "theme": "un petit ours polaire",
-      "duration": "3 min",
+      "theme": "alphabet",
+      "duration": "3min",
       "style": "testeur",
-      "scenes": 5,
+      "scenes": 6,
       "voice": "fr-FR-DeniseNeural",
       "subtitles": true
     },
-    "created_at": "2026-08-10T18:15:29.399096Z",
-    "finished_at": "2026-08-10T18:18:25.315307Z",
+    "created_at": "2026-08-10T18:33:32.480403Z",
+    "finished_at": "2026-08-10T18:39:59.687492Z",
     "files": {
-      "video": "video_factory/output/vf_20260810_181529_879/video.mp4",
-      "script": "video_factory/output/vf_20260810_181529_879/script.json",
-      "srt": "video_factory/output/vf_20260810_181529_879/subtitles.srt"
+      "video": "video_factory/output/vf_20260810_183332_253/video.mp4",
+      "script": "video_factory/output/vf_20260810_183332_253/script.json",
+      "srt": "video_factory/output/vf_20260810_183332_253/subtitles.srt"
     },
     "log": [
       {
-        "ts": "18:15:29",
+        "ts": "18:33:32",
         "msg": "Job cree"
       },
       {
-        "ts": "18:15:29",
+        "ts": "18:33:32",
         "msg": "Script IA en cours..."
       },
       {
-        "ts": "18:15:34",
-        "msg": "Script genere (IA (GROQ)) - 5 scenes"
+        "ts": "18:33:38",
+        "msg": "Script genere (IA (GROQ)) - 6 scenes"
       },
       {
-        "ts": "18:15:34",
+        "ts": "18:33:38",
         "msg": "Storyboard images (PIL)..."
       },
       {
-        "ts": "18:15:34",
-        "msg": "5 images generees"
+        "ts": "18:33:40",
+        "msg": "6 images generees"
       },
       {
-        "ts": "18:15:34",
+        "ts": "18:33:40",
         "msg": "Voix IA (edge-tts)..."
       },
       {
-        "ts": "18:15:39",
-        "msg": "Voix IA: 5/5 scenes"
+        "ts": "18:33:49",
+        "msg": "Voix IA: 6/6 scenes"
       },
       {
-        "ts": "18:15:39",
+        "ts": "18:33:49",
         "msg": "Sous-titres SRT (timings edge-tts)..."
       },
       {
-        "ts": "18:15:40",
+        "ts": "18:33:51",
+        "msg": "Sous-titres: 29 lignes (incrustes dans la video)"
+      },
+      {
+        "ts": "18:33:51",
+        "msg": "Montage (moviepy + ffmpeg)..."
+      },
+      {
+        "ts": "18:39:59",
+        "msg": "Video MP4 terminee"
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "vf_20260810_183332_177",
+    "kind": "lesson",
+    "status": "done",
+    "progress": 100,
+    "step": "Video terminee",
+    "title": "Decouvrir les 4 saisons",
+    "params": {
+      "product": null,
+      "theme": "saisons",
+      "duration": "3min",
+      "style": "testeur",
+      "scenes": 6,
+      "voice": "fr-FR-DeniseNeural",
+      "subtitles": true
+    },
+    "created_at": "2026-08-10T18:33:32.480403Z",
+    "finished_at": "2026-08-10T18:38:37.574833Z",
+    "files": {
+      "video": "video_factory/output/vf_20260810_183332_177/video.mp4",
+      "script": "video_factory/output/vf_20260810_183332_177/script.json",
+      "srt": "video_factory/output/vf_20260810_183332_177/subtitles.srt"
+    },
+    "log": [
+      {
+        "ts": "18:33:32",
+        "msg": "Job cree"
+      },
+      {
+        "ts": "18:33:32",
+        "msg": "Script IA en cours..."
+      },
+      {
+        "ts": "18:33:37",
+        "msg": "Script genere (IA (GROQ)) - 6 scenes"
+      },
+      {
+        "ts": "18:33:37",
+        "msg": "Storyboard images (PIL)..."
+      },
+      {
+        "ts": "18:33:40",
+        "msg": "6 images generees"
+      },
+      {
+        "ts": "18:33:40",
+        "msg": "Voix IA (edge-tts)..."
+      },
+      {
+        "ts": "18:33:49",
+        "msg": "Voix IA: 6/6 scenes"
+      },
+      {
+        "ts": "18:33:49",
+        "msg": "Sous-titres SRT (timings edge-tts)..."
+      },
+      {
+        "ts": "18:33:51",
+        "msg": "Sous-titres: 22 lignes (incrustes dans la video)"
+      },
+      {
+        "ts": "18:33:51",
+        "msg": "Montage (moviepy + ffmpeg)..."
+      },
+      {
+        "ts": "18:38:37",
+        "msg": "Video MP4 terminee"
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "vf_20260810_183332_739",
+    "kind": "lesson",
+    "status": "done",
+    "progress": 100,
+    "step": "Video terminee",
+    "title": "Découvrons les jours de la semaine",
+    "params": {
+      "product": null,
+      "theme": "jours",
+      "duration": "3min",
+      "style": "testeur",
+      "scenes": 6,
+      "voice": "fr-FR-DeniseNeural",
+      "subtitles": true
+    },
+    "created_at": "2026-08-10T18:33:32.480403Z",
+    "finished_at": "2026-08-10T18:38:20.498508Z",
+    "files": {
+      "video": "video_factory/output/vf_20260810_183332_739/video.mp4",
+      "script": "video_factory/output/vf_20260810_183332_739/script.json",
+      "srt": "video_factory/output/vf_20260810_183332_739/subtitles.srt"
+    },
+    "log": [
+      {
+        "ts": "18:33:32",
+        "msg": "Job cree"
+      },
+      {
+        "ts": "18:33:32",
+        "msg": "Script IA en cours..."
+      },
+      {
+        "ts": "18:33:37",
+        "msg": "Script genere (IA (GROQ)) - 6 scenes"
+      },
+      {
+        "ts": "18:33:37",
+        "msg": "Storyboard images (PIL)..."
+      },
+      {
+        "ts": "18:33:39",
+        "msg": "6 images generees"
+      },
+      {
+        "ts": "18:33:39",
+        "msg": "Voix IA (edge-tts)..."
+      },
+      {
+        "ts": "18:33:49",
+        "msg": "Voix IA: 6/6 scenes"
+      },
+      {
+        "ts": "18:33:49",
+        "msg": "Sous-titres SRT (timings edge-tts)..."
+      },
+      {
+        "ts": "18:33:51",
         "msg": "Sous-titres: 19 lignes (incrustes dans la video)"
       },
       {
-        "ts": "18:15:40",
+        "ts": "18:33:51",
         "msg": "Montage (moviepy + ffmpeg)..."
       },
       {
-        "ts": "18:18:25",
-        "msg": "Video MP4 terminee"
-      }
-    ],
-    "error": null
-  },
-  {
-    "id": "vf_20260810_181529_978",
-    "kind": "story",
-    "status": "done",
-    "progress": 100,
-    "step": "Video terminee",
-    "title": "L'aventure du petit loup",
-    "params": {
-      "product": null,
-      "theme": "un petit loup",
-      "duration": "3 min",
-      "style": "testeur",
-      "scenes": 5,
-      "voice": "fr-FR-DeniseNeural",
-      "subtitles": true
-    },
-    "created_at": "2026-08-10T18:15:29.381531Z",
-    "finished_at": "2026-08-10T18:20:08.891913Z",
-    "files": {
-      "video": "video_factory/output/vf_20260810_181529_978/video.mp4",
-      "script": "video_factory/output/vf_20260810_181529_978/script.json",
-      "srt": "video_factory/output/vf_20260810_181529_978/subtitles.srt"
-    },
-    "log": [
-      {
-        "ts": "18:15:29",
-        "msg": "Job cree"
-      },
-      {
-        "ts": "18:15:29",
-        "msg": "Script IA en cours..."
-      },
-      {
-        "ts": "18:15:38",
-        "msg": "Script genere (IA (GROQ)) - 5 scenes"
-      },
-      {
-        "ts": "18:15:38",
-        "msg": "Storyboard images (PIL)..."
-      },
-      {
-        "ts": "18:15:39",
-        "msg": "5 images generees"
-      },
-      {
-        "ts": "18:15:39",
-        "msg": "Voix IA (edge-tts)..."
-      },
-      {
-        "ts": "18:15:47",
-        "msg": "Voix IA: 5/5 scenes"
-      },
-      {
-        "ts": "18:15:47",
-        "msg": "Sous-titres SRT (timings edge-tts)..."
-      },
-      {
-        "ts": "18:15:48",
-        "msg": "Sous-titres: 35 lignes (incrustes dans la video)"
-      },
-      {
-        "ts": "18:15:48",
-        "msg": "Montage (moviepy + ffmpeg)..."
-      },
-      {
-        "ts": "18:20:08",
-        "msg": "Video MP4 terminee"
-      }
-    ],
-    "error": null
-  },
-  {
-    "id": "vf_20260810_181529_573",
-    "kind": "story",
-    "status": "done",
-    "progress": 100,
-    "step": "Video terminee",
-    "title": "La petite licorne et la foret enchantee",
-    "params": {
-      "product": null,
-      "theme": "une petite licorne",
-      "duration": "3 min",
-      "style": "testeur",
-      "scenes": 5,
-      "voice": "fr-FR-DeniseNeural",
-      "subtitles": true
-    },
-    "created_at": "2026-08-10T18:15:29.381531Z",
-    "finished_at": "2026-08-10T18:19:29.904511Z",
-    "files": {
-      "video": "video_factory/output/vf_20260810_181529_573/video.mp4",
-      "script": "video_factory/output/vf_20260810_181529_573/script.json",
-      "srt": "video_factory/output/vf_20260810_181529_573/subtitles.srt"
-    },
-    "log": [
-      {
-        "ts": "18:15:29",
-        "msg": "Job cree"
-      },
-      {
-        "ts": "18:15:29",
-        "msg": "Script IA en cours..."
-      },
-      {
-        "ts": "18:15:34",
-        "msg": "Script genere (IA (GROQ)) - 5 scenes"
-      },
-      {
-        "ts": "18:15:34",
-        "msg": "Storyboard images (PIL)..."
-      },
-      {
-        "ts": "18:15:35",
-        "msg": "5 images generees"
-      },
-      {
-        "ts": "18:15:35",
-        "msg": "Voix IA (edge-tts)..."
-      },
-      {
-        "ts": "18:15:42",
-        "msg": "Voix IA: 5/5 scenes"
-      },
-      {
-        "ts": "18:15:42",
-        "msg": "Sous-titres SRT (timings edge-tts)..."
-      },
-      {
-        "ts": "18:15:42",
-        "msg": "Sous-titres: 28 lignes (incrustes dans la video)"
-      },
-      {
-        "ts": "18:15:42",
-        "msg": "Montage (moviepy + ffmpeg)..."
-      },
-      {
-        "ts": "18:19:29",
+        "ts": "18:38:20",
         "msg": "Video MP4 terminee"
       }
     ],

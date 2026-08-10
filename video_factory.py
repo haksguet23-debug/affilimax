@@ -81,6 +81,99 @@ STORY_THEMES = [
     "L'arrivee", "L'aventure commence", "L'obstacle", "L'entraide",
     "La lecon", "Le retour", "La celebration",
 ]
+LESSON_THEMES = [
+    "Bienvenue a la lecon", "On decouvre ensemble", "On pratique",
+    "On repete", "Petit quiz", "Le recap", "A bientot !",
+]
+
+# Catalogue de lecons pedagogiques pour enfants (3-8 ans)
+# cle -> (titre, accroche, narration de la 1ere scene, mots-cles)
+LESSONS = {
+    "compter": {
+        "titre": "Apprendre a compter de 1 a 10 - lecon educative",
+        "accroche": "Aujourd'hui, on apprend a compter de 1 a 10 !",
+        "contenu": [
+            ("Les nombres 1 a 5", "Regarde bien : un, deux, trois, quatre, cinq. Repete avec moi : un, deux, trois, quatre, cinq. Bravo !"),
+            ("Les nombres 6 a 10", "Maintenant les grands nombres : six, sept, huit, neuf, dix. Encore une fois : six, sept, huit, neuf, dix !"),
+            ("On compte les doigts", "Comptons sur nos doigts : un pouce, deux pouces, trois, quatre, cinq doigts sur une main. Et dix doigts sur les deux mains !"),
+            ("On compte les objets", "Comptons ensemble les objets de la maison : une pomme, deux pommes, trois pommes. Combien y en a-t-il ? Oui, trois pommes !"),
+            ("Le quiz des nombres", "Petit quiz : quel nombre vient apres trois ? Un, deux, trois, quatre ! Oui, c'est quatre. Et apres sept ? Huit ! Excellent !"),
+            ("Le recap", "Recapitulons : un, deux, trois, quatre, cinq, six, sept, huit, neuf, dix. Tu sais compter jusqu'a dix ! Bravo !"),
+        ],
+    },
+    "couleurs": {
+        "titre": "Apprendre les couleurs - lecon educative",
+        "accroche": "Aujourd'hui, on découvre les belles couleurs !",
+        "contenu": [
+            ("Les couleurs chaudes", "Regarde le ciel rouge du soleil couchant : c'est rouge. Et le soleil ? Il est jaune et orange. Rouge, jaune, orange : ce sont les couleurs chaudes."),
+            ("Les couleurs froides", "Le ciel est bleu, l'herbe est verte. Regarde la mer : elle est bleue aussi ! Bleu et vert sont des couleurs froides et apaisantes."),
+            ("Rose et violet", "La fleur est rose, le raisin est violet. Rose et violet, ce sont des couleurs tres jolies, comme dans un arc-en-ciel."),
+            ("On cherche les couleurs", "Cherchons les couleurs autour de nous : quelle couleur est la banane ? Oui, jaune ! Et la tomate ? Oui, rouge !"),
+            ("Le quiz des couleurs", "Petit quiz : quelle couleur est le ciel ? Bleu ! Et le soleil ? Jaune ! Et l'herbe ? Verte ! Excellent, tu connais tes couleurs !"),
+            ("Le recap", "On retient : rouge, jaune, orange, bleu, vert, rose et violet. Les couleurs sont partout autour de toi !"),
+        ],
+    },
+    "formes": {
+        "titre": "Apprendre les formes - lecon educative",
+        "accroche": "Aujourd'hui, on apprend les formes geomeetriques !",
+        "contenu": [
+            ("Le cercle et le carre", "Voici le cercle : il est rond, comme une roue ou un ballon. Voici le carre : il a quatre cotes egaux, comme une fenetre."),
+            ("Le triangle et le rectangle", "Le triangle a trois cotes, comme une part de pizza. Le rectangle a deux cotes longs et deux courts, comme une porte ou une feuille."),
+            ("L'etoile et le coeur", "L'etoile a cinq branches, comme celle du ciel la nuit. Le coeur, lui, est le symbole de l'amour, comme celui qu'on dessine pour maman."),
+            ("On cherche les formes", "Cherchons les formes : la roue de la voiture est un cercle ! La fenetre est un carre ! Le toit de la maison est un triangle !"),
+            ("Le quiz des formes", "Petit quiz : quelle forme a un ballon ? Un cercle ! Et une piece de puzzle ? Un carre ! Et un toit ? Un triangle ! Bravo !"),
+            ("Le recap", "On retient : cercle, carre, triangle, rectangle, etoile et coeur. Les formes sont partout autour de toi !"),
+        ],
+    },
+    "animaux": {
+        "titre": "Decouvrir les animaux de la ferme - lecon educative",
+        "accroche": "Aujourd'hui, on visite la ferme et ses animaux !",
+        "contenu": [
+            ("La vache et le cheval", "A la ferme, la vache fait meuh et nous donne du lait. Le cheval fait hennit et court tres vite dans le pre."),
+            ("Le mouton et la poule", "Le mouton est tout doux avec sa laine blanche, il fait beee. La poule fait cot cot et pond des oeufs delicieux."),
+            ("Le cochon et le canard", "Le cochon est rose et adore se rouler dans la boue, il fait groin groin. Le canard nage dans la mare et fait coin coin."),
+            ("On ecoute les animaux", "Ecoute bien : qui fait meuh ? La vache ! Qui fait coin coin ? Le canard ! Qui fait cot cot ? La poule ! Tu connais bien les animaux !"),
+            ("Le quiz des animaux", "Petit quiz : quel animal donne du lait ? La vache ! Quel animal pond des oeufs ? La poule ! Quel animal a de la laine ? Le mouton !"),
+            ("Le recap", "On retient : la vache, le cheval, le mouton, la poule, le cochon et le canard. Les animaux de la ferme sont nos amis !"),
+        ],
+    },
+    "alphabet": {
+        "titre": "Apprendre l'alphabet - lecon educative",
+        "accroche": "Aujourd'hui, on chante l'alphabet ensemble !",
+        "contenu": [
+            ("Les lettres A a G", "Regarde : A comme Abeille, B comme Ballon, C comme Chat, D comme Dauphin, E comme Elephant, F comme Fleur, G comme Girafe."),
+            ("Les lettres H a N", "Continuons : H comme Hibou, I comme Ile, J comme Jardin, K comme Koala, L comme Lion, M comme Maison, N comme Nuage."),
+            ("Les lettres O a U", "Et maintenant : O comme Oiseau, P comme Papillon, Q comme Question, R comme Renard, S comme Soleil, T comme Tortue, U comme Univers."),
+            ("Les lettres V a Z", "Enfin : V comme Voiture, W comme Wagon, X comme Xylophone, Y comme Yoyo, Z comme Zebre. Et voila tout l'alphabet !"),
+            ("On chante l'alphabet", "Chantons ensemble : A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z. Bravo !"),
+            ("Le recap", "Tu connais maintenant les 26 lettres de l'alphabet ! Chaque lettre a un son et une histoire. Tu progresses chaque jour !"),
+        ],
+    },
+    "jours": {
+        "titre": "Apprendre les jours de la semaine - lecon educative",
+        "accroche": "Aujourd'hui, on apprend les jours de la semaine !",
+        "contenu": [
+            ("Lundi et mardi", "La semaine commence : lundi, on retourne a l'ecole. Mardi, on continue d'apprendre plein de choses nouvelles."),
+            ("Mercredi et jeudi", "Mercredi, c'est souvent le jour des activites et du sport. Jeudi, on se rapproche du week-end, encore un petit effort !"),
+            ("Vendredi, samedi, dimanche", "Vendredi, l'ecole est finie, on range les cahiers ! Samedi, on joue et on se repose. Dimanche, on passe du temps en famille."),
+            ("On chante la semaine", "Chantons les jours : lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche. Sept jours pour toute une semaine !"),
+            ("Le quiz des jours", "Petit quiz : quel jour vient apres lundi ? Mardi ! Et avant dimanche ? Samedi ! Et le premier jour de l'ecole ? Lundi !"),
+            ("Le recap", "On retient les 7 jours : lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche. Chaque jour est une nouvelle aventure !"),
+        ],
+    },
+    "saisons": {
+        "titre": "Decouvrir les 4 saisons - lecon educative",
+        "accroche": "Aujourd'hui, on decouvre les 4 saisons de l'annee !",
+        "contenu": [
+            ("Le printemps", "Au printemps, les fleurs poussent, les oiseaux chantent et il fait de plus en plus beau. C'est la saison du renouveau."),
+            ("L'ete", "En ete, le soleil brille fort, on va a la plage et on mange des glaces. C'est la saison des grandes vacances."),
+            ("L'automne", "En automne, les feuilles deviennent orange et tombent des arbres. On ramasse les champignons et on se couvre un peu."),
+            ("L'hiver", "En hiver, il fait froid, parfois il neige et on fait des bonhommes de neige. On boit du chocolat chaud au coin du feu."),
+            ("Le quiz des saisons", "Petit quiz : quelle saison est chaude ? L'ete ! Quelle saison est froide ? L'hiver ! Quelle saison fait pousser les fleurs ? Le printemps !"),
+            ("Le recap", "Les 4 saisons : printemps, ete, automne, hiver. Chacune est belle et apporte ses surprises. L'annee tourne sans cesse !"),
+        ],
+    },
+}
 
 # ==================== JOBS (GESTIONNAIRE) ====================
 
@@ -530,6 +623,181 @@ JSON attendu:
         result["seo"] = _static_story_script(theme, scenes, duration)["seo"]
 
     return result
+
+
+def _static_lesson_script(lesson_key, scenes=6, duration="5 min"):
+    """Lecon pedagogique structuree : decouverte -> pratique -> quiz -> recap."""
+    lesson = LESSONS.get(lesson_key, LESSONS["compter"])
+    tpl = lesson["contenu"]
+    scenes_out = []
+    for i in range(scenes):
+        t, narr = tpl[i % len(tpl)]
+        scenes_out.append({
+            "titre": t,
+            "narration": narr,
+            "visuel": f"Scene educative: {t}",
+            "prompt_image": f"Illustration educative enfantine douce et coloree: {t}, dessin anime, lumineux",
+        })
+    return {
+        "titre": lesson["titre"],
+        "accroche": lesson["accroche"],
+        "scenes": scenes_out,
+        "cta": "Bravo ! Tu as appris quelque chose de nouveau aujourd'hui. Abonne-toi pour continuer d'apprendre en t'amusant !",
+        "seo": {
+            "titre_youtube": f"{lesson['titre']} (video educative 3-8 ans)",
+            "description": f"{lesson['titre']}. Une lecon pedagogique douce et amusante pour les enfants de 3 a 8 ans.\n\nAbonne-toi pour de nouvelles lecons chaque semaine !\n\n#Lecon #Education #Enfants #Apprendre",
+            "tags": ["lecon", "education", "enfants", "apprendre", "video educative", "maternelle", "primaire"],
+            "hashtags": ["#Lecon", "#Education", "#Enfants", "#Apprendre"],
+        },
+        "mode": "STATIQUE (fallback)",
+        "duration": duration,
+        "theme": lesson_key,
+    }
+
+
+def generate_children_lesson(lesson_key="", scenes=6, duration="5 min"):
+    """Lecon pedagogique pour enfants (3-8 ans), structuree : decouverte, pratique, quiz, recap."""
+    lesson_key = (lesson_key or "compter").strip().lower()
+    if lesson_key not in LESSONS:
+        lesson_key = "compter"
+    lesson = LESSONS[lesson_key]
+
+    system = ("Tu es un professeur des ecoles specialise dans les lecons pedagogiques "
+              "pour enfants de 3 a 8 ans. Tes lecons sont douces, progressives, "
+              "avec repetition, quiz et recapitulatif. Reponds UNIQUEMENT en JSON valide.")
+    user = f"""Cree une lecon pedagogique pour enfants sur le theme: {lesson['titre']}
+Duree: {duration} | Nombre de scenes: {scenes}
+
+JSON attendu (strict):
+{{
+  "titre": "titre de la lecon, simple et clair",
+  "accroche": "phrase d'introduction encourageante pour l'enfant",
+  "scenes": [
+    {{
+      "titre": "nom de l'etape",
+      "narration": "texte pedagogique simple (2 a 4 phrases, voix douce)",
+      "visuel": "description de l'image educative",
+      "prompt_image": "prompt image dessin animee educative"
+    }}
+  ],
+  "cta": "phrase de felicitation finale"
+}}
+
+Regles pedagogiques:
+- langage tres simple, adapte aux 3-8 ans
+- progression: decouverte -> pratique -> repetition -> petit quiz -> recap
+- {scenes} scenes exactement
+- ton encourageant et bienveillant
+- le quiz doit poser une question simple et donner la reponse"""
+
+    data = _ask_json(system, user, temperature=0.85, max_tokens=2200)
+
+    if data and isinstance(data, dict):
+        scenes_out = _clean_scenes(data.get("scenes"), LESSON_THEMES, scenes)
+        result = {
+            "titre": str(data.get("titre") or lesson["titre"])[:120],
+            "accroche": str(data.get("accroche") or lesson["accroche"])[:200],
+            "scenes": scenes_out,
+            "cta": str(data.get("cta") or "")[:300],
+            "mode": _mode_label(),
+            "duration": duration,
+            "theme": lesson_key,
+        }
+    else:
+        result = _static_lesson_script(lesson_key, scenes, duration)
+        result["mode"] = _mode_label()
+
+    seo = _ask_json(
+        "Tu es un expert SEO YouTube pour chaines educatives enfants. Reponds UNIQUEMENT en JSON valide.",
+        f"""Produis les metadonnees YouTube pour cette lecon educative enfants:
+Titre: {result['titre']}
+Theme: {lesson['titre']}
+Nombre de scenes: {len(result['scenes'])}
+
+JSON attendu:
+{{
+  "titre_youtube": "titre <=100 caracteres, adapte aux enfants et aux parents",
+  "description": "description 2-3 phrases + hashtags",
+  "tags": ["5 a 8 mots-cles"],
+  "hashtags": ["3 a 5 hashtags"]
+}}""",
+        temperature=0.6, max_tokens=800
+    )
+    if seo and isinstance(seo, dict):
+        result["seo"] = {
+            "titre_youtube": str(seo.get("titre_youtube") or result["titre"])[:100],
+            "description": str(seo.get("description") or "")[:1000],
+            "tags": [str(t)[:40] for t in (seo.get("tags") or [])][:8],
+            "hashtags": [str(h)[:30] for h in (seo.get("hashtags") or [])][:5],
+        }
+    else:
+        result["seo"] = _static_lesson_script(lesson_key, scenes, duration)["seo"]
+
+    return result
+
+
+# ==================== COMPILATION VIDEO LONGUE ====================
+
+def compile_videos(mp4_paths, out_path, title="Compilation educative", intro_text="", fps=24):
+    """Concatene plusieurs MP4 en une seule video longue (compilation).
+
+    Ajoute une intro/outro de 8 s chacune (image degrade + texte) et
+    enchaîne les segments avec 0.6 s de noir entre eux.
+    Retourne le chemin du fichier final.
+    """
+    import numpy as np
+    from PIL import Image as PILImage, ImageDraw as PILDraw
+    from moviepy import ImageClip, VideoFileClip, concatenate_videoclips, AudioFileClip, CompositeVideoClip
+
+    def _title_clip(text, dur=8.0):
+        W, H = 1280, 720
+        img = PILImage.new("RGB", (W, H), (30, 27, 75))
+        d = PILDraw.Draw(img)
+        for yy in range(0, H, 8):
+            t = yy / H
+            color = (int(30 * (1 - t) + 124 * t), int(27 * (1 - t) + 58 * t), int(75 * (1 - t) + 237 * t))
+            d.rectangle([0, yy, W, yy + 8], fill=color)
+        f_t = _load_font(72)
+        f_s = _load_font(36)
+        lines = _wrap_text(d, text, f_t, W - 120)[:3]
+        yy = H // 2 - 120
+        for line in lines:
+            d.text((60, yy), line, font=f_t, fill=(255, 224, 130))
+            yy += 90
+        d.text((60, yy + 20), "Affilimax Studio - Videos educatives pour enfants", font=f_s, fill=(255, 255, 255))
+        return ImageClip(np.array(img)).with_duration(dur)
+
+    clips = []
+    # Intro
+    intro_text = intro_text or title
+    clips.append(_title_clip("APPRENONS ENSEMBLE !\n" + intro_text))
+    # Segments
+    for p in mp4_paths:
+        p = Path(p)
+        if not p.exists():
+            print(f"[VF] Segment manquant ignore: {p}")
+            continue
+        try:
+            vc = VideoFileClip(str(p))
+            clips.append(vc)
+            # petite pause noire entre segments
+            black = ImageClip(np.zeros((720, 1280, 3), dtype="uint8")).with_duration(0.6)
+            clips.append(black)
+        except Exception as e:
+            print(f"[VF] Erreur segment {p.name}: {e}")
+    # Outro
+    clips.append(_title_clip("BRAVO !\nTu as appris plein de choses.\nA bientot !"))
+
+    if not clips:
+        raise RuntimeError("Aucun segment a compiler")
+    final = concatenate_videoclips(clips, method="chain")
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    temp_audio = str(out_path.parent / f"temp_audio_{out_path.stem}.m4a")
+    final.write_videofile(
+        str(out_path), fps=fps, codec="libx264", audio_codec="aac",
+        preset="ultrafast", temp_audiofile=temp_audio, remove_temp=True, logger=None,
+    )
+    return out_path
 
 
 # ==================== STORYBOARD (IMAGES PIL) ====================
@@ -1084,6 +1352,12 @@ def _run_job(job_id):
                 style=p.get("style", "testeur"),
                 duration=p.get("duration", "60s"),
             )
+        elif kind == "lesson":
+            script = generate_children_lesson(
+                p.get("theme", "compter"),
+                scenes=int(p.get("scenes", 6)),
+                duration=DURATION_LABELS.get(p.get("duration", "5min"), p.get("duration", "5min")),
+            )
         else:
             script = generate_children_story(
                 p.get("theme", ""),
@@ -1204,7 +1478,7 @@ if __name__ == "__main__":
     parser.add_argument("--script", action="store_true", help="Generer un script produit")
     parser.add_argument("--story", action="store_true", help="Generer une histoire enfant")
     parser.add_argument("--pipeline", action="store_true", help="Lancer le pipeline complet (MP4)")
-    parser.add_argument("--kind", default="product", choices=["product", "story"])
+    parser.add_argument("--kind", default="product", choices=["product", "story", "lesson"])
     parser.add_argument("--product", type=str, help="Nom ou slug du produit")
     parser.add_argument("--theme", type=str, default="un petit renard", help="Theme de l'histoire")
     parser.add_argument("--duration", default="60s", help="Duree cible (30s, 60s, 3min, 5min, 10min)")
