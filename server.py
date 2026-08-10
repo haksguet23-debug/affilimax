@@ -2559,20 +2559,21 @@ function toast(msg, isError) {{
     _AMZ_LOCK = threading.Lock()
 
     def handle_amazon_notification(self, raw_body, headers):
-        """Webhook de ventes Amazon. PROTEGE par un secret partage :
-        si AMAZON_WEBHOOK_SECRET est defini dans l'environnement (prod), la
-        requete DOIT porter le header X-Amzn-Webhook-Secret correspondant,
-        sinon elle est rejetee (403). En dev (secret absent), on accepte mais
-        on log un warning — a ne jamais faire en production.
+        """Webhook de ventes Amazon. FAIL-CLOSED : la requete DOIT porter le
+        header X-Amzn-Webhook-Secret correspondant a AMAZON_WEBHOOK_SECRET
+        (env var). Sans secret configure OU sans header valide, la requete
+        est REJETEE (403) : aucune conversion n'est creditee. C'est le meme
+        principe que le garde-fou AFFILMAX_REQUIRE_LIVE (stripe_config).
         """
         secret = os.environ.get("AMAZON_WEBHOOK_SECRET", "").strip()
-        if secret:
-            header_secret = (headers.get("X-Amzn-Webhook-Secret") or headers.get("X-Affilimax-Secret") or "").strip()
-            if not header_secret or not hmac.compare_digest(header_secret, secret):
-                self.serve_json({"status": "error", "message": "Signature webhook invalide"})
-                return
-        else:
-            print("  [AMAZON] ATTENTION: AMAZON_WEBHOOK_SECRET non defini, webhook non protege (dev only)", file=sys.stderr)
+        if not secret:
+            print("  [AMAZON] REFUS: AMAZON_WEBHOOK_SECRET non defini dans l'environnement (fail-closed)", file=sys.stderr)
+            self.serve_json({"status": "error", "message": "Webhook non configure : AMAZON_WEBHOOK_SECRET absent, requete refusee"})
+            return
+        header_secret = (headers.get("X-Amzn-Webhook-Secret") or headers.get("X-Affilimax-Secret") or "").strip()
+        if not header_secret or not hmac.compare_digest(header_secret, secret):
+            self.serve_json({"status": "error", "message": "Signature webhook invalide"})
+            return
         try:
             text = raw_body.decode("utf-8", errors="ignore").strip() if raw_body else ""
             if not text:
