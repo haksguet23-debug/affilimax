@@ -436,6 +436,16 @@ LIEN   : https://affilimax.onrender.com/affilimax_blog/guide-maison-connectee-20
 ARTICLE: affilimax_blog/guide-maison-connectee-2026.html
 
 ======================================================================
+MISE A JOUR 10/08/2026 - 5 PREMIERES EPINGLES AVEC VISUELS IA PRETS
+Visuels 1000x1500 deja generes (photo produit + titre + prix + CTA) :
+- cartable-enfant-20l.jpg   -> https://affilimax.onrender.com/assets/pins/cartable-enfant-20l.jpg
+- gourde-isotherme-enfant-500ml.jpg -> https://affilimax.onrender.com/assets/pins/gourde-isotherme-enfant-500ml.jpg
+- calculatrice-scientifique-casio.jpg -> https://affilimax.onrender.com/assets/pins/calculatrice-scientifique-casio.jpg
+- crayons-couleur-36-pcs.jpg -> https://affilimax.onrender.com/assets/pins/crayons-couleur-36-pcs.jpg
+- lampe-bureau-led-pliable.jpg -> https://affilimax.onrender.com/assets/pins/lampe-bureau-led-pliable.jpg
+Titres/descriptions/hashtags/lien traque complets dans EPINGLES_RENTREE_A_PUBLIER.md
+113 autres visuels disponibles dans affilimax/assets/pins/ (1 par produit du catalogue)
+======================================================================
 FIN - BONNE PUBLICATION !
 Pensez a varier les heures de publication (9h, 13h, 19h) pour toucher plus de monde.
 ======================================================================
