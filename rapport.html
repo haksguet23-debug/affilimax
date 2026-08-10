@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Affilimax — Tableau de bord réel</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+:root{--bg:#06061a;--card:#0f0f28;--border:#1e1e4a;--gold:#f0a500;--green:#10b981;--red:#ef4444;--blue:#3b82f6;--purple:#8b5cf6;--text:#f1f5f9;--muted:#64748b;--radius:16px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at 20% 50%,rgba(240,165,0,0.04) 0%,transparent 50%),radial-gradient(ellipse at 80% 20%,rgba(59,130,246,0.04) 0%,transparent 50%);pointer-events:none;z-index:0}
+.app{position:relative;z-index:1;max-width:1200px;margin:0 auto;padding:20px}
+header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:24px;padding:20px 24px;background:var(--card);border-radius:var(--radius);border:1px solid var(--border)}
+header h1{font-size:1.6rem;background:linear-gradient(135deg,var(--text),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.sub{color:var(--muted);font-size:0.75rem;margin-top:4px}
+.status-row{display:flex;gap:10px;flex-wrap:wrap}
+.status-pill{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:50px;font-size:0.75rem;font-weight:600}
+.status-pill--up{background:rgba(16,185,129,0.12);color:var(--green)}
+.status-pill--down{background:rgba(239,68,68,0.12);color:var(--red)}
+.status-pill--warn{background:rgba(240,165,0,0.12);color:var(--gold)}
+.dot{width:8px;height:8px;border-radius:50%}
+.dot--up{background:var(--green);box-shadow:0 0 8px var(--green)}
+.dot--down{background:var(--red);box-shadow:0 0 8px var(--red)}
+.dot--warn{background:var(--gold);box-shadow:0 0 8px var(--gold)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-bottom:20px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;transition:all .2s;position:relative;overflow:hidden}
+.card:hover{border-color:rgba(240,165,0,0.2);transform:translateY(-1px)}
+.card__icon{font-size:1.5rem;margin-bottom:8px}
+.card__value{font-size:2.2rem;font-weight:800;font-family:'SF Mono','Cascadia Code',monospace;margin:6px 0}
+.card__label{font-size:0.75rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px}
+.card--green .card__value{color:var(--green)}
+.card--red .card__value{color:var(--red)}
+.card--gold .card__value{color:var(--gold)}
+.card--blue .card__value{color:var(--blue)}
+.card--purple .card__value{color:var(--purple)}
+.card__sub{font-size:0.68rem;color:var(--muted);margin-top:6px}
+.row2{display:grid;grid-template-columns:1.2fr 1fr;gap:14px;margin-bottom:20px}
+.row3{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px}
+.section{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
+.section h3{font-size:0.85rem;color:var(--muted);margin-bottom:14px;text-transform:uppercase;letter-spacing:1px;display:flex;align-items:center;gap:8px;justify-content:space-between}
+.section h3 .hint{font-size:0.62rem;text-transform:none;letter-spacing:0;font-weight:400;color:var(--muted)}
+.hist{display:flex;align-items:flex-end;gap:8px;height:140px;padding-top:8px}
+.hist-col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%;gap:4px}
+.hist-val{font-size:0.72rem;font-weight:700;color:var(--gold);font-family:'SF Mono',monospace}
+.hist-bar-wrap{width:100%;max-width:36px;height:90px;display:flex;align-items:flex-end;background:rgba(30,30,74,0.5);border-radius:8px;overflow:hidden}
+.hist-bar{width:100%;background:linear-gradient(180deg,var(--blue),var(--purple));border-radius:8px;transition:height .6s ease;min-height:2px}
+.hist-bar--comm{background:linear-gradient(180deg,var(--gold),#e08900)}
+.hist-day{font-size:0.6rem;color:var(--muted)}
+.legend{display:flex;gap:16px;justify-content:flex-end;font-size:0.68rem;color:var(--muted);margin-bottom:8px}
+.legend span{display:flex;align-items:center;gap:5px}
+.legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
+.src-row{display:flex;align-items:center;gap:12px;padding:6px 0}
+.src-name{width:170px;font-size:0.78rem;color:var(--text);display:flex;align-items:center;gap:6px;flex-shrink:0}
+.src-bar-wrap{flex:1;height:14px;background:rgba(30,30,74,0.5);border-radius:8px;overflow:hidden}
+.src-bar{height:100%;border-radius:8px;transition:width .6s ease;min-width:2px}
+.src-count{width:44px;text-align:right;font-size:0.8rem;font-weight:700;color:var(--gold);font-family:'SF Mono',monospace;flex-shrink:0}
+table{width:100%;border-collapse:collapse;font-size:0.8rem}
+th{text-align:left;padding:8px 10px;color:var(--muted);font-weight:600;font-size:0.65rem;text-transform:uppercase;border-bottom:1px solid var(--border);letter-spacing:0.5px}
+td{padding:9px 10px;border-bottom:1px solid rgba(30,30,74,0.4)}
+tr:last-child td{border-bottom:none}
+.feed{max-height:320px;overflow-y:auto}
+.feed-item{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid rgba(30,30,74,0.4);font-size:0.8rem;animation:slideIn .3s ease}
+.feed-item:last-child{border-bottom:none}
+.feed-item__icon{font-size:1rem;flex-shrink:0}
+.feed-item__text{flex:1}
+.feed-item__time{color:var(--muted);font-size:0.68rem;flex-shrink:0}
+.badge{display:inline-block;padding:2px 8px;border-radius:30px;font-size:0.6rem;font-weight:700;flex-shrink:0}
+.badge--social{background:rgba(232,56,106,0.15);color:#e8386a}
+.badge--direct{background:rgba(59,130,246,0.15);color:var(--blue)}
+.badge--seo{background:rgba(16,185,129,0.15);color:var(--green)}
+.badge--email{background:rgba(168,85,247,0.15);color:var(--purple)}
+.badge--ads{background:rgba(240,165,0,0.15);color:var(--gold)}
+.badge--other{background:rgba(100,116,139,0.2);color:var(--muted)}
+.banner{border-radius:var(--radius);padding:16px 20px;margin-bottom:20px;font-size:0.9rem;line-height:1.6;display:flex;gap:12px;align-items:flex-start}
+.banner--warn{background:rgba(240,165,0,0.08);border:1px solid rgba(240,165,0,0.3)}
+.banner--ok{background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.3)}
+.banner__icon{font-size:1.3rem}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+/* Projection des commissions potentielles */
+.proj-controls{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:16px;padding:14px 16px;background:rgba(30,30,74,0.35);border:1px solid var(--border);border-radius:12px}
+.proj-ctl{flex:1;min-width:190px}
+.proj-ctl label{display:flex;justify-content:space-between;align-items:center;font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:6px;font-weight:600}
+.proj-ctl label b{color:var(--gold);font-family:'SF Mono',monospace;font-size:0.85rem}
+.proj-ctl input[type=range]{width:100%;-webkit-appearance:none;appearance:none;height:6px;background:var(--border);border-radius:4px;outline:none}
+.proj-ctl input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:16px;height:16px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#e08900);cursor:pointer;box-shadow:0 0 8px rgba(240,165,0,0.5);border:none}
+.proj-ctl input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--gold);cursor:pointer;border:none}
+.proj-badges{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.proj-badge{flex:1;min-width:150px;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:rgba(30,30,74,0.35)}
+.proj-badge__label{font-size:0.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px}
+.proj-badge__value{font-size:1.25rem;font-weight:800;font-family:'SF Mono',monospace;margin-top:4px}
+.proj-badge--real .proj-badge__value{color:var(--blue)}
+.proj-badge--pess .proj-badge__value{color:var(--red)}
+.proj-badge--realiste .proj-badge__value{color:var(--gold)}
+.proj-badge--opt .proj-badge__value{color:var(--green)}
+.proj-note{font-size:0.68rem;color:var(--muted);margin-top:10px;line-height:1.5}
+.proj-note code{background:rgba(124,58,237,0.2);padding:1px 5px;border-radius:4px;font-size:0.66rem}
+.btn{padding:10px 20px;border-radius:50px;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:0.8rem;cursor:pointer;transition:all .2s;font-weight:600;display:flex;align-items:center;gap:6px}
+.btn:hover{background:var(--border);border-color:var(--gold)}
+.btn--gold{background:linear-gradient(135deg,var(--gold),#e08900);color:#141432;border:none}
+.btn--gold:hover{transform:scale(1.03);box-shadow:0 4px 16px rgba(240,165,0,0.3)}
+.btn--red{border-color:var(--red);color:var(--red)}
+.btn--red:hover{background:rgba(239,68,68,0.1)}
+.source-tag{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:50px;font-size:0.68rem;font-weight:600;background:rgba(30,30,74,0.7);color:var(--muted);border:1px solid var(--border)}
+.source-tag b{color:var(--text)}
+footer{text-align:center;padding:16px;color:var(--muted);font-size:0.7rem;border-top:1px solid var(--border);margin-top:20px}
+@keyframes slideIn{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:translateX(0)}}
+@media(max-width:768px){.row2,.row3{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.src-name{width:110px}}
+</style>
+</head>
+<body>
+<div class="app">
+<header>
+  <div>
+    <h1>📊 Affilimax — Tableau de bord réel</h1>
+    <div class="sub">Dernière mise à jour : <span id="clock">--</span> · Données 100% factuelles, aucun chiffre simulé</div>
+  </div>
+  <div class="status-row">
+    <span class="status-pill status-pill--down" id="pillLocal"><span class="dot dot--down"></span> Serveur local</span>
+    <span class="status-pill status-pill--down" id="pillRender"><span class="dot dot--down"></span> Render</span>
+    <span class="status-pill status-pill--warn" id="pillSource"><span class="dot dot--warn"></span> Source : --</span>
+  </div>
+</header>
+
+<div class="banner banner--warn" id="verdict">
+  <div class="banner__icon">⚠️</div>
+  <div><strong>Verdict réel :</strong> <span id="verdictText">Chargement des données…</span></div>
+</div>
+
+<div class="grid">
+  <div class="card card--green">
+    <div class="card__icon">💰</div>
+    <div class="card__value" id="comms">--</div>
+    <div class="card__label">Commissions aujourd'hui</div>
+    <div class="card__sub" id="comms7">7j : --</div>
+  </div>
+  <div class="card card--blue">
+    <div class="card__icon">👆</div>
+    <div class="card__value" id="clicks">--</div>
+    <div class="card__label">Clics aujourd'hui</div>
+    <div class="card__sub" id="clicks7">7j : --</div>
+  </div>
+  <div class="card card--gold">
+    <div class="card__icon">🛒</div>
+    <div class="card__value" id="conv">--</div>
+    <div class="card__label">Conversions</div>
+    <div class="card__sub">Ventes enregistrées</div>
+  </div>
+  <div class="card card--purple">
+    <div class="card__icon">📊</div>
+    <div class="card__value" id="epc">--</div>
+    <div class="card__label">EPC (€ / clic)</div>
+    <div class="card__sub" id="tauxConv">Taux conv : --</div>
+  </div>
+</div>
+
+<!-- PROJECTION COMMISSIONS POTENTIELLES -->
+<div class="section" style="margin-bottom:20px">
+  <h3>🎯 Commissions potentielles <span class="hint">panier moyen × clics — estimation, pas des données réelles</span></h3>
+  <div class="proj-controls">
+    <div class="proj-ctl">
+      <label>Panier moyen <b id="projBasketVal">45 €</b></label>
+      <input type="range" id="projBasket" min="10" max="400" step="5" value="45" oninput="updateProjection()">
+    </div>
+    <div class="proj-ctl">
+      <label>Taux commission <b id="projRateVal">4,7 %</b></label>
+      <input type="range" id="projRate" min="1" max="12" step="0.1" value="4.7" oninput="updateProjection()">
+    </div>
+    <div class="proj-ctl">
+      <label>Clics cible (jour) <b id="projClicksVal">1 000</b></label>
+      <input type="range" id="projClicks" min="50" max="5000" step="50" value="1000" oninput="updateProjection()">
+    </div>
+  </div>
+  <div class="proj-badges">
+    <div class="proj-badge proj-badge--real">
+      <div class="proj-badge__label">Potentiel à mes clics réels</div>
+      <div class="proj-badge__value" id="projReal">--</div>
+    </div>
+    <div class="proj-badge proj-badge--pess">
+      <div class="proj-badge__label">Pessimiste (1 % conv.)</div>
+      <div class="proj-badge__value" id="projPess">--</div>
+    </div>
+    <div class="proj-badge proj-badge--realiste">
+      <div class="proj-badge__label">Réaliste (2,5 % conv.)</div>
+      <div class="proj-badge__value" id="projRealiste">--</div>
+    </div>
+    <div class="proj-badge proj-badge--opt">
+      <div class="proj-badge__label">Optimiste (5 % conv.)</div>
+      <div class="proj-badge__value" id="projOpt">--</div>
+    </div>
+  </div>
+  <div style="position:relative;height:300px">
+    <canvas id="chartProjection"></canvas>
+    <div class="chart-empty-state" id="projEmpty" style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:0.8rem;font-family:monospace;pointer-events:none">Chargement du graphique…</div>
+  </div>
+  <div class="proj-note">
+    💡 <b>Méthode :</b> commissions estimées = clics × taux de conversion × panier moyen × taux de commission.
+    Taux de conversion basés sur les moyennes du marché de l'affiliation (1 à 5 %).
+    Le panier moyen et le taux de commission par défaut (45 € / 4,7 %) correspondent à la
+    <b>moyenne réelle du catalogue</b> : 46,85 € et 4,74 % sur 95 produits actifs
+    (<code>liens_affiliation.json</code>). Ajuste les curseurs pour tes propres hypothèses.
+  </div>
+</div>
+
+<div class="actions">
+  <button class="btn btn--gold" onclick="loadAll()">🔄 Actualiser</button>
+  <button class="btn" onclick="window.open('live.html','_blank')">🚀 Live Dashboard</button>
+  <button class="btn" onclick="window.open('status.html','_blank')">🔍 Diagnostic</button>
+  <button class="btn" onclick="window.open('https://afflimax.onrender.com','_blank')">🌐 Site Render</button>
+  <button class="btn" onclick="window.open('RAPPORT_REEL_2026-08-10.md','_blank')">📄 Rapport réel</button>
+</div>
+
+<div class="row2">
+  <div class="section">
+    <h3>📅 7 derniers jours <span class="hint" id="histRange">clics + commissions</span></h3>
+    <div class="legend">
+      <span><i style="background:linear-gradient(180deg,var(--blue),var(--purple))"></i> Clics</span>
+      <span><i style="background:linear-gradient(180deg,var(--gold),#e08900)"></i> Commissions (€)</span>
+    </div>
+    <div id="histContent" style="color:var(--muted);font-size:0.8rem">En attente…</div>
+  </div>
+  <div class="section">
+    <h3>📈 Sources de trafic <span class="hint">clics aujourd'hui</span></h3>
+    <div id="sourcesContent" style="color:var(--muted);font-size:0.8rem">En attente…</div>
+  </div>
+</div>
+
+<div class="row3">
+  <div class="section">
+    <h3>🏆 Top campagnes <span class="hint">classées par clics réels</span></h3>
+    <div style="overflow-x:auto">
+      <table>
+        <thead><tr><th>Produit</th><th>Clics</th><th>Conversions</th><th>Commissions</th></tr></thead>
+        <tbody id="campBody"><tr><td colspan="4" style="text-align:center;color:var(--muted)">Chargement…</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="section">
+    <h3>🕒 Activité récente <span class="hint">derniers événements</span></h3>
+    <div class="feed" id="feedContent" style="color:var(--muted);font-size:0.8rem">Chargement…</div>
+  </div>
+</div>
+
+<footer>
+  Affilimax · Tableau de bord réel · Données : stats.json + API Render · Tag Amazon : confortbure07-21
+</footer>
+</div>
+
+<script>
+const RENDER = 'https://afflimax.onrender.com';
+
+function fmtEuro(v){ return (Number(v)||0).toLocaleString('fr-FR',{minimumFractionDigits:2, maximumFractionDigits:2}) + ' €'; }
+function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+function srcBadge(src){
+  const labels = {
+    'reseaux_sociaux':['📌 Pinterest','badge--social'],
+    'referencement_direct':['🖥️ Direct','badge--direct'],
+    'SEO_organique':['🔍 SEO','badge--seo'],
+    'email_marketing':['📧 Email','badge--email'],
+    'publicite_payante':['📣 Ads','badge--ads']
+  };
+  const [l,c] = labels[src] || [src,'badge--other'];
+  return `<span class="badge ${c}">${esc(l)}</span>`;
+}
+
+async function fetchJson(url, timeout=10000){
+  const resp = await fetch(url, {signal:AbortSignal.timeout(timeout)});
+  if(!resp.ok) throw new Error('HTTP '+resp.status);
+  return resp.json();
+}
+
+async function loadStats(){
+  // 1) API locale d'abord, 2) Render ensuite, 3) garder la plus récente
+  const attempts = [];
+  const localUrl = '/api/stats';
+  // true si la page n'est PAS servie par le serveur local (file:// ou domaine distant)
+  const isRemote = location.protocol==='file:' || !(location.hostname==='localhost'||location.hostname==='127.0.0.1');
+  try {
+    if(!isRemote){ const d = await fetchJson(localUrl, 4000); attempts.push({src:'Serveur local', data:d}); }
+  } catch(e){}
+  try {
+    const d = await fetchJson(RENDER + '/api/stats', 8000); attempts.push({src:'Render', data:d});
+  } catch(e){}
+  if(attempts.length===0) return null;
+  // Choisir l'entrée la plus récente
+  attempts.sort((a,b)=>new Date(b.data.timestamp||0)-new Date(a.data.timestamp||0));
+  return attempts[0];
+}
+
+function renderStats(entry){
+  const sd = entry.data;
+  const r = sd.resume || {};
+  const hist = sd.historique_7j || {};
+  const dates = sd.historique_dates || ['J-6','J-5','J-4','J-3','J-2','J-1','Auj'];
+  const srcs = sd.sources_trafic || {};
+
+  // Pill source
+  const pill = document.getElementById('pillSource');
+  pill.innerHTML = `<span class="dot dot--warn"></span> Source : ${entry.src}`;
+  pill.className = 'status-pill status-pill--warn';
+
+  // KPIs
+  document.getElementById('comms').textContent = fmtEuro(r.commissions_aujourdhui);
+  document.getElementById('clicks').textContent = r.clics_aujourdhui || 0;
+  document.getElementById('conv').textContent = r.conversions_aujourdhui || 0;
+  document.getElementById('epc').textContent = fmtEuro(r.epc);
+  document.getElementById('tauxConv').textContent = 'Taux conv : ' + (r.taux_conversion||0).toFixed(2) + ' %';
+
+  // Somme 7 jours
+  const sum7 = (arr)=>Array.isArray(arr)?arr.reduce((a,b)=>a+(Number(b)||0),0):0;
+  realClicksTotal = sum7(hist.clics);
+  document.getElementById('comms7').textContent = '7j : ' + fmtEuro(sum7(hist.commissions));
+  document.getElementById('clicks7').textContent = '7j : ' + realClicksTotal + ' clics';
+
+  // Verdict
+  const v = document.getElementById('verdict');
+  const vText = document.getElementById('verdictText');
+  const totalComm7 = sum7(hist.commissions);
+  const totalClicks7 = sum7(hist.clics);
+  if(totalComm7 > 0){
+    v.className = 'banner banner--ok';
+    vText.textContent = `Commissions réelles détectées : ${fmtEuro(totalComm7)} sur 7 jours. Continue !`;
+  } else if(totalClicks7 > 0){
+    v.className = 'banner banner--warn';
+    vText.textContent = `Système en ligne, tracking OK (${totalClicks7} clics réels sur 7 jours), mais 0 € de commission : il faut du trafic humain pour convertir.`;
+  } else {
+    v.className = 'banner banner--warn';
+    vText.textContent = 'Aucun clic enregistré. Le serveur tourne mais les liens /go/ ne sont pas encore partagés.';
+  }
+
+  // Historique
+  const clics = Array.isArray(hist.clics)?hist.clics:[0,0,0,0,0,0,0];
+  const comms = Array.isArray(hist.commissions)?hist.commissions:[0,0,0,0,0,0,0];
+  const maxC = Math.max(1, ...clics);
+  const maxM = Math.max(0.01, ...comms);
+  document.getElementById('histRange').textContent = dates[0] + ' → ' + dates[dates.length-1];
+  document.getElementById('histContent').innerHTML =
+    '<div class="hist">' + clics.map((v,i)=>{
+      const hc = v>0?Math.max(5,Math.round(v/maxC*100)):2;
+      const hm = (comms[i]||0)>0 ? Math.max(6, Math.round(comms[i]/maxM*100)) : 0;
+      return `<div class="hist-col">
+        <span class="hist-val" style="color:var(--blue)">${v}</span>
+        <div class="hist-bar-wrap"><div class="hist-bar" style="height:${hc}%"></div></div>
+        <div class="hist-bar-wrap" style="height:18px"><div class="hist-bar hist-bar--comm" style="height:${hm}%"></div></div>
+        <span class="hist-day">${dates[i]}</span>
+      </div>`;
+    }).join('') + '</div>';
+
+  // Sources
+  const defs = [
+    {key:'reseaux_sociaux', label:'Réseaux sociaux (Pinterest)', color:'#e8386a'},
+    {key:'SEO_organique', label:'SEO organique', color:'#10b981'},
+    {key:'email_marketing', label:'Email marketing', color:'#8b5cf6'},
+    {key:'publicite_payante', label:'Publicité payante', color:'#f0a500'},
+    {key:'referencement_direct', label:'Référencement direct', color:'#3b82f6'}
+  ];
+  const total = defs.reduce((a,d)=>a+(Number(srcs[d.key])||0),0);
+  if(total===0){
+    document.getElementById('sourcesContent').innerHTML = 'Aucun clic aujourd\'hui. Les sources apparaîtront dès le premier clic tracké.';
+  } else {
+    document.getElementById('sourcesContent').innerHTML = defs.map(d=>{
+      const v = Number(srcs[d.key])||0;
+      const pct = Math.round(v/total*100);
+      return `<div class="src-row">
+        <span class="src-name">${d.label}</span>
+        <div class="src-bar-wrap"><div class="src-bar" style="width:${Math.max(pct,2)}%;background:${d.color}"></div></div>
+        <span class="src-count">${v}</span>
+      </div>`;
+    }).join('');
+  }
+
+  // Top campagnes (avec au moins 1 clic ou conversion, ou top 8 sinon)
+  const camps = Array.isArray(sd.top_campagnes)?sd.top_campagnes:[];
+  const active = camps.filter(c=>(c.clics||0)>0||(c.conversions||0)>0).sort((a,b)=>(b.clics||0)-(a.clics||0));
+  const shown = active.length>0 ? active : camps.slice(0,8);
+  document.getElementById('campBody').innerHTML = shown.length===0
+    ? '<tr><td colspan="4" style="text-align:center;color:var(--muted)">Aucune campagne trackée</td></tr>'
+    : shown.map(c=>`<tr>
+        <td><strong>${esc(c.nom)}</strong><br><small style="color:var(--muted)">${esc(c.plateforme||'')}</small></td>
+        <td>${c.clics||0}</td>
+        <td>${c.conversions||0}</td>
+        <td>${fmtEuro(c.commissions)}</td>
+      </tr>`).join('');
+
+  // Activité récente
+  const recent = Array.isArray(sd.activite_recente)?sd.activite_recente:[];
+  const fc = document.getElementById('feedContent');
+  if(recent.length===0){
+    fc.innerHTML = 'Aucune activité enregistrée.';
+  } else {
+    fc.innerHTML = recent.slice(0,15).map(ev=>{
+      const icon = ev.type==='clic'?'👆':ev.type==='vente'?'💰':ev.type==='payout'?'💸':'📌';
+      const time = ev.timestamp ? new Date(ev.timestamp).toLocaleString('fr-FR',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}) : '';
+      const badge = ev.source ? srcBadge(ev.source) : '';
+      const extra = ev.montant ? fmtEuro(ev.montant) : '';
+      return `<div class="feed-item">
+        <span class="feed-item__icon">${icon}</span>${badge}
+        <span class="feed-item__text">${esc(ev.produit||'?')} ${extra?`<b style="color:var(--green)">${extra}</b>`:''}</span>
+        <span class="feed-item__time">${time}</span>
+      </div>`;
+    }).join('');
+  }
+}
+
+async function checkHealth(){
+  const isRemote = location.protocol==='file:' || !(location.hostname==='localhost'||location.hostname==='127.0.0.1');
+  const pl = document.getElementById('pillLocal');
+  const pr = document.getElementById('pillRender');
+  // Local
+  try {
+    if(!isRemote){
+      const h = await fetchJson('/healthz', 4000);
+      pl.innerHTML = `<span class="dot dot--up"></span> Serveur local`;
+      pl.className = 'status-pill status-pill--up';
+    }
+  } catch(e){
+    pl.innerHTML = `<span class="dot dot--down"></span> Serveur local`;
+    pl.className = 'status-pill status-pill--down';
+  }
+  // Render
+  try {
+    const h = await fetchJson(RENDER + '/healthz', 10000);
+    if(h.status==='ok'){
+      pr.innerHTML = `<span class="dot dot--up"></span> Render`;
+      pr.className = 'status-pill status-pill--up';
+    } else {
+      pr.innerHTML = `<span class="dot dot--warn"></span> Render (degraded)`;
+      pr.className = 'status-pill status-pill--warn';
+    }
+  } catch(e){
+    pr.innerHTML = `<span class="dot dot--down"></span> Render`;
+    pr.className = 'status-pill status-pill--down';
+  }
+}
+
+async function loadAll(){
+  const clock = document.getElementById('clock');
+  clock.textContent = new Date().toLocaleString('fr-FR');
+  checkHealth();
+  const entry = await loadStats();
+  if(entry){
+    renderStats(entry);
+    updateProjection();
+  } else {
+    document.getElementById('verdictText').textContent = 'Aucune source de données accessible (serveur local éteint + Render injoignable).';
+  }
+}
+
+// ==================== PROJECTION COMMISSIONS POTENTIELLES ====================
+// Estimation = clics × taux de conversion × panier moyen × taux de commission
+let projChart = null;
+let realClicksTotal = 0;
+
+const fmtIntFR = n => Math.round(n).toLocaleString('fr-FR');
+
+function estCommissions(clics, convPct, basket, ratePct){
+  return clics * (convPct/100) * basket * (ratePct/100);
+}
+
+function getProjParams(){
+  return {
+    basket: Number(document.getElementById('projBasket').value) || 45,
+    rate: Number(document.getElementById('projRate').value) || 4.7,
+    target: Number(document.getElementById('projClicks').value) || 1000
+  };
+}
+
+function initProjectionChart(){
+  const ctx = document.getElementById('chartProjection');
+  if(!ctx) return;
+  if(typeof Chart === 'undefined'){
+    // CDN indisponible : on masque le canvas, les badges fonctionnent quand même
+    ctx.style.display = 'none';
+    document.getElementById('projEmpty').textContent = 'Graphique indisponible (Chart.js non chargé) — les estimations restent affichées.';
+    document.getElementById('projEmpty').style.display = 'flex';
+    return;
+  }
+  const labels = [0,250,500,750,1000,1500,2000,3000,4000,5000];
+  try{
+    projChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        { label: 'Pessimiste (1 % conv.)', data: labels.map(()=>0), borderColor: '#ef4444', backgroundColor: 'rgba(239,68,68,0.08)', fill: true, tension: 0.35, pointRadius: 0, borderWidth: 2 },
+        { label: 'Réaliste (2,5 % conv.)', data: labels.map(()=>0), borderColor: '#f0a500', backgroundColor: 'rgba(240,165,0,0.08)', fill: true, tension: 0.35, pointRadius: 0, borderWidth: 2 },
+        { label: 'Optimiste (5 % conv.)', data: labels.map(()=>0), borderColor: '#10b981', backgroundColor: 'rgba(16,185,129,0.06)', fill: true, tension: 0.35, pointRadius: 0, borderWidth: 2 }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      interaction: { intersect: false, mode: 'index' },
+      plugins: {
+        legend: { labels: { color: '#94a3b8', usePointStyle: true, padding: 20, font: { size: 11 } } },
+        tooltip: {
+          backgroundColor: '#141432', borderColor: '#1e1e4a', borderWidth: 1, padding: 12, cornerRadius: 8,
+          callbacks: {
+            label: function(c){ return c.dataset.label + ' : ' + fmtEuro(c.parsed.y); }
+          }
+        }
+      },
+      scales: {
+        x: { title: { display: true, text: 'Clics / jour', color: '#64748b', font: { size: 11 } }, grid: { color: 'rgba(30,30,74,0.5)' }, ticks: { color: '#64748b', font: { size: 10 }, callback: v => fmtIntFR(v) } },
+        y: { title: { display: true, text: 'Commissions estimées (€/jour)', color: '#64748b', font: { size: 11 } }, min: 0, grid: { color: 'rgba(30,30,74,0.5)' }, ticks: { color: '#64748b', font: { size: 10 }, callback: v => v + ' €' } }
+      }
+    }
+    });
+  }catch(e){
+    ctx.style.display = 'none';
+    document.getElementById('projEmpty').textContent = 'Graphique indisponible (' + e.message + ')';
+    document.getElementById('projEmpty').style.display = 'flex';
+    projChart = null;
+  }
+}
+
+function projLabelsFor(target){
+  // Axe X dynamique : points de 0 jusqu'à 1,5× la cible (min 1000)
+  const max = Math.max(1000, Math.round(target * 1.5));
+  const steps = [0, 0.25, 0.5, 0.75, 1, 1.25, 1.5];
+  return [...new Set(steps.map(s => Math.round(max * s / 50) * 50))];
+}
+
+function updateProjection(){
+  const p = getProjParams();
+  const basket = p.basket, rate = p.rate;
+  document.getElementById('projBasketVal').textContent = fmtEuro(basket);
+  document.getElementById('projRateVal').textContent = rate.toLocaleString('fr-FR',{minimumFractionDigits:2}) + ' %';
+  document.getElementById('projClicksVal').textContent = fmtIntFR(p.target);
+
+  // Badges d'abord : fonctionnent même sans Chart.js
+  document.getElementById('projPess').textContent = fmtEuro(estCommissions(p.target, 1.0, basket, rate));
+  document.getElementById('projRealiste').textContent = fmtEuro(estCommissions(p.target, 2.5, basket, rate));
+  document.getElementById('projOpt').textContent = fmtEuro(estCommissions(p.target, 5.0, basket, rate));
+  document.getElementById('projReal').textContent = fmtEuro(estCommissions(realClicksTotal, 2.5, basket, rate)) + ' (pour ' + fmtIntFR(realClicksTotal) + ' clics réels)';
+
+  // Graphique ensuite (optionnel)
+  if(!projChart){
+    initProjectionChart();
+    if(!projChart){
+      document.getElementById('projEmpty').style.display = 'flex';
+      return;
+    }
+  }
+
+  // Axe X dynamique selon la cible + recalcul des courbes
+  const labels = projLabelsFor(p.target);
+  projChart.data.labels = labels;
+  projChart.data.datasets[0].data = labels.map(c => Math.round(estCommissions(c, 1.0, basket, rate)*100)/100);
+  projChart.data.datasets[1].data = labels.map(c => Math.round(estCommissions(c, 2.5, basket, rate)*100)/100);
+  projChart.data.datasets[2].data = labels.map(c => Math.round(estCommissions(c, 5.0, basket, rate)*100)/100);
+  projChart.update('none');
+  document.getElementById('projEmpty').style.display = 'none';
+}
+
+// Clock
+setInterval(()=>{document.getElementById('clock').textContent = new Date().toLocaleString('fr-FR');},1000);
+initProjectionChart();
+loadAll();
+setInterval(loadAll, 30000);
+</script>
+</body>
+</html>
