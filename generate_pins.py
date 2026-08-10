@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Affilimax - Generateur d'Epingles Pinterest (visuels 1000x1500)
+Affilimax - Generateur de visuels reseaux sociaux
 ================================================================
-Cree des visuels Pinterest au format vertical (1000x1500, ratio 2:3)
-avec la VRAIE photo produit en fond + titre accrocheur + prix + CTA.
+Cree des visuels (photo produit + titre + prix + CTA) pour :
+    --format pinterest : 1000x1500 (ratio 2:3)
+    --format instagram : 1080x1080 (carre)
+    --format tiktok    : 1080x1920 (story 9:16)
 
 Usage:
-    python generate_pins.py                    # toutes les epingles du calendrier
-    python generate_pins.py --product cartable # une seule epingle
-    python generate_pins.py --list             # liste les produits
+    python generate_pins.py --all --format pinterest
+    python generate_pins.py --product cartable --format instagram --force
+    python generate_pins.py --list
 """
 
 import argparse
@@ -24,11 +26,14 @@ from datetime import datetime
 from pathlib import Path
 
 BASE_DIR = Path(__file__).parent.resolve()
-OUT_DIR = BASE_DIR / "assets" / "pins"
-OUT_DIR.mkdir(parents=True, exist_ok=True)
 LIENS_FILE = BASE_DIR / "liens_affiliation.json"
 
-W, H = 1000, 1500  # format Pinterest (ratio 2:3)
+# Dimensions + dossiers de sortie par format
+FORMATS = {
+    "pinterest": {"w": 1000, "h": 1500, "dir": BASE_DIR / "assets" / "pins"},
+    "instagram": {"w": 1080, "h": 1080, "dir": BASE_DIR / "assets" / "instagram"},
+    "tiktok":    {"w": 1080, "h": 1920, "dir": BASE_DIR / "assets" / "tiktok"},
+}
 
 _FONT_CANDIDATES = [
     "C:/Windows/Fonts/arialbd.ttf",
@@ -64,6 +69,13 @@ _FALLBACK_TITLES = [
     "Decouvrez : {nom}",
     "{nom} a prix reduit",
 ]
+
+# Etiquettes selon le format
+LABELS = {
+    "pinterest": "AFFILIMAX  |  RENTREE 2026",
+    "instagram": "AFFILIMAX",
+    "tiktok":    "AFFILIMAX  |  RENTREE 2026",
+}
 
 
 def _load_font(size):
@@ -105,9 +117,21 @@ def _download_image(url, dest, timeout=15):
         return None
 
 
-def make_pin(product, force=False):
-    """Cree une epingle Pinterest 1000x1500 pour un produit."""
+def _scale(fmt, *vals):
+    """Echelle les tailles de police selon la hauteur du format (base = 1500)."""
+    h = FORMATS[fmt]["h"]
+    k = h / 1500.0
+    return tuple(int(v * k) for v in vals)
+
+
+def make_visual(product, fmt="pinterest", force=False):
+    """Cree un visuel (photo produit + titre + prix + CTA) pour le format donne."""
     from PIL import Image, ImageDraw, ImageEnhance
+
+    conf = FORMATS[fmt]
+    W, H = conf["w"], conf["h"]
+    out_dir = conf["dir"]
+    out_dir.mkdir(parents=True, exist_ok=True)
 
     nom = product.get("nom", "Produit")
     slug = product.get("slug", "produit")
@@ -116,16 +140,15 @@ def make_pin(product, force=False):
     avis = product.get("avis_total", 0)
     cat = product.get("categorie", "High-Tech")
     img_url = product.get("image_url", "")
-    comm = product.get("commission_euro", 0)
 
-    out_path = OUT_DIR / f"{slug}.jpg"
+    out_path = out_dir / f"{slug}.jpg"
     if out_path.exists() and not force:
         return out_path
 
     # 1. Fond : photo produit reelle (ou degrade si KO)
     bg_path = None
     if img_url:
-        bg_path = _download_image(img_url, OUT_DIR / f"{slug}_bg.jpg")
+        bg_path = _download_image(img_url, out_dir / f"{slug}_bg.jpg")
     if bg_path and bg_path.exists():
         im = Image.open(bg_path).convert("RGB")
         im = im.resize((W, H), Image.LANCZOS)
@@ -143,14 +166,18 @@ def make_pin(product, force=False):
 
     draw = ImageDraw.Draw(image)
 
+    # Tailles de police adaptees au format
+    f_badge_s, f_title_s, f_price_s, f_small_s, f_cta_s = _scale(
+        fmt, 34, 64, 58, 32, 42
+    )
+
     # 2. Badge AFFILIMAX
-    f_badge = _load_font(34)
-    draw.text((48, 40), "AFFILIMAX  |  RENTREE 2026", font=f_badge, fill=(255, 255, 255))
+    draw.text((int(W * 0.05), int(H * 0.027)), LABELS[fmt], font=_load_font(f_badge_s), fill=(255, 255, 255))
 
     # 3. Bandeau titre semi-transparent (bande sombre en bas)
+    band_h = int(H * 0.35)
     overlay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
     od = ImageDraw.Draw(overlay)
-    band_h = 520
     od.rectangle([0, H - band_h, W, H], fill=(10, 10, 30, 200))
     image = Image.alpha_composite(image.convert("RGBA"), overlay).convert("RGB")
     draw = ImageDraw.Draw(image)
@@ -159,23 +186,33 @@ def make_pin(product, force=False):
     titles = _TITLES.get(cat, _FALLBACK_TITLES)
     rng = random.Random(abs(hash(slug)) % 999)
     titre = rng.choice(titles).format(nom=nom)
-    f_title = _load_font(64)
-    lines = _wrap_text(draw, titre.upper(), f_title, W - 100)[:3]
-    yy = H - band_h + 60
+    f_title = _load_font(f_title_s)
+    lines = _wrap_text(draw, titre.upper(), f_title, W - int(W * 0.1))[:3]
+    yy = H - band_h + int(H * 0.04)
+    line_gap = int(H * 0.056)
     for line in lines:
-        draw.text((50, yy), line, font=f_title, fill=(255, 224, 130))
-        yy += 84
+        draw.text((int(W * 0.05), yy), line, font=f_title, fill=(255, 224, 130))
+        yy += line_gap
 
     # 5. Prix + note
-    f_price = _load_font(58)
-    draw.text((50, yy + 20), f"{prix} EUR", font=f_price, fill=(255, 255, 255))
-    f_small = _load_font(32)
-    draw.text((50, yy + 100), f"Note {note}/5 - {avis} avis | Comm {comm} EUR", font=f_small, fill=(220, 220, 245))
+    draw.text((int(W * 0.05), yy + int(H * 0.013)), f"{prix} EUR", font=_load_font(f_price_s), fill=(255, 255, 255))
+    draw.text(
+        (int(W * 0.05), yy + int(H * 0.067)),
+        f"Note {note}/5 - {avis} avis",
+        font=_load_font(f_small_s),
+        fill=(220, 220, 245),
+    )
 
     # 6. CTA
-    f_cta = _load_font(42)
-    draw.rounded_rectangle([50, H - 110, 650, H - 40], radius=16, fill=(240, 165, 0))
-    draw.text((90, H - 96), "VOIR LE PRIX SUR AMAZON", font=f_cta, fill=(20, 20, 40))
+    f_cta = _load_font(f_cta_s)
+    cta_w, cta_h = int(W * 0.6), int(H * 0.047)
+    draw.rounded_rectangle(
+        [int(W * 0.05), H - cta_h - int(H * 0.013), int(W * 0.05) + cta_w, H - int(H * 0.013)],
+        radius=int(H * 0.011),
+        fill=(240, 165, 0),
+    )
+    cta_label = "VOIR SUR AMAZON" if fmt != "pinterest" else "VOIR LE PRIX SUR AMAZON"
+    draw.text((int(W * 0.05) + 20, H - cta_h - int(H * 0.013) + 12), cta_label, font=f_cta, fill=(20, 20, 40))
 
     image.save(out_path, "JPEG", quality=88)
     return out_path
@@ -190,9 +227,10 @@ def load_products():
 
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(description="Generateur d'epingles Pinterest")
+    ap = argparse.ArgumentParser(description="Generateur de visuels reseaux sociaux")
     ap.add_argument("--product", type=str, help="Slug du produit (sinon tous les scolaires)")
     ap.add_argument("--all", action="store_true", help="Tous les produits")
+    ap.add_argument("--format", type=str, choices=list(FORMATS.keys()), default="pinterest", help="Format du visuel")
     ap.add_argument("--force", action="store_true", help="Regenerer meme si existe")
     ap.add_argument("--list", action="store_true", help="Lister les produits scolaires")
     args = ap.parse_args()
@@ -215,10 +253,10 @@ if __name__ == "__main__":
     ok = 0
     for p in targets:
         try:
-            out = make_pin(p, force=args.force)
+            out = make_visual(p, fmt=args.format, force=args.force)
             print(f"  OK {p['slug']} -> {out.name} ({out.stat().st_size//1024} Ko)")
             ok += 1
             time.sleep(0.5)
         except Exception as e:
             print(f"  ERR {p['slug']}: {str(e)[:60]}")
-    print(f"\nEpingles generees: {ok}/{len(targets)} dans {OUT_DIR}")
+    print(f"\nVisuels {args.format} generes: {ok}/{len(targets)} dans {FORMATS[args.format]['dir']}")

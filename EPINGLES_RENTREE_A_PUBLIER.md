@@ -80,10 +80,79 @@ La lampe LED pliable parfaite pour les devoirs : eclairage doux anti-fatigue, re
 
 LIEN   : https://affilimax.onrender.com/go/lampe-bureau-led-pliable?src=pinterest
 
+--- EPINGLE 6/10 : TROUSSE SCOLAIRE ZIPEE ---
+VISUEL : https://afflimax.onrender.com/assets/pins/trousse-scolaire-3-compartiments.jpg
+FICHIER: affilimax/assets/pins/trousse-scolaire-3-compartiments.jpg
+
+TITRE :
+RENTREE 2026 : Trousse scolaire zippee 3 compartiments - le rangement malin
+
+DESCRIPTION :
+La trousse zippee 3 compartiments : stylos, crayons, gommes, tout est range et facile a trouver. L'essentiel du cartable pour une rentree organisee. #trousse #rentree2026 #fournitures #ecole #college #rentreescolaire #backtoschool #organisation #parents #affilimax
+
+LIEN   : https://afflimax.onrender.com/go/trousse-scolaire-3-compartiments?src=pinterest
+
 ======================================================================
-APRES LES 5 PREMIERES : 113 autres epingles pretes dans affilimax/assets/pins/
+
+--- EPINGLE 7/10 : BOITE A LUNCH BENTO 3 COMPARTIMENTS ---
+VISUEL : https://afflimax.onrender.com/assets/pins/boite-lunch-bento-3-compartiments.jpg
+FICHIER: affilimax/assets/pins/boite-lunch-bento-3-compartiments.jpg
+
+TITRE :
+Boite a lunch bento 3 compartiments - les repas sains des enfants
+
+DESCRIPTION :
+La boite a lunch bento 3 compartiments : composez des repas equilibres et appetissants pour la cantine ou les sorties. Facile a ouvrir, facile a nettoyer. #bento #lunchbox #rentree2026 #repas #ecole #cantine #parents #cuisine #backtoschool #affilimax
+
+LIEN   : https://afflimax.onrender.com/go/boite-lunch-bento-3-compartiments?src=pinterest
+
+======================================================================
+
+--- EPINGLE 8/10 : CAHIER DE VACANCES CE1-CE2 ---
+VISUEL : https://afflimax.onrender.com/assets/pins/cahier-vacances-ce1-ce2.jpg
+FICHIER: affilimax/assets/pins/cahier-vacances-ce1-ce2.jpg
+
+TITRE :
+Cahier de vacances CE1 vers CE2 - reviser en s'amusant
+
+DESCRIPTION :
+Le cahier de vacances CE1 vers CE2 : des exercices ludiques pour garder le niveau tout en s'amusant. Le compagnon ideal des vacances. #cahierdevacances #ce1 #ce2 #rentree2026 #ecole #revision #enfants #apprendre #affilimax
+
+LIEN   : https://afflimax.onrender.com/go/cahier-vacances-ce1-ce2?src=pinterest
+
+======================================================================
+
+--- EPINGLE 9/10 : CHAISE DE BUREAU ENFANT ---
+VISUEL : https://afflimax.onrender.com/assets/pins/chaise-bureau-enfant-reglable.jpg
+FICHIER: affilimax/assets/pins/chaise-bureau-enfant-reglable.jpg
+
+TITRE :
+Chaise de bureau enfant reglable - le dos des petits protege
+
+DESCRIPTION :
+La chaise de bureau reglable pour enfants : confort et bonne posture pour les devoirs et les jeux. Grandit avec votre enfant. #chaise #bureau #enfant #rentree2026 #devoirs #posture #confort #etude #affilimax
+
+LIEN   : https://afflimax.onrender.com/go/chaise-bureau-enfant-reglable?src=pinterest
+
+======================================================================
+
+--- EPINGLE 10/10 : TABLEAU BLANC MAGNETIQUE ENFANT ---
+VISUEL : https://afflimax.onrender.com/assets/pins/tableau-blanc-magnetique-enfant.jpg
+FICHIER: affilimax/assets/pins/tableau-blanc-magnetique-enfant.jpg
+
+TITRE :
+Tableau blanc magnetique enfant - dessiner, ecrire, apprendre
+
+DESCRIPTION :
+Le tableau blanc magnetique pour enfants : dessins, ecriture, lettres et chiffres. L'outil pedagogique qui plait aux petits et aux grands. #tableau #magn�tique #enfant #rentree2026 #dessin #ecole #apprendre #maternelle #primaire #affilimax
+
+LIEN   : https://afflimax.onrender.com/go/tableau-blanc-magnetique-enfant?src=pinterest
+
+======================================================================
+APRES LES 10 PREMIERES : 108 autres epingles pretes dans affilimax/assets/pins/
 - Suivre le meme modele (titre accrocheur + 8-10 hashtags + ?src=pinterest)
 - Varier les horaires : 9h, 13h, 19h
 - Regrouper par board : Rentree 2026, Bureau, High-Tech, Cuisine...
 - Publier 5/jour sur 14 jours = 70+ publications
+- VISUELS AUSSI DISPO pour Instagram (1080x1080) et TikTok (1080x1920) dans assets/instagram/ et assets/tiktok/
 ======================================================================
