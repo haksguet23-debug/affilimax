@@ -12,3 +12,11 @@ __pycache__/
 # Videos generees (Video Factory output)
 video_factory/output/
 amazon_orders_seen.json
+
+# Secret webhook local pour l'import automatique - JAMAIS commiter
+config_import.env
+
+# Rapports Amazon telecharges (contenu commercial) + logs d'import
+rapports_amazon/*.csv
+rapports_amazon/*.log
+rapports_amazon/importes/

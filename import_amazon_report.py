@@ -190,8 +190,6 @@ def main():
             ok += 1
         elif res.startswith("DOUBLON") or res.startswith("IGNORE"):
             ignored += 1
-        elif res.startswith("[DRY-RUN]"):
-            print(f"  {i}. {res}")
         else:
             errors += 1
         print(f"  {i}. {res}")
