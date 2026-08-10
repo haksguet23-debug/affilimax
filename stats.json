@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-01T10:02:16.889167Z",
+  "timestamp": "2026-08-10T15:17:41.776676Z",
   "temps_reel": true,
   "demarrage": "2026-07-24T17:56:11.560873Z",
   "resume": {
@@ -12,19 +12,19 @@
   },
   "historique_7j": {
     "commissions": [
-      0,
-      0,
-      0,
       0.0,
-      0,
-      0,
-      0
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
     ],
     "clics": [
       0,
       0,
       0,
-      5,
+      0,
       0,
       0,
       0
@@ -195,7 +195,7 @@
     {
       "nom": "Xiaomi Robot Aspirateur S20+",
       "plateforme": "Amazon",
-      "clics": 1,
+      "clics": 0,
       "conversions": 0,
       "commissions": 0.0,
       "progression": 0
@@ -219,7 +219,7 @@
     {
       "nom": "Bose QuietComfort Ultra Casque",
       "plateforme": "Amazon",
-      "clics": 1,
+      "clics": 0,
       "conversions": 0,
       "commissions": 0.0,
       "progression": 0
@@ -299,7 +299,7 @@
     {
       "nom": "SSD Samsung T7 Shield 1To",
       "plateforme": "Amazon",
-      "clics": 1,
+      "clics": 0,
       "conversions": 0,
       "commissions": 0.0,
       "progression": 0
@@ -307,7 +307,7 @@
     {
       "nom": "Roborock Q5 Pro+ Aspirateur Robot",
       "plateforme": "Amazon",
-      "clics": 1,
+      "clics": 0,
       "conversions": 0,
       "commissions": 0.0,
       "progression": 0
@@ -315,7 +315,7 @@
     {
       "nom": "Logitech G502 HERO Souris Gaming",
       "plateforme": "Amazon",
-      "clics": 1,
+      "clics": 0,
       "conversions": 0,
       "commissions": 0.0,
       "progression": 0
@@ -330,30 +330,30 @@
   },
   "performance_horaire": {
     "labels": [
-      "0h",
-      "1h",
-      "2h",
-      "3h",
-      "4h",
-      "5h",
-      "6h",
-      "7h",
-      "8h",
-      "9h",
-      "10h",
-      "11h",
-      "12h",
-      "13h",
-      "14h",
-      "15h",
-      "16h",
-      "17h",
-      "18h",
-      "19h",
-      "20h",
-      "21h",
-      "22h",
-      "23h"
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
     ],
     "clics": [
       0,
@@ -412,53 +412,17 @@
     "n8n": "online",
     "postgres": "online",
     "render_webhook": "online",
-    "derniere_synchro": "2026-08-01T10:02:16.889167Z",
+    "derniere_synchro": "2026-08-10T15:17:41.776676Z",
     "uptime_24h": 100.0
   },
-  "activite_recente": [
-    {
-      "type": "clic",
-      "produit": "Logitech G502 HERO Souris Gaming",
-      "plateforme": "Amazon",
-      "source": "referencement_direct",
-      "timestamp": "2026-08-01T10:02:16.889167Z"
-    },
-    {
-      "type": "clic",
-      "produit": "Xiaomi Robot Aspirateur S20+",
-      "plateforme": "Amazon",
-      "source": "referencement_direct",
-      "timestamp": "2026-08-01T09:37:44.870115Z"
-    },
-    {
-      "type": "clic",
-      "produit": "Roborock Q5 Pro+ Aspirateur Robot",
-      "plateforme": "Amazon",
-      "source": "referencement_direct",
-      "timestamp": "2026-08-01T09:37:16.960990Z"
-    },
-    {
-      "type": "clic",
-      "produit": "Bose QuietComfort Ultra Casque",
-      "plateforme": "Amazon",
-      "source": "referencement_direct",
-      "timestamp": "2026-08-01T09:35:38.664739Z"
-    },
-    {
-      "type": "clic",
-      "produit": "SSD Samsung T7 Shield 1To",
-      "plateforme": "Amazon",
-      "source": "referencement_direct",
-      "timestamp": "2026-08-01T08:15:39.759797Z"
-    }
-  ],
+  "activite_recente": [],
   "historique_dates": [
-    "31/07",
-    "01/08",
-    "02/08",
-    "03/08",
     "04/08",
+    "05/08",
+    "06/08",
     "07/08",
+    "08/08",
+    "09/08",
     "10/08"
   ],
   "date_jour": "2026-08-10"
