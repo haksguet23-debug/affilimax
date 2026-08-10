@@ -151,6 +151,64 @@ def _require_admin_auth(handler):
     return False
 
 
+# ==================== GARDE-FOU ANTI-TEST / ANTI-BOT ====================
+# Objectif : les stats ne doivent contenir QUE du trafic reel humain.
+# Les requetes de test (curl, python, postman...) ou de bots/crawlers
+# (Googlebot, Bingbot...) ou venant d'IP locales sont redirigees/acceptees
+# mais NE comptent JAMAIS comme clic/conversion.
+
+_TEST_UA_MARKERS = (
+    "curl", "wget", "httpie", "postman", "insomnia", "apifox", "requests",
+    "urllib", "python", "scrapy", "phantomjs", "headlesschrome", "puppeteer",
+    "playwright", "uptimerobot", "pingdom", "newrelic", "datadog", "k6",
+    "jmeter", "guzzle", "axios",
+)
+_BOT_UA_MARKERS = (
+    "googlebot", "bingbot", "duckduckbot", "baiduspider", "yandex", "yandexbot",
+    "semrushbot", "ahrefsbot", "mj12bot", "sogou", "exabot", "ia_archiver",
+    "facebookexternalhit", "twitterbot", "linkedinbot", "slackbot",
+    "telegrambot", "whatsapp", "discordbot", "embedly", "petalbot",
+    "applebot", "meta-externalagent", "screaming", "xenu", "sitesucker",
+    "http banner", "spider", "crawler", "crawl", "bot.html", "search",
+    "monitoring", "checker", "statuscake", "kayako",
+)
+_LOCAL_IP_PREFIXES = (
+    "10.", "192.168.", "172.16.", "172.17.", "172.18.", "172.19.",
+    "172.20.", "172.21.", "172.22.", "172.23.", "172.24.", "172.25.",
+    "172.26.", "172.27.", "172.28.", "172.29.", "172.30.", "172.31.",
+    "127.", "169.254.", "0.",
+)
+
+
+def _is_test_or_bot(user_agent="", client_ip=""):
+    """True si la requete ressemble a un test ou un bot (a NE PAS compter)."""
+    ua = (user_agent or "").strip().lower()
+    # Un navigateur envoie TOUJOURS un User-Agent non vide : un UA absent ou
+    # vide est donc 100% un script/test -> on ne compte jamais.
+    if not ua:
+        return True
+    if any(m in ua for m in _TEST_UA_MARKERS):
+        return True
+    if any(m in ua for m in _BOT_UA_MARKERS):
+        return True
+    ip = (client_ip or "").strip()
+    if ip in ("127.0.0.1", "::1", "localhost"):
+        return True
+    if any(ip.startswith(p) for p in _LOCAL_IP_PREFIXES):
+        return True
+    return False
+
+
+def _client_ip(handler):
+    """IP reelle du client (respecte X-Forwarded-For derriere un proxy)."""
+    fwd = handler.headers.get("X-Forwarded-For", "") or ""
+    if fwd.strip():
+        return fwd.split(",")[0].strip()
+    if handler.client_address:
+        return handler.client_address[0]
+    return ""
+
+
 # Helper pour identifier les routes admin protegees par auth
 ADMIN_PROTECTED_PREFIXES = ("/admin.html", "/payouts.html", "/api/stripe/")
 ADMIN_PROTECTED_WEBHOOK = ("/api/stripe/webhook",)  # nonce: webhook DOIT etre signe par Stripe
@@ -1309,6 +1367,11 @@ class AffilimaxHandler(http.server.SimpleHTTPRequestHandler):
             payload = {}
 
         if path == "/api/click":
+            # Garde-fou : les requetes de test/bot sont ignorees (aucun clic).
+            if _is_test_or_bot(self.headers.get("User-Agent", ""), _client_ip(self)):
+                print("  [GARDE-FOU] /api/click ignore (test/bot)", file=sys.stderr)
+                self.serve_json({"status": "ok", "action": "ignored", "message": "Requete bot/test ignoree"})
+                return
             product_name = payload.get("product") or payload.get("produit")
             platform = payload.get("platform") or payload.get("plateforme")
             source = payload.get("source")
@@ -1321,6 +1384,11 @@ class AffilimaxHandler(http.server.SimpleHTTPRequestHandler):
             return
 
         if path == "/api/conversion":
+            # PROTEGE PAR AUTH ADMIN : endpoint de test historique qui permettait
+            # d'injecter des conversions arbitraires. Les vraies ventes passent
+            # exclusivement par /amazon/notification (secret partage).
+            if not _require_admin_auth(self):
+                return
             product_name = payload.get("product") or payload.get("produit")
             platform = payload.get("platform") or payload.get("plateforme")
             commission_override = payload.get("commission") if "commission" in payload else payload.get("montant")
@@ -1923,13 +1991,21 @@ class AffilimaxHandler(http.server.SimpleHTTPRequestHandler):
             self.end_headers()
             return
 
-        # Enregistrer le clic
-        record_click(
-            product_name=target["nom"],
-            platform=target["plateforme"],
-            source=source,
-            ref=raw_ref or None
-        )
+        # Garde-fou anti-test/anti-bot : on redirige TOUT LE MONDE vers Amazon
+        # (SEO intact, liens fonctionnels) mais on n'enregistre le clic QUE
+        # pour du trafic reel humain. Tests (curl/python) et bots/crawlers
+        # ne polluent plus jamais les stats.
+        user_agent = self.headers.get("User-Agent", "")
+        ip = _client_ip(self)
+        if not _is_test_or_bot(user_agent, ip):
+            record_click(
+                product_name=target["nom"],
+                platform=target["plateforme"],
+                source=source,
+                ref=raw_ref or None
+            )
+        else:
+            print(f"  [GARDE-FOU] Clic ignore (test/bot): {slug} UA={user_agent[:40]!r} IP={ip}", file=sys.stderr)
 
         # Rediriger vers le vrai lien Amazon
         self.send_response(302)

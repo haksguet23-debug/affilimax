@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-08-10T15:17:41.776676Z",
+  "timestamp": "2026-08-10T15:25:11.090924Z",
   "temps_reel": true,
   "demarrage": "2026-07-24T17:56:11.560873Z",
   "resume": {
@@ -371,7 +371,7 @@
       0,
       0,
       0,
-      0,
+      1,
       0,
       0,
       0,
@@ -412,7 +412,7 @@
     "n8n": "online",
     "postgres": "online",
     "render_webhook": "online",
-    "derniere_synchro": "2026-08-10T15:17:41.776676Z",
+    "derniere_synchro": "2026-08-10T15:25:11.090924Z",
     "uptime_24h": 100.0
   },
   "activite_recente": [],
