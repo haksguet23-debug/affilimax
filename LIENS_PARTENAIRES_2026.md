@@ -1,6 +1,6 @@
 # 🔗 LIENS DE TRACKING PARTENAIRES — Affilimax
 
-> **Objectif :** activer les 3 partenaires influents pour envoyer du trafic qualifié
+> **Objectif :** activer les partenaires influents pour envoyer du trafic qualifié
 > vers affilimax.onrender.com. Chaque clic est attribué au bon partenaire via `?ref=`,
 > chaque conversion crédite automatiquement son solde (Stripe Connect).
 >
@@ -17,7 +17,7 @@
 
 ---
 
-## 🤝 1. Roxanne — BabyChouFamily (Instagram 200K+)
+## 🤝 1. Roxanne — BabyChouFamily (Instagram 345K vérifiés)
 
 **Thème :** Famille, enfants, maison, bien-être.
 
@@ -35,25 +35,7 @@
 
 ---
 
-## 🤝 2. SerialDealer — Telegram (10K+)
-
-**Thème :** Bons plans, tech, gaming, high-tech.
-
-| Produit | Lien de tracking |
-|---|---|
-| Souris Logitech G502 | `https://afflimax.onrender.com/go/logitech-g502-hero?ref=serialdealer_deals` |
-| Clavier mécanique | `https://afflimax.onrender.com/go/epomaker-aula-f75?ref=serialdealer_deals` |
-| SSD Samsung T7 | `https://afflimax.onrender.com/go/ssd-samsung-t7-shield?ref=serialdealer_deals` |
-| Power Bank Anker 20000 | `https://afflimax.onrender.com/go/anker-power-bank-20000?ref=serialdealer_deals` |
-| Casque Bose QC Ultra | `https://afflimax.onrender.com/go/bose-quietcomfort-ultra?ref=serialdealer_deals` |
-| **Lien vitrine** | `https://afflimax.onrender.com/?ref=serialdealer_deals` |
-
-**Discours suggéré (message Telegram) :**
-> 🔥 DERNIERS BONS PLANS — prix canon aujourd'hui sur Amazon, lien direct ci-dessous 👇
-
----
-
-## 🤝 3. Frandroid — Média tech (mail+site)
+## 🤝 2. Frandroid — Média tech (mail+site)
 
 **Thème :** High-tech, tests, guides d'achat.
 

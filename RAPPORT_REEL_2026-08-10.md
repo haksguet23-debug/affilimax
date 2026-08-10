@@ -73,8 +73,8 @@ est encore très faible. Les premières ventes arriveront quand le trafic humain
 
 | Partenaire | Contact | Commission | Solde | Stripe Connect |
 |---|---|---|---|---|
-| Roxanne (BabyChouFamily) | Instagram @babychoufamily.fr (200K+) | 10 % | 0,00 € | ❌ Non connecté |
-| SerialDealer | Telegram @SerialDealerFr (10K+) | 15 % | 0,00 € | ❌ Non connecté |
+| Roxanne (BabyChouFamily) | Instagram @babychoufamily.fr (345K vérifiés) | 10 % | 0,00 € | ❌ Non connecté |
+
 | Frandroid | frandroid.com (média tech #1 FR) | 12,5 % | 0,00 € | ❌ Non connecté |
 
 > 📌 3 partenaires identifiés mais **aucun n'est encore connecté à Stripe Connect**

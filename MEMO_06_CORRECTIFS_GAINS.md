@@ -46,7 +46,7 @@
 
 ### 5. Attribution partenaire (`?ref=`)
 - Les clics `/go/<slug>?ref=<partenaire>` et `/api/click` enregistrent maintenant le **ref partenaire** dans l'activité récente + événements SSE
-- Document : **`LIENS_PARTENAIRES_2026.md`** — liens de tracking prêts pour Roxanne, SerialDealer et Frandroid
+- Document : **`LIENS_PARTENAIRES_2026.md`** — liens de tracking prêts pour Roxanne, La Cerise, ActionBonPlan et Frandroid
 
 ---
 
@@ -56,7 +56,7 @@
 1. Définir la clé Stripe **LIVE** dans Render (`STRIPE_SECRET_KEY`)
 2. `/payouts.html` → « Connecter » pour chaque partenaire (onboarding Stripe)
 3. Envoyer les liens de `LIENS_PARTENAIRES_2026.md` à chaque partenaire
-4. **Un seul post de Roxanne (200K) ou SerialDealer (10K) = 100-1000+ clics réels**
+4. **Un seul post de Roxanne (345K) = 100-1000+ clics réels**
 
 ### ⚡ Action 2 — Indexation Google
 1. **Google Search Console** : vérifier `afflimax.onrender.com` + soumettre `sitemap.xml`

@@ -84,7 +84,7 @@ Merci ! 🙏
 ## ✅ CHECKLIST AVANT D'ENVOYER
 
 - [ ] Onboarding Stripe de Roxanne (lien KYC via `/payouts.html`)
-- [ ] Adapter le `ref=` si un autre partenaire est ciblé (ex: `?ref=serialdealer_deals`)
+- [ ] Adapter le `ref=` si un autre partenaire est ciblé (ex: `?ref=lacerise_bonplan`)
 - [ ] Envoyer depuis ta boîte mail, puis relance DM sous 5-7 jours
 
 *Généré par Buffy/Freebuff · 10/08/2026 · Liens vérifiés en local (302) avant déploiement.*
