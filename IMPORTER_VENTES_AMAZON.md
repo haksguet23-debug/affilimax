@@ -52,7 +52,7 @@ Creditees: 2 | Deja vues/ignorees: 0 | Erreurs: 0
 
 Ouvre **https://afflimax.onrender.com/dashboard** → les commissions et
 conversions apparaissent. Le solde du partenaire (si `Tracking ID` = id
-partenaire, ex: `madame_bons_plan`) est crédité automatiquement.
+partenaire, ex: `roxanne_famille`) est crédité automatiquement.
 
 ---
 

@@ -19,14 +19,7 @@
 
 ## 🥇 PRIORITÉ 1 — Comptes « bons plans » (les plus accessibles)
 
-### 1. Madame Bons Plan — Instagram
-- **URL** : https://www.instagram.com/madameb0nplan/
-- **Audience indicative** : ~966K abonnés IG
-- **Thème** : bons plans généralistes + tech (compte connexe @madamet3ch)
-- **Canal de contact** : DM Instagram + email pro sur le profil
-- **Angle** : commission 10-15 % + 5 produits tech « pour les parents » (Kindle, AirPods, tapis de marche, Lego, air fryer)
-
-### 2. AlertePrix — Plateforme d'alertes prix
+### 1. AlertePrix — Plateforme d'alertes prix
 - **URL** : https://www.alerteprix.com/
 - **Audience** : chasseurs de deals abonnés aux alertes en temps réel
 - **Thème** : surveillance des prix Amazon (hausse/baisse)
@@ -37,14 +30,14 @@
 
 ## 🥈 PRIORITÉ 2 — Créateurs tech de taille moyenne (bons ratio réponse)
 
-### 3. Nowtech — YouTube (tech)
+### 2. Nowtech — YouTube (tech)
 - **URL** : https://www.youtube.com/@NowtechTV · Site : https://nowtech.fr/
 - **Audience indicative** : ~440K abonnés
 - **Thème** : tests matériel informatique, objets connectés, lives « Techscope »
 - **Canal de contact** : email pro sur nowtech.fr (rubrique contact)
 - **Angle** : produits gratuits à tester + lien affilié en description + commission
 
-### 4. Léo Duff — YouTube (setup bureau / high-tech)
+### 3. Léo Duff — YouTube (setup bureau / high-tech)
 - **URL** : https://www.youtube.com/@leoduff · IG : https://www.instagram.com/leoduff
 - **Audience indicative** : ~800K abonnés
 - **Thème** : tests produits, setup de bureau, accessoires connectés
@@ -55,20 +48,20 @@
 
 ## 🥉 PRIORITÉ 3 — Très gros créateurs (nécessitent un budget ou produit VIP)
 
-### 5. Jojol — YouTube (high-tech grand public)
+### 4. Jojol — YouTube (high-tech grand public)
 - **URL** : https://www.youtube.com/@Jojol
 - **Audience indicative** : ~2,65M abonnés
 - **Thème** : smartphones, objets connectés, accessoires
 
-### 6. Léo TechMaker — YouTube (pédagogie tech)
+### 5. Léo TechMaker — YouTube (pédagogie tech)
 - **URL** : https://www.youtube.com/@LeoTechmaker
 - **Audience indicative** : ~2,15M abonnés
 
-### 7. The iCollection — YouTube (écosystème Apple)
+### 6. The iCollection — YouTube (écosystème Apple)
 - **URL** : https://www.youtube.com/@TheiCollection
 - **Audience indicative** : ~1M abonnés · IG ~138K
 
-### 8. Steven Lathoud — YouTube (vidéo/photo/audio)
+### 7. Steven Lathoud — YouTube (vidéo/photo/audio)
 - **URL** : https://www.youtube.com/@StevenLathoud
 - **Audience indicative** : ~1M abonnés
 
@@ -76,12 +69,12 @@
 
 ## 🏢 PRIORITÉ 4 — Médias (relations publiques longues, retombées lentes)
 
-### 9. Journal du Geek — rubrique Bons Plans
+### 8. Journal du Geek — rubrique Bons Plans
 - **URL** : https://www.journaldugeek.com/category/offres-bons-plans/
 - **Audience** : millions de visiteurs mensuels
 - **Angle** : leur proposer nos meilleurs prix via un contact presse
 
-### 10. Frandroid — rubrique Bons Plans (déjà dans partners.json)
+### 9. Frandroid — rubrique Bons Plans (déjà dans partners.json)
 - **URL** : https://www.frandroid.com/bons-plans
 - **Statut** : partenaire déjà enregistré (12,5 %) mais **aucun onboarding Stripe fait**
 
