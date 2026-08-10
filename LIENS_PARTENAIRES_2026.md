@@ -68,6 +68,25 @@
 
 ---
 
+## 🤝 4. Madame Bons Plan — Instagram (~966K)
+
+**Thème :** Bons plans généralistes + tech (compte connexe @madamet3ch) · cible familles/parents.
+**Contact :** `madamebonplan@loopstr.fr` (bio officielle Instagram, agence Loopstr) · `hello@loopstr.fr`
+
+| Produit | Lien de tracking |
+|---|---|
+| Apple AirPods 4 | `https://afflimax.onrender.com/go/apple-airpods-4?ref=madame_bons_plan` |
+| Amazon Kindle 2024 | `https://afflimax.onrender.com/go/amazon-kindle-2024?ref=madame_bons_plan` |
+| Tapis de marche LONTEK | `https://afflimax.onrender.com/go/tapis-marche-pliable-lontek?ref=madame_bons_plan` |
+| Ninja Air Fryer | `https://afflimax.onrender.com/go/ninja-foodi-max-air-fryer?ref=madame_bons_plan` |
+| Lego Notre-Dame | `https://afflimax.onrender.com/go/lego-ideas-notre-dame-paris?ref=madame_bons_plan` |
+| **Lien vitrine** | `https://afflimax.onrender.com/?ref=madame_bons_plan` |
+
+**Discours suggéré (story/reel bons plans) :**
+> 🛍️ Mes bons plans Amazon de la semaine — Kindle, AirPods, air fryer… tout est dans le lien ! 👇
+
+---
+
 ## ✅ CHECKLIST D'ACTIVATION (à faire par le fondateur)
 
 - [ ] **1. Stripe Connect** : clé Stripe LIVE dans Render (`STRIPE_SECRET_KEY`) → `/payouts.html` → bouton "Connecter" pour chaque partenaire (onboarding Stripe)

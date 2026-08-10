@@ -11,3 +11,4 @@ __pycache__/
 
 # Videos generees (Video Factory output)
 video_factory/output/
+amazon_orders_seen.json

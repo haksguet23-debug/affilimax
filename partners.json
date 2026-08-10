@@ -1,6 +1,6 @@
 {
   "timestamp": "2026-08-01T17:20:43.618825Z",
-  "note": "3 partenaires identifies — contacter pour obtenir l'email definitif avant Stripe Connect",
+  "note": "4 partenaires identifies — Madame Bons Plan ajoutee avec email reel (bio officielle Loopstr)",
   "partenaires": [
     {
       "id": "roxanne_famille",
@@ -50,6 +50,24 @@
       "derniere_activite": "2026-08-01T17:20:43.618825Z",
       "note": "Site frandroid.com | Media tech #1 France | Tests/actus high-tech | Contacter via page contact du site",
       "contact": "https://www.frandroid.com/contact",
+      "payouts": [],
+      "transactions": []
+    },
+    {
+      "id": "madame_bons_plan",
+      "nom": "Madame Bons Plan",
+      "email": "madamebonplan@loopstr.fr",
+      "pays": "FR",
+      "commission_pct": 15.0,
+      "commission_rate": 15.0,
+      "total_gagne": 0.0,
+      "total_paye": 0.0,
+      "solde_en_attente": 0.0,
+      "onboarded": false,
+      "stripe_account_id": null,
+      "derniere_activite": "2026-08-10T00:00:00.000000Z",
+      "note": "Instagram @madameb0nplan | ~966K abonnes | Bons plans + tech (@madamet3ch) | Email reel: bio officielle Instagram (agence Loopstr) | A contacter via agence Loopstr",
+      "contact": "https://www.instagram.com/madameb0nplan/",
       "payouts": [],
       "transactions": []
     }
