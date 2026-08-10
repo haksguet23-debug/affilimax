@@ -372,8 +372,12 @@ PRODUCTS = get_products_tuples()
 SOURCES = ["SEO_organique", "reseaux_sociaux", "email_marketing", "publicite_payante", "referencement_direct"]
 SOURCE_WEIGHTS = [0.30, 0.25, 0.20, 0.15, 0.10]
 
-def record_click(product_name=None, platform=None, source=None):
-    """Enregistre un clic reel. Accepte des parametres manuels ou utilise des valeurs aleatoires."""
+def record_click(product_name=None, platform=None, source=None, ref=None):
+    """Enregistre un clic reel. Accepte des parametres manuels ou utilise des valeurs aleatoires.
+
+    ref: ID partenaire (ex: roxanne_famille) si le clic vient d'un lien ?ref=...
+    Le ref est stocke dans l'evenement pour pouvoir attribuer la conversion au partenaire.
+    """
     data = load_data()
     now = datetime.utcnow()
 
@@ -424,11 +428,19 @@ def record_click(product_name=None, platform=None, source=None):
     else:
         display_name, display_platform = "Inconnu", "Inconnu"
 
+    # Attribution partenaire : un clic ?ref=<partner_id> sera rattache a ce
+    # partenaire (les conversions Amazon de la session lui seront creditees).
+    if ref and isinstance(ref, str):
+        ref = ref.strip()[:60]
+    else:
+        ref = None
+
     data["activite_recente"].insert(0, {
         "type": "clic",
         "produit": display_name,
         "plateforme": display_platform,
         "source": final_source,
+        "ref": ref,
         "timestamp": now.isoformat() + "Z"
     })
     if len(data["activite_recente"]) > 100:
@@ -441,6 +453,7 @@ def record_click(product_name=None, platform=None, source=None):
         "produit": display_name,
         "plateforme": display_platform,
         "source": final_source,
+        "ref": ref,
         "resume": data["resume"],
     })
     return data
@@ -1261,10 +1274,17 @@ class AffilimaxHandler(http.server.SimpleHTTPRequestHandler):
             return super().do_GET()
 
         # Fichiers statiques
-        if path == "/" or path == "":
-            self.path = "/index.html"
+        # RACINE = VITRINE PUBLIQUE (pub.html) : c'est la page que Google indexe
+        # et que les visiteurs voient. Elle convertit le trafic en clics Amazon.
+        # Le dashboard interne reste accessible sur /dashboard (et /index.html).
+        if path in ("/", ""):
+            self.path = "/pub.html"
+            return super().do_GET()
 
-        # Page vitrine publique : servie comme fichier statique (JSON-LD pré-généré)
+        # Alias du dashboard interne (anciennement a la racine)
+        if path == "/dashboard":
+            self.path = "/index.html"
+            return super().do_GET()
 
         return super().do_GET()
 
@@ -1292,7 +1312,8 @@ class AffilimaxHandler(http.server.SimpleHTTPRequestHandler):
             product_name = payload.get("product") or payload.get("produit")
             platform = payload.get("platform") or payload.get("plateforme")
             source = payload.get("source")
-            data = record_click(product_name=product_name, platform=platform, source=source)
+            ref = payload.get("ref") or payload.get("partner_id")
+            data = record_click(product_name=product_name, platform=platform, source=source, ref=ref)
             if data:
                 self.serve_json({"status": "ok", "action": "click", "produit": product_name or "aleatoire", "data": data["resume"]})
             else:
@@ -1316,6 +1337,15 @@ class AffilimaxHandler(http.server.SimpleHTTPRequestHandler):
                 self.serve_json({"status": "ok", "action": "conversion", "produit": product_name or "aleatoire", "data": data["resume"]})
             else:
                 self.serve_json({"status": "error", "message": "Aucun produit disponible"})
+            return
+
+        # ============ AMAZON WEBHOOK (ventes reelles) ============
+        # Endpoint a configurer dans Amazon Partenaires > Rapport > Webhooks
+        # (ou Instant Notification). Amazon envoie un POST avec les ventes
+        # -> on credite la conversion automatiquement dans les stats.
+        # Format accepte : JSON ou XML simple (les 2 sont geres).
+        if path == "/amazon/notification":
+            self.handle_amazon_notification(raw_body, self.headers)
             return
 
         # ================== STRIPE / PAIEMENTS ==================
@@ -1845,6 +1875,8 @@ class AffilimaxHandler(http.server.SimpleHTTPRequestHandler):
         parsed = urllib.parse.urlparse(self.path)
         qs = urllib.parse.parse_qs(parsed.query)
         raw_source = (qs.get("src", [None])[0] or qs.get("utm_source", [None])[0] or "").strip()
+        # Ref partenaire (attribution des ventes a un partenaire specifique)
+        raw_ref = (qs.get("ref", [None])[0] or qs.get("partner", [None])[0] or "").strip()
 
         # Mapping des sources connues
         SOURCE_MAP = {
@@ -1895,7 +1927,8 @@ class AffilimaxHandler(http.server.SimpleHTTPRequestHandler):
         record_click(
             product_name=target["nom"],
             platform=target["plateforme"],
-            source=source
+            source=source,
+            ref=raw_ref or None
         )
 
         # Rediriger vers le vrai lien Amazon
@@ -2322,7 +2355,7 @@ footer{{text-align:center;padding:40px 20px;color:var(--muted);font-size:.7rem;b
 </div>
 
 <footer>
-    <p>Affilimax - Plateforme d'affiliation | En partenariat avec Amazon | <a href="/">Dashboard</a> | <a href="/go">Liens</a></p>
+    <p>Affilimax - Plateforme d'affiliation | En partenariat avec Amazon | <a href="/pub.html">Offres</a> | <a href="/dashboard">Espace admin</a></p>
 <p style="font-size:0.72rem">En tant que Partenaire Amazon, je réalise un bénéfice sur les achats remplissant les conditions requises.</p>
 </footer>
 
@@ -2515,6 +2548,172 @@ function toast(msg, isError) {{
             "distribution": data["distribution"]
         })
 
+    # ==================== AMAZON NOTIFICATION (VENTES REELLES) ====================
+    # Amazon Associates envoie les ventes via Webhook / Instant Notification.
+    # Le payload peut etre du JSON ou du XML simple. On extrait le produit, la
+    # commission, le prix et l'order_id (deduplication), puis on credite la
+    # conversion dans stats.json + partners.json (si ref partenaire fournie).
+    # Fichier de suivi : amazon_orders_seen.json (derniers 1000 order_id).
+
+    # Verrou pour la deduplication (fichier amazon_orders_seen.json)
+    _AMZ_LOCK = threading.Lock()
+
+    def handle_amazon_notification(self, raw_body, headers):
+        """Webhook de ventes Amazon. PROTEGE par un secret partage :
+        si AMAZON_WEBHOOK_SECRET est defini dans l'environnement (prod), la
+        requete DOIT porter le header X-Amzn-Webhook-Secret correspondant,
+        sinon elle est rejetee (403). En dev (secret absent), on accepte mais
+        on log un warning — a ne jamais faire en production.
+        """
+        secret = os.environ.get("AMAZON_WEBHOOK_SECRET", "").strip()
+        if secret:
+            header_secret = (headers.get("X-Amzn-Webhook-Secret") or headers.get("X-Affilimax-Secret") or "").strip()
+            if not header_secret or not hmac.compare_digest(header_secret, secret):
+                self.serve_json({"status": "error", "message": "Signature webhook invalide"})
+                return
+        else:
+            print("  [AMAZON] ATTENTION: AMAZON_WEBHOOK_SECRET non defini, webhook non protege (dev only)", file=sys.stderr)
+        try:
+            text = raw_body.decode("utf-8", errors="ignore").strip() if raw_body else ""
+            if not text:
+                self.serve_json({"status": "error", "message": "Payload vide"})
+                return
+
+            # --- Parse JSON ---
+            data = {}
+            if text.startswith("{"):
+                try:
+                    data = json.loads(text)
+                except json.JSONDecodeError:
+                    data = {}
+
+            # --- Parse XML simple (Instant Notification) ---
+            if not data and text.startswith("<"):
+                import re as _re
+                for tag, val in _re.findall(r"<(\w+)>([^<]+)</\1>", text):
+                    data[tag] = val.strip()
+
+            # --- Fallback: form-urlencoded ---
+            if not data and ("=" in text):
+                import urllib.parse as _up
+                data = {k: v[0] if len(v) == 1 else v for k, v in _up.parse_qs(text).items()}
+
+            if not data:
+                self.serve_json({"status": "error", "message": "Payload non reconnu (JSON ou XML attendu)"})
+                return
+
+            # Normalisation des cles (case-insensitive)
+            flat = {}
+            for k, v in data.items():
+                if isinstance(v, dict):
+                    for k2, v2 in v.items():
+                        flat[f"{k}.{k2}".lower()] = v2
+                else:
+                    flat[str(k).lower()] = v
+
+            def first(*keys):
+                for k in keys:
+                    if k in flat and flat[k] is not None and str(flat[k]).strip():
+                        return flat[k]
+                return None
+
+            # --- Extraction des champs (multi-formats Amazon) ---
+            order_id = first("orderid", "order_id", "order.id", "id", "purchaseid", "transactionid")
+            product_raw = first("producttitle", "itemname", "product", "produit", "item", "title", "description")
+            commission_raw = first("commission", "referralfee", "fee", "montant", "amount", "commissionamount")
+            price_raw = first("price", "prix", "totalprice", "itemprice", "amountpaid")
+            qty_raw = first("quantity", "qty", "itemquantity")
+            partner_ref = first("ref", "partner_id", "partnerid", "trackingid", "tag")
+            asin = first("asin", "itemid")
+
+            def to_float(v):
+                if v is None:
+                    return None
+                try:
+                    s = str(v).replace("EUR", "").replace("€", "").replace(" ", "").replace(",", ".")
+                    return round(float(s), 2)
+                except Exception:
+                    return None
+
+            commission = to_float(commission_raw)
+            price = to_float(price_raw)
+            qty = 1
+            try:
+                qty = max(1, int(qty_raw))
+            except Exception:
+                qty = 1
+            if commission is not None:
+                commission = round(commission * qty, 2)
+            if price is not None:
+                price = round(price * qty, 2)
+
+            # --- Deduplication par order_id (thread-safe) ---
+            order_id_s = str(order_id).strip() if order_id else None
+            seen_file = os.path.join(BASE_DIR, "amazon_orders_seen.json")
+            if order_id_s:
+                with self._AMZ_LOCK:
+                    try:
+                        seen = []
+                        if os.path.exists(seen_file):
+                            with open(seen_file, "r", encoding="utf-8") as f:
+                                seen = json.load(f)
+                        if order_id_s in seen:
+                            self.serve_json({"status": "ok", "action": "conversion", "duplicate": True, "order_id": order_id_s})
+                            return
+                        seen.append(order_id_s)
+                        with open(seen_file, "w", encoding="utf-8") as f:
+                            json.dump(seen[-1000:], f, ensure_ascii=False)
+                    except Exception as e:
+                        print(f"  [AMAZON] dedup error: {e}", file=sys.stderr)
+
+            # --- Resoudre le produit par ASIN ou nom ---
+            product_name = None
+            matched_product = None
+            produits = load_products()
+            if asin:
+                asin_s = str(asin).strip().upper()
+                for p in produits:
+                    lien = (p.get("lien") or "").upper()
+                    if asin_s in lien:
+                        matched_product = p
+                        break
+            if not matched_product and product_raw:
+                name_low = str(product_raw).strip().lower()
+                for p in produits:
+                    if name_low in (p.get("nom") or "").lower():
+                        matched_product = p
+                        break
+            if matched_product:
+                product_name = matched_product.get("nom")
+            else:
+                product_name = str(product_raw or "").strip()[:80] or "Vente Amazon"
+
+            # SECURITE CHIFFRES : si le produit est inconnu du catalogue ET que
+            # la commission n'est pas fournie par Amazon, on REFUSE la conversion
+            # (evite de crediter un faux 10 EUR par defaut = 100 x 10%).
+            if commission is None:
+                if matched_product:
+                    commission = round(float(matched_product.get("commission_euro") or 0.0) * qty, 2)
+                else:
+                    self.serve_json({"status": "error", "message": "Commission manquante et produit inconnu : conversion refusee"})
+                    return
+
+            data2 = record_conversion(
+                product_name=product_name,
+                platform="Amazon",
+                commission_override=commission,
+                price_override=price,
+                partner_id=partner_ref
+            )
+            if data2:
+                print(f"  [AMAZON] VENTE TRACKEE: {product_name} | commission={commission} EUR | order={order_id}")
+                self.serve_json({"status": "ok", "action": "conversion", "produit": product_name, "commission": commission, "order_id": order_id})
+            else:
+                self.serve_json({"status": "error", "message": "Conversion non enregistree"})
+        except Exception as e:
+            print(f"  [AMAZON] notification error: {e}", file=sys.stderr)
+            self.serve_json({"status": "error", "message": str(e)})
+
     def serve_robots(self):
         """Genere un robots.txt ameliore pour le SEO."""
         host = self.headers.get("Host", "localhost")
@@ -2524,17 +2723,24 @@ function toast(msg, isError) {{
 Allow: /
 Allow: /pub.html$
 Allow: /produit/
-Allow: /go
-Allow: /payouts.html
+Allow: /affilimax_blog/
 Disallow: /admin.html
+Disallow: /admin/
 Disallow: /api/
 Disallow: /healthz
+Disallow: /dashboard
+Disallow: /index.html
+Disallow: /live.html
+Disallow: /status.html
+Disallow: /ai-content.html
+Disallow: /video-factory.html
+Disallow: /payouts.html
+Disallow: /partner.html
+Disallow: /promo.html
+Disallow: /go
 
 # Sitemaps
 Sitemap: {base}/sitemap.xml
-
-# Crawl-delay
-Crawl-delay: 10
 
 # Host
 Host: {base}
@@ -2560,26 +2766,27 @@ Host: {base}
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="{base}/"/>
-  </url>
-  <url>
-    <loc>{base}/pub.html</loc>
-    <lastmod>{now}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="{base}/pub.html"/>
-  </url>
-  <url>
-    <loc>{base}/payouts.html</loc>
-    <lastmod>{now}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>{base}/go</loc>
-    <lastmod>{now}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
   </url>"""]
+
+        # Articles SEO du blog (affilimax_blog/*.html) : essentiels pour
+        # decouvrir les 70+ pages de contenu aupres de Google.
+        blog_dir = os.path.join(BASE_DIR, "affilimax_blog")
+        try:
+            if os.path.isdir(blog_dir):
+                for fname in sorted(os.listdir(blog_dir)):
+                    if not fname.endswith(".html") or fname in ("index.html", "robots.txt"):
+                        continue
+                    # Tous les articles HTML (sauf index/robots) : seo-*, guide-*,
+                    # comparatif-*, top-*, article-*, checklist-*, liste-*, etc.
+                    urls.append(f"""  <url>
+    <loc>{base}/affilimax_blog/{html.escape(fname)}</loc>
+    <lastmod>{now}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="{base}/affilimax_blog/{html.escape(fname)}"/>
+  </url>""")
+        except Exception as e:
+            print(f"  [SITEMAP] scan blog: {e}", file=sys.stderr)
 
         for p in produits:
             if p.get("actif") and p.get("slug"):
@@ -2697,7 +2904,7 @@ a:hover{text-decoration:underline}
 
         page += """
 <div class="footer">
-    <a href="/">Dashboard</a> &middot;
+    <a href="/dashboard">Dashboard</a> &middot;
     <a href="/pub.html">Landing Page</a>
 </div>
 <script>

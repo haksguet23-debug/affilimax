@@ -238,7 +238,7 @@ body{font-family:'Inter','Segoe UI',system-ui,sans-serif;background:var(--bg);co
     </div>
     <div class="nav-links">
         <a href="/pub.html" class="nav-link nav-link--secondary">Offres</a>
-        <a href="/" class="nav-link nav-link--secondary">Dashboard</a>
+        <a href="/dashboard" class="nav-link nav-link--secondary">Dashboard</a>
         <a href="/rapport.html" class="nav-link nav-link--secondary">Rapport réel</a>
     </div>
 </header>
@@ -258,10 +258,8 @@ body{font-family:'Inter','Segoe UI',system-ui,sans-serif;background:var(--bg);co
         </button>
         <div class="login-error" id="loginError"></div>
         <div class="login-hint">
-            &#128161; Partenaires disponibles pour la demo :
-            <code>sophie.martin.pro@gmail.com</code> <code>lucas.bernard.tech@gmail.com</code> <code>emma.dubois.creator@gmail.com</code>
-            <code>james.wilson.creator@outlook.com</code> <code>olivia.t.lifestyle@gmail.com</code> <code>markus.schneider.tech@web.de</code>
-            <code>carlos.ruiz.influencer@gmail.com</code> <code>ana.silva.deals@hotmail.com</code> <code>yuki.tanaka.gadget@icloud.com</code>
+            &#128161; Connectez-vous avec l'email enregistre lors de votre inscription partenaire.
+            <code style="margin-top:6px">Contactez l'equipe si vous n'avez pas recu votre acces : support@affilimax.fr</code>
         </div>
     </div>
 </div>
@@ -668,7 +666,7 @@ function renderDashboard() {
         document.getElementById('onboardBanner').style.display = 'flex';
     }
 
-    // Mini chart (barres aleatoires pour l'esthetique)
+    // Mini chart : barres de commissions REELLES (aucune donnee simulee)
     renderMiniChart();
 
     // (NEW) Tracking link + preferences + products list
@@ -731,14 +729,26 @@ function renderPayouts(payouts) {
 }
 
 function renderMiniChart() {
-    const container = document.getElementById('chartTotal');
-    const values = [];
-    for (let i = 0; i < 12; i++) {
-        values.push(Math.random() * 0.7 + 0.3);
+    // Graphique 100% reel : les barres representent les commissions REELLES
+    // (dernieres transactions du partenaire). Aucun nombre simule.
+    const stats = (state.stats) || {};
+    const txs = stats.transactions_recents || stats.transactions || [];
+    const commissions = txs
+        .filter(t => t && t.type === 'commission' && typeof t.montant === 'number')
+        .map(t => Math.max(0, t.montant));
+
+    if (commissions.length === 0) {
+        container.innerHTML = '<div class="mini-chart__empty" style="font-size:.62rem;color:var(--muted);width:100%;text-align:center;align-self:center;padding-top:6px">Aucune commission - les barres apparaitront avec tes premieres ventes reelles</div>';
+        return;
     }
-    container.innerHTML = values.map((v, i) => {
-        const isActive = i >= 8;
-        return `<div class="bar ${isActive ? 'active' : ''}" style="height:${v * 24}px"></div>`;
+
+    // Prend les 12 dernieres commissions (ou moins)
+    const last = commissions.slice(-12);
+    const max = Math.max(...last, 0.01);
+    container.innerHTML = last.map((v, i) => {
+        const isActive = i >= last.length - 4;
+        const h = Math.max(3, Math.round((v / max) * 24));
+        return `<div class="bar ${isActive ? 'active' : ''}" style="height:${h}px" title="${v.toFixed(2).replace('.', ',')} EUR"></div>`;
     }).join('');
 }
 
