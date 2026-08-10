@@ -1,5 +1,218 @@
 [
   {
+    "id": "vf_20260810_180740_277",
+    "kind": "story",
+    "status": "done",
+    "progress": 100,
+    "step": "Video terminee",
+    "title": "L'histoire de une petite etoile - histoire pour enfants",
+    "params": {
+      "product": null,
+      "theme": "une petite etoile",
+      "duration": "3 min",
+      "style": "testeur",
+      "scenes": 5,
+      "voice": "fr-FR-DeniseNeural",
+      "subtitles": true
+    },
+    "created_at": "2026-08-10T18:07:40.516855Z",
+    "finished_at": "2026-08-10T18:09:09.737281Z",
+    "files": {
+      "video": "video_factory/output/vf_20260810_180740_277/video.mp4",
+      "script": "video_factory/output/vf_20260810_180740_277/script.json",
+      "srt": "video_factory/output/vf_20260810_180740_277/subtitles.srt"
+    },
+    "log": [
+      {
+        "ts": "18:07:40",
+        "msg": "Job cree"
+      },
+      {
+        "ts": "18:07:40",
+        "msg": "Script IA en cours..."
+      },
+      {
+        "ts": "18:07:53",
+        "msg": "Script genere (IA (GEMINI)) - 5 scenes"
+      },
+      {
+        "ts": "18:07:53",
+        "msg": "Storyboard images (PIL)..."
+      },
+      {
+        "ts": "18:07:54",
+        "msg": "5 images generees"
+      },
+      {
+        "ts": "18:07:54",
+        "msg": "Voix IA (edge-tts)..."
+      },
+      {
+        "ts": "18:07:58",
+        "msg": "Voix IA: 5/5 scenes"
+      },
+      {
+        "ts": "18:07:58",
+        "msg": "Sous-titres SRT (timings edge-tts)..."
+      },
+      {
+        "ts": "18:07:59",
+        "msg": "Sous-titres: 10 lignes (incrustes dans la video)"
+      },
+      {
+        "ts": "18:07:59",
+        "msg": "Montage (moviepy + ffmpeg)..."
+      },
+      {
+        "ts": "18:09:09",
+        "msg": "Video MP4 terminee"
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "vf_20260810_180537_677",
+    "kind": "story",
+    "status": "done",
+    "progress": 100,
+    "step": "Video terminee",
+    "title": "L'histoire de un petit renard - histoire pour enfants",
+    "params": {
+      "product": null,
+      "theme": "un petit renard",
+      "duration": "3 min",
+      "style": "testeur",
+      "scenes": 5,
+      "voice": "fr-FR-DeniseNeural",
+      "subtitles": true
+    },
+    "created_at": "2026-08-10T18:05:37.891434Z",
+    "finished_at": "2026-08-10T18:07:26.080860Z",
+    "files": {
+      "video": "video_factory/output/vf_20260810_180537_677/video.mp4",
+      "script": "video_factory/output/vf_20260810_180537_677/script.json",
+      "srt": "video_factory/output/vf_20260810_180537_677/subtitles.srt"
+    },
+    "log": [
+      {
+        "ts": "18:05:37",
+        "msg": "Job cree"
+      },
+      {
+        "ts": "18:05:37",
+        "msg": "Script IA en cours..."
+      },
+      {
+        "ts": "18:05:53",
+        "msg": "Script genere (IA (GEMINI)) - 5 scenes"
+      },
+      {
+        "ts": "18:05:53",
+        "msg": "Storyboard images (PIL)..."
+      },
+      {
+        "ts": "18:05:53",
+        "msg": "5 images generees"
+      },
+      {
+        "ts": "18:05:53",
+        "msg": "Voix IA (edge-tts)..."
+      },
+      {
+        "ts": "18:05:57",
+        "msg": "Voix IA: 5/5 scenes"
+      },
+      {
+        "ts": "18:05:57",
+        "msg": "Sous-titres SRT (timings edge-tts)..."
+      },
+      {
+        "ts": "18:05:59",
+        "msg": "Sous-titres: 10 lignes (incrustes dans la video)"
+      },
+      {
+        "ts": "18:05:59",
+        "msg": "Montage (moviepy + ffmpeg)..."
+      },
+      {
+        "ts": "18:07:26",
+        "msg": "Video MP4 terminee"
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "vf_20260810_180537_228",
+    "kind": "story",
+    "status": "done",
+    "progress": 100,
+    "step": "Video terminee",
+    "title": "L'histoire de un petit dragon - histoire pour enfants",
+    "params": {
+      "product": null,
+      "theme": "un petit dragon",
+      "duration": "3 min",
+      "style": "testeur",
+      "scenes": 5,
+      "voice": "fr-FR-DeniseNeural",
+      "subtitles": true
+    },
+    "created_at": "2026-08-10T18:05:37.875193Z",
+    "finished_at": "2026-08-10T18:07:25.833799Z",
+    "files": {
+      "video": "video_factory/output/vf_20260810_180537_228/video.mp4",
+      "script": "video_factory/output/vf_20260810_180537_228/script.json",
+      "srt": "video_factory/output/vf_20260810_180537_228/subtitles.srt"
+    },
+    "log": [
+      {
+        "ts": "18:05:37",
+        "msg": "Job cree"
+      },
+      {
+        "ts": "18:05:37",
+        "msg": "Script IA en cours..."
+      },
+      {
+        "ts": "18:05:53",
+        "msg": "Script genere (IA (GEMINI)) - 5 scenes"
+      },
+      {
+        "ts": "18:05:53",
+        "msg": "Storyboard images (PIL)..."
+      },
+      {
+        "ts": "18:05:54",
+        "msg": "5 images generees"
+      },
+      {
+        "ts": "18:05:54",
+        "msg": "Voix IA (edge-tts)..."
+      },
+      {
+        "ts": "18:05:57",
+        "msg": "Voix IA: 5/5 scenes"
+      },
+      {
+        "ts": "18:05:57",
+        "msg": "Sous-titres SRT (timings edge-tts)..."
+      },
+      {
+        "ts": "18:05:59",
+        "msg": "Sous-titres: 10 lignes (incrustes dans la video)"
+      },
+      {
+        "ts": "18:05:59",
+        "msg": "Montage (moviepy + ffmpeg)..."
+      },
+      {
+        "ts": "18:07:25",
+        "msg": "Video MP4 terminee"
+      }
+    ],
+    "error": null
+  },
+  {
     "id": "vf_20260807_133030_501",
     "kind": "product",
     "status": "done",
