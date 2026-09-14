@@ -42,7 +42,16 @@ STORY_TITLES = {
     "renard": "Un petit renard - Histoire pour enfants (conte du soir)",
     "dragon": "Un petit dragon - Histoire pour enfants (conte du soir)",
     "etoile": "Une petite etoile - Histoire pour enfants (conte du soir)",
+    "loup": "Un petit loup - Histoire pour enfants (conte du soir)",
+    "licorne": "Une petite licorne - Histoire pour enfants (conte du soir)",
+    "ours": "Un petit ours polaire - Histoire pour enfants (conte du soir)",
+    "chat": "Un petit chat - Histoire pour enfants (conte du soir)",
+    "singe": "Un petit singe - Histoire pour enfants (conte du soir)",
+    "elephant": "Un petit elephant - Histoire pour enfants (conte du soir)",
 }
+
+# Mots-cles a chercher dans le theme (script.json) pour choisir le titre
+STORY_KEYS = ["renard", "dragon", "etoile", "loup", "licorne", "ours", "chat", "singe", "elephant"]
 
 
 def get_authenticated_service():
@@ -69,12 +78,34 @@ def get_authenticated_service():
     return build("youtube", "v3", credentials=creds)
 
 
-def build_description(video_dir):
-    """Construit une description YouTube a partir du script.json (si present)."""
+def _load_script(video_dir):
     script_file = video_dir / "script.json"
     if script_file.exists():
         try:
-            s = json.loads(script_file.read_text(encoding="utf-8"))
+            return json.loads(script_file.read_text(encoding="utf-8"))
+        except Exception:
+            return None
+    return None
+
+
+def story_title_for(script, video_dir):
+    """Titre YouTube depuis le theme (script.json) ou fallback dossier."""
+    theme = str((script or {}).get("theme") or "").strip().lower()
+    for key in STORY_KEYS:
+        import re
+        if re.search(rf"\b{key}\b", theme):
+            return STORY_TITLES[key]
+    seo = (script or {}).get("seo", {})
+    if seo.get("titre_youtube"):
+        return str(seo["titre_youtube"])[:100]
+    return video_dir.name  # fallback
+
+
+def build_description(video_dir):
+    """Construit une description YouTube a partir du script.json (si present)."""
+    s = _load_script(video_dir)
+    if s:
+        try:
             seo = s.get("seo", {})
             desc = seo.get("description") or s.get("description") or ""
             tags = seo.get("tags") or ["histoire pour enfants", "conte du soir"]
@@ -87,7 +118,28 @@ def build_description(video_dir):
     return "Histoire pour enfants - Abonne-toi ! 📚 #histoire #conte #enfants"
 
 
-def upload_video(youtube, file_path, title, description, privacy="unlisted", made_for_kids=False):
+def build_tags(video_dir):
+    """Tags YouTube depuis script.json (fallback histoires)."""
+    s = _load_script(video_dir)
+    if s and s.get("seo", {}).get("tags"):
+        return [str(t)[:40] for t in s["seo"]["tags"]][:10]
+    return ["histoire pour enfants", "conte du soir", "histoires", "enfants", "education", "affilimax"]
+
+
+def thumbnail_for(video_dir):
+    """Miniature locale correspondant au theme (assets/thumbs/story_*.jpg)."""
+    s = _load_script(video_dir)
+    theme = str((s or {}).get("theme") or "").strip().lower()
+    for key in STORY_KEYS:
+        import re
+        if re.search(rf"\b{key}\b", theme):
+            p = BASE_DIR / "assets" / "thumbs" / f"story_{key}.jpg"
+            if p.exists():
+                return p
+    return None
+
+
+def upload_video(youtube, file_path, title, description, privacy="unlisted", made_for_kids=False, tags=None, thumb=None):
     from googleapiclient.http import MediaFileUpload
 
     body = {
@@ -95,8 +147,8 @@ def upload_video(youtube, file_path, title, description, privacy="unlisted", mad
             "title": title[:100],
             "description": description[:4900],
             "categoryId": "24",  # 24 = Education, 22 = People & Blogs
-            "tags": ["histoire pour enfants", "conte du soir", "histoires",
-                     "enfants", "education", "affilimax"],
+            "tags": tags or ["histoire pour enfants", "conte du soir", "histoires",
+                             "enfants", "education", "affilimax"],
         },
         "status": {
             "privacyStatus": privacy,
@@ -115,6 +167,17 @@ def upload_video(youtube, file_path, title, description, privacy="unlisted", mad
     vid = response.get("id")
     print(f"  ✅ Video en ligne ! ID: {vid}")
     print(f"  → https://www.youtube.com/watch?v={vid}")
+
+    # Miniature personnalisee (requiert le scope youtube.upload)
+    if thumb and thumb.exists():
+        try:
+            from googleapiclient.http import MediaFileUpload as ThumbUpload
+            youtube.thumbnails().set(
+                videoId=vid, media_body=ThumbUpload(str(thumb))
+            ).execute()
+            print(f"  🖼️ Miniature uploadee: {thumb.name}")
+        except Exception as e:
+            print(f"  ⚠️ Miniature: {str(e)[:80]}")
     return vid
 
 
@@ -166,11 +229,13 @@ def main():
 
     youtube = get_authenticated_service()
     for vdir, mp4 in targets:
-        title = args.title or STORY_TITLES.get(vdir.name.split("_")[-1], "")
-        if not title:
-            title = vdir.name  # fallback
+        script = _load_script(vdir)
+        title = args.title or story_title_for(script, vdir)
         description = args.description or build_description(vdir)
-        upload_video(youtube, mp4, title, description, args.privacy, args.made_for_kids)
+        tags = build_tags(vdir)
+        thumb = thumbnail_for(vdir)
+        upload_video(youtube, mp4, title, description, args.privacy, args.made_for_kids,
+                     tags=tags, thumb=thumb)
 
 
 if __name__ == "__main__":

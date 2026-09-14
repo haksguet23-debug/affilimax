@@ -1,153 +1,11 @@
 [
   {
-    "id": "vf_20260810_183332_253",
+    "id": "vf_20260810_211230_347",
     "kind": "lesson",
     "status": "done",
     "progress": 100,
     "step": "Video terminee",
-    "title": "Découvrons l'Alphabet",
-    "params": {
-      "product": null,
-      "theme": "alphabet",
-      "duration": "3min",
-      "style": "testeur",
-      "scenes": 6,
-      "voice": "fr-FR-DeniseNeural",
-      "subtitles": true
-    },
-    "created_at": "2026-08-10T18:33:32.480403Z",
-    "finished_at": "2026-08-10T18:39:59.687492Z",
-    "files": {
-      "video": "video_factory/output/vf_20260810_183332_253/video.mp4",
-      "script": "video_factory/output/vf_20260810_183332_253/script.json",
-      "srt": "video_factory/output/vf_20260810_183332_253/subtitles.srt"
-    },
-    "log": [
-      {
-        "ts": "18:33:32",
-        "msg": "Job cree"
-      },
-      {
-        "ts": "18:33:32",
-        "msg": "Script IA en cours..."
-      },
-      {
-        "ts": "18:33:38",
-        "msg": "Script genere (IA (GROQ)) - 6 scenes"
-      },
-      {
-        "ts": "18:33:38",
-        "msg": "Storyboard images (PIL)..."
-      },
-      {
-        "ts": "18:33:40",
-        "msg": "6 images generees"
-      },
-      {
-        "ts": "18:33:40",
-        "msg": "Voix IA (edge-tts)..."
-      },
-      {
-        "ts": "18:33:49",
-        "msg": "Voix IA: 6/6 scenes"
-      },
-      {
-        "ts": "18:33:49",
-        "msg": "Sous-titres SRT (timings edge-tts)..."
-      },
-      {
-        "ts": "18:33:51",
-        "msg": "Sous-titres: 29 lignes (incrustes dans la video)"
-      },
-      {
-        "ts": "18:33:51",
-        "msg": "Montage (moviepy + ffmpeg)..."
-      },
-      {
-        "ts": "18:39:59",
-        "msg": "Video MP4 terminee"
-      }
-    ],
-    "error": null
-  },
-  {
-    "id": "vf_20260810_183332_177",
-    "kind": "lesson",
-    "status": "done",
-    "progress": 100,
-    "step": "Video terminee",
-    "title": "Decouvrir les 4 saisons",
-    "params": {
-      "product": null,
-      "theme": "saisons",
-      "duration": "3min",
-      "style": "testeur",
-      "scenes": 6,
-      "voice": "fr-FR-DeniseNeural",
-      "subtitles": true
-    },
-    "created_at": "2026-08-10T18:33:32.480403Z",
-    "finished_at": "2026-08-10T18:38:37.574833Z",
-    "files": {
-      "video": "video_factory/output/vf_20260810_183332_177/video.mp4",
-      "script": "video_factory/output/vf_20260810_183332_177/script.json",
-      "srt": "video_factory/output/vf_20260810_183332_177/subtitles.srt"
-    },
-    "log": [
-      {
-        "ts": "18:33:32",
-        "msg": "Job cree"
-      },
-      {
-        "ts": "18:33:32",
-        "msg": "Script IA en cours..."
-      },
-      {
-        "ts": "18:33:37",
-        "msg": "Script genere (IA (GROQ)) - 6 scenes"
-      },
-      {
-        "ts": "18:33:37",
-        "msg": "Storyboard images (PIL)..."
-      },
-      {
-        "ts": "18:33:40",
-        "msg": "6 images generees"
-      },
-      {
-        "ts": "18:33:40",
-        "msg": "Voix IA (edge-tts)..."
-      },
-      {
-        "ts": "18:33:49",
-        "msg": "Voix IA: 6/6 scenes"
-      },
-      {
-        "ts": "18:33:49",
-        "msg": "Sous-titres SRT (timings edge-tts)..."
-      },
-      {
-        "ts": "18:33:51",
-        "msg": "Sous-titres: 22 lignes (incrustes dans la video)"
-      },
-      {
-        "ts": "18:33:51",
-        "msg": "Montage (moviepy + ffmpeg)..."
-      },
-      {
-        "ts": "18:38:37",
-        "msg": "Video MP4 terminee"
-      }
-    ],
-    "error": null
-  },
-  {
-    "id": "vf_20260810_183332_739",
-    "kind": "lesson",
-    "status": "done",
-    "progress": 100,
-    "step": "Video terminee",
-    "title": "Découvrons les jours de la semaine",
+    "title": "Apprendre les jours de la semaine - lecon educative",
     "params": {
       "product": null,
       "theme": "jours",
@@ -157,56 +15,198 @@
       "voice": "fr-FR-DeniseNeural",
       "subtitles": true
     },
-    "created_at": "2026-08-10T18:33:32.480403Z",
-    "finished_at": "2026-08-10T18:38:20.498508Z",
+    "created_at": "2026-08-10T21:12:30.553084Z",
+    "finished_at": "2026-08-10T21:17:23.470429Z",
     "files": {
-      "video": "video_factory/output/vf_20260810_183332_739/video.mp4",
-      "script": "video_factory/output/vf_20260810_183332_739/script.json",
-      "srt": "video_factory/output/vf_20260810_183332_739/subtitles.srt"
+      "video": "video_factory/output/vf_20260810_211230_347/video.mp4",
+      "script": "video_factory/output/vf_20260810_211230_347/script.json",
+      "srt": "video_factory/output/vf_20260810_211230_347/subtitles.srt"
     },
     "log": [
       {
-        "ts": "18:33:32",
+        "ts": "21:12:30",
         "msg": "Job cree"
       },
       {
-        "ts": "18:33:32",
+        "ts": "21:12:30",
         "msg": "Script IA en cours..."
       },
       {
-        "ts": "18:33:37",
-        "msg": "Script genere (IA (GROQ)) - 6 scenes"
+        "ts": "21:12:32",
+        "msg": "Script genere (IA (STATIQUE)) - 6 scenes"
       },
       {
-        "ts": "18:33:37",
+        "ts": "21:12:32",
         "msg": "Storyboard images (PIL)..."
       },
       {
-        "ts": "18:33:39",
+        "ts": "21:12:33",
         "msg": "6 images generees"
       },
       {
-        "ts": "18:33:39",
+        "ts": "21:12:33",
         "msg": "Voix IA (edge-tts)..."
       },
       {
-        "ts": "18:33:49",
+        "ts": "21:12:39",
         "msg": "Voix IA: 6/6 scenes"
       },
       {
-        "ts": "18:33:49",
+        "ts": "21:12:39",
         "msg": "Sous-titres SRT (timings edge-tts)..."
       },
       {
-        "ts": "18:33:51",
-        "msg": "Sous-titres: 19 lignes (incrustes dans la video)"
+        "ts": "21:12:42",
+        "msg": "Sous-titres: 23 lignes (incrustes dans la video)"
       },
       {
-        "ts": "18:33:51",
+        "ts": "21:12:42",
         "msg": "Montage (moviepy + ffmpeg)..."
       },
       {
-        "ts": "18:38:20",
+        "ts": "21:17:23",
+        "msg": "Video MP4 terminee"
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "vf_20260810_211230_165",
+    "kind": "lesson",
+    "status": "done",
+    "progress": 100,
+    "step": "Video terminee",
+    "title": "Decouvrir les fruits et legumes - lecon educative",
+    "params": {
+      "product": null,
+      "theme": "fruits",
+      "duration": "3min",
+      "style": "testeur",
+      "scenes": 6,
+      "voice": "fr-FR-DeniseNeural",
+      "subtitles": true
+    },
+    "created_at": "2026-08-10T21:12:30.553084Z",
+    "finished_at": "2026-08-10T21:17:00.789507Z",
+    "files": {
+      "video": "video_factory/output/vf_20260810_211230_165/video.mp4",
+      "script": "video_factory/output/vf_20260810_211230_165/script.json",
+      "srt": "video_factory/output/vf_20260810_211230_165/subtitles.srt"
+    },
+    "log": [
+      {
+        "ts": "21:12:30",
+        "msg": "Job cree"
+      },
+      {
+        "ts": "21:12:30",
+        "msg": "Script IA en cours..."
+      },
+      {
+        "ts": "21:12:32",
+        "msg": "Script genere (IA (STATIQUE)) - 6 scenes"
+      },
+      {
+        "ts": "21:12:32",
+        "msg": "Storyboard images (PIL)..."
+      },
+      {
+        "ts": "21:12:33",
+        "msg": "6 images generees"
+      },
+      {
+        "ts": "21:12:33",
+        "msg": "Voix IA (edge-tts)..."
+      },
+      {
+        "ts": "21:12:39",
+        "msg": "Voix IA: 6/6 scenes"
+      },
+      {
+        "ts": "21:12:39",
+        "msg": "Sous-titres SRT (timings edge-tts)..."
+      },
+      {
+        "ts": "21:12:41",
+        "msg": "Sous-titres: 23 lignes (incrustes dans la video)"
+      },
+      {
+        "ts": "21:12:41",
+        "msg": "Montage (moviepy + ffmpeg)..."
+      },
+      {
+        "ts": "21:17:00",
+        "msg": "Video MP4 terminee"
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "vf_20260810_211230_612",
+    "kind": "lesson",
+    "status": "done",
+    "progress": 100,
+    "step": "Video terminee",
+    "title": "Decouvrir les moyens de transport - lecon educative",
+    "params": {
+      "product": null,
+      "theme": "transports",
+      "duration": "3min",
+      "style": "testeur",
+      "scenes": 6,
+      "voice": "fr-FR-DeniseNeural",
+      "subtitles": true
+    },
+    "created_at": "2026-08-10T21:12:30.553084Z",
+    "finished_at": "2026-08-10T21:16:50.911875Z",
+    "files": {
+      "video": "video_factory/output/vf_20260810_211230_612/video.mp4",
+      "script": "video_factory/output/vf_20260810_211230_612/script.json",
+      "srt": "video_factory/output/vf_20260810_211230_612/subtitles.srt"
+    },
+    "log": [
+      {
+        "ts": "21:12:30",
+        "msg": "Job cree"
+      },
+      {
+        "ts": "21:12:30",
+        "msg": "Script IA en cours..."
+      },
+      {
+        "ts": "21:12:32",
+        "msg": "Script genere (IA (STATIQUE)) - 6 scenes"
+      },
+      {
+        "ts": "21:12:32",
+        "msg": "Storyboard images (PIL)..."
+      },
+      {
+        "ts": "21:12:33",
+        "msg": "6 images generees"
+      },
+      {
+        "ts": "21:12:33",
+        "msg": "Voix IA (edge-tts)..."
+      },
+      {
+        "ts": "21:12:39",
+        "msg": "Voix IA: 6/6 scenes"
+      },
+      {
+        "ts": "21:12:39",
+        "msg": "Sous-titres SRT (timings edge-tts)..."
+      },
+      {
+        "ts": "21:12:41",
+        "msg": "Sous-titres: 22 lignes (incrustes dans la video)"
+      },
+      {
+        "ts": "21:12:41",
+        "msg": "Montage (moviepy + ffmpeg)..."
+      },
+      {
+        "ts": "21:16:50",
         "msg": "Video MP4 terminee"
       }
     ],

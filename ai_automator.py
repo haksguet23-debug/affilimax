@@ -77,7 +77,7 @@ GROQ_MODEL = os.environ.get("AI_MODEL", "llama-3.3-70b-versatile")
 
 # --- Provider 2: Google Gemini (gratuit) ---
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", os.environ.get("GOOGLE_API_KEY", ""))
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.0-flash")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
 
 # --- Etat des providers ---
 GROQ_ENABLED = False
@@ -126,7 +126,7 @@ else:
         providers.append("Groq")
     if GEMINI_ENABLED:
         providers.append("Gemini")
-    print(f"[IA] Providers actifs: {', '.join(providers)} (cascade: Gemini -> Groq -> statique)")
+    print(f"[IA] Providers actifs: {', '.join(providers)} (cascade: Groq -> Gemini -> statique)")
 
 
 # ==================== CHARGEMENT PRODUITS ====================
@@ -161,6 +161,10 @@ def find_product(query):
 
 _last_provider = None  # Track which provider answered last
 
+# Cooldown apres un 429 Gemini (quota quotidien epuise) : evite de retenter
+# Gemini a chaque appel pendant la periode ou la cle est saturee.
+_gemini_cooldown_until = 0.0
+
 def _ask_groq(system_prompt, user_prompt, temperature=0.8, max_tokens=500):
     """Appelle Groq (OpenAI-compatible). Retourne None si indisponible."""
     global _last_provider
@@ -185,8 +189,11 @@ def _ask_groq(system_prompt, user_prompt, temperature=0.8, max_tokens=500):
 
 def _ask_gemini(system_prompt, user_prompt, temperature=0.8, max_tokens=500):
     """Appelle Google Gemini. Retourne None si indisponible."""
-    global _last_provider
+    global _last_provider, _gemini_cooldown_until
     if not GEMINI_ENABLED or not gemini_model_obj:
+        return None
+    # Quota quotidien epuise -> ne pas retenter Gemini pendant le cooldown
+    if time.time() < _gemini_cooldown_until:
         return None
     try:
         # Gemini: fusionner system+user en un seul prompt (le modele le gere bien)
@@ -201,7 +208,14 @@ def _ask_gemini(system_prompt, user_prompt, temperature=0.8, max_tokens=500):
         _last_provider = "gemini"
         return response.text.strip()
     except Exception as e:
-        print(f"[IA Gemini] Erreur: {e}")
+        msg = str(e)
+        # 429 = quota/rate limit. Le quota JOURNALIER (free tier ~20 req/jour)
+        # ne sert a rien a retenter tout de suite -> cooldown 6h.
+        if "429" in msg or "quota" in msg.lower() or "rate limit" in msg.lower():
+            _gemini_cooldown_until = time.time() + 6 * 3600
+            print(f"[IA Gemini] Quota/429 -> cooldown 6h. ({e})")
+        else:
+            print(f"[IA Gemini] Erreur: {e}")
         return None
 
 
@@ -215,14 +229,14 @@ def ask_ai(system_prompt, user_prompt, temperature=0.8, max_tokens=500):
     if not AI_ENABLED:
         return None
 
-    # Provider 1: Gemini (Google AI Studio, prioritaire)
-    result = _ask_gemini(system_prompt, user_prompt, temperature, max_tokens)
+    # Provider 1: Groq (priorite - quota gratuit ~1000 req/jour)
+    result = _ask_groq(system_prompt, user_prompt, temperature, max_tokens)
     if result is not None:
         return result
 
-    # Provider 2: Groq (repli)
-    print("[IA] Gemini KO -> tentative Groq...")
-    result = _ask_groq(system_prompt, user_prompt, temperature, max_tokens)
+    # Provider 2: Gemini (repli - free tier ~20 req/jour)
+    print("[IA] Groq KO -> tentative Gemini...")
+    result = _ask_gemini(system_prompt, user_prompt, temperature, max_tokens)
     if result is not None:
         return result
 

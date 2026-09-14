@@ -23,20 +23,30 @@ BASE_DIR = Path(__file__).parent.resolve()
 OUTPUT_DIR = BASE_DIR / "video_factory" / "output"
 OUT_LONG = OUTPUT_DIR / "longue"
 
+# Versions 3 (10/08/2026) : 21 videos, fonds coherents verifies
+# (12 lecons fonds PIL + 9 histoires miniatures locales verifiees)
 SEGMENTS = [
-    ("vf_20260810_182749_505", "Lecon 1 - Compter de 1 a 10"),
-    ("vf_20260810_182749_338", "Lecon 2 - Les couleurs"),
-    ("vf_20260810_182749_659", "Lecon 3 - Les formes"),
-    ("vf_20260810_182749_421", "Lecon 4 - Les animaux de la ferme"),
-    ("vf_20260810_183332_253", "Lecon 5 - L'alphabet"),
-    ("vf_20260810_183332_739", "Lecon 6 - Les jours de la semaine"),
-    ("vf_20260810_183332_177", "Lecon 7 - Les 4 saisons"),
-    ("vf_20260810_180537_677", "Histoire - Le petit renard"),
-    ("vf_20260810_180537_228", "Histoire - Le petit dragon"),
-    ("vf_20260810_180740_277", "Histoire - La petite etoile"),
-    ("vf_20260810_181529_978", "Histoire - Le petit loup"),
-    ("vf_20260810_181529_573", "Histoire - La petite licorne"),
-    ("vf_20260810_181529_879", "Histoire - Le petit ours polaire"),
+    ("vf_20260810_205540_923", "Lecon 1 - Compter de 1 a 10"),
+    ("vf_20260810_205540_895", "Lecon 2 - Les couleurs"),
+    ("vf_20260810_205540_430", "Lecon 3 - Les formes"),
+    ("vf_20260810_210114_708", "Lecon 4 - Les animaux de la ferme"),
+    ("vf_20260810_210114_955", "Lecon 5 - L'alphabet"),
+    ("vf_20260810_211230_347", "Lecon 6 - Les jours de la semaine"),
+    ("vf_20260810_210114_146", "Lecon 7 - Les 4 saisons"),
+    ("vf_20260810_210649_775", "Lecon 8 - Compter de 1 a 20"),
+    ("vf_20260810_210649_140", "Lecon 9 - Les contraires"),
+    ("vf_20260810_210649_497", "Lecon 10 - Le corps humain"),
+    ("vf_20260810_211230_165", "Lecon 11 - Les fruits et legumes"),
+    ("vf_20260810_211230_612", "Lecon 12 - Les transports"),
+    ("vf_20260810_191819_717", "Histoire - Le petit renard"),
+    ("vf_20260810_204614_573", "Histoire - Le petit dragon"),
+    ("vf_20260810_204614_717", "Histoire - La petite etoile"),
+    ("vf_20260810_204614_574", "Histoire - Le petit loup"),
+    ("vf_20260810_204905_968", "Histoire - La petite licorne"),
+    ("vf_20260810_204905_947", "Histoire - Le petit ours polaire"),
+    ("vf_20260810_203136_286", "Histoire - Le petit chat"),
+    ("vf_20260810_203136_326", "Histoire - Le petit singe"),
+    ("vf_20260810_203136_453", "Histoire - Le petit elephant"),
 ]
 
 INTRO = "1 HEURE POUR APPRENDRE ET REVER"

@@ -38,6 +38,9 @@ STORIES = {
     "loup": ("wolf,cute,forest,animal", 4444, "UN PETIT LOUP"),
     "licorne": ("unicorn,toy,rainbow", 404, "UNE PETITE LICORNE"),  # lock 404 verifie: figurine licorne
     "ours": ("polar,bear,cute,snow", 4446, "UN PETIT OURS POLAIRE"),
+    "chat": ("cat,kitten,cute,pet", 7051, "UN PETIT CHAT"),  # verifie: chat gris mignon
+    "elephant": ("elephant,cute,animal,safari", 7052, "UN PETIT ELEPHANT"),  # verifie: bebe elephant dans l'eau
+    "singe": ("monkey,cute,animal,jungle", 5053, "UN PETIT SINGE"),  # verifie: singe malicieux
 }
 
 SUFFIXE = "HISTOIRE POUR ENFANTS | CONTE DU SOIR"

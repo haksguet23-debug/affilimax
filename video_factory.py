@@ -173,6 +173,66 @@ LESSONS = {
             ("Le recap", "Les 4 saisons : printemps, ete, automne, hiver. Chacune est belle et apporte ses surprises. L'annee tourne sans cesse !"),
         ],
     },
+    "compter20": {
+        "titre": "Apprendre a compter de 1 a 20 - lecon educative",
+        "accroche": "Aujourd'hui, on compte encore plus loin : de 1 a 20 !",
+        "contenu": [
+            ("On revise 1 a 10", "On reprend ensemble : un, deux, trois, quatre, cinq, six, sept, huit, neuf, dix. Tres bien, tu te souviens !"),
+            ("On decouvre 11 a 15", "Maintenant, on continue : onze, douze, treize, quatorze, quinze. Repete avec moi : onze, douze, treize, quatorze, quinze !"),
+            ("On decouvre 16 a 20", "Et voici la fin du voyage : seize, dix-sept, dix-huit, dix-neuf, vingt. Encore une fois : seize, dix-sept, dix-huit, dix-neuf, vingt !"),
+            ("On compte les jouets", "Comptons les jouets : un ballon, deux ballons, trois ballons... jusqu'a dix ! Puis onze, douze, treize... tu es un champion du comptage !"),
+            ("Le quiz des grands nombres", "Petit quiz : quel nombre vient apres dix ? Onze ! Et apres quinze ? Seize ! Et apres dix-neuf ? Vingt ! Bravo !"),
+            ("Le recap", "Tu sais compter de 1 a 20 ! C'est enorme. Compte avec tes parents quand tu ranges tes jouets ce soir. Bravo champion !"),
+        ],
+    },
+    "contraires": {
+        "titre": "Decouvrir les contraires - lecon educative",
+        "accroche": "Aujourd'hui, on joue avec les contraires !",
+        "contenu": [
+            ("Grand et petit", "Un elephant est grand, une souris est petite. Grand et petit, ce sont des contraires. Le papa est grand, le bebe est petit !"),
+            ("Chaud et froid", "Le chocolat chaud est chaud, la glace est froide. Chaud et froid, ce sont des contraires. Touche ta joue : elle est froide !"),
+            ("Jour et nuit", "Le jour, le soleil brille. La nuit, la lune et les etoiles apparaissent. Jour et nuit, ce sont des contraires."),
+            ("Vite et lentement", "Le guepard court vite, la tortue marche lentement. Vite et lentement, ce sont des contraires. Quelle bete va le plus vite ?"),
+            ("Le quiz des contraires", "Petit quiz : quel est le contraire de grand ? Petit ! De chaud ? Froid ! De jour ? Nuit ! Tu es un champion des contraires !"),
+            ("Le recap", "Grand-petit, chaud-froid, jour-nuit, vite-lent : les contraires sont partout autour de toi !"),
+        ],
+    },
+    "corps": {
+        "titre": "Decouvrir le corps humain - lecon educative",
+        "accroche": "Aujourd'hui, on decouvre notre corps !",
+        "contenu": [
+            ("La tete", "Sur ta tete, il y a les yeux pour voir, les oreilles pour entendre, le nez pour sentir et la bouche pour parler et manger."),
+            ("Les bras et les mains", "Tes bras te servent a porter et a serrer. Tes mains ont cinq doigts chacune : pouce, index, majeur, annulaire et auriculaire !"),
+            ("Les jambes et les pieds", "Tes jambes te permettent de courir et de sauter. Tes pieds ont dix orteils et te portent toute la journee."),
+            ("Le corps en mouvement", "Le corps peut courir, sauter, danser, grimper. Chaque partie a un role : regarde tes mains applaudir, tes pieds danser !"),
+            ("Le quiz du corps", "Petit quiz : avec quoi vois-tu ? Les yeux ! Avec quoi entends-tu ? Les oreilles ! Avec quoi marches-tu ? Les jambes ! Bravo !"),
+            ("Le recap", "Tete, yeux, oreilles, bras, mains, jambes, pieds : ton corps est magnifique et tu dois en prendre soin !"),
+        ],
+    },
+    "fruits": {
+        "titre": "Decouvrir les fruits et legumes - lecon educative",
+        "accroche": "Aujourd'hui, on decouvre les fruits et les legumes !",
+        "contenu": [
+            ("Les fruits rouges", "La pomme est rouge et croquante, la fraise est petite et sucree, la cerise est ronde. Les fruits rouges sont pleins de vitamines !"),
+            ("Les fruits jaunes", "La banane est jaune et toute douce, le citron est jaune et acide, l'ananas est jaune et juteux. Tu aimes les fruits jaunes ?"),
+            ("Les legumes verts", "Le brocoli est vert, le haricot est vert, la courgette est verte. Les legumes verts donnent beaucoup d'energie pour jouer !"),
+            ("Les legumes orange", "La carotte est orange et croquante, la courge est orange et douce. Les lapins adorent les carottes, et toi ?"),
+            ("Le quiz des fruits", "Petit quiz : quel fruit est jaune et tout doux ? La banane ! Quel legume adorent les lapins ? La carotte ! Quel fruit est rouge ? La pomme !"),
+            ("Le recap", "Pomme, banane, fraise, carotte, brocoli : mange 5 fruits et legumes par jour pour etre en pleine forme !"),
+        ],
+    },
+    "transports": {
+        "titre": "Decouvrir les moyens de transport - lecon educative",
+        "accroche": "Aujourd'hui, on part en voyage : decouvrons les moyens de transport !",
+        "contenu": [
+            ("Sur la route", "La voiture roule sur la route, le bus transporte beaucoup de monde, le velo a deux roues et une sonnette : ding ding !"),
+            ("Sur les rails", "Le train file sur les rails tres vite. Le TGV va encore plus vite ! Ecoute le train : tchou tchou !"),
+            ("Dans le ciel", "L'avion vole haut dans le ciel, l'helicoptere a une grande helice qui tourne, la fusee va jusqu'aux etoiles !"),
+            ("Sur l'eau", "Le bateau navigue sur la mer, le voilier utilise le vent, le sous-marin plonge sous les vagues !"),
+            ("Le quiz des transports", "Petit quiz : quel vehicule vole dans le ciel ? L'avion ! Quel vehicule roule sur les rails ? Le train ! Quel vehicule navigue sur l'eau ? Le bateau !"),
+            ("Le recap", "Voiture, bus, velo, train, avion, bateau : les moyens de transport nous aident a voyager partout dans le monde !"),
+        ],
+    },
 }
 
 # ==================== JOBS (GESTIONNAIRE) ====================
@@ -846,6 +906,199 @@ def _wrap_text(draw, text, font, max_width):
     return lines or [""]
 
 
+# Mots-cles LoremFlickr par theme de lecon (image de fond coherente)
+LESSON_IMAGES = {
+    "compter": "numbers,counting,kids,education",
+    "couleurs": "colors,paint,rainbow,art",
+    "formes": "shapes,geometry,blocks,kids",
+    "animaux": "farm,animals,cow,sheep",
+    "alphabet": "alphabet,letters,abc,kids",
+    "jours": "calendar,week,days,school",
+    "saisons": "seasons,four,weather,landscape",
+}
+
+# Mots-cles LoremFlickr par theme d'histoire + LOCK VERIFIE visuellement
+# (les memes locks que les miniatures make_story_thumbs.py, controlees a l'ecran)
+STORY_IMAGES = {
+    "renard": ("fox,forest,cute,animal", 4441),
+    "dragon": ("dragon,cute,fire,magic", 4442),
+    "etoile": ("star,night,sky,cute,child", 4443),
+    "loup": ("wolf,cute,forest,animal", 4444),
+    "licorne": ("unicorn,toy,rainbow", 404),   # verifie: figurine licorne
+    "ours": ("polar,bear,cute,snow", 4446),
+    "chat": ("cat,kitten,cute,pet", 7051),        # verifie: chat gris mignon
+    "elephant": ("elephant,cute,animal,safari", 7052),  # verifie: bebe elephant dans l'eau
+    "singe": ("monkey,cute,animal,jungle", 5053),  # verifie: singe malicieux
+}
+
+# Priorite locale : si la miniature verifiee existe, on l'utilise direct
+# (fallback local = jamais de photo hors-sujet)
+def _theme_background_local(script):
+    """Chemin de la miniature locale verifiee pour ce theme (si elle existe).
+
+    Detection par MOT ENTIER uniquement (pas de sous-chaine) pour eviter
+    les faux positifs : "jours" ne doit pas matcher "ours" ("ours" in "jours").
+    """
+    theme = str(script.get("theme") or "").strip().lower()
+    if theme in LESSON_IMAGES:
+        return None  # lecon -> fond PIL dedie, jamais de miniature d'histoire
+    for key in STORY_IMAGES:
+        if re.search(rf"\b{re.escape(key)}\b", theme):
+            p = BASE_DIR / "assets" / "thumbs" / f"story_{key}.jpg"
+            if p.exists():
+                return p
+    return None
+
+
+def _theme_keywords(script):
+    """Mots-cles LoremFlickr pour le fond d'une lecon ou d'une histoire.
+
+    Retourne (keywords, lock) ou None si aucun mapping trouve.
+    Priorite : 1) lesson theme, 2) story theme detecte dans le texte.
+    """
+    theme = str(script.get("theme") or "").strip().lower()
+    if theme in LESSON_IMAGES:
+        return LESSON_IMAGES[theme], hash(theme) % 5000 + 1000
+    # detection dans un theme libre (ex: "un petit renard" -> renard)
+    for key, (kw, lock) in STORY_IMAGES.items():
+        if key in theme:
+            return kw, lock
+    return None, None
+
+
+def _lesson_background_pil(theme, out_path):
+    """Dessine un fond pedagogique PIL 100%% coherent pour une lecon.
+
+    Pas de reseau, pas de photo hors-sujet : chiffres geants pour compter,
+    pastilles de couleurs, formes geometriques, lettres, calendrier...
+    Retourne le chemin si OK, None sinon.
+    """
+    from PIL import Image, ImageDraw
+
+    W, H = 1280, 720
+    img = Image.new("RGB", (W, H), (24, 26, 52))
+    d = ImageDraw.Draw(img)
+    # fond degrade sombre
+    for yy in range(0, H, 8):
+        t = yy / H
+        color = tuple(int(30 * (1 - t) + 16 * t) for _ in range(1)) + tuple(
+            [int(27 * (1 - t) + 18 * t), int(75 * (1 - t) + 40 * t)]
+        )
+        d.rectangle([0, yy, W, yy + 8], fill=(color[0], color[1], color[2]))
+    # cercles doux
+    rng = random.Random(abs(hash(theme)) % 9999)
+    for _ in range(16):
+        cx, cy, r = rng.randint(-80, W), rng.randint(-80, H), rng.randint(40, 150)
+        d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=(255, 255, 255), width=3)
+
+    f_big = _load_font(110)
+    f_med = _load_font(46)
+    f_sm = _load_font(32)
+    gold = (255, 224, 130)
+    white = (245, 245, 255)
+    # IMPORTANT : tout le contenu reste dans la bande haute (0-240px) pour
+    # ne jamais chevaucher le titre de scene (y=250) ni la narration (y=380+)
+
+    if theme == "compter":
+        nums = "1 2 3 4 5 6 7 8 9 10".split()
+        for i, n in enumerate(nums):
+            d.text((45 + i * 120, 40), n, font=f_big, fill=gold)
+        d.text((60, 175), "COMPTER DE 1 A 10", font=f_med, fill=white)
+    elif theme == "couleurs":
+        cols = [("ROUGE", (239, 68, 68)), ("JAUNE", (250, 204, 21)), ("VERT", (34, 197, 94)),
+                ("BLEU", (59, 130, 246)), ("VIOLET", (168, 85, 247)), ("ROSE", (236, 72, 153))]
+        for i, (label, col) in enumerate(cols):
+            x = 105 + i * 182
+            d.ellipse([x - 70, 95 - 70, x + 70, 95 + 70], fill=col, outline=white, width=6)
+            d.text((x - 45, 185), label, font=f_sm, fill=white)
+        d.text((60, 240), "LES COULEURS", font=f_med, fill=gold)
+    elif theme == "formes":
+        # cercle, carre, triangle, etoile (bande haute)
+        cx0, cy0, s = 200, 130, 95
+        d.ellipse([cx0 - s, cy0 - s, cx0 + s, cy0 + s], outline=gold, width=8)
+        x2 = 480
+        d.rounded_rectangle([x2 - s, cy0 - s, x2 + s, cy0 + s], radius=12, outline=gold, width=8)
+        x3 = 760
+        d.polygon([(x3, cy0 - s), (x3 - s, cy0 + s), (x3 + s, cy0 + s)], outline=gold, width=8)
+        x4 = 1040
+        d.regular_polygon((x4, cy0, s), 5, rotation=-90, outline=gold, width=8)
+        d.text((60, 255), "CERCLE - CARRE - TRIANGLE - ETOILE", font=f_sm, fill=white)
+    elif theme == "alphabet":
+        for i, l in enumerate("ABCDEFG"):
+            d.text((45 + i * 178, 40), l, font=f_big, fill=gold)
+        d.text((60, 180), "L'ALPHABET", font=f_med, fill=white)
+    elif theme == "jours":
+        days = ["LUN", "MAR", "MER", "JEU", "VEN", "SAM", "DIM"]
+        for i, day in enumerate(days):
+            x = 50 + i * 172
+            d.rounded_rectangle([x, 45, x + 155, 150], radius=16, fill=(40, 44, 90), outline=gold, width=4)
+            d.text((x + 25, 70), day, font=_load_font(42), fill=white)
+        d.text((60, 180), "LES JOURS DE LA SEMAINE", font=f_med, fill=gold)
+    elif theme == "saisons":
+        seasons = [("PRINTEMPS", (34, 197, 94)), ("ETE", (250, 204, 21)),
+                   ("AUTOMNE", (249, 115, 22)), ("HIVER", (96, 165, 250))]
+        for i, (label, col) in enumerate(seasons):
+            x = 35 + i * 312
+            d.rounded_rectangle([x, 40, x + 290, 230], radius=24, fill=(col[0], col[1], col[2]))
+            d.text((x + 55, 85), label, font=f_med, fill=(15, 20, 40))
+        d.text((60, 262), "LES 4 SAISONS", font=_load_font(40), fill=gold)
+    elif theme == "animaux":
+        animals = ["VACHE", "CHEVAL", "MOUTON", "POULE", "COCHON", "CANARD"]
+        for i, label in enumerate(animals):
+            x = 55 + (i % 3) * 400
+            y = 35 + (i // 3) * 105
+            d.rounded_rectangle([x, y, x + 370, y + 90], radius=16, fill=(40, 44, 90), outline=gold, width=4)
+            d.text((x + 115, y + 18), label, font=_load_font(34), fill=white)
+        d.text((60, 255), "LES ANIMAUX DE LA FERME", font=_load_font(38), fill=gold)
+    elif theme == "compter20":
+        nums = "1 2 3 4 5 6 7 8 9 10".split()
+        for i, n in enumerate(nums):
+            d.text((35 + i * 121, 30), n, font=f_big, fill=gold)
+        nums2 = "11 12 13 14 15 16 17 18 19 20".split()
+        for i, n in enumerate(nums2):
+            d.text((20 + i * 124, 135), n, font=_load_font(80), fill=white)
+        d.text((60, 245), "COMPTER DE 1 A 20", font=f_med, fill=gold)
+    elif theme == "contraires":
+        pairs = [("GRAND", "PETIT"), ("CHAUD", "FROID"), ("JOUR", "NUIT"), ("VITE", "LENT")]
+        for i, (a, b) in enumerate(pairs):
+            x = 60 + (i % 2) * 620
+            y = 30 + (i // 2) * 105
+            d.rounded_rectangle([x, y, x + 565, y + 90], radius=16, fill=(40, 44, 90), outline=gold, width=4)
+            d.text((x + 100, y + 15), a, font=_load_font(38), fill=(255, 224, 130))
+            d.text((x + 340, y + 15), b, font=_load_font(38), fill=white)
+        d.text((60, 255), "LES CONTRAIRES", font=_load_font(38), fill=gold)
+    elif theme == "corps":
+        parts = ["YEUX", "OREILLES", "NEZ", "BOUCHE", "BRAS", "MAINS", "JAMBES", "PIEDS"]
+        for i, label in enumerate(parts):
+            x = 55 + (i % 4) * 300
+            y = 30 + (i // 4) * 105
+            d.rounded_rectangle([x, y, x + 270, y + 90], radius=16, fill=(40, 44, 90), outline=gold, width=4)
+            d.text((x + 65, y + 18), label, font=_load_font(34), fill=white)
+        d.text((60, 250), "LE CORPS HUMAIN", font=_load_font(38), fill=gold)
+    elif theme == "fruits":
+        items = ["POMME", "BANANE", "FRAISE", "CAROTTE", "BROCOLI", "CITRON"]
+        for i, label in enumerate(items):
+            x = 55 + (i % 3) * 400
+            y = 35 + (i // 3) * 105
+            d.rounded_rectangle([x, y, x + 370, y + 90], radius=16, fill=(40, 44, 90), outline=gold, width=4)
+            d.text((x + 115, y + 18), label, font=_load_font(34), fill=white)
+        d.text((60, 255), "LES FRUITS ET LEGUMES", font=_load_font(38), fill=gold)
+    elif theme == "transports":
+        items = ["VOITURE", "TRAIN", "AVION", "VELO", "BATEAU", "FUSEE"]
+        for i, label in enumerate(items):
+            x = 55 + (i % 3) * 400
+            y = 35 + (i // 3) * 105
+            d.rounded_rectangle([x, y, x + 370, y + 90], radius=16, fill=(40, 44, 90), outline=gold, width=4)
+            d.text((x + 115, y + 18), label, font=_load_font(34), fill=white)
+        d.text((60, 255), "LES MOYENS DE TRANSPORT", font=_load_font(38), fill=gold)
+    else:
+        return None
+
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    img.save(out_path, "JPEG", quality=92)
+    return out_path
+
+
 def _load_product_image_url(product_name):
     """Retrouve l'URL d'image du produit (catalogue) pour illustrer les scenes.
 
@@ -883,6 +1136,56 @@ def _download_background(url, dest, timeout=10):
         dest.write_bytes(data)
         return dest
     except Exception:
+        return None
+
+
+def _cover_resize(img, width, height):
+    """Redimensionne en 'cover' (recadre le surplus) vers width x height."""
+    from PIL import Image
+    scale = max(width / img.size[0], height / img.size[1])
+    new_size = (max(1, round(img.size[0] * scale)),
+                max(1, round(img.size[1] * scale)))
+    img = img.resize(new_size, Image.LANCZOS)
+    left = (img.size[0] - width) // 2
+    top = (img.size[1] - height) // 2
+    return img.crop((left, top, left + width, top + height))
+
+
+IA_STYLE = ("dessin anime pedagogique pour enfants, style livre pour enfants, "
+            "couleurs douces et lumineuses, personnages mignons et souriants, "
+            "fond simple et lisible, aucune texte, aucune ecriture")
+
+
+def _generate_ai_background(hint, dest, width=1280, height=720, timeout=45):
+    """Illustration anime generee par IA (Pollinations.ai / FLUX, GRATUIT).
+
+    Aucune cle API requise. Retourne le chemin si OK, None en cas d'echec
+    (le pipeline retombe alors sur LoremFlickr / degrade).
+    """
+    if not hint:
+        return None
+    try:
+        import io
+        import urllib.parse
+        import urllib.request
+        from PIL import Image
+        prompt = f"{str(hint).strip()[:120]}, {IA_STYLE}"
+        seed = abs(hash(prompt)) % 1000000
+        url = ("https://image.pollinations.ai/prompt/"
+               + urllib.parse.quote(prompt)
+               + f"?width={min(width, 1536)}&height={min(height, 1536)}"
+               + f"&nologo=true&seed={seed}")
+        req = urllib.request.Request(url, headers={"User-Agent": "Affilimax/1.0"})
+        data = urllib.request.urlopen(req, timeout=timeout).read()
+        if len(data) < 5000:
+            return None
+        img = Image.open(io.BytesIO(data)).convert("RGB")
+        img = _cover_resize(img, width, height)
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        img.save(dest, "JPEG", quality=90)
+        return dest
+    except Exception as exc:
+        print(f"[VF] Illustration IA indisponible ({exc}) -> fallback")
         return None
 
 
@@ -935,14 +1238,23 @@ def _build_scene_image(scene, index, total, out_path, background_path=None):
         alpha_color = tuple(min(255, int(c * 0.10 + 40)) for c in (255, 255, 255))
         draw.ellipse([cx - r, cy - r, cx + r, cy + r], outline=alpha_color, width=3)
 
-    # Badge haut gauche
+    # Badge haut gauche (pastille sombre semi-transparente pour rester
+    # lisible sur n'importe quel fond : photo, PIL, degrade)
     badge = f"AFFILIMAX STUDIO  |  SCENE {index + 1}/{total}"
     f_badge = _load_font(30)
+    from PIL import Image as _PILImg, ImageDraw as _PILDr
+    _ov = _PILImg.new("RGBA", (W, H), (0, 0, 0, 0))
+    _od = _PILDr.Draw(_ov)
+    _bw = int(_od.textlength(badge, font=f_badge))
+    _od.rounded_rectangle([36, 28, 52 + _bw + 16, 86], radius=14, fill=(5, 5, 20, 170))
+    image = _PILImg.alpha_composite(image.convert("RGBA"), _ov).convert("RGB")
+    draw = _PILDr.Draw(image)
     draw.text((48, 40), badge, font=f_badge, fill=(255, 255, 255))
 
-    # Gros numero
+    # Gros numero (contour sombre pour rester lisible sur tout fond)
     f_num = _load_font(190)
-    draw.text((W - 260, 30), f"{index + 1:02d}", font=f_num, fill=(255, 255, 255))
+    draw.text((W - 260, 30), f"{index + 1:02d}", font=f_num, fill=(255, 255, 255),
+              stroke_width=8, stroke_fill=(10, 10, 35))
 
     # Titre de scene
     f_title = _load_font(64)
@@ -976,7 +1288,10 @@ def _build_scene_images(script, job_dir):
     scenes = script.get("scenes") or []
     paths = []
 
-    # Image produit reelle en fond (une seule, partagee par toutes les scenes)
+    # Image de fond reelle et COHERENTE avec le contenu :
+    #   - produit (catalogue) -> photo du vrai produit
+    #   - lecon pedagogique -> photo du theme (nombres, couleurs, animaux...)
+    #   - histoire enfant -> photo du personnage/univers (renard, dragon...)
     background_path = None
     product_name = script.get("produit") or script.get("product_name") or ""
     if product_name:
@@ -984,6 +1299,37 @@ def _build_scene_images(script, job_dir):
         if url:
             bg_dest = job_dir / "images" / "background.jpg"
             background_path = _download_background(url, bg_dest)
+    else:
+        # 1) Miniature locale VERIFIEE (histoires) -> 100% coherente,
+        #    jamais de photo hors-sujet (LoremFlickr est instable).
+        local_bg = _theme_background_local(script)
+        if local_bg:
+            background_path = local_bg
+            print(f"[VF] Fond theme local (verifie): {local_bg.name}")
+        else:
+            # 2) Lecon pedagogique -> fond PIL dessine (chiffres, couleurs,
+            #    formes...). 100%% coherent, sans reseau, toujours disponible.
+            theme = str(script.get("theme") or "").strip().lower()
+            bg_dest = job_dir / "images" / "background.jpg"
+            pil_bg = _lesson_background_pil(theme, bg_dest)
+            if pil_bg:
+                background_path = pil_bg
+                print(f"[VF] Fond pedagogique PIL pour lecon '{theme}'")
+            else:
+                # 3) Illustration IA (Pollinations, GRATUIT) : dessin anime
+                #    coherent avec le theme (personnage, univers...)
+                ai_bg = _generate_ai_background(theme, bg_dest)
+                if ai_bg:
+                    background_path = ai_bg
+                    print(f"[VF] Illustration IA Pollinations pour '{theme}'")
+                else:
+                    # 4) Dernier recours : photo LoremFlickr avec lock stable
+                    keywords, lock = _theme_keywords(script)
+                    if keywords:
+                        url = f"https://loremflickr.com/1280/720/{keywords}?lock={lock}"
+                        background_path = _download_background(url, bg_dest)
+                        if background_path:
+                            print(f"[VF] Fond theme '{script.get('theme')}': {keywords}")
 
     for i, scene in enumerate(scenes):
         out = img_dir / f"scene_{i + 1:02d}.png"
