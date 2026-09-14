@@ -1,0 +1,26 @@
+[11/08/2026  9:30:02,34] Debut de l'import 
+[11/08/2026  9:30:02,34] PAS DE RAPPORT - telecharge-le sur partenaires.amazon.fr 
+[14/08/2026  9:45:40,06] Debut de l'import 
+[14/08/2026  9:45:40,07] PAS DE RAPPORT - telecharge-le sur partenaires.amazon.fr 
+[15/08/2026  9:30:02,16] Debut de l'import 
+[15/08/2026  9:30:02,18] PAS DE RAPPORT - telecharge-le sur partenaires.amazon.fr 
+[16/08/2026  9:30:02,67] Debut de l'import 
+[16/08/2026  9:30:02,69] PAS DE RAPPORT - telecharge-le sur partenaires.amazon.fr 
+[17/08/2026  9:30:02,51] Debut de l'import 
+[17/08/2026  9:30:02,52] PAS DE RAPPORT - telecharge-le sur partenaires.amazon.fr 
+[18/08/2026  9:30:02,74] Debut de l'import 
+[18/08/2026  9:30:02,76] PAS DE RAPPORT - telecharge-le sur partenaires.amazon.fr 
+[20/08/2026  9:30:02,08] Debut de l'import 
+[20/08/2026  9:30:02,09] PAS DE RAPPORT - telecharge-le sur partenaires.amazon.fr 
+[22/08/2026 12:23:55,34] Debut de l'import 
+[22/08/2026 12:23:55,66] PAS DE RAPPORT - telecharge-le sur partenaires.amazon.fr 
+[25/08/2026 10:23:55,99] Debut de l'import 
+[25/08/2026 10:23:56,06] PAS DE RAPPORT - telecharge-le sur partenaires.amazon.fr 
+[26/08/2026  9:30:02,18] Debut de l'import 
+[26/08/2026  9:30:02,19] PAS DE RAPPORT - telecharge-le sur partenaires.amazon.fr 
+[08/09/2026 16:31:03,17] Debut de l'import 
+[08/09/2026 16:31:03,22] PAS DE RAPPORT - telecharge-le sur partenaires.amazon.fr 
+[13/09/2026  9:30:01,87] Debut de l'import 
+[13/09/2026  9:30:01,87] PAS DE RAPPORT - telecharge-le sur partenaires.amazon.fr 
+[14/09/2026  9:30:02,57] Debut de l'import 
+[14/09/2026  9:30:02,58] PAS DE RAPPORT - telecharge-le sur partenaires.amazon.fr 

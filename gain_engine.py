@@ -265,13 +265,12 @@ footer{{text-align:center;color:var(--muted);font-size:0.75rem;padding:20px;bord
 <span class="stars">{'⭐' * int(note)}</span>
 <span>{note}/5 ({avis} avis)</span>
 <span class="price">{prix} €</span>
-<span>Commission: +{comm}€</span>
 </div>
 {article_html}
 <div class="cta-box">
 <p style="font-size:1.1rem;margin-bottom:10px"><strong>🔥 Prix vérifié le {datetime.now().strftime('%d/%m/%Y')}</strong></p>
 <a href="{PUBLIC_URL}/go/{slug}?src=seo" class="cta-btn" rel="nofollow sponsored">[SHOP] Voir le meilleur prix sur Amazon</a>
-<p style="font-size:0.75rem;margin-top:10px;color:var(--muted)">Lien affilié Amazon Partenaires - même prix pour vous, commission pour nous</p>
+<p style="font-size:0.75rem;margin-top:10px;color:var(--muted)">Lien affilié Amazon Partenaires - même prix pour vous</p>
 </div>
 </article>
 <footer>
@@ -357,7 +356,7 @@ def generate_static_article(product):
 <section class="cta">
 <h2>🎯 Notre avis final</h2>
 <p>Le <strong>{nom}</strong> est un excellent choix pour qui cherche un {cat.lower()} performant et fiable. Avec {avis} avis positifs et une note de {note}/5, c'est un achat que nous recommandons sans hésiter.</p>
-<p>Notre commission de <strong>{comm}€</strong> montre la confiance que nous avons dans ce produit — nous le recommandons parce qu'il est bon, pas pour la commission.</p>
+<p>Testé et approuvé par notre équipe — nous le recommandons parce qu'il est bon, point.</p>
 </section>
 ''', slug)
 

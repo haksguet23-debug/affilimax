@@ -1315,7 +1315,6 @@ function renderProducts() {
             <div class="card__price">
                 ${p.prix.toFixed(2).replace('.',',')} EUR
             </div>
-            <div class="card__commission">Commission: ${p.commission_euro.toFixed(2).replace('.',',')} EUR (${p.commission_pct}%)</div>
             <a class="card__cta ${CTA_COLORS[i%CTA_COLORS.length]}" href="/produit/${p.slug || ''}" onclick="trackClick(${i})" aria-label="Voir la fiche detaillee de ${p.nom}">
                 Voir la fiche produit
             </a>

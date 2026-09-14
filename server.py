@@ -2316,7 +2316,6 @@ footer{{text-align:center;padding:40px 20px;color:var(--muted);font-size:.7rem;b
         </div>
         <p class="desc">{desc}</p>
         <div class="price">{prix:.2f} EUR</div>
-        <div class="comm">Commission: {comm_euro:.2f} EUR ({comm_pct}%)</div>
         <div class="cta-section">
             <a class="btn-buy" href="{go_url}" rel="nofollow sponsored" target="_blank">
                 Voir l'offre sur {plateforme}
