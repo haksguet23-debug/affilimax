@@ -73,7 +73,7 @@ _load_env_file()
 # --- Provider 1: Groq (OpenAI-compatible, gratuit) ---
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
 GROQ_BASE_URL = "https://api.groq.com/openai/v1"
-GROQ_MODEL = os.environ.get("AI_MODEL", "llama-3.3-70b-versatile")
+GROQ_MODEL = os.environ.get("AI_MODEL", "openai/gpt-oss-120b")
 
 # --- Provider 2: Google Gemini (gratuit) ---
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", os.environ.get("GOOGLE_API_KEY", ""))
