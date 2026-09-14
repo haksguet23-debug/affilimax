@@ -2079,6 +2079,7 @@ class AffilimaxHandler(http.server.SimpleHTTPRequestHandler):
         stars_empty = 5 - stars_full - stars_half
         stars_html = "\u2B50" * stars_full + ("\u2B50" if stars_half else "") + "" * stars_empty
         note_str = str(note_moyenne).replace('.', ',')
+        badge_top = '<span class="top-badge">🏆 Meilleur choix 2026</span>' if note_moyenne >= 4.8 else ''
 
         # Avis HTML avec boutons Like et tri
         reviews_html = ""
@@ -2156,6 +2157,7 @@ body{{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--te
 /* Infos */
 .product-info h1{{font-size:1.8rem;font-weight:800;margin-bottom:8px}}
 .product-info .category{{display:inline-block;padding:3px 12px;background:rgba(124,58,237,.15);color:var(--purple);border-radius:50px;font-size:.72rem;font-weight:600;margin-bottom:12px}}
+        .top-badge{{display:inline-block;padding:4px 14px;background:linear-gradient(135deg,#f0a500,#ff8c00);color:#141432;border-radius:50px;font-size:.75rem;font-weight:700;margin-bottom:12px}}
 .rating-row{{display:flex;align-items:center;gap:10px;margin-bottom:12px;flex-wrap:wrap}}
 .rating-stars{{font-size:1.2rem;letter-spacing:2px}}
 .rating-note{{font-weight:800;font-size:1.3rem;font-family:monospace;color:var(--gold)}}
@@ -2307,6 +2309,7 @@ footer{{text-align:center;padding:40px 20px;color:var(--muted);font-size:.7rem;b
         <img src="{image}" alt="{nom}" loading="lazy">
     </div>
     <div class="product-info">
+        {badge_top}
         <span class="category">{categorie}</span>
         <h1>{nom}</h1>
         <div class="rating-row">

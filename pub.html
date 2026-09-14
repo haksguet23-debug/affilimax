@@ -1128,6 +1128,10 @@ body{font-family:'Inter','Segoe UI',system-ui,sans-serif;background:var(--bg);co
 .card--purple::before{background:linear-gradient(90deg,var(--purple),#a78bfa)}
 .card--green::before{background:linear-gradient(90deg,var(--green),#34d399)}
 .card__platform{font-size:.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px}
+.card__badges{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.cbadge{padding:3px 10px;border-radius:50px;font-size:.68rem;font-weight:700}
+.cbadge--top{background:linear-gradient(135deg,#f0a500,#ff8c00);color:#141432}
+.cbadge--tested{background:rgba(16,185,129,.15);color:var(--green);border:1px solid rgba(16,185,129,.4)}
 .card__title{font-size:1.2rem;font-weight:700;margin-bottom:8px}
 .card__desc{color:var(--muted);font-size:.85rem;margin-bottom:16px;line-height:1.5}
 .card__image{width:100%;height:200px;object-fit:cover;border-radius:10px;margin-bottom:14px;background:var(--border)}
@@ -1309,6 +1313,7 @@ function renderProducts() {
         <div class="card card--${COLORS[i%COLORS.length]}">
             <img class="card__image" src="${p.image_url || 'https://placehold.co/600x400/141432/f0a500?text=' + encodeURIComponent(p.nom.substring(0,20))}" alt="${p.nom} — Avis, test et meilleur prix" loading="lazy" width="600" height="400">
             <div class="card__platform">${p.plateforme} · ${p.categorie||'Autre'}</div>
+            <div class="card__badges">${p.note_moyenne>=4.8?'<span class="cbadge cbadge--top">🏆 Meilleur choix 2026</span>':''}<span class="cbadge cbadge--tested">⭐ Testé 2026</span></div>
             <div class="card__title">${p.nom}</div>
             <div class="card__desc">${p.description}</div>
             <div class="card__rating">${'\u2B50'.repeat(Math.round(p.note_moyenne||0))} <span style="color:var(--muted);font-size:.75rem">${(p.note_moyenne||0).toFixed(1).replace('.',',')} (${p.avis_total||0} avis)</span></div>

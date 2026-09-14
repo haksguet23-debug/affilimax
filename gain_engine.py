@@ -244,6 +244,8 @@ li{{margin-bottom:8px}}
 .cta-btn{{display:inline-block;background:linear-gradient(135deg,var(--gold),#ff8c00);color:#000;padding:14px 36px;border-radius:50px;font-weight:700;text-decoration:none;font-size:1.1rem;transition:all .3s}}
 .cta-btn:hover{{transform:translateY(-2px);box-shadow:0 8px 30px rgba(240,165,0,0.4)}}
 .stars{{color:var(--gold);font-size:1.2rem}}
+.top-badge{{display:inline-block;padding:3px 12px;background:linear-gradient(135deg,#f0a500,#ff8c00);color:#141432;border-radius:50px;font-size:.75rem;font-weight:700}}
+.tested-badge{{display:inline-block;padding:3px 12px;background:rgba(16,185,129,.12);color:var(--green);border:1px solid rgba(16,185,129,.4);border-radius:50px;font-size:.75rem;font-weight:600}}
 .price{{font-size:1.5rem;font-weight:800;color:var(--green)}}
 .meta{{display:flex;gap:20px;margin:10px 0 20px;color:var(--muted);font-size:0.85rem;flex-wrap:wrap}}
 .breadcrumb{{font-size:0.8rem;color:var(--muted);margin-bottom:20px}}
@@ -264,6 +266,7 @@ footer{{text-align:center;color:var(--muted);font-size:0.75rem;padding:20px;bord
 <div class="meta">
 <span class="stars">{'⭐' * int(note)}</span>
 <span>{note}/5 ({avis} avis)</span>
+<span class="tested-badge">⭐ Testé 2026</span>{'' if note < 4.8 else ' <span class="top-badge">🏆 Meilleur choix 2026</span>'}
 <span class="price">{prix} €</span>
 </div>
 {article_html}
