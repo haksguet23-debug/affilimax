@@ -103,7 +103,9 @@ def ping_indexnow():
             for f in sorted(blog.glob("*.html"))[:10]:
                 urls.append(f"{RENDER_URL}/affilimax_blog/{f.name}")
 
-        payload = {"host": host, "key": INDEXNOW_KEY, "keyLocation": f"{RENDER_URL}/affilimax_blog/{INDEXNOW_KEY}.txt", "urlList": urls[:20]}
+        # keyLocation doit couvrir le prefixe de TOUTES les URLs soumises
+        # (la cle est a la racine => valide pour / et /affilimax_blog/*)
+        payload = {"host": host, "key": INDEXNOW_KEY, "keyLocation": f"{RENDER_URL}/{INDEXNOW_KEY}.txt", "urlList": urls[:20]}
         data = json.dumps(payload).encode("utf-8")
         req = urllib.request.Request("https://api.indexnow.org/indexnow", data=data, headers={"Content-Type": "application/json"}, method="POST")
         ctx = ssl.create_default_context()
